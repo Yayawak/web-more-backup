@@ -4,19 +4,19 @@ import type { MenuItem } from './Menu'
 const Navbar = () => {
   const menuItems: MenuItem[] = [
     {
-      title: 'หน้าแรก',
-      path: '/',
+      title: "หน้าแรก",
+      path: "/",
     },
     {
       title: 'หลักสูตร',
       submenus: [
         {
-          title: 'International Program',
-          path: '/courses/inter'
+          title: "International Program",
+          path: "/courses/inter",
         },
         {
-          title: 'ปริญญาตรี',
-          path: '/courses/bachelor'
+          title: "ปริญญาตรี",
+          path: "/courses/bachelor",
         },
       ],
     },
@@ -45,16 +45,24 @@ const Navbar = () => {
   ]
 
   return (
-    <header>
-      <nav className="h-[103px] bg-gradient-to-b from-[#fe970b] to-[#f74707]">
-        <ul className="h-full text-[25px] flex flex-row justify-end text-white">
-          {menuItems.map((menu, index) => {
-            const depthLevel = 0
-            return <Menu item={menu} key={index} depthLevel={depthLevel} />
-          })}
-        </ul>
-      </nav>
-    </header>
+    <>
+      <header>
+        <nav className="h-[103px] bg-gradient-to-b from-[#fe970b] to-[#f74707]">
+          <ul className="h-full text-[25px] flex flex-row justify-end text-white">
+            {menuItems.map((menu, index) => {
+              const depthLevel = 0
+              return <Menu item={menu} key={index} depthLevel={depthLevel} />
+            })}
+          </ul>
+        </nav>
+      </header>
+
+      <style jsx>{`
+        nav {
+          height: var(--navbar-height);
+        }
+      `}</style>
+    </>
   )
 }
 
