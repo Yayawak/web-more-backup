@@ -1,10 +1,12 @@
-import { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 
-type MenuItem = {
+import Dropdown from './Dropdown'
+
+export type MenuItem = {
   title: string,
   path?: string,
-  submenu?: MenuItem[],
+  submenus?: MenuItem[],
 }
 
 interface MenuProps {
@@ -15,21 +17,37 @@ interface MenuProps {
 const Menu = ({ item, depthLevel }: MenuProps) => {
   const [dropdownShow, setDropdownShow] = useState(false)
 
-  let ref = useRef
+  const dismissHandler = (e: React.FocusEvent<HTMLButtonElement, Element>) => {
+    if (!e.currentTarget.contains(e.target)) {
+      setDropdownShow(false)
+    }
+  }
 
   return (
     <li
-      className="px-[25px] flex items-center hover:cursor-pointer"
-      // ref={ref}
+      className={`flex items-center hover:cursor-pointer hover:bg-gradient-to-b from-[#ff7c32] to-[#000000] relative ${dropdownShow ? "bg-gradient-to-b from-[#ff7c32] to-[#000000]" : ""}`}
     >
-      {item.submenu ? (
-        <div></div>
+      {item.submenus ? (
+        <>
+          <button
+            className="w-full h-full px-[25px]"
+            onClick={() => setDropdownShow(!dropdownShow)}
+            onBlur={(e) => dismissHandler(e)}
+          >
+            {item.title}
+          </button>
+          {dropdownShow ? (<Dropdown
+            items={item.submenus}
+            dropdownShow={dropdownShow}
+            depthLevel={depthLevel}
+          />) : <></>}
+        </>
       ) : (
-        <Link href={"/" + item.path}>
-          <a className="">{item.title}</a>
+        <Link href={item.path + ""}>
+          <a className="whitespace-nowrap px-[25px]">{item.title}</a>
         </Link >
       )}
-    </li >
+    </li>
   )
 }
 

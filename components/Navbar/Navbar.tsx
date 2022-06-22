@@ -1,12 +1,5 @@
-import { useState } from 'react'
-import Link from 'next/link'
 import Menu from './Menu'
-
-type MenuItem = {
-  title: string,
-  path?: string,
-  submenu?: MenuItem[],
-}
+import type { MenuItem } from './Menu'
 
 const Navbar = () => {
   const menuItems: MenuItem[] = [
@@ -16,7 +9,7 @@ const Navbar = () => {
     },
     {
       title: 'หลักสูตร',
-      submenu: [
+      submenus: [
         {
           title: 'International Program',
           path: '/courses/inter'
@@ -27,19 +20,41 @@ const Navbar = () => {
         },
       ],
     },
+    {
+      title: 'ภาควิชา',
+      submenus: [
+        {
+          title: 'วิทยาการคอมพิวเตอร์',
+          path: '/courses/inter'
+        },
+        {
+          title: 'เคมี',
+          submenus: [
+            {
+              title: 'วิทยาการคอมพิวเตอร์',
+              path: '/courses/inter'
+            },
+            {
+              title: 'เคมี',
+              path: '/courses/bachelor'
+            },
+          ],
+        },
+      ],
+    },
   ]
 
   return (
-      <header>
-        <nav className="h-[103px] bg-gradient-to-b from-[#fe970b] to-[#f74707]">
-          <ul className="h-full text-[25px] flex flex-row gap-4 justify-end text-white">
-            {menuItems.map((menu, index) => {
-              const depthLevel = 0
-              return <Menu item={menu} key={index} depthLevel={depthLevel} />
-            })}
-          </ul>
-        </nav>
-      </header>
+    <header>
+      <nav className="h-[103px] bg-gradient-to-b from-[#fe970b] to-[#f74707]">
+        <ul className="h-full text-[25px] flex flex-row justify-end text-white">
+          {menuItems.map((menu, index) => {
+            const depthLevel = 0
+            return <Menu item={menu} key={index} depthLevel={depthLevel} />
+          })}
+        </ul>
+      </nav>
+    </header>
   )
 }
 
