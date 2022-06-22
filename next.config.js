@@ -7,6 +7,10 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
     prependData: `@import "./variables.scss";`,
   },
+  i18n: {
+    locales: ['th-TH', 'en-US'],
+    defaultLocale: 'th-TH'
+  },
 };
 
 module.exports = nextConfig;
