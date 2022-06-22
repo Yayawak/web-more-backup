@@ -1,15 +1,18 @@
-import SlideshowButton from "./Button";
+import SlideshowButton from "./Button"
 
 interface SlideshowProps {
-  image: string[];
+  image: string[]
 }
 
 const Slideshow = ({ image }: SlideshowProps) => {
   return (
     <>
-      <div className="relative w-full h-full"></div>
+      <div className="relative w-full h-full">
+        <SlideshowButton side="left" />
+        <SlideshowButton side="right" />
+      </div>
     </>
-  );
-};
+  )
+}
 
-export default Slideshow;
+export default Slideshow

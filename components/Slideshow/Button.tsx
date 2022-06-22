@@ -1,9 +1,14 @@
 interface ButtonProps {
-  side: number
+  side: string
 }
 
-const SlideshowButton = () => {
-  return <></>
+const sideToText: { [key: string]: string } = {
+  left: "<",
+  right: ">",
+}
+
+const SlideshowButton = ({ side }: ButtonProps) => {
+  return <div className="w-[75px] h-[124px] bg-black">{sideToText[side]}</div>
 }
 
 export default SlideshowButton
