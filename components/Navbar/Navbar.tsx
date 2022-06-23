@@ -9,15 +9,18 @@ import sciKmitlLogo from '../../assets/logos/sci-kmitl-logo.png'
 import flagTH from '../../assets/flags/flag-th.png'
 import flagEN from '../../assets/flags/flag-en.png'
 
+/**
+ * TODO: Add responsive design to Navbar component
+ */
+
 const Navbar = () => {
   const router = useRouter()
-  const { pathname, asPath, query } = router
+  const { asPath } = router
 
   return (
     <>
       <nav className="flex items-center bg-gradient-to-b from-[#ff970bd4] to-[#f74707] text-white">
         {/* Logo */}
-        {/* <div className="w-fit h-[48px] ml-[70px]"> */}
         <Link href="/">
           <a className="h-full flex items-center ml-[70px]">
             <Image
