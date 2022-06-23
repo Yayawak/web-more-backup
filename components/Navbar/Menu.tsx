@@ -44,19 +44,21 @@ const Menu = ({ item, depthLevel }: MenuProps) => {
 
   return (
     <li
-      className={`flex items-center hover:cursor-pointer hover:bg-gradient-to-b from-[#ff7c32] to-[#000000] relative ${
-        dropdownShow ? "bg-gradient-to-b from-[#ff7c32] to-[#000000]" : ""
-      }`}
+      className={`flex items-center hover:cursor-pointer hover:bg-gradient-to-b from-[#ff7c32] to-[#00000048] relative ${dropdownShow ? "bg-gradient-to-b from-[#ff7c32] to-[#00000048]" : ""
+        }`}
     >
       {item.submenus ? (
         <>
           <button
-            className="w-full h-full px-[25px]"
+            className="w-full h-full px-[18px] flex items-center gap-1"
             onClick={() => setDropdownShow(!dropdownShow)}
             onBlur={(e) => dismissHandler(e)}
             ref={ref}
           >
             {item.title}
+            <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" clipRule="evenodd" d="M12.2706 4.79492L13.5761 6.37458L7.38472 13.8663L1.19336 6.37458L2.49883 4.79492L7.38472 10.707L12.2706 4.79492Z" fill="white" />
+            </svg>
           </button>
           {dropdownShow ? (
             <Dropdown
@@ -70,7 +72,7 @@ const Menu = ({ item, depthLevel }: MenuProps) => {
         </>
       ) : (
         <Link href={item.path + ""}>
-          <a className="whitespace-nowrap px-[25px]">{item.title}</a>
+          <a className="whitespace-nowrap px-[18px]">{item.title}</a>
         </Link>
       )}
     </li>
