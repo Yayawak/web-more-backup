@@ -1,19 +1,23 @@
+import React from 'react'
+
 interface ButtonProps {
   side: string
+  onClick?: () => void
 }
 
 const sideToText: { [key: string]: string } = {
-  left: "<",
-  right: ">",
+  left: '<',
+  right: '>',
 }
 
-const SlideshowButton = ({ side }: ButtonProps) => {
+const SlideshowButton = ({ side, onClick }: ButtonProps) => {
   return (
     <>
       <div
-        className={`slideshow-button w-[75px] h-[124px] text-white text-[30px] absolute flex justify-center items-center ${
-          side === "right" && "right-0 "
+        className={`slideshow-button w-[60px] h-[100px] text-white text-[30px] absolute flex justify-center items-center ${
+          side === 'right' && 'right-0 '
         } cursor-pointer select-none`}
+        onClick={onClick}
       >
         {sideToText[side]}
       </div>

@@ -19,3 +19,13 @@ const Template: ComponentStory<typeof Slideshow> = (args) => (
 )
 
 export const Default = Template.bind({})
+Default.args = {
+  images: [
+    'https://picsum.photos/1920/1080',
+    'https://picsum.photos/1920/1080?1',
+    'https://picsum.photos/1920/1080?2',
+    'https://picsum.photos/1920/1080?3',
+    'https://picsum.photos/1920/1080?4',
+    'https://picsum.photos/1920/1080?5',
+  ],
+}
