@@ -1,10 +1,10 @@
-import SlideshowButton from "./Button"
+import SlideshowButton from './Button'
 
 interface SlideshowProps {
-  image?: string[]
+  images?: string[]
 }
 
-const Slideshow = ({ image }: SlideshowProps) => {
+const Slideshow = ({ images }: SlideshowProps) => {
   return (
     <>
       <div className="relative w-full h-full bg-black">
