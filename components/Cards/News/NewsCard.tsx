@@ -1,3 +1,5 @@
+import * as datefns from 'date-fns'
+
 interface INewsCardProps {
   width: number
   height: number
@@ -16,14 +18,21 @@ const NewsCard = ({
   date,
 }: INewsCardProps) => {
   return (
-    <div
-      className={`drop-shadow-lg w-[${width}px] h-[${height}px] bg-white rounded-[20px]`}
-    >
-      <span>{imageUrl}</span>
-      <span>{title}</span>
-      <span>{description}</span>
-      <span>{date?.toString()}</span>
-    </div>
+    <>
+      <div className={`news-card drop-shadow-lg bg-white rounded-[20px]`}>
+        <span>{imageUrl}</span>
+        <span>{title}</span>
+        <span>{description}</span>
+        {date && <span>{datefns.format(date, 'dd MMM yyyy')}</span>}
+      </div>
+
+      <style jsx>{`
+        .news-card {
+          width: ${width}px;
+          height: ${height}px;
+        }
+      `}</style>
+    </>
   )
 }
 
