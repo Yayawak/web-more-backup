@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -16,6 +17,7 @@ const Layout = ({ children }: LayoutProps) => {
 
       <Navbar />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

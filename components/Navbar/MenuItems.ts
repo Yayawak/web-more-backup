@@ -1,6 +1,6 @@
 import type { MenuItem } from './Menu'
 
-export const menuItems: MenuItem[] = [
+const menuItems: MenuItem[] = [
     {
         title: "หน้าแรก",
         path: "/",
@@ -66,3 +66,5 @@ export const menuItems: MenuItem[] = [
         path: '/documents',
     },
 ]
+
+export default menuItems
