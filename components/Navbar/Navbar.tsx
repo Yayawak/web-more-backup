@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 import Menu from './Menu'
-import { menuItems } from './MenuItems'
+import menuItems from './MenuItems'
 
 import sciKmitlLogo from '../../assets/logos/sci-kmitl-logo.png'
 import flagTH from '../../assets/flags/flag-th.png'
