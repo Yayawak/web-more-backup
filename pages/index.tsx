@@ -1,8 +1,16 @@
 import { NextPage } from 'next'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 import atomLogo from '../assets/logos/atom-logo.png'
+import chemistryIcon from '../assets/icons/icon-chemist.svg'
+import mathIcon from '../assets/icons/icon-math.svg'
+import physicsIcon from '../assets/icons/icon-physics.svg'
+import biologyIcon from '../assets/icons/icon-biology.svg'
+import comsciIcon from '../assets/icons/icon-comsci.svg'
+import statisticIcon from '../assets/icons/icon-stat.svg'
+import scitoolIcon from '../assets/icons/icon-scitool.svg'
+import kdaiIcon from '../assets/icons/icon-kdai.svg'
 
 /**
  * TODO: Add responsive design
@@ -13,22 +21,14 @@ type programItem = {
   path: string
 }
 
-const Home: NextPage = () => {
-  const programItems: programItem[] = [
-    {
-      title: 'หลักสูตรปริญญาตรี',
-      path: '/programs/bechelor',
-    },
-    {
-      title: 'หลักสูตรปริญญาโทร',
-      path: '/programs/master',
-    },
-    {
-      title: 'หลักสูตรปริญญาเอก',
-      path: '/programs/doctor',
-    },
-  ]
+type departmentItem = {
+  title: string
+  image: StaticImageData
+  alt: string
+  path: string
+}
 
+const Home: NextPage = () => {
   return (
     <>
       {/* News */}
@@ -71,8 +71,111 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      {/* Departments */}
+      <div className="bg-gradient-to-br from-[#ff7c32] to-[#ffd200]">
+        <div className="mx-auto py-14 lg:w-10/12">
+          <h1 className="w-fit round mx-auto mb-8 font-bold lg:text-[39px]">ภาควิชาและหน่วยงาน</h1>
+          <div className="flex flex-col justify-center lg:flex-row">
+            <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:w-[600px] lg:mr-auto">
+              {departmentItems.map((item, index) => {
+                return (
+                  <li key={index} className="w-[154px] mb-4 basis-1/3 hover:underline">
+                    <Link href={item.path}>
+                      <a className="flex flex-col items-center">
+                        <div className="w-[100px] h-[100px] lg:w-[128px] lg:h-[128px] relative mb-2">
+                          <Image
+                            src={item.image}
+                            alt={item.alt}
+                            layout="fill"
+                            objectFit="contain"
+                          />
+                        </div>
+                        <p className="text-base text-center">{item.title}</p>
+                      </a>
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+            <div className="flex items-center">
+              <div className="border border-black w-0 h-[192px] ml-8 mr-6 lg:h-[517px] lg:mr-44"></div>
+              <p className="text-2xl whitespace-pre-wrap">
+                เพราะเราเชื่อว่า <br />
+                <q> การศึกษา วิจัย ด้านวิทยาศาสตร์และเทคโนโลยี <br />
+                เป็นรากฐานที่ดีของการพัฒนาประเทศ </q>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
 
 export default Home
+
+const programItems: programItem[] = [
+  {
+    title: 'หลักสูตรปริญญาตรี',
+    path: '/programs/bechelor',
+  },
+  {
+    title: 'หลักสูตรปริญญาโทร',
+    path: '/programs/master',
+  },
+  {
+    title: 'หลักสูตรปริญญาเอก',
+    path: '/programs/doctor',
+  },
+]
+
+const departmentItems: departmentItem[] = [
+  {
+    title: 'ภาควิชาเคมี',
+    image: chemistryIcon,
+    alt: 'Chemistry icon',
+    path: '/departments/chemistry',
+  },
+  {
+    title: 'ภาควิชาคณิตศาสตร์',
+    image: mathIcon,
+    alt: 'Mathematics icon',
+    path: '/departments/mathematics',
+  },
+  {
+    title: 'ภาควิชาฟิสิกส์',
+    image: physicsIcon,
+    alt: 'Physics icon',
+    path: '/departments/physics',
+  },
+  {
+    title: 'ภาควิชาชีววิทยา',
+    image: biologyIcon,
+    alt: 'Biology icon',
+    path: '/departments/biology',
+  },
+  {
+    title: 'ภาควิชาวิทยาการคอมพิวเตอร์',
+    image: comsciIcon,
+    alt: 'Computer Science icon',
+    path: '/departments/computer-science',
+  },
+  {
+    title: 'ภาควิชาสถิติ',
+    image: statisticIcon,
+    alt: 'Statistic icon',
+    path: '/departments/statistic',
+  },
+  {
+    title: 'ศูนย์เครื่องมือวิทยาศาสตร์',
+    image: scitoolIcon,
+    alt: 'Scientific Instruments Centre icon',
+    path: '/departments/scientific-instruments-centre',
+  },
+  {
+    title: 'ศูนย์วิเคราะห์ข้อมูลดิจิทัลอัจฉริยะพระจอมเกล้าลาดกระบัง',
+    image: kdaiIcon,
+    alt: 'KDAI icon',
+    path: '/departments/kdai',
+  },
+]
