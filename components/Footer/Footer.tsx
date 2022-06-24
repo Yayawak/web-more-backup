@@ -5,9 +5,13 @@ import { aboutItems, contactItems } from './items'
 
 import kmitlLogo from '../../assets/logos/kmitl-logo.png'
 
+/**
+ * TODO: Add responsive design to Footer component
+ */
+
 const Footer = () => {
   return (
-    <footer className="fixed left-0 bottom-0 w-full h-[380px] bg-[#021e4a] text-white flex items-center">
+    <footer className="bottom-0 w-full h-[380px] bg-[#021e4a] text-white flex items-center">
       <div className="w-full px-[139px] flex">
         <div>
           <Image
