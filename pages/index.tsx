@@ -1,3 +1,4 @@
+import NewsCard from '@/components/Cards/News/NewsCard'
 import Container from '@/components/Layout/Container'
 import { NextPage } from 'next'
 import Image from 'next/image'
@@ -35,6 +36,13 @@ const Home: NextPage = () => {
       {/* News */}
       <Container>
         <SectionTitle>ข่าวสาร</SectionTitle>
+      </Container>
+
+      <Container className="flex gap-[16px]">
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
       </Container>
 
       {/* Programs */}
