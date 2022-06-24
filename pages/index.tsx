@@ -34,7 +34,9 @@ const Home: NextPage = () => {
     <>
       {/* News */}
       <Container>
-        <SectionTitle>ข่าวสาร</SectionTitle>
+        <SectionTitle>
+          ข่าวสาร <span className="mdi mdi-facebook"></span>
+        </SectionTitle>
       </Container>
 
       {/* Programs */}
