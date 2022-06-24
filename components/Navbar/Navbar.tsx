@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center bg-gradient-to-b from-[#ff970bd4] to-[#f74707] text-white">
+      <nav className="sticky top-0 w-full flex items-center bg-gradient-to-b from-[#ff970bd4] to-[#f74707] text-white">
         {/* Logo */}
         <Link href="/">
           <a className="h-full flex items-center ml-[70px]">
