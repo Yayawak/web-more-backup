@@ -52,7 +52,9 @@ const Home: NextPage = () => {
               return (
                 <li key={index} className="mb-8">
                   <Link href={item.path}>
-                    <a className="text-[24px] hover:underline">{item.title + ` >`}</a>
+                    <a className="text-[24px] hover:underline">
+                      {item.title + ` >`}
+                    </a>
                   </Link>
                   <div className="border border-[#979797] w-[305px]" />
                 </li>
