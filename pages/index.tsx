@@ -1,3 +1,5 @@
+import NewsCard from '@/components/Cards/News/NewsCard'
+import Container from '@/components/Layout/Container'
 import { NextPage } from 'next'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
@@ -32,14 +34,21 @@ const Home: NextPage = () => {
   return (
     <>
       {/* News */}
-      <div className="w-10/12 mx-auto">
-        <div className="flex items-center">
-          <div className="border border-[#6a6a6a] w-[83px] h-0" />
-          <h1 className="text-[39px] font-bold mx-3">ข่าวสาร</h1>
-          <div className="border border-[#6a6a6a] w-full h-0" />
-        </div>
-      </div>
+      <Container>
+        <SectionTitle>ข่าวสาร</SectionTitle>
+      </Container>
+
+      <Container className="flex gap-[16px]">
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
+      </Container>
+
       {/* Programs */}
+      <Container>
+        <SectionTitle>หลักสูตร</SectionTitle>
+      </Container>
       <div className="w-10/12 mx-auto">
         <div className="flex items-center">
           <div className="border border-[#6a6a6a] w-[83px] h-0" />
@@ -108,6 +117,21 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <Container>
+        <SectionTitle>ภาควิชาและหน่วยงาน</SectionTitle>
+      </Container>
+
+      <Container>
+        <SectionTitle>ผู้บริหาร</SectionTitle>
+      </Container>
+
+      <Container>
+        <SectionTitle>Our partners</SectionTitle>
+      </Container>
+
+      <Container>
+        <SectionTitle>การเดินทาง</SectionTitle>
+      </Container>
     </>
   )
 }
@@ -179,3 +203,27 @@ const departmentItems: departmentItem[] = [
     path: '/departments/kdai',
   },
 ]
+interface ISectionTitleProps {
+  children?: React.ReactNode
+}
+const SectionTitle = ({ children }: ISectionTitleProps) => {
+  return (
+    <>
+      <div className="section-title flex gap-[8px] items-center justify-start">
+        <div className="border-t-[2px] border-black"></div>
+        <div className="text-[32px]">{children}</div>
+        <div className="border-t-[2px] border-black"></div>
+      </div>
+
+      <style jsx>{`
+        .section-title > div:not(:nth-child(2)) {
+          flex-grow: 1;
+        }
+
+        .section-title > div:nth-child(1) {
+          max-width: 50px;
+        }
+      `}</style>
+    </>
+  )
+}

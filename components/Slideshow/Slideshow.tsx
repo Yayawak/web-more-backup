@@ -13,6 +13,10 @@ const Slideshow = ({ images = [] }: SlideshowProps) => {
     else if (currentSlide < 0) setCurrentSlide(images.length - 1)
   }, [currentSlide, images.length])
 
+  const onNavigatorClick = useCallback((page: number) => {
+    setCurrentSlide(page)
+  }, [])
+
   return (
     <div className="w-full h-full relative">
       <div
@@ -26,6 +30,7 @@ const Slideshow = ({ images = [] }: SlideshowProps) => {
               currentSlide === i && 'active'
             }`}
             key={i}
+            onClick={() => onNavigatorClick(i)}
           ></div>
         ))}
       </div>
