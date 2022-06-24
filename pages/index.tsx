@@ -34,9 +34,7 @@ const Home: NextPage = () => {
     <>
       {/* News */}
       <Container>
-        <SectionTitle>
-          ข่าวสาร <span className="mdi mdi-facebook"></span>
-        </SectionTitle>
+        <SectionTitle>ข่าวสาร</SectionTitle>
       </Container>
 
       {/* Programs */}
@@ -70,6 +68,22 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
+      <Container>
+        <SectionTitle>ภาควิชาและหน่วยงาน</SectionTitle>
+      </Container>
+
+      <Container>
+        <SectionTitle>ผู้บริหาร</SectionTitle>
+      </Container>
+
+      <Container>
+        <SectionTitle>Our partners</SectionTitle>
+      </Container>
+
+      <Container>
+        <SectionTitle>การเดินทาง</SectionTitle>
+      </Container>
     </>
   )
 }
