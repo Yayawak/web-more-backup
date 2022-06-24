@@ -50,11 +50,6 @@ const Home: NextPage = () => {
         <SectionTitle>หลักสูตร</SectionTitle>
       </Container>
       <div className="w-10/12 mx-auto">
-        <div className="flex items-center">
-          <div className="border border-[#6a6a6a] w-[83px] h-0" />
-          <h1 className="text-[39px] font-bold mx-3">หลักสูตร</h1>
-          <div className="border border-[#6a6a6a] w-full h-0" />
-        </div>
         <div className="flex flex-wrap">
           <div>
             <ul className="ml-36 mt-28">
@@ -62,7 +57,9 @@ const Home: NextPage = () => {
                 return (
                   <li key={index} className="mb-8">
                     <Link href={item.path}>
-                      <a className="text-[24px] hover:underline">{item.title + ` >`}</a>
+                      <a className="text-[24px] hover:underline">
+                        {item.title + ` >`}
+                      </a>
                     </Link>
                     <div className="border border-[#979797] w-[305px]" />
                   </li>
@@ -71,24 +68,24 @@ const Home: NextPage = () => {
             </ul>
           </div>
           <div className="ml-auto mr-36">
-            <Image
-              src={atomLogo}
-              alt="Atom logo"
-              width={391}
-              height={391}
-            />
+            <Image src={atomLogo} alt="Atom logo" width={391} height={391} />
           </div>
         </div>
       </div>
       {/* Departments */}
       <div className="bg-gradient-to-br from-[#ff7c32] to-[#ffd200]">
         <div className="mx-auto py-14 lg:w-10/12">
-          <h1 className="w-fit round mx-auto mb-8 font-bold lg:text-[39px]">ภาควิชาและหน่วยงาน</h1>
+          <h1 className="w-fit round mx-auto mb-8 font-bold lg:text-[39px]">
+            ภาควิชาและหน่วยงาน
+          </h1>
           <div className="flex flex-col justify-center lg:flex-row">
             <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:w-[600px] lg:mr-auto">
               {departmentItems.map((item, index) => {
                 return (
-                  <li key={index} className="w-[154px] mb-4 basis-1/3 hover:underline">
+                  <li
+                    key={index}
+                    className="w-[154px] mb-4 basis-1/3 hover:underline"
+                  >
                     <Link href={item.path}>
                       <a className="flex flex-col items-center">
                         <div className="w-[100px] h-[100px] lg:w-[128px] lg:h-[128px] relative mb-2">
@@ -110,8 +107,11 @@ const Home: NextPage = () => {
               <div className="border border-black w-0 h-[192px] ml-8 mr-6 lg:h-[517px] lg:mr-44"></div>
               <p className="text-2xl whitespace-pre-wrap">
                 เพราะเราเชื่อว่า <br />
-                <q> การศึกษา วิจัย ด้านวิทยาศาสตร์และเทคโนโลยี <br />
-                เป็นรากฐานที่ดีของการพัฒนาประเทศ </q>
+                <q>
+                  {' '}
+                  การศึกษา วิจัย ด้านวิทยาศาสตร์และเทคโนโลยี <br />
+                  เป็นรากฐานที่ดีของการพัฒนาประเทศ{' '}
+                </q>
               </p>
             </div>
           </div>
