@@ -2,21 +2,25 @@ import { Rounded } from '@/types/rounded'
 import { useCallback } from 'react'
 
 interface IBaseButtonProps {
-  roundedType: Rounded
-  rounded: number
-  elevation: boolean
-  children: React.ReactNode
-  backgroundColor: string
-  textColor: string
+  roundedType?: Rounded
+  rounded?: number
+  elevation?: boolean
+  children?: React.ReactNode
+  backgroundColor?: string
+  textColor?: string
+  className?: string
+  padding?: string
 }
 
 const BaseButton = ({
+  children,
   roundedType = Rounded.NONE,
   rounded = 0,
   elevation = true,
   backgroundColor = '#0A17A7',
   textColor = 'white',
-  children,
+  className = '',
+  padding = '8px 16px',
 }: IBaseButtonProps) => {
   const getRound = useCallback(() => {
     if (roundedType === Rounded.NONE) {
@@ -33,13 +37,14 @@ const BaseButton = ({
       <button
         className={`base-button flex justify-center items-center ${
           elevation && 'drop-shadow-lg'
-        } py-[8px] px-[16px]`}
+        } ${className}`}
       >
         {children}
       </button>
 
       <style jsx>{`
         .base-button {
+          padding: ${padding};
           color: ${textColor};
           text-transform: uppercase;
           background-color: ${backgroundColor};

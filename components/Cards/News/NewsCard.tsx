@@ -1,3 +1,5 @@
+import BaseButton from '@/components/Buttons/Base/BaseButton'
+import { Rounded } from '@/types/rounded'
 import * as datefns from 'date-fns'
 
 interface INewsCardProps {
@@ -34,6 +36,14 @@ const NewsCard = ({
         </div>
         <div className="news-card-footer flex items-center">
           {date && <span>{datefns.format(date, 'dd MMM yyyy')}</span>}
+          <BaseButton
+            className="ml-auto"
+            roundedType={Rounded.FULL}
+            backgroundColor="#FF7C32"
+            padding="4px 16px"
+          >
+            อ่านต่อ
+          </BaseButton>
         </div>
       </div>
 
