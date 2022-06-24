@@ -16,8 +16,14 @@ const Layout = ({ children }: LayoutProps) => {
       </Head>
 
       <Navbar />
-      <main>{children}</main>
+      <div className="app-main">{children}</div>
       <Footer />
+
+      <style jsx>{`
+        .app-main {
+          margin-top: var(--navbar-height);
+        }
+      `}</style>
     </>
   )
 }
