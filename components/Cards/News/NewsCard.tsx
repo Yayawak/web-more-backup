@@ -3,8 +3,8 @@ import { Rounded } from '@/types/rounded'
 import * as datefns from 'date-fns'
 
 interface INewsCardProps {
-  width: number
-  height: number
+  width?: number
+  height?: number
   imageUrl?: string
   title?: string
   category?: string[]
