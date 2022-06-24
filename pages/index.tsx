@@ -46,24 +46,25 @@ const Home: NextPage = () => {
           <h1 className="text-[39px] font-bold mx-3">หลักสูตร</h1>
           <div className="border border-[#6a6a6a] w-full h-0" />
         </div>
-        <div className="flex">
-          <ul className="ml-36 mt-28">
-            {programItems.map((item, index) => {
-              return (
-                <li key={index} className="mb-8">
-                  <Link href={item.path}>
-                    <a className="text-[24px] hover:underline">{item.title + ` >`}</a>
-                  </Link>
-                  <div className="border border-[#979797] w-[305px]" />
-                </li>
-              )
-            })}
-          </ul>
+        <div className="flex flex-wrap">
+          <div>
+            <ul className="ml-36 mt-28">
+              {programItems.map((item, index) => {
+                return (
+                  <li key={index} className="mb-8">
+                    <Link href={item.path}>
+                      <a className="text-[24px] hover:underline">{item.title + ` >`}</a>
+                    </Link>
+                    <div className="border border-[#979797] w-[305px]" />
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
           <div className="ml-auto mr-36">
             <Image
               src={atomLogo}
               alt="Atom logo"
-              layout="fixed"
               width={391}
               height={391}
             />
