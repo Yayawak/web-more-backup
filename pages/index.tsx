@@ -101,6 +101,17 @@ const Home: NextPage = () => {
       <Container>
         <SectionTitle>ผู้บริหาร</SectionTitle>
 
+        <div className="flex gap-[24px] justify-center mb-[32px]">
+          <ExecutiveCard />
+        </div>
+
+        <div className="flex gap-[24px] justify-center mb-[32px]">
+          <ExecutiveCard />
+          <ExecutiveCard />
+          <ExecutiveCard />
+          <ExecutiveCard />
+        </div>
+
         <BaseButton
           backgroundColor="#FF7C32"
           roundedType={Rounded.CUSTOM}
@@ -135,6 +146,7 @@ import scitoolIcon from '@/assets/icons/icon-scitool.svg'
 import kdaiIcon from '@/assets/icons/icon-kdai.svg'
 import BaseButton from '@/components/Buttons/Base/BaseButton'
 import { Rounded } from '@/types/rounded'
+import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
 
 type programItem = {
   title: string
