@@ -3,12 +3,9 @@ import Head from 'next/head'
 
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
+import { IComponentProps } from '@/types/component-props'
 
-interface LayoutProps {
-  children: React.ReactNode
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: IComponentProps) => {
   return (
     <>
       <Head>
@@ -21,7 +18,8 @@ const Layout = ({ children }: LayoutProps) => {
 
       <style jsx>{`
         .app-main {
-          margin-top: var(--navbar-height);
+          position: relative;
+          padding-top: var(--navbar-height);
         }
       `}</style>
     </>

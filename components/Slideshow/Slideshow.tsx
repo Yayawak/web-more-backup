@@ -1,3 +1,4 @@
+import { CustomProps } from '@/types/component-props'
 import React, { useCallback, useState, useEffect } from 'react'
 import ControlButton from './ControlButton'
 
@@ -5,7 +6,9 @@ interface SlideshowProps {
   images?: string[]
 }
 
-const Slideshow = ({ images = [] }: SlideshowProps) => {
+type Props = CustomProps<SlideshowProps>
+
+const Slideshow = ({ images = [], className = '', style = {} }: Props) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(() => {
@@ -18,7 +21,7 @@ const Slideshow = ({ images = [] }: SlideshowProps) => {
   }, [])
 
   return (
-    <div className="w-full h-full relative">
+    <div className={`w-full h-full relative ${className}`} style={style}>
       <div
         className={`${
           images.length > 0 && 'mb-[8px]'
