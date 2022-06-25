@@ -11,10 +11,18 @@ type Props = CustomProps<SlideshowProps>
 const Slideshow = ({ images = [], className = '', style = {} }: Props) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  useEffect(() => {
-    if (currentSlide > images.length - 1) setCurrentSlide(0)
-    else if (currentSlide < 0) setCurrentSlide(images.length - 1)
-  }, [currentSlide, images.length])
+  const navigate = useCallback(
+    (num: number) => {
+      if (num === 1) {
+        if (currentSlide + 1 === images.length) setCurrentSlide(0)
+        else setCurrentSlide((val) => val + 1)
+      } else if (num === -1) {
+        if (currentSlide - 1 === -1) setCurrentSlide(images.length - 1)
+        else setCurrentSlide((val) => val - 1)
+      }
+    },
+    [currentSlide, images.length]
+  )
 
   const onNavigatorClick = useCallback((page: number) => {
     setCurrentSlide(page)
@@ -42,14 +50,8 @@ const Slideshow = ({ images = [], className = '', style = {} }: Props) => {
       </div>
 
       <div className="slideshow-content relative w-full grow">
-        <ControlButton
-          side="left"
-          onClick={() => setCurrentSlide((v) => v - 1)}
-        />
-        <ControlButton
-          side="right"
-          onClick={() => setCurrentSlide((v) => v + 1)}
-        />
+        <ControlButton side="left" onClick={() => navigate(-1)} />
+        <ControlButton side="right" onClick={() => navigate(1)} />
 
         <div
           className="relative w-full h-full bg-no-repeat bg-cover"
