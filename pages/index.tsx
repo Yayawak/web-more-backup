@@ -6,6 +6,10 @@ import Link from 'next/link'
 
 import atomLogo from '../assets/logos/atom-logo.png'
 
+import tcasBG from '@/assets/images/tcas_bg.png'
+import partnerEtat from '@/assets/images/partners/etat.png'
+import partnerIsp from '@/assets/images/partners/isp.png'
+
 /**
  * TODO: Add responsive design
  */
@@ -13,8 +17,43 @@ import atomLogo from '../assets/logos/atom-logo.png'
 const Home: NextPage = () => {
   return (
     <>
+      {/* <div className="bg-[#FF6D2D] h-[50px] flex items-center">
+        <Container>
+          <div className="text-white text-[32px] font-bold">TCAS</div>
+        </Container>
+      </div>
+
+      <Container
+        className="bg-cover bg-no-repeat bg-center pb-[8px] h-[300px]"
+        style={{
+          backgroundImage: `url(${tcasBG.src})`,
+        }}
+      >
+        <Container noPadding className="flex w-full h-full">
+          <div className="flex flex-col">
+            <div>TCAS 65</div>
+            <BaseButton
+              backgroundColor="#0A17A7"
+              textColor="white"
+              roundedType={Rounded.CUSTOM}
+              rounded={10}
+              className="mt-auto"
+            >
+              เข้าสู่เว็บไซต์ Admission
+            </BaseButton>
+          </div>
+        </Container>
+      </Container> */}
+
+      <Container className="h-[350px]">
+        <Slideshow
+          className="mt-[16px] mx-auto"
+          style={{ maxWidth: '800px' }}
+        />
+      </Container>
+
       {/* News */}
-      <Container>
+      <Container className="my-[16px]">
         <SectionTitle>ข่าวสาร</SectionTitle>
       </Container>
 
@@ -23,6 +62,18 @@ const Home: NextPage = () => {
         <NewsCard />
         <NewsCard />
         <NewsCard />
+      </Container>
+
+      <Container>
+        <BaseButton
+          className="mx-auto mt-[48px]"
+          roundedType={Rounded.CUSTOM}
+          rounded={8}
+          backgroundColor="#FF7C32"
+          elevation={false}
+        >
+          ข่าวทั้งหมด
+        </BaseButton>
       </Container>
 
       {/* Programs */}
@@ -99,7 +150,7 @@ const Home: NextPage = () => {
       </div>
 
       <Container>
-        <SectionTitle>ผู้บริหาร</SectionTitle>
+        <SectionTitle className="my-[16px]">ผู้บริหาร</SectionTitle>
 
         <div className="flex gap-[24px] justify-center mb-[32px]">
           <ExecutiveCard />
@@ -117,19 +168,46 @@ const Home: NextPage = () => {
           roundedType={Rounded.CUSTOM}
           rounded={8}
           elevation={false}
-          className="mx-auto"
+          className="mx-auto mt-[48px]"
         >
           คณะผู้บริหารทั้งหมด
         </BaseButton>
       </Container>
 
       <Container>
-        <SectionTitle>Our partners</SectionTitle>
+        <SectionTitle className="my-[16px]">Our partners</SectionTitle>
+
+        <div className="image relative mx-auto">
+          <Image src={partnerEtat.src} alt="etat" layout="fill" />
+        </div>
+        <div className="image relative mx-auto mt-[32px]">
+          <Image src={partnerIsp.src} alt="etat" layout="fill" />
+        </div>
       </Container>
 
       <Container>
         <SectionTitle>การเดินทาง</SectionTitle>
       </Container>
+
+      <style jsx>{`
+        .image {
+          max-width: 600px;
+          height: auto;
+        }
+
+        .image :global(span) {
+          position: relative !important;
+          width: 100% !important;
+          height: 100% !important;
+        }
+
+        .image :global(img) {
+          position: relative !important;
+          width: 100% !important;
+          height: auto !important;
+          min-height: unset !important;
+        }
+      `}</style>
     </>
   )
 }
@@ -147,6 +225,7 @@ import kdaiIcon from '@/assets/icons/icon-kdai.svg'
 import BaseButton from '@/components/Buttons/Base/BaseButton'
 import { Rounded } from '@/types/rounded'
 import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
+import Slideshow from '@/components/Slideshow/Slideshow'
 
 type programItem = {
   title: string
