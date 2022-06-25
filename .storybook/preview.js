@@ -1,4 +1,5 @@
-import '../styles/globals.scss'
+import '@/styles/globals.scss'
+import '@mdi/font/css/materialdesignicons.min.css'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
