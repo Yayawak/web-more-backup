@@ -5,30 +5,10 @@ import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 import atomLogo from '../assets/logos/atom-logo.png'
-import chemistryIcon from '../assets/icons/icon-chemist.svg'
-import mathIcon from '../assets/icons/icon-math.svg'
-import physicsIcon from '../assets/icons/icon-physics.svg'
-import biologyIcon from '../assets/icons/icon-biology.svg'
-import comsciIcon from '../assets/icons/icon-comsci.svg'
-import statisticIcon from '../assets/icons/icon-stat.svg'
-import scitoolIcon from '../assets/icons/icon-scitool.svg'
-import kdaiIcon from '../assets/icons/icon-kdai.svg'
 
 /**
  * TODO: Add responsive design
  */
-
-type programItem = {
-  title: string
-  path: string
-}
-
-type departmentItem = {
-  title: string
-  image: StaticImageData
-  alt: string
-  path: string
-}
 
 const Home: NextPage = () => {
   return (
@@ -74,10 +54,10 @@ const Home: NextPage = () => {
       </div>
       {/* Departments */}
       <div className="bg-gradient-to-br from-[#ff7c32] to-[#ffd200]">
-        <div className="mx-auto py-14 lg:w-10/12">
-          <h1 className="w-fit round mx-auto mb-8 font-bold lg:text-[39px]">
-            ภาควิชาและหน่วยงาน
-          </h1>
+        <Container className="py-[16px]">
+          <Container className="mb-[32px]">
+            <SectionTitle>ภาควิชาและหน่วยงาน</SectionTitle>
+          </Container>
           <div className="flex flex-col justify-center lg:flex-row">
             <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:w-[600px] lg:mr-auto">
               {departmentItems.map((item, index) => {
@@ -115,14 +95,21 @@ const Home: NextPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
-      <Container>
-        <SectionTitle>ภาควิชาและหน่วยงาน</SectionTitle>
-      </Container>
 
       <Container>
         <SectionTitle>ผู้บริหาร</SectionTitle>
+
+        <BaseButton
+          backgroundColor="#FF7C32"
+          roundedType={Rounded.CUSTOM}
+          rounded={8}
+          elevation={false}
+          className="mx-auto"
+        >
+          คณะผู้บริหารทั้งหมด
+        </BaseButton>
       </Container>
 
       <Container>
@@ -138,7 +125,30 @@ const Home: NextPage = () => {
 
 export default Home
 
-const programItems: programItem[] = [
+import chemistryIcon from '@/assets/icons/icon-chemist.svg'
+import mathIcon from '@/assets/icons/icon-math.svg'
+import physicsIcon from '@/assets/icons/icon-physics.svg'
+import biologyIcon from '@/assets/icons/icon-biology.svg'
+import comsciIcon from '@/assets/icons/icon-comsci.svg'
+import statisticIcon from '@/assets/icons/icon-stat.svg'
+import scitoolIcon from '@/assets/icons/icon-scitool.svg'
+import kdaiIcon from '@/assets/icons/icon-kdai.svg'
+import BaseButton from '@/components/Buttons/Base/BaseButton'
+import { Rounded } from '@/types/rounded'
+
+type programItem = {
+  title: string
+  path: string
+}
+
+type departmentItem = {
+  title: string
+  image: StaticImageData
+  alt: string
+  path: string
+}
+
+export const programItems: programItem[] = [
   {
     title: 'หลักสูตรปริญญาตรี',
     path: '/programs/bechelor',
@@ -153,7 +163,7 @@ const programItems: programItem[] = [
   },
 ]
 
-const departmentItems: departmentItem[] = [
+export const departmentItems: departmentItem[] = [
   {
     title: 'ภาควิชาเคมี',
     image: chemistryIcon,
@@ -203,16 +213,25 @@ const departmentItems: departmentItem[] = [
     path: '/departments/kdai',
   },
 ]
+
 interface ISectionTitleProps {
   children?: React.ReactNode
+  color?: string
+  className?: string
 }
-const SectionTitle = ({ children }: ISectionTitleProps) => {
+const SectionTitle = ({
+  children,
+  color = 'black',
+  className = '',
+}: ISectionTitleProps) => {
   return (
     <>
-      <div className="section-title flex gap-[8px] items-center justify-start">
-        <div className="border-t-[2px] border-black"></div>
-        <div className="text-[32px]">{children}</div>
-        <div className="border-t-[2px] border-black"></div>
+      <div
+        className={`section-title flex gap-[8px] items-center justify-start ${className}`}
+      >
+        <div className="line border-t-[2px]"></div>
+        <div className="title text-[32px] font-bold">{children}</div>
+        <div className="line border-t-[2px]"></div>
       </div>
 
       <style jsx>{`
@@ -221,7 +240,15 @@ const SectionTitle = ({ children }: ISectionTitleProps) => {
         }
 
         .section-title > div:nth-child(1) {
-          max-width: 50px;
+          max-width: 100px;
+        }
+
+        .title {
+          color: ${color};
+        }
+
+        .line {
+          border-top-color: ${color};
         }
       `}</style>
     </>
