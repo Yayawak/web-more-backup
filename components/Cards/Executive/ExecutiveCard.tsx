@@ -22,10 +22,12 @@ const ExecutiveCard = ({
   return (
     <>
       <div className="executive-card bg-[#F2F2F2] rounded-[30px] drop-shadow-lg grid overflow-hidden pb-[16px]">
-        <div
-          className="bg-cover bg-no-repeat bg-center"
-          style={{ backgroundImage: `url(${image})` }}
-        ></div>
+        <div className="pt-[8px] px-[8px]">
+          <div
+            className="bg-cover bg-no-repeat bg-center w-full h-full rounded-[20px]"
+            style={{ backgroundImage: `url(${image})` }}
+          ></div>
+        </div>
 
         <div className="mt-[8px] px-[8px] text-center">{name}</div>
         <div className="px-[8px] text-center text-[16px]">{position}</div>
