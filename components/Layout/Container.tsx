@@ -14,11 +14,12 @@ const Container = ({
   const getMaxWidth = useMemo(() => (fluid ? 'unset' : '1200px'), [fluid])
   return (
     <>
-      <div className={`container ${className}`}>{children}</div>
+      <div className={`container relative mx-auto ${className}`}>
+        {children}
+      </div>
 
       <style jsx>{`
         .container {
-          margin: auto;
           max-width: ${getMaxWidth};
         }
       `}</style>
