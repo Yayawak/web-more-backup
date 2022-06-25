@@ -1,7 +1,7 @@
 import NewsCard from '@/components/Cards/News/NewsCard'
 import Container from '@/components/Layout/Container'
 import { NextPage } from 'next'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import atomLogo from '../assets/logos/atom-logo.png'
@@ -10,6 +10,19 @@ import tcasBG from '@/assets/images/tcas_bg.png'
 import partnerEtat from '@/assets/images/partners/etat.png'
 import partnerIsp from '@/assets/images/partners/isp.png'
 
+import chemistryIcon from '@/assets/icons/icon-chemist.svg'
+import mathIcon from '@/assets/icons/icon-math.svg'
+import physicsIcon from '@/assets/icons/icon-physics.svg'
+import biologyIcon from '@/assets/icons/icon-biology.svg'
+import comsciIcon from '@/assets/icons/icon-comsci.svg'
+import statisticIcon from '@/assets/icons/icon-stat.svg'
+import scitoolIcon from '@/assets/icons/icon-scitool.svg'
+import kdaiIcon from '@/assets/icons/icon-kdai.svg'
+import BaseButton from '@/components/Buttons/Base/BaseButton'
+import { Rounded } from '@/types/rounded'
+import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
+import Slideshow from '@/components/Slideshow/Slideshow'
+
 /**
  * TODO: Add responsive design
  */
@@ -17,7 +30,15 @@ import partnerIsp from '@/assets/images/partners/isp.png'
 const Home: NextPage = () => {
   return (
     <>
-      {/* <div className="bg-[#FF6D2D] h-[50px] flex items-center">
+      <Container className="h-[500px] mb-[16px]">
+        <Slideshow
+          className="mt-[16px] mx-auto"
+          style={{ maxWidth: '800px' }}
+          images={slideshowImages}
+        />
+      </Container>
+
+      <div className="bg-[#FF6D2D] h-[50px] flex items-center">
         <Container>
           <div className="text-white text-[32px] font-bold">TCAS</div>
         </Container>
@@ -43,21 +64,25 @@ const Home: NextPage = () => {
             </BaseButton>
           </div>
         </Container>
-      </Container> */}
-
-      <Container className="h-[350px]">
-        <Slideshow
-          className="mt-[16px] mx-auto"
-          style={{ maxWidth: '800px' }}
-        />
       </Container>
 
       {/* News */}
       <Container className="my-[16px]">
-        <SectionTitle>ข่าวสาร</SectionTitle>
+        <SectionTitle className="mb-[16px]">ข่าวสาร</SectionTitle>
+
+        <div className="flex gap-[8px] flex-wrap">
+          {newsTypes.map((e) => (
+            <div
+              key={e}
+              className="rounded-[10px] px-[16px] py-[4px] border-[1px] border-black cursor-pointer"
+            >
+              {e}
+            </div>
+          ))}
+        </div>
       </Container>
 
-      <Container className="flex gap-[16px]">
+      <Container className="flex gap-[16px] mt-[32px]">
         <NewsCard />
         <NewsCard />
         <NewsCard />
@@ -214,32 +239,7 @@ const Home: NextPage = () => {
 
 export default Home
 
-import chemistryIcon from '@/assets/icons/icon-chemist.svg'
-import mathIcon from '@/assets/icons/icon-math.svg'
-import physicsIcon from '@/assets/icons/icon-physics.svg'
-import biologyIcon from '@/assets/icons/icon-biology.svg'
-import comsciIcon from '@/assets/icons/icon-comsci.svg'
-import statisticIcon from '@/assets/icons/icon-stat.svg'
-import scitoolIcon from '@/assets/icons/icon-scitool.svg'
-import kdaiIcon from '@/assets/icons/icon-kdai.svg'
-import BaseButton from '@/components/Buttons/Base/BaseButton'
-import { Rounded } from '@/types/rounded'
-import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
-import Slideshow from '@/components/Slideshow/Slideshow'
-
-type programItem = {
-  title: string
-  path: string
-}
-
-type departmentItem = {
-  title: string
-  image: StaticImageData
-  alt: string
-  path: string
-}
-
-export const programItems: programItem[] = [
+const programItems = [
   {
     title: 'หลักสูตรปริญญาตรี',
     path: '/programs/bechelor',
@@ -254,7 +254,7 @@ export const programItems: programItem[] = [
   },
 ]
 
-export const departmentItems: departmentItem[] = [
+const departmentItems = [
   {
     title: 'ภาควิชาเคมี',
     image: chemistryIcon,
@@ -303,6 +303,25 @@ export const departmentItems: departmentItem[] = [
     alt: 'KDAI icon',
     path: '/departments/kdai',
   },
+]
+
+const slideshowImages = [
+  'https://s3-alpha-sig.figma.com/img/39a4/d040/41698d9675a622fdaeacd6be81648804?Expires=1656892800&Signature=XoWRy10K~9bA5PJhbjYaif-agwI1~Eq~JJzZaPGmDAYenFYXCAzgsjlpMKyDdl2B9u4heUNH3lEMdFw2dTeFClJ85Ko8FfTEO1nQiv2M5X3HJVeK3VG48EhRXm7b6dNqUdmIkDL3VKQYOqPpbCje0zLiySlF4GivmQIRvm3cSyEHDAZSo8jHJV38zb3iv68NZIzS2wEqk~JAO0e66dY0EjPOXjU5m1a4r~2uU~9aAey6iaOce83rGWcONNRh2gp-eU2668ZcggAyWonvUiIbbn1cbRl~P3AcKM7fPUP-zE4oZU6f~90s1FY4SphtjWDDxOZm4hfX4wCQSge0eRVqOQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
+]
+
+const newsTypes = [
+  'ทั้งหมด',
+  'ทุนการศึกษา/วิจัย',
+  'จัดซื้อ-จัดจ้าง',
+  'บริการวิชาการ/อบรม/สัมมนา',
+  'งานประกันคุณภาพ',
+  'จดหมายข่าวคณะวิทยาศาสตร์',
+  'ปริญญาตรี',
+  'กิจกรรม',
+  'รางวัล',
+  'งานการเงิน',
+  'บัณฑิตศึกษา',
+  'HR',
 ]
 
 interface ISectionTitleProps {
