@@ -41,6 +41,7 @@ const NewsCard = ({
             roundedType={Rounded.FULL}
             backgroundColor="#FF7C32"
             padding="4px 16px"
+            elevation={false}
           >
             อ่านต่อ
           </BaseButton>
