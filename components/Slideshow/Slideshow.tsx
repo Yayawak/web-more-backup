@@ -21,7 +21,10 @@ const Slideshow = ({ images = [], className = '', style = {} }: Props) => {
   }, [])
 
   return (
-    <div className={`w-full h-full relative ${className}`} style={style}>
+    <div
+      className={`flex flex-col w-full h-full relative ${className}`}
+      style={style}
+    >
       <div
         className={`${
           images.length > 0 && 'mb-[8px]'
@@ -38,7 +41,7 @@ const Slideshow = ({ images = [], className = '', style = {} }: Props) => {
         ))}
       </div>
 
-      <div className="slideshow-content relative w-full h-full">
+      <div className="slideshow-content relative w-full grow">
         <ControlButton
           side="left"
           onClick={() => setCurrentSlide((v) => v - 1)}
