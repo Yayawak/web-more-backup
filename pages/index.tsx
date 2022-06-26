@@ -224,24 +224,25 @@ const Home: NextPage = () => {
       <Container>
         <SectionTitle className="mb-[16px]">การเดินทาง</SectionTitle>
 
-        <div className="flex drop-shadow-lg rounded-[4px] h-[574px] bg-[#F2F2F2] mb-[32px] overflow-hidden">
-          <div className="relative grow flex justify-center items-center">
+        <div className="flex flex-col md:flex-row drop-shadow-lg rounded-[4px] min-h-[574px] bg-[#F2F2F2] mb-[32px] overflow-hidden">
+          <div className="relative grow flex justify-center items-center min-h-[300px] md:min-h-[unset] bg-[#FBFBFB]">
             <Image
               src={mapImage.src}
               alt="kmitl map"
               layout="fill"
               objectFit="contain"
+              className="mt-[16px] md:mt-0"
             />
           </div>
 
-          <div className="p-[16px] pl-[32px] w-[450px] flex flex-col">
+          <div className="p-[16px] pl-[32px] flex flex-col w-full md:w-[450px]">
             <div>
               <div className="text-[#FF7C32]">ที่อยู่</div>
               <div>คณะวิทยาศาสตร์</div>
               <div>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</div>
               <div>ถนนฉลองกรุง เขตลาดกระบัง กรุงเทพ 10520</div>
             </div>
-            <div className="flex mt-[16px]">
+            <div className="flex mt-[16px] mb-[16px]">
               <div className="border-l-2 border-[#FF7C32] mr-[16px]"></div>
               <div>
                 <div className="text-[#FF7C32]">รถโดยสารประจำทาง</div>
