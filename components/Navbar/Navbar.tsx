@@ -2,12 +2,12 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
-import Menu from './Menu'
 import menuItems from './MenuItems'
 
 import sciKmitlLogo from '../../assets/logos/sci-kmitl-logo.png'
 import flagTH from '../../assets/flags/flag-th.png'
 import flagEN from '../../assets/flags/flag-en.png'
+import MyMenu from './MyMenu'
 
 /**
  * TODO: Add responsive design to Navbar component
@@ -35,10 +35,12 @@ const Navbar = () => {
         </Link>
 
         {/* Navigation */}
-        <ul className="ml-auto h-full text-[25px] flex">
-          {menuItems.map((menu, index) => {
+        <ul className="ml-auto h-full flex">
+          {menuItems.map((item, index) => {
             const depthLevel = 0
-            return <Menu item={menu} key={index} depthLevel={depthLevel} />
+            return (
+              <MyMenu key={index} item={item} depthLevel={depthLevel} />
+            )
           })}
         </ul>
 
