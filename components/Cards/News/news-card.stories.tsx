@@ -24,4 +24,8 @@ Default.args = {
   title:
     'First Announcement for the 18th International Symposium of Biocontroland Biotechnology',
   date: new Date(),
+  style: {
+    width: '304px',
+    height: '348px',
+  },
 }

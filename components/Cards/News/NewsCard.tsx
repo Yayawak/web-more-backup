@@ -1,28 +1,30 @@
 import BaseButton from '@/components/Buttons/Base/BaseButton'
+import { CustomProps } from '@/types/component-props'
 import { Rounded } from '@/types/rounded'
 import * as datefns from 'date-fns'
 
 interface INewsCardProps {
-  width?: number
-  height?: number
   imageUrl?: string
   title?: string
   category?: string[]
   date?: Date
 }
 
+type Props = CustomProps<INewsCardProps>
+
 const NewsCard = ({
-  width = 304,
-  height = 348,
   imageUrl = '',
   title = '',
   category = [],
   date,
-}: INewsCardProps) => {
+  className = '',
+  style = {},
+}: Props) => {
   return (
     <>
       <div
-        className={`news-card drop-shadow-lg bg-white rounded-[20px] p-[16px] grid overflow-hidden`}
+        className={`news-card drop-shadow-lg bg-white rounded-[20px] p-[16px] grid overflow-hidden ${className}`}
+        style={style}
       >
         <div
           className="news-card-image bg-cover bg-no-repeat bg-center"
@@ -51,8 +53,6 @@ const NewsCard = ({
       <style jsx>{`
         .news-card {
           grid-template-rows: 114px auto 50px;
-          width: ${width}px;
-          height: ${height}px;
         }
 
         .news-card-body-description {
