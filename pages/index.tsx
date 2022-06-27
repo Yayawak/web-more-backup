@@ -31,9 +31,9 @@ import mapImage from '@/assets/images/map.png'
 const Home: NextPage = () => {
   return (
     <>
-      <Container className="h-[500px] mb-[16px]">
+      <Container className="h-[500px] my-[16px]">
         <Slideshow
-          className="mt-[16px] mx-auto"
+          className="mx-auto"
           style={{ maxWidth: '800px' }}
           images={slideshowImages}
         />
