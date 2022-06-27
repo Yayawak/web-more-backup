@@ -22,6 +22,7 @@ import BaseButton from '@/components/Buttons/Base/BaseButton'
 import { Rounded } from '@/types/rounded'
 import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
 import Slideshow from '@/components/Slideshow/Slideshow'
+import mapImage from '@/assets/images/map.png'
 
 /**
  * TODO: Add responsive design
@@ -203,34 +204,83 @@ const Home: NextPage = () => {
         <SectionTitle className="my-[16px]">Our partners</SectionTitle>
 
         <div className="image relative mx-auto">
-          <Image src={partnerEtat.src} alt="etat" layout="fill" />
+          <Image
+            src={partnerEtat.src}
+            alt="etat"
+            layout="fill"
+            objectFit="contain"
+          />
         </div>
         <div className="image relative mx-auto mt-[32px]">
-          <Image src={partnerIsp.src} alt="etat" layout="fill" />
+          <Image
+            src={partnerIsp.src}
+            alt="isp"
+            layout="fill"
+            objectFit="contain"
+          />
         </div>
       </Container>
 
       <Container>
-        <SectionTitle>การเดินทาง</SectionTitle>
+        <SectionTitle className="mb-[16px]">การเดินทาง</SectionTitle>
+
+        <div className="flex flex-col md:flex-row drop-shadow-lg rounded-[4px] min-h-[574px] bg-[#F2F2F2] mb-[32px] overflow-hidden">
+          <div className="relative grow flex justify-center items-center min-h-[300px] md:min-h-[unset] bg-[#FBFBFB]">
+            <Image
+              src={mapImage.src}
+              alt="kmitl map"
+              layout="fill"
+              objectFit="contain"
+              className="mt-[16px] md:mt-0"
+            />
+          </div>
+
+          <div className="p-[16px] pl-[32px] flex flex-col w-full md:w-[450px]">
+            <div>
+              <div className="text-[#FF7C32]">ที่อยู่</div>
+              <div>คณะวิทยาศาสตร์</div>
+              <div>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</div>
+              <div>ถนนฉลองกรุง เขตลาดกระบัง กรุงเทพ 10520</div>
+            </div>
+            <div className="flex mt-[16px] mb-[16px]">
+              <div className="border-l-2 border-[#FF7C32] mr-[16px]"></div>
+              <div>
+                <div className="text-[#FF7C32]">รถโดยสารประจำทาง</div>
+                <ul>
+                  <li className="ml-[24px] mt-[16px] list-disc">
+                    รถโดยสารประจำทางสาย 1013 ต้นทาง จากซอยสุขุมวิท 77 (อ่อนนุช)
+                    ปลายทาง ตลาดหัวตะเข้
+                  </li>
+
+                  <li className="ml-[24px] mt-[16px] list-disc">
+                    รถโดยสารประจำทางสาย 1013 (คันเล็ก) ต้นทาง
+                    จากศูนย์การค้าเสรีเซนเตอร์ ปลายทาง นิคมอุตสาหกรรมลาดกระบัง
+                  </li>
+
+                  <li className="ml-[24px] mt-[16px] list-disc">
+                    รถประจำทางสาย 517 ต้นทาง สวนจตุจักร ปลายทาง
+                    สถาบันเทคโนโลยีพระจอมเกล้า
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <BaseButton
+              backgroundColor="#FF7C32"
+              roundedType={Rounded.CUSTOM}
+              rounded={8}
+              className="mx-auto mt-auto"
+              elevation={false}
+            >
+              การเดินทางเพิ่มเติม
+            </BaseButton>
+          </div>
+        </div>
       </Container>
 
       <style jsx>{`
         .image {
           max-width: 600px;
-          height: auto;
-        }
-
-        .image :global(span) {
-          position: relative !important;
-          width: 100% !important;
-          height: 100% !important;
-        }
-
-        .image :global(img) {
-          position: relative !important;
-          width: 100% !important;
-          height: auto !important;
-          min-height: unset !important;
+          height: 100px;
         }
       `}</style>
     </>
