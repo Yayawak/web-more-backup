@@ -79,7 +79,7 @@ const Home: NextPage = () => {
         </div>
       </Container>
 
-      <Container className="flex gap-[16px] mt-[32px]">
+      <Container className="news-cards grid justify-between gap-[16px] mt-[32px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap">
         <NewsCard />
         <NewsCard />
         <NewsCard />
@@ -275,6 +275,11 @@ const Home: NextPage = () => {
       </Container>
 
       <style jsx>{`
+        :global(.news-card) {
+          flex-grow: 1;
+          height: 348px;
+        }
+
         .image {
           max-width: 600px;
           height: 100px;
