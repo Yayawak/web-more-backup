@@ -2465,6 +2465,13 @@
     regenerator-runtime "^0.13.7"
     resolve-from "^5.0.0"
 
+"@styled-jsx/plugin-sass@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@styled-jsx/plugin-sass/-/plugin-sass-4.0.2.tgz#6bbe6368dba608eb09e2128e47a1a02db3585c52"
+  integrity sha512-TVEzLI4z0nswzySN7+n9UHwxSb1+EAHFVYHlaEGJNaPTg65Tkg0LllkPZz9WUCgpH2zG1Jams/4EelWNjwNjIQ==
+  dependencies:
+    strip-indent "3.0.0"
+
 "@szhsin/react-menu@^3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@szhsin/react-menu/-/react-menu-3.1.1.tgz#8218fdb4bb2f55cc066392ccd31613125357af8d"
@@ -10029,19 +10036,19 @@ strip-final-newline@^2.0.0:
   resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
   integrity sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
 
+strip-indent@3.0.0, strip-indent@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-3.0.0.tgz#c32e1cee940b6b3432c771bc2c54bcce73cd3001"
+  integrity sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
+  dependencies:
+    min-indent "^1.0.0"
+
 strip-indent@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-1.0.1.tgz#0c7962a6adefa7bbd4ac366460a638552ae1a0a2"
   integrity sha512-I5iQq6aFMM62fBEAIB/hXzwJD6EEZ0xEGCX2t7oXqaKPIRgt4WruAQ285BISgdkP+HLGWyeGmNJcpIwFeRYRUA==
   dependencies:
     get-stdin "^4.0.1"
-
-strip-indent@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-3.0.0.tgz#c32e1cee940b6b3432c771bc2c54bcce73cd3001"
-  integrity sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
-  dependencies:
-    min-indent "^1.0.0"
 
 strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   version "3.1.1"
