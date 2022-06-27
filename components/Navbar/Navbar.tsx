@@ -4,10 +4,10 @@ import Image from 'next/image'
 
 import menuItems from './MenuItems'
 
-import sciKmitlLogo from '../../assets/logos/sci-kmitl-logo.png'
-import flagTH from '../../assets/flags/flag-th.png'
-import flagEN from '../../assets/flags/flag-en.png'
-import MyMenu from './MyMenu'
+import sciKmitlLogo from '@/assets/logos/sci-kmitl-logo.png'
+import flagTH from '@/assets/flags/flag-th.png'
+import flagEN from '@/assets/flags/flag-en.png'
+import MyMenu from './NavbarMenu'
 
 /**
  * TODO: Add responsive design to Navbar component
@@ -35,32 +35,30 @@ const Navbar = () => {
         </Link>
 
         {/* Navigation */}
-        <ul className="ml-auto h-full flex">
+        <div className="ml-auto h-full flex gap-[24px]">
           {menuItems.map((item, index) => {
             const depthLevel = 0
-            return (
-              <MyMenu key={index} item={item} depthLevel={depthLevel} />
-            )
+            return <MyMenu key={index} item={item} depthLevel={depthLevel} />
           })}
-        </ul>
+        </div>
 
         {/* Languages */}
-        <ul className="flex items-center h-full pl-[18px] gap-[8px] mr-[60px]">
-          <li className="flex h-min">
+        <div className="flex items-center h-full pl-[18px] gap-[8px] mr-[60px]">
+          <div className="flex h-min">
             <Link href={asPath} locale="th">
               <a className="h-[24px]">
                 <Image src={flagTH} alt="Thai logo" />
               </a>
             </Link>
-          </li>
-          <li className="flex h-min">
+          </div>
+          <div className="flex h-min">
             <Link href={asPath} locale="en">
               <a className="h-[24px]">
                 <Image src={flagEN} alt="English logo" />
               </a>
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
 
       <style jsx>{`
