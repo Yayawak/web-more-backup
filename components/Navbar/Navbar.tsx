@@ -2,12 +2,14 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
-import menuItems from './MenuItems'
+import menuItems, { MyMenuItem } from './MenuItems'
 
 import sciKmitlLogo from '@/assets/logos/sci-kmitl-logo.png'
 import flagTH from '@/assets/flags/flag-th.png'
 import flagEN from '@/assets/flags/flag-en.png'
-import MyMenu from './NavbarMenu'
+import NavbarMenu from './NavbarMenu'
+import { Menu, MenuButton } from '@szhsin/react-menu'
+import { useCallback } from 'react'
 
 /**
  * TODO: Add responsive design to Navbar component
@@ -16,6 +18,15 @@ import MyMenu from './NavbarMenu'
 const Navbar = () => {
   const router = useRouter()
   const { asPath } = router
+
+  const handleRootClick = useCallback(
+    (item: MyMenuItem) => {
+      if (item.path !== undefined) {
+        router.push(item.path)
+      }
+    },
+    [router]
+  )
 
   return (
     <>
@@ -36,10 +47,20 @@ const Navbar = () => {
 
         {/* Navigation */}
         <div className="ml-auto h-full flex gap-[24px]">
-          {menuItems.map((item, index) => {
-            const depthLevel = 0
-            return <MyMenu key={index} item={item} depthLevel={depthLevel} />
-          })}
+          {menuItems.map((item, index) => (
+            <Menu
+              key={index}
+              menuButton={
+                <MenuButton onClick={() => handleRootClick(item)}>
+                  {item.title}
+                </MenuButton>
+              }
+            >
+              {item.submenus !== undefined && (
+                <NavbarMenu item={item} key={index} />
+              )}
+            </Menu>
+          ))}
         </div>
 
         {/* Languages */}

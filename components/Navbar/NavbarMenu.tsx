@@ -3,65 +3,28 @@ import { useRouter } from 'next/router'
 import { Menu, MenuItem, MenuButton, SubMenu } from '@szhsin/react-menu'
 
 import type { MyMenuItem } from './MenuItems'
+import { useMemo } from 'react'
 
 interface MenuProps {
   item: MyMenuItem
-  depthLevel: number
 }
-const NavbarMenu = ({ item, depthLevel }: MenuProps) => {
+
+const NavbarMenu = ({ item }: MenuProps) => {
   const router = useRouter()
+  const hasSubItems = useMemo(() => !!item.submenus, [item])
 
   return (
     <>
-      {depthLevel === 0 ? (
-        <div>
-          {item.submenus ? (
-            <Menu
-              menuButton={<MenuButton>{item.title}</MenuButton>}
-              align="center"
-            >
-              {item.submenus.map((subitem, index) => {
-                depthLevel += 1
-                return (
-                  <NavbarMenu
-                    key={index}
-                    item={subitem}
-                    depthLevel={depthLevel}
-                  />
-                )
-              })}
-            </Menu>
-          ) : (
-            <Menu
-              menuButton={
-                <MenuButton onClick={() => router.push(item.path + '')}>
-                  {item.title}
-                </MenuButton>
-              }
-            />
-          )}
-        </div>
+      {!hasSubItems ? (
+        <MenuItem onClick={() => router.push(item.path + '')}>
+          {item.title}
+        </MenuItem>
       ) : (
-        <div>
-          {item.submenus ? (
-            <SubMenu label={item.title}>
-              {item.submenus.map((subitem, index) => {
-                depthLevel += 1
-                return (
-                  <NavbarMenu
-                    key={index}
-                    item={subitem}
-                    depthLevel={depthLevel}
-                  />
-                )
-              })}
-            </SubMenu>
-          ) : (
-            <MenuItem onClick={() => router.push(item.path + '')}>
-              {item.title}
-            </MenuItem>
-          )}
-        </div>
+        <SubMenu label={item.title}>
+          {item.submenus?.map((subitem, index) => (
+            <NavbarMenu key={index} item={subitem} />
+          ))}
+        </SubMenu>
       )}
 
       <style jsx global>{`

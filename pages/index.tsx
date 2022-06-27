@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       </div>
 
       <Container
-        className="bg-cover bg-no-repeat bg-center pb-[8px] h-[300px]"
+        className="bg-cover bg-no-repeat bg-center pb-[8px] h-[400px]"
         style={{
           backgroundImage: `url(${tcasBG.src})`,
         }}
@@ -117,7 +117,12 @@ const Home: NextPage = () => {
             })}
           </ul>
           <div className="w-[200px] h-[200px] relative md:mr-14">
-            <Image src={atomLogo} alt="Atom logo" layout="fill" objectFit="contain" />
+            <Image
+              src={atomLogo}
+              alt="Atom logo"
+              layout="fill"
+              objectFit="contain"
+            />
           </div>
         </div>
       </Container>
@@ -387,7 +392,7 @@ const SectionTitle = ({
       <div
         className={`section-title flex gap-[8px] items-center justify-start ${className}`}
       >
-        <div className="line border-t-[2px]"></div>
+        <div className="line border-t-[2px] max-w-[unset] md:max-w-[100px]"></div>
         <div className="title text-[32px] font-bold">{children}</div>
         <div className="line border-t-[2px]"></div>
       </div>
@@ -395,10 +400,6 @@ const SectionTitle = ({
       <style jsx>{`
         .section-title > div:not(:nth-child(2)) {
           flex-grow: 1;
-        }
-
-        .section-title > div:nth-child(1) {
-          max-width: 100px;
         }
 
         .title {
