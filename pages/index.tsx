@@ -24,10 +24,6 @@ import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
 import Slideshow from '@/components/Slideshow/Slideshow'
 import mapImage from '@/assets/images/map.png'
 
-/**
- * TODO: Add responsive design
- */
-
 const Home: NextPage = () => {
   return (
     <>
@@ -129,6 +125,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
       {/* Departments */}
       <div className="bg-gradient-to-br from-[#ff7c32] to-[#ffd200]">
         <Container className="py-[16px]">
