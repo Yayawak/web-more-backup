@@ -116,7 +116,7 @@ const Home: NextPage = () => {
               )
             })}
           </ul>
-          <div className="w-[200px] h-[200px] relative lg:mr-14">
+          <div className="w-[200px] h-[200px] relative md:mr-14">
             <Image src={atomLogo} alt="Atom logo" layout="fill" objectFit="contain" />
           </div>
         </div>
