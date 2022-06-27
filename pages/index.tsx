@@ -99,32 +99,28 @@ const Home: NextPage = () => {
       </Container>
 
       {/* Programs */}
-      <Container>
+      <Container className="mt-8">
         <SectionTitle>หลักสูตร</SectionTitle>
-      </Container>
-      <div className="w-10/12 mx-auto">
-        <div className="flex flex-wrap">
-          <div>
-            <ul className="ml-36 mt-28">
-              {programItems.map((item, index) => {
-                return (
-                  <li key={index} className="mb-8">
-                    <Link href={item.path}>
-                      <a className="text-[24px] hover:underline">
-                        {item.title + ` >`}
-                      </a>
-                    </Link>
-                    <div className="border border-[#979797] w-[305px]" />
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-          <div className="ml-auto mr-36">
-            <Image src={atomLogo} alt="Atom logo" width={391} height={391} />
+        <div className="flex flex-wrap justify-center mt-9 mb-20">
+          <ul className="w-full sm:w-[305px] sm:mr-auto">
+            {programItems.map((item, index) => {
+              return (
+                <li key={index} className="mb-8">
+                  <Link href={item.path}>
+                    <a className="text-[24px] hover:underline">
+                      {item.title + ` >`}
+                    </a>
+                  </Link>
+                  <div className="border border-[#979797] sm:w-[305px]" />
+                </li>
+              )
+            })}
+          </ul>
+          <div className="w-[200px] h-[200px] relative lg:mr-14">
+            <Image src={atomLogo} alt="Atom logo" layout="fill" objectFit="contain" />
           </div>
         </div>
-      </div>
+      </Container>
 
       {/* Departments */}
       <div className="bg-gradient-to-br from-[#ff7c32] to-[#ffd200]">
@@ -132,7 +128,7 @@ const Home: NextPage = () => {
           <Container className="mb-[32px]">
             <SectionTitle>ภาควิชาและหน่วยงาน</SectionTitle>
           </Container>
-          <div className="flex flex-col justify-center lg:flex-row">
+          <div className="flex flex-col justify-center lg:flex-row mt-20">
             <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:w-[600px] lg:mr-auto">
               {departmentItems.map((item, index) => {
                 return (
