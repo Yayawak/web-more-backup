@@ -5,27 +5,22 @@ import { aboutItems, contactItems } from './items'
 
 import kmitlLogo from '../../assets/logos/kmitl-logo.png'
 
-/**
- * TODO: Add responsive design to Footer component
- */
-
 const Footer = () => {
   return (
-    <footer className="bottom-0 w-full h-[380px] bg-[#021e4a] text-white flex items-center">
-      <div className="w-full px-[139px] flex">
-        <div>
+    <footer className="bottom-0 left-0 w-full bg-[#021e4a] text-white flex flex-col items-center px-4 xl:flex-row xl:h-80 xl:px-0">
+      <div className="w-full flex flex-col items-center pt-10 xl:flex-row xl:p-0 xl:gap-12 xl:ml-16">
+        <div className="w-[120px] h-[120px] relative xl:w-[165px] xl:h-[165px] xl:ml-auto">
           <Image
             src={kmitlLogo}
             alt="KMITL logo"
-            layout="fixed"
-            width={164}
-            height={164}
+            layout="fill"
+            objectFit="contain"
           />
         </div>
-        <div className="pl-16 max-w-[520px]">
-          <p className="text-[14px] font-bold">KMITL</p>
-          <p className="text-[22px] my-4">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
-          <p className="text-[14px]">
+        <div className="text-center xl:text-left xl:w-[520px] xl:mr-auto">
+          <p className="text-sm font-bold mt-2">KMITL</p>
+          <p className="text-[22px] mt-3">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+          <p className="text-sm mt-5 md:w-[768px] xl:w-auto xl:mr-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam,
@@ -33,14 +28,14 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="border border-white max-h-[320px] h-full" />
-      <div className="w-full flex pl-16">
-        <div>
-          <p className="text-base font-bold mb-6">About Science KMITL</p>
+      <div className="hidden border border-white xl:block xl:h-72" />
+      <div className="w-full flex flex-col items-center mt-7 mb-4 text-center sm:flex-row sm:items-start sm:text-left xl:my-0 xl:mr-16">
+        <div className="h-full mb-7 md:mx-auto">
+          <p className="text-[22px] font-bold mb-2">About Science KMITL</p>
           <ul>
             {aboutItems.map((item, index) => {
               return (
-                <li key={index} className="mb-1 hover:underline">
+                <li key={index} className="text-sm mb-1 hover:underline">
                   <Link href={item.path}>
                     <a>{item.title}</a>
                   </Link>
@@ -49,29 +44,28 @@ const Footer = () => {
             })}
           </ul>
         </div>
-        <div className="ml-auto mr-40">
-          <p className="text-[25px]">Contact</p>
-          <p>Phone : 02-329-8400 To 8411</p>
-          <p>Fax : 02-329-8412</p>
-          <ul className="flex max-h-[52px] gap-6 mt-4">
+        <div className="hidden border border-white h-36 m-auto sm:block xl:hidden" />
+        <div className="h-full md:mx-auto">
+          <p className="text-[22px] font-bold mb-2">Contact</p>
+          <p className="text-sm leading-none">Phone : 02-329-8400 To 8411</p>
+          <p className="text-sm leading-none">Email : SCIENCE@kmitl.ac.th</p>
+          <p className="text-sm leading-none">Fax : 02-329-8412</p>
+          <ul className="flex gap-4 mt-2">
             {contactItems.map((item, index) => {
               return (
-                <li key={index} className="hover:cursor-pointer">
+                <li key={index}>
                   <Link href={item.path}>
-                    <a>
-                      <Image
-                        src={item.image}
-                        alt={item.alt}
-                        width={52}
-                        height={52}
-                      />
-                    </a>
+                    <a className={item.mdiIconClass + " text-3xl"} />
                   </Link>
                 </li>
               )
             })}
           </ul>
         </div>
+      </div>
+      <div className="xl:hidden">
+        <p className="text-sm">© 2010 — 2020</p>
+        <p className="text-sm">Privacy — Terms</p>
       </div>
     </footer>
   )

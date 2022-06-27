@@ -1,5 +1,3 @@
-import { StaticImageData } from 'next/image'
-
 import facebookLogo from '../../assets/logos/facebook-logo.png'
 import youtubeLogo from '../../assets/logos/youtube-logo.png'
 import worldLogo from '../../assets/logos/world-logo.png'
@@ -10,8 +8,7 @@ type aboutItem = {
 }
 
 type contactItem = {
-  image: StaticImageData
-  alt: string
+  mdiIconClass: string
   path: string
 }
 
@@ -44,18 +41,15 @@ export const aboutItems: aboutItem[] = [
 
 export const contactItems: contactItem[] = [
   {
-    image: facebookLogo,
-    alt: 'Facebook logo',
+    mdiIconClass: 'mdi mdi-facebook',
     path: 'https://facebook.com',
   },
   {
-    image: youtubeLogo,
-    alt: 'YouTube logo',
+    mdiIconClass: 'mdi mdi-youtube',
     path: 'https://youtube.com',
   },
   {
-    image: worldLogo,
-    alt: 'Website logo',
+    mdiIconClass: 'mdi mdi-web',
     path: 'https://kmitl.ac.th',
   },
 ]
