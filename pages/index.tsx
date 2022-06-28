@@ -23,17 +23,21 @@ import { Rounded } from '@/types/rounded'
 import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
 import Slideshow from '@/components/Slideshow/Slideshow'
 import mapImage from '@/assets/images/map.png'
+import KMITLLogo from '@/assets/logos/kmitl-logo.png'
+import homeHeaderBG from '@/assets/images/home_header_bg.svg'
 
 const Home: NextPage = () => {
   return (
     <>
-      <Container className="h-[500px] my-[16px]">
-        <Slideshow
-          className="mx-auto"
-          style={{ maxWidth: '800px' }}
-          images={slideshowImages}
-        />
-      </Container>
+      <div className="header h-[550px] py-[16px] bg-cover bg-center">
+        <div className="max-h-[500px] h-full">
+          <Slideshow
+            className="mx-auto"
+            style={{ maxWidth: '800px' }}
+            images={slideshowImages}
+          />
+        </div>
+      </div>
 
       <div className="bg-[#FF6D2D] h-[50px] flex items-center">
         <Container>
@@ -41,27 +45,54 @@ const Home: NextPage = () => {
         </Container>
       </div>
 
-      <Container
-        className="bg-cover bg-no-repeat bg-center pb-[8px] h-[400px]"
+      <div
+        className="bg-cover bg-center pb-[8px] h-[400px]"
         style={{
           backgroundImage: `url(${tcasBG.src})`,
         }}
       >
-        <Container noPadding className="flex w-full h-full">
-          <div className="flex flex-col">
-            <div>TCAS 65</div>
+        <Container
+          noPadding
+          className="flex flex-col lg:flex-row w-full h-full gap-[32px]"
+        >
+          <div className="flex flex-col grow">
+            <div className="text-[#0A6AB7] text-[90px] font-bold text-center lg:text-right">
+              TCAS 65
+            </div>
+            <div className="flex mx-auto lg:mx-0 lg:ml-auto">
+              <div className="relative w-[100px]">
+                <Image
+                  src={KMITLLogo}
+                  alt="kmitl logo"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <div>
+                <div className="text-[#F16322] font-bold text-center lg:text-right">
+                  สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                </div>
+                <div className="font-bold text-center lg:text-right">
+                  King Mongkut&apos;s Institute of Technology Ladkrabang
+                </div>
+              </div>
+            </div>
             <BaseButton
               backgroundColor="#0A17A7"
               textColor="white"
               roundedType={Rounded.CUSTOM}
               rounded={10}
-              className="mt-auto"
+              className="mt-auto w-[fit-content] mx-auto"
             >
               เข้าสู่เว็บไซต์ Admission
             </BaseButton>
           </div>
+
+          <div className="flex flex-col w-full lg:w-[500px] text-center lg:text-left pt-0 lg:pt-[16px]">
+            <div>ประกาศ</div>
+          </div>
         </Container>
-      </Container>
+      </div>
 
       {/* News */}
       <Container className="my-[16px]">
@@ -276,6 +307,10 @@ const Home: NextPage = () => {
       </Container>
 
       <style jsx>{`
+        :global(.header) {
+          background-image: url(${homeHeaderBG.src});
+        }
+
         :global(.news-card) {
           flex-grow: 1;
           height: 348px;
