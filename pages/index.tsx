@@ -147,7 +147,7 @@ const Home: NextPage = () => {
 
       <Container>
         <BaseButton
-          className="mx-auto mt-[48px]"
+          className="mx-auto mt-[48px] mb-[32px]"
           roundedType={Rounded.CUSTOM}
           rounded={8}
           backgroundColor="#FF7C32"
@@ -161,7 +161,7 @@ const Home: NextPage = () => {
       <div
         className="bg-cover bg-center"
         style={{
-          backgroundImage: `url(${programsSectionBG.src})`
+          backgroundImage: `url(${programsSectionBG.src})`,
         }}
       >
         <Container className="mt-8">
@@ -194,10 +194,10 @@ const Home: NextPage = () => {
       </div>
 
       {/* Departments */}
-      <div 
+      <div
         className="bg-cover bg-center"
         style={{
-          backgroundImage: `url(${departmentSectioinBG.src})`
+          backgroundImage: `url(${departmentSectioinBG.src})`,
         }}
       >
         <Container className="py-[16px]">
