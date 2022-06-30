@@ -25,6 +25,7 @@ import Slideshow from '@/components/Slideshow/Slideshow'
 import mapImage from '@/assets/images/map.png'
 import KMITLLogo from '@/assets/logos/kmitl-logo.png'
 import homeHeaderBG from '@/assets/images/home_header_bg.svg'
+import { CustomProps } from '@/types/component-props'
 
 const Home: NextPage = () => {
   return (
@@ -46,14 +47,14 @@ const Home: NextPage = () => {
       </div>
 
       <div
-        className="bg-cover bg-center pb-[8px] h-[400px]"
+        className="bg-cover bg-center pb-[8px] min-h-[400px]"
         style={{
           backgroundImage: `url(${tcasBG.src})`,
         }}
       >
         <Container
           noPadding
-          className="flex flex-col lg:flex-row w-full h-full gap-[32px]"
+          className="flex flex-col lg:flex-row w-full h-full gap-[40px]"
         >
           <div className="flex flex-col grow">
             <div className="text-[#0A6AB7] text-[90px] font-bold text-center lg:text-right">
@@ -88,8 +89,33 @@ const Home: NextPage = () => {
             </BaseButton>
           </div>
 
-          <div className="flex flex-col w-full lg:w-[500px] text-center lg:text-left pt-0 lg:pt-[16px]">
-            <div>ประกาศ</div>
+          <div className="flex flex-col w-full lg:w-[500px] text-center lg:text-left pt-0 lg:pt-[16px] gap-[16px] px-[8px]">
+            <div className="text-[32px] font-bold">ประกาศ</div>
+
+            <TCASAnnouncementCard
+              type="ข่าวสาร"
+              color="#00D2EF"
+              text="ช่องทางการชำระค่าสมัคร"
+              icon="calendar"
+            />
+            <TCASAnnouncementCard
+              type="ข่าวสาร"
+              color="#00D2EF"
+              text="ช่องทางการชำระค่าสมัคร"
+              icon="calendar"
+            />
+            <TCASAnnouncementCard
+              type="ข่าวสาร"
+              color="#00D2EF"
+              text="ช่องทางการชำระค่าสมัคร"
+              icon="calendar"
+            />
+            <TCASAnnouncementCard
+              type="ข่าวสาร"
+              color="#FACF06"
+              text="ช่องทางการชำระค่าสมัคร"
+              icon="calendar"
+            />
           </div>
         </Container>
       </div>
@@ -445,6 +471,35 @@ const SectionTitle = ({
           border-top-color: ${color};
         }
       `}</style>
+    </>
+  )
+}
+
+interface ITCASAnnouncementProps {
+  type: string
+  color: string
+  text: string
+  icon: string
+}
+type TCASAnnouncementProps = CustomProps<ITCASAnnouncementProps>
+const TCASAnnouncementCard = ({
+  type,
+  color,
+  text,
+  icon,
+}: TCASAnnouncementProps) => {
+  return (
+    <>
+      <div className="flex items-center bg-white w-full h-[60px] drop-shadow-lg rounded-[8px] overflow-hidden pr-[16px]">
+        <div
+          className="h-full w-[80px] flex justify-center items-center mr-[8px] text-white font-bold"
+          style={{ backgroundColor: color }}
+        >
+          {type}
+        </div>
+        <div>{text}</div>
+        <div className={`mdi mdi-${icon} ml-auto`}></div>
+      </div>
     </>
   )
 }
