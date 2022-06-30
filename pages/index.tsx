@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import atomLogo from '../assets/logos/atom-logo.png'
+import programsSectionBG from '@/assets/images/programs_bg.svg'
+import departmentSectioinBG from '@/assets/images/departments_bg.svg'
 
 import tcasBG from '@/assets/images/tcas_bg.png'
 import partnerEtat from '@/assets/images/partners/etat.png'
@@ -130,36 +132,48 @@ const Home: NextPage = () => {
       </Container>
 
       {/* Programs */}
-      <Container className="mt-8">
-        <SectionTitle>หลักสูตร</SectionTitle>
-        <div className="flex flex-wrap justify-center mt-9 mb-20">
-          <ul className="w-full sm:w-[305px] sm:mr-auto">
-            {programItems.map((item, index) => {
-              return (
-                <li key={index} className="mb-8">
-                  <Link href={item.path}>
-                    <a className="text-[24px] hover:underline">
-                      {item.title + ` >`}
-                    </a>
-                  </Link>
-                  <div className="border border-[#979797] sm:w-[305px]" />
-                </li>
-              )
-            })}
-          </ul>
-          <div className="w-[200px] h-[200px] relative md:mr-14">
-            <Image
-              src={atomLogo}
-              alt="Atom logo"
-              layout="fill"
-              objectFit="contain"
-            />
+      <div
+        className="bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${programsSectionBG.src})`
+        }}
+      >
+        <Container className="mt-8">
+          <SectionTitle>หลักสูตร</SectionTitle>
+          <div className="flex flex-wrap justify-center mt-9 mb-20">
+            <ul className="w-full sm:w-[305px] sm:mr-auto">
+              {programItems.map((item, index) => {
+                return (
+                  <li key={index} className="mb-8">
+                    <Link href={item.path}>
+                      <a className="text-[24px] hover:underline">
+                        {item.title + ` >`}
+                      </a>
+                    </Link>
+                    <div className="border border-[#979797] sm:w-[305px]" />
+                  </li>
+                )
+              })}
+            </ul>
+            <div className="w-[200px] h-[200px] relative md:mr-14">
+              <Image
+                src={atomLogo}
+                alt="Atom logo"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
 
       {/* Departments */}
-      <div className="bg-gradient-to-br from-[#ff7c32] to-[#ffd200]">
+      <div 
+        className="bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${departmentSectioinBG.src})`
+        }}
+      >
         <Container className="py-[16px]">
           <Container className="mb-[32px]">
             <SectionTitle>ภาควิชาและหน่วยงาน</SectionTitle>
