@@ -251,7 +251,7 @@ const Home: NextPage = () => {
           <ExecutiveCard />
         </div>
 
-        <div className="flex gap-[24px] justify-center mb-[32px]">
+        <div className="flex gap-[24px] justify-center mb-[32px] flex-wrap md:flex-nowrap">
           <ExecutiveCard />
           <ExecutiveCard />
           <ExecutiveCard />
