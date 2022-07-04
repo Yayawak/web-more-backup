@@ -9,7 +9,7 @@ const Layout = ({ children }: IComponentProps) => {
   return (
     <>
       <Head>
-        <title>Science@KMITL</title>
+        <title>Science @KMITL</title>
       </Head>
 
       <div className="flex flex-col min-h-screen">

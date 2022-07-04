@@ -29,6 +29,8 @@ import KMITLLogo from '@/assets/logos/kmitl-logo.png'
 import homeHeaderBG from '@/assets/images/home_header_bg.svg'
 import { CustomProps } from '@/types/component-props'
 
+import slideshowImage1 from '@/assets/images/slideshow/1.png'
+
 const Home: NextPage = () => {
   return (
     <>
@@ -139,10 +141,34 @@ const Home: NextPage = () => {
       </Container>
 
       <Container className="news-cards grid justify-between gap-[16px] mt-[32px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap">
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
+        <NewsCard
+          imageUrl="https://picsum.photos/200/300?1"
+          category={['วิชาการ', 'อบรม', 'สัมมนา']}
+          title="ประชุมขับเคลื่อนองค์กรสู่ความเป็น
+เลิศของคณะวิทยาศาสตร์ (ครั้งที่ 1)"
+          date={new Date()}
+        />
+        <NewsCard
+          imageUrl="https://picsum.photos/200/300?2"
+          category={['วิชาการ', 'อบรม', 'สัมมนา']}
+          title="ประชุมขับเคลื่อนองค์กรสู่ความเป็น
+เลิศของคณะวิทยาศาสตร์ (ครั้งที่ 1)"
+          date={new Date()}
+        />
+        <NewsCard
+          imageUrl="https://picsum.photos/200/300?3"
+          category={['วิชาการ', 'อบรม', 'สัมมนา']}
+          title="ประชุมขับเคลื่อนองค์กรสู่ความเป็น
+เลิศของคณะวิทยาศาสตร์ (ครั้งที่ 1)"
+          date={new Date()}
+        />
+        <NewsCard
+          imageUrl="https://picsum.photos/200/300?4"
+          category={['วิชาการ', 'อบรม', 'สัมมนา']}
+          title="ประชุมขับเคลื่อนองค์กรสู่ความเป็น
+เลิศของคณะวิทยาศาสตร์ (ครั้งที่ 1)"
+          date={new Date()}
+        />
       </Container>
 
       <Container>
@@ -176,7 +202,7 @@ const Home: NextPage = () => {
                         {item.title + ` >`}
                       </a>
                     </Link>
-                    <div className="border border-[#979797] sm:w-[305px]" />
+                    <div className="border-t-[2px] border-t-[#979797] sm:w-[305px]" />
                   </li>
                 )
               })}
@@ -214,7 +240,7 @@ const Home: NextPage = () => {
                   >
                     <Link href={item.path}>
                       <a className="flex flex-col items-center">
-                        <div className="w-[100px] h-[100px] lg:w-[128px] lg:h-[128px] relative mb-2">
+                        <div className="w-[100px] h-[100px] relative mb-2">
                           <Image
                             src={item.image}
                             alt={item.alt}
@@ -248,14 +274,34 @@ const Home: NextPage = () => {
         <SectionTitle className="my-[16px]">ผู้บริหาร</SectionTitle>
 
         <div className="flex gap-[24px] justify-center mb-[32px]">
-          <ExecutiveCard />
+          <ExecutiveCard
+            image="https://www.science.kmitl.ac.th/assets/img/dean-office/sutee.png"
+            name="รศ.ดร.สุธี ชุติไพจิตร"
+            position="คณบดีคณะวิทยาศาสตร์"
+          />
         </div>
 
         <div className="flex gap-[24px] justify-center mb-[32px] flex-wrap md:flex-nowrap">
-          <ExecutiveCard />
-          <ExecutiveCard />
-          <ExecutiveCard />
-          <ExecutiveCard />
+          <ExecutiveCard
+            image="https://picsum.photos/200/300?11"
+            name="Test"
+            position="Test"
+          />
+          <ExecutiveCard
+            image="https://picsum.photos/200/300?12"
+            name="Test"
+            position="Test"
+          />
+          <ExecutiveCard
+            image="https://picsum.photos/200/300?13"
+            name="Test"
+            position="Test"
+          />
+          <ExecutiveCard
+            image="https://picsum.photos/200/300?14"
+            name="Test"
+            position="Test"
+          />
         </div>
 
         <BaseButton
@@ -373,7 +419,7 @@ const programItems = [
     path: '/programs/bechelor',
   },
   {
-    title: 'หลักสูตรปริญญาโทร',
+    title: 'หลักสูตรปริญญาโท',
     path: '/programs/master',
   },
   {
@@ -433,9 +479,7 @@ const departmentItems = [
   },
 ]
 
-const slideshowImages = [
-  'https://s3-alpha-sig.figma.com/img/39a4/d040/41698d9675a622fdaeacd6be81648804?Expires=1656892800&Signature=XoWRy10K~9bA5PJhbjYaif-agwI1~Eq~JJzZaPGmDAYenFYXCAzgsjlpMKyDdl2B9u4heUNH3lEMdFw2dTeFClJ85Ko8FfTEO1nQiv2M5X3HJVeK3VG48EhRXm7b6dNqUdmIkDL3VKQYOqPpbCje0zLiySlF4GivmQIRvm3cSyEHDAZSo8jHJV38zb3iv68NZIzS2wEqk~JAO0e66dY0EjPOXjU5m1a4r~2uU~9aAey6iaOce83rGWcONNRh2gp-eU2668ZcggAyWonvUiIbbn1cbRl~P3AcKM7fPUP-zE4oZU6f~90s1FY4SphtjWDDxOZm4hfX4wCQSge0eRVqOQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-]
+const slideshowImages = [slideshowImage1.src]
 
 const newsTypes = [
   'ทั้งหมด',
