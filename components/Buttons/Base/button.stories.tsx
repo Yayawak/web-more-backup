@@ -21,6 +21,14 @@ export default {
   },
 } as ComponentMeta<typeof BaseButton>
 
-export const Default: ComponentStory<typeof BaseButton> = (args) => (
+const Template: ComponentStory<typeof BaseButton> = (args) => (
   <BaseButton {...args}>click me</BaseButton>
 )
+
+export const Default = Template.bind({})
+
+export const WithRounded = Template.bind({})
+WithRounded.args = {
+  roundedType: Rounded.CUSTOM,
+  rounded: 8,
+}
