@@ -22,7 +22,8 @@ const Navbar = () => {
   const handleRootClick = useCallback(
     (item: MyMenuItem) => {
       if (item.path !== undefined) {
-        router.push(item.path)
+        if (!item.isExternalPath) router.push(item.path)
+        else window.open(item.path)
       }
     },
     [router]

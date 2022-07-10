@@ -283,9 +283,9 @@ const Home: NextPage = () => {
 
         <div className="flex gap-[24px] justify-center mb-[32px] flex-wrap md:flex-nowrap">
           <ExecutiveCard
-            image="https://picsum.photos/200/300?11"
-            name="Test"
-            position="Test"
+            image="https://www.science.kmitl.ac.th/assets/img/dean-office/karn.png"
+            name="ผศ.ดร.กานต์ วงศาริยะ"
+            position="รองคณบดีคณะวิทยาศาสตร์"
           />
           <ExecutiveCard
             image="https://picsum.photos/200/300?12"
@@ -479,7 +479,7 @@ const departmentItems = [
   },
 ]
 
-const slideshowImages = [slideshowImage1.src]
+const slideshowImages = [slideshowImage1.src, 'https://picsum.photos/200']
 
 const newsTypes = [
   'ทั้งหมด',

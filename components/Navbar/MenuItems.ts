@@ -1,6 +1,7 @@
 export type MyMenuItem = {
   title: string
   path?: string
+  isExternalPath?: boolean
   submenus?: MyMenuItem[]
 }
 
@@ -39,8 +40,9 @@ const menuItems: MyMenuItem[] = [
     title: 'เกี่ยวกับเรา',
     submenus: [
       {
-        title: 'วิทยาการคอมพิวเตอร์',
-        path: '/major/comsci',
+        title: 'ประวัติความเป็นมา',
+        path: 'https://www.science.kmitl.ac.th/page#/history',
+        isExternalPath: true,
       },
       {
         title: 'เคมี',
