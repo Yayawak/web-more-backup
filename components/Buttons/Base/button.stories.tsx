@@ -3,8 +3,6 @@ import BaseButton from './BaseButton'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Rounded } from '@/types/rounded'
 
-console.log()
-
 export default {
   title: 'Common/Button/BaseButton',
   component: BaseButton,
