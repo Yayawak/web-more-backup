@@ -31,7 +31,12 @@ import { CustomProps } from '@/types/component-props'
 
 import slideshowImage1 from '@/assets/images/slideshow/1.png'
 
+import { useRouter } from 'next/router'
+import { goToExternalPage, goToInternalPage } from '@/helpers/link'
+
 const Home: NextPage = () => {
+  const router = useRouter()
+
   return (
     <>
       <div className="header h-[550px] py-[16px] bg-cover bg-center">
@@ -385,6 +390,11 @@ const Home: NextPage = () => {
               rounded={8}
               className="mx-auto mt-auto"
               elevation={false}
+              onClick={() =>
+                goToExternalPage(
+                  'https://www.science.kmitl.ac.th/page#/contact'
+                )
+              }
             >
               การเดินทางเพิ่มเติม
             </BaseButton>
