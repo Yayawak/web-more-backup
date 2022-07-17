@@ -10,6 +10,7 @@ interface IBaseButtonProps {
   textColor?: string
   className?: string
   padding?: string
+  onClick?: (e: any) => void
 }
 
 const BaseButton = ({
@@ -21,6 +22,7 @@ const BaseButton = ({
   textColor = 'white',
   className = '',
   padding = '8px 16px',
+  onClick,
 }: IBaseButtonProps) => {
   const getRound = useCallback(() => {
     if (roundedType === Rounded.NONE) {
@@ -38,6 +40,7 @@ const BaseButton = ({
         className={`base-button flex justify-center items-center ${
           elevation && 'drop-shadow-lg'
         } ${className}`}
+        onClick={onClick}
       >
         {children}
       </button>
