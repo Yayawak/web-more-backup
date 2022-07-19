@@ -15,41 +15,41 @@ type contactItem = {
 export const aboutItems: aboutItem[] = [
   {
     title: 'History',
-    path: '/about/history',
+    path: 'https://www.science.kmitl.ac.th/page#/history',
   },
   {
     title: 'KMITL Vision and Strategy',
-    path: '/about/vision-and-strategy',
+    path: 'https://www.science.kmitl.ac.th/page#/resolution',
   },
   {
     title: 'Procurement',
-    path: '/about/procurement',
+    path: 'https://www.science.kmitl.ac.th/page#/news_each/5edf9affec4d923a5ce03cd3',
   },
   {
     title: 'Authority and Responsibility',
-    path: '/about/authority-and-responsibility',
+    path: 'https://www.science.kmitl.ac.th/page#/news_each/5edf9affec4d923a5ce03cd3',
   },
   {
     title: 'งาน ITA',
-    path: '/about/ita',
+    path: 'https://www.science.kmitl.ac.th/page#/news_each/5edf9affec4d923a5ce03cd3',
   },
   {
     title: 'ช่องทางการร้องเรียน',
-    path: '/about/complaint',
+    path: 'https://www.science.kmitl.ac.th/page#/contact',
   },
 ]
 
 export const contactItems: contactItem[] = [
   {
     mdiIconClass: 'mdi mdi-facebook',
-    path: 'https://facebook.com',
+    path: 'https://www.facebook.com/SciKmitl?_rdc=1&_rdr',
   },
   {
     mdiIconClass: 'mdi mdi-youtube',
-    path: 'https://youtube.com',
+    path: 'https://www.youtube.com/channel/UCuU-IWCmc10r4DDRnyV4y6A',
   },
   {
     mdiIconClass: 'mdi mdi-web',
-    path: 'https://kmitl.ac.th',
+    path: 'https://www.science.kmitl.ac.th/#/home',
   },
 ]
