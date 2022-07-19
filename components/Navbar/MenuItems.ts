@@ -35,7 +35,7 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'ค่าธรรมเนียมการศึกษา',
-        path: 'https://www.science.kmitl.ac.th/page#/course-aek',
+        path: '/',
         isExternalPath: true,
       },
     ],
@@ -75,7 +75,7 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'K-DAI',
-        path: 'https://www.science.kmitl.ac.th/department-math',
+        path: 'https://kdaicenter.science.kmitl.ac.th/',
         isExternalPath: true,
       },
       {
