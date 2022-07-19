@@ -315,6 +315,11 @@ const Home: NextPage = () => {
           rounded={8}
           elevation={false}
           className="mx-auto mt-[48px]"
+          onClick={() =>
+            goToExternalPage(
+              'https://www.science.kmitl.ac.th/page#/personel'
+            )
+          }
         >
           คณะผู้บริหารทั้งหมด
         </BaseButton>
@@ -426,15 +431,15 @@ export default Home
 const programItems = [
   {
     title: 'หลักสูตรปริญญาตรี',
-    path: '/programs/bechelor',
+    path: 'https://www.science.kmitl.ac.th/page#/course-tee',
   },
   {
     title: 'หลักสูตรปริญญาโท',
-    path: '/programs/master',
+    path: 'https://www.science.kmitl.ac.th/page#/course-tor',
   },
   {
     title: 'หลักสูตรปริญญาเอก',
-    path: '/programs/doctor',
+    path: 'https://www.science.kmitl.ac.th/page#/course-aek',
   },
 ]
 
@@ -443,49 +448,49 @@ const departmentItems = [
     title: 'ภาควิชาเคมี',
     image: chemistryIcon,
     alt: 'Chemistry icon',
-    path: '/departments/chemistry',
+    path: 'https://www.science.kmitl.ac.th/chemistry#/about',
   },
   {
     title: 'ภาควิชาคณิตศาสตร์',
     image: mathIcon,
     alt: 'Mathematics icon',
-    path: '/departments/mathematics',
+    path: 'https://www.science.kmitl.ac.th/department-math#/about',
   },
   {
     title: 'ภาควิชาฟิสิกส์',
     image: physicsIcon,
     alt: 'Physics icon',
-    path: '/departments/physics',
+    path: 'https://www.science.kmitl.ac.th/department-physics#/about',
   },
   {
     title: 'ภาควิชาชีววิทยา',
     image: biologyIcon,
     alt: 'Biology icon',
-    path: '/departments/biology',
+    path: 'https://www.science.kmitl.ac.th/department-bio#/about',
   },
   {
     title: 'ภาควิชาวิทยาการคอมพิวเตอร์',
     image: comsciIcon,
     alt: 'Computer Science icon',
-    path: '/departments/computer-science',
+    path: 'https://www.science.kmitl.ac.th/department-com#/about',
   },
   {
     title: 'ภาควิชาสถิติ',
     image: statisticIcon,
     alt: 'Statistic icon',
-    path: '/departments/statistic',
+    path: 'https://www.science.kmitl.ac.th/department-stat#/about',
   },
   {
     title: 'ศูนย์เครื่องมือวิทยาศาสตร์',
     image: scitoolIcon,
     alt: 'Scientific Instruments Centre icon',
-    path: '/departments/scientific-instruments-centre',
+    path: 'https://sciins.science.kmitl.ac.th/',
   },
   {
     title: 'ศูนย์วิเคราะห์ข้อมูลดิจิทัลอัจฉริยะพระจอมเกล้าลาดกระบัง',
     image: kdaiIcon,
     alt: 'KDAI icon',
-    path: '/departments/kdai',
+    path: 'https://kdaicenter.science.kmitl.ac.th/',
   },
 ]
 
