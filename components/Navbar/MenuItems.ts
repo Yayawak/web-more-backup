@@ -27,7 +27,7 @@ const menuItems: MyMenuItem[] = [
         title: 'ปริญญาโท',
         path: 'https://www.science.kmitl.ac.th/page#/course-tor',
         isExternalPath: true,
-      }, 
+      },
       {
         title: 'ปริญญาเอก',
         path: 'https://www.science.kmitl.ac.th/page#/course-aek',
@@ -82,7 +82,7 @@ const menuItems: MyMenuItem[] = [
         title: 'ศูนย์เครื่องมือ',
         path: 'https://www.science.kmitl.ac.th/department-math',
         isExternalPath: true,
-      }
+      },
     ],
   },
 
@@ -108,7 +108,7 @@ const menuItems: MyMenuItem[] = [
         title: 'บริการถามตอบปัญหา',
         path: 'https://osda.science.kmitl.ac.th/room/%E0%B8%AA%E0%B8%AB%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2',
         isExternalPath: true,
-      }
+      },
     ],
   },
   {
@@ -174,7 +174,6 @@ const menuItems: MyMenuItem[] = [
         path: 'https://www.science.kmitl.ac.th/page#/contact',
         isExternalPath: true,
       },
-
     ],
   },
 ]

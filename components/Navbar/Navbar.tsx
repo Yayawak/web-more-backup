@@ -19,16 +19,6 @@ const Navbar = () => {
   const router = useRouter()
   const { asPath } = router
 
-  const handleRootClick = useCallback(
-    (item: MyMenuItem) => {
-      if (item.path !== undefined) {
-        if (!item.isExternalPath) router.push(item.path)
-        else window.open(item.path)
-      }
-    },
-    [router]
-  )
-
   return (
     <>
       <nav className="fixed top-0 left-0 w-full flex items-center bg-gradient-to-b from-[#ff970b] to-[#f74707] text-white">
@@ -49,18 +39,22 @@ const Navbar = () => {
         {/* Navigation */}
         <div className="ml-auto h-full flex gap-[24px]">
           {menuItems.map((item, index) => (
-            <Menu
-              key={index}
-              menuButton={
-                <MenuButton onClick={() => handleRootClick(item)}>
-                  {item.title}
-                </MenuButton>
-              }
-            >
-              {item.submenus !== undefined && (
-                <NavbarMenu item={item} key={index} />
+            <div className="navbar-menu" key={index}>
+              {item.submenus && item.submenus.length > 0 ? (
+                <Menu
+                  key={index}
+                  menuButton={<MenuButton>{item.title}</MenuButton>}
+                >
+                  {item.submenus.map((menu, index) => (
+                    <NavbarMenu item={menu} key={index} />
+                  ))}
+                </Menu>
+              ) : (
+                <Link href={item.path as string}>
+                  <a>{item.title}</a>
+                </Link>
               )}
-            </Menu>
+            </div>
           ))}
         </div>
 
@@ -83,10 +77,15 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <style jsx>{`
+      <style jsx lang="scss">{`
         nav {
           height: var(--navbar-height);
           z-index: 999;
+
+          .navbar-menu {
+            display: flex;
+            align-items: center;
+          }
         }
       `}</style>
     </>

@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router'
 
-import { Menu, MenuItem, MenuButton, SubMenu } from '@szhsin/react-menu'
+import { MenuItem, SubMenu } from '@szhsin/react-menu'
 
 import type { MyMenuItem } from './MenuItems'
 import { useMemo } from 'react'
+import Link from 'next/link'
 
 interface MenuProps {
   item: MyMenuItem
@@ -16,15 +17,17 @@ const NavbarMenu = ({ item }: MenuProps) => {
   return (
     <>
       {!hasSubItems ? (
-        <MenuItem onClick={() => router.push(item.path + '')}>
-          {item.title}
+        <MenuItem>
+          <Link href={item.path as string}>
+            <a>{item.title}</a>
+          </Link>
         </MenuItem>
       ) : (
-        // <SubMenu label={item.title}>
-        item.submenus?.map((subitem, index) => (
-          <NavbarMenu key={index} item={subitem} />
-        ))
-        // </SubMenu>
+        <SubMenu>
+          {item.submenus?.map((subitem, index) => (
+            <NavbarMenu key={index} item={subitem} />
+          ))}
+        </SubMenu>
       )}
 
       <style jsx global>{`
