@@ -20,11 +20,11 @@ const NavbarMenu = ({ item }: MenuProps) => {
           {item.title}
         </MenuItem>
       ) : (
-        <SubMenu label={item.title}>
-          {item.submenus?.map((subitem, index) => (
-            <NavbarMenu key={index} item={subitem} />
-          ))}
-        </SubMenu>
+        // <SubMenu label={item.title}>
+        item.submenus?.map((subitem, index) => (
+          <NavbarMenu key={index} item={subitem} />
+        ))
+        // </SubMenu>
       )}
 
       <style jsx global>{`
