@@ -2,18 +2,14 @@ import '@/styles/globals.scss'
 import '@mdi/font/css/materialdesignicons.min.css'
 
 import type { AppProps } from 'next/app'
-import { Provider } from 'react-redux'
 
 import Layout from '@/components/Layout/Layout'
-import store from '@/store'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <Provider store={store}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </Provider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   )
 }
 
