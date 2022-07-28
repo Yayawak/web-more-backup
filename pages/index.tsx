@@ -31,11 +31,11 @@ import { CustomProps } from '@/types/component-props'
 
 import slideshowImage1 from '@/assets/images/slideshow/1.png'
 
-import { useRouter } from 'next/router'
 import { goToExternalPage, goToInternalPage } from '@/helpers/link'
+import { useGetHomeNewsQuery } from '@/store/api/news/getHomeNews'
 
 const Home: NextPage = () => {
-  const router = useRouter()
+  const { data, isLoading, isSuccess } = useGetHomeNewsQuery(9)
 
   return (
     <>
@@ -316,9 +316,7 @@ const Home: NextPage = () => {
           elevation={false}
           className="mx-auto mt-[48px]"
           onClick={() =>
-            goToExternalPage(
-              'https://www.science.kmitl.ac.th/page#/personel'
-            )
+            goToExternalPage('https://www.science.kmitl.ac.th/page#/personel')
           }
         >
           คณะผู้บริหารทั้งหมด
