@@ -146,34 +146,16 @@ const Home: NextPage = () => {
       </Container>
 
       <Container className="news-cards grid justify-between gap-[16px] mt-[32px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap">
-        <NewsCard
-          imageUrl="https://picsum.photos/200/300?1"
-          category={['วิชาการ', 'อบรม', 'สัมมนา']}
-          title="ประชุมขับเคลื่อนองค์กรสู่ความเป็น
+        {[...new Array(8)].map((e, i) => (
+          <NewsCard
+            key={i}
+            imageUrl="https://picsum.photos/200/300?1"
+            category={['วิชาการ', 'อบรม', 'สัมมนา']}
+            title="ประชุมขับเคลื่อนองค์กรสู่ความเป็น
 เลิศของคณะวิทยาศาสตร์ (ครั้งที่ 1)"
-          date={new Date()}
-        />
-        <NewsCard
-          imageUrl="https://picsum.photos/200/300?2"
-          category={['วิชาการ', 'อบรม', 'สัมมนา']}
-          title="ประชุมขับเคลื่อนองค์กรสู่ความเป็น
-เลิศของคณะวิทยาศาสตร์ (ครั้งที่ 1)"
-          date={new Date()}
-        />
-        <NewsCard
-          imageUrl="https://picsum.photos/200/300?3"
-          category={['วิชาการ', 'อบรม', 'สัมมนา']}
-          title="ประชุมขับเคลื่อนองค์กรสู่ความเป็น
-เลิศของคณะวิทยาศาสตร์ (ครั้งที่ 1)"
-          date={new Date()}
-        />
-        <NewsCard
-          imageUrl="https://picsum.photos/200/300?4"
-          category={['วิชาการ', 'อบรม', 'สัมมนา']}
-          title="ประชุมขับเคลื่อนองค์กรสู่ความเป็น
-เลิศของคณะวิทยาศาสตร์ (ครั้งที่ 1)"
-          date={new Date()}
-        />
+            date={new Date()}
+          />
+        ))}
       </Container>
 
       <Container>
