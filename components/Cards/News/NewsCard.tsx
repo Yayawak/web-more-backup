@@ -2,12 +2,14 @@ import BaseButton from '@/components/Buttons/Base/BaseButton'
 import { CustomProps } from '@/types/component-props'
 import { Rounded } from '@/types/rounded'
 import * as datefns from 'date-fns'
+import { useRouter } from 'next/router'
 
 interface INewsCardProps {
   imageUrl?: string
   title?: string
   category?: string[]
-  date?: Date
+  date?: string
+  read?: string
 }
 
 type Props = CustomProps<INewsCardProps>
@@ -18,8 +20,10 @@ const NewsCard = ({
   category = [],
   date,
   className = '',
+  read = '',
   style = {},
 }: Props) => {
+  const router = useRouter();
   return (
     <>
       <div
@@ -37,13 +41,16 @@ const NewsCard = ({
           </div>
         </div>
         <div className="news-card-footer flex items-center">
-          {date && <span>{datefns.format(date, 'dd MMM yyyy')}</span>}
+          {date && <span>{date}</span>}
           <BaseButton
             className="ml-auto"
             roundedType={Rounded.FULL}
             backgroundColor="#FF7C32"
             padding="4px 16px"
             elevation={false}
+            onClick={() =>
+              router.push(read)
+            }
           >
             อ่านต่อ
           </BaseButton>
