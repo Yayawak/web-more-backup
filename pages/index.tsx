@@ -427,6 +427,14 @@ const programItems = [
     title: 'หลักสูตรปริญญาเอก',
     path: 'https://www.science.kmitl.ac.th/page#/course-aek',
   },
+  {
+    title: 'หลักสูตรนานาชาติ',
+    path: 'https://inter.science.kmitl.ac.th/',
+  },
+  {
+    title: 'บัณฑิตศึกษา',
+    path: 'https://www.science.kmitl.ac.th/graduate/#/home',
+  },
 ]
 
 const departmentItems = [
