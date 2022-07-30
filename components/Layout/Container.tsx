@@ -1,4 +1,4 @@
-import { CustomProps } from '@/types/component-props'
+import { CustomProps } from '@/@types/component-props'
 import { useMemo } from 'react'
 
 interface IContainerProps {

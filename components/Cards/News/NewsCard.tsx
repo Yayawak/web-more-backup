@@ -1,6 +1,5 @@
 import BaseButton from '@/components/Buttons/Base/BaseButton'
-import { CustomProps } from '@/types/component-props'
-import { Rounded } from '@/types/rounded'
+import { CustomProps } from '@/@types/component-props'
 import Link from 'next/link'
 
 interface INewsCardProps {

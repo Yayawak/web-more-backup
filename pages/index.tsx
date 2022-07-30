@@ -21,14 +21,13 @@ import statisticIcon from '@/assets/icons/icon-stat.svg'
 import scitoolIcon from '@/assets/icons/icon-scitool.svg'
 import kdaiIcon from '@/assets/icons/icon-kdai.svg'
 import BaseButton from '@/components/Buttons/Base/BaseButton'
-import { Rounded } from '@/types/rounded'
 import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
 
 import Slideshow from '@/components/Slideshow/Slideshow'
 import mapImage from '@/assets/images/map.png'
 import KMITLLogo from '@/assets/logos/kmitl-logo.png'
 import homeHeaderBG from '@/assets/images/home_header_bg.svg'
-import { CustomProps } from '@/types/component-props'
+import { CustomProps } from '@/@types/component-props'
 
 import slideshowImage1 from '@/assets/images/slideshow/1.png'
 

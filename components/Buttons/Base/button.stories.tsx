@@ -1,7 +1,6 @@
 import BaseButton from './BaseButton'
 
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Rounded } from '@/types/rounded'
 
 export default {
   title: 'Common/Button/BaseButton',

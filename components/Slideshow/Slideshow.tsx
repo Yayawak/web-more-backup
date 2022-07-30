@@ -1,5 +1,5 @@
-import { CustomProps } from '@/types/component-props'
-import React, { useCallback, useState, useEffect } from 'react'
+import { CustomProps } from '@/@types/component-props'
+import React, { useCallback, useState } from 'react'
 import ControlButton from './ControlButton'
 
 interface SlideshowProps {

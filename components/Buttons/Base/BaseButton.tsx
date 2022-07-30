@@ -1,4 +1,3 @@
-import { Rounded } from '@/types/rounded'
 import { useCallback } from 'react'
 
 interface IBaseButtonProps {
