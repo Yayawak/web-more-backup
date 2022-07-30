@@ -32,8 +32,8 @@ import { CustomProps } from '@/types/component-props'
 
 import slideshowImage1 from '@/assets/images/slideshow/1.png'
 
-import { goToExternalPage } from '@/helpers/link'
 import { useGetHomeNewsQuery } from '@/store/api/news/getHomeNews'
+import DeanCard from '@/components/Cards/Executive/DeanCard'
 
 const Home: NextPage = () => {
   const { data, isLoading, isSuccess } = useGetHomeNewsQuery(8)
@@ -88,18 +88,18 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <BaseButton
-              backgroundColor="#0A17A7"
-              textColor="white"
-              roundedType={Rounded.CUSTOM}
-              rounded={10}
-              className="mt-auto w-[fit-content] mx-auto"
-              onClick={() =>
-                goToExternalPage('https://new.reg.kmitl.ac.th/admission/#/')
-              }
-            >
-              เข้าสู่เว็บไซต์ Admission
-            </BaseButton>
+            <Link href="https://new.reg.kmitl.ac.th/admission/#/">
+              <a className="mt-auto w-[fit-content] mx-auto">
+                <BaseButton
+                  backgroundColor="#0A17A7"
+                  textColor="white"
+                  roundedType={Rounded.CUSTOM}
+                  rounded={10}
+                >
+                  เข้าสู่เว็บไซต์ Admission
+                </BaseButton>
+              </a>
+            </Link>
           </div>
 
           <div className="flex flex-col w-full lg:w-[500px] text-center lg:text-left pt-0 lg:pt-[16px] gap-[16px] px-[8px]">
@@ -169,15 +169,21 @@ const Home: NextPage = () => {
       </Container>
 
       <Container>
-        <BaseButton
-          className="mx-auto mt-[48px] mb-[32px]"
-          roundedType={Rounded.CUSTOM}
-          rounded={8}
-          backgroundColor="#FF7C32"
-          elevation={false}
+        <Link
+          href={`https://www.science.kmitl.ac.th/page#/news_container/0/5a8470b228d2e92a0c753010`}
         >
-          ข่าวทั้งหมด
-        </BaseButton>
+          <a>
+            <BaseButton
+              className="mx-auto mt-[48px] mb-[32px]"
+              roundedType={Rounded.CUSTOM}
+              rounded={8}
+              backgroundColor="#FF7C32"
+              elevation={false}
+            >
+              ข่าวทั้งหมด
+            </BaseButton>
+          </a>
+        </Link>
       </Container>
 
       {/* Programs */}
@@ -274,64 +280,48 @@ const Home: NextPage = () => {
       <Container>
         <SectionTitle className="my-[16px]">ผู้บริหาร</SectionTitle>
 
-        <div className="flex gap-[24px] justify-center mb-[32px]">
-          <ExecutiveCard
-            image="https://cdn.discordapp.com/attachments/983649833275510804/997547460006248548/Untitled-3.png"
-            name=""
-            position=""
-            width={800}
-            widthContact={40}
-            heightContact={40}
-            contactSize={20}
-            contactLeft={52}
-            imageHeight={170}
-          />
-          {/* <ExecutiveCardHeader
-            image="https://www.science.kmitl.ac.th/assets/img/dean-office/karn.png"
-          /> */}
-        </div>
+        <DeanCard />
 
         <div className="flex gap-[24px] justify-center mb-[32px] flex-wrap md:flex-nowrap">
           <ExecutiveCard
             image="https://www.science.kmitl.ac.th/assets/img/dean-office/karn.png"
             name="ผศ.ดร.กานต์ วงศาริยะ"
             position="รองคณบดีคณะวิทยาศาสตร์"
+            autoHeight
           />
           <ExecutiveCard
             image="https://www.science.kmitl.ac.th/assets/img/dean-office/aparporn.png"
-            name="รศ.ดร.อาภาภรณ์
-            สกุลการะเวก"
-            position="รองคณบดี
-            คณะวิทยาศาสตร์"
+            name="รศ.ดร.อาภาภรณ์ สกุลการะเวก"
+            position="รองคณบดี คณะวิทยาศาสตร์"
+            autoHeight
           />
           <ExecutiveCard
             image="https://www.science.kmitl.ac.th/assets/img/dean-office/chokchai.png"
-            name="รศ.ดร.โชคชัย
-            กิตติวงศ์วัฒนา"
-            position="รองคณบดี
-            คณะวิทยาศาสตร์"
+            name="รศ.ดร.โชคชัย กิตติวงศ์วัฒนา"
+            position="รองคณบดี คณะวิทยาศาสตร์"
+            autoHeight
           />
           <ExecutiveCard
             image="https://www.science.kmitl.ac.th/assets/img/dean-office/apiluk.png"
-            name="รศ.ดร.อภิลักษณ์
-            เอียดเอื้อ"
-            position="รองคณบดี
-            คณะวิทยาศาสตร์"
+            name="รศ.ดร.อภิลักษณ์ เอียดเอื้อ"
+            position="รองคณบดี คณะวิทยาศาสตร์"
+            autoHeight
           />
         </div>
 
-        <BaseButton
-          backgroundColor="#FF7C32"
-          roundedType={Rounded.CUSTOM}
-          rounded={8}
-          elevation={false}
-          className="mx-auto mt-[48px]"
-          onClick={() =>
-            goToExternalPage('https://www.science.kmitl.ac.th/page#/personel')
-          }
-        >
-          คณะผู้บริหารทั้งหมด
-        </BaseButton>
+        <Link href="https://www.science.kmitl.ac.th/page#/personel">
+          <a className="mt-[48px] block">
+            <BaseButton
+              backgroundColor="#FF7C32"
+              roundedType={Rounded.CUSTOM}
+              rounded={8}
+              elevation={false}
+              className="mx-auto"
+            >
+              คณะผู้บริหารทั้งหมด
+            </BaseButton>
+          </a>
+        </Link>
       </Container>
 
       <Container>
@@ -398,25 +388,23 @@ const Home: NextPage = () => {
                 </ul>
               </div>
             </div>
-            <BaseButton
-              backgroundColor="#FF7C32"
-              roundedType={Rounded.CUSTOM}
-              rounded={8}
-              className="mx-auto mt-auto"
-              elevation={false}
-              onClick={() =>
-                goToExternalPage(
-                  'https://www.science.kmitl.ac.th/page#/contact'
-                )
-              }
-            >
-              การเดินทางเพิ่มเติม
-            </BaseButton>
+            <Link href="https://www.science.kmitl.ac.th/page#/contact">
+              <a className="mx-auto mt-auto">
+                <BaseButton
+                  backgroundColor="#FF7C32"
+                  roundedType={Rounded.CUSTOM}
+                  rounded={8}
+                  elevation={false}
+                >
+                  การเดินทางเพิ่มเติม
+                </BaseButton>
+              </a>
+            </Link>
           </div>
         </div>
       </Container>
 
-      <style jsx>{`
+      <style jsx scoped>{`
         :global(.header) {
           background-image: url(${homeHeaderBG.src});
         }
@@ -548,7 +536,7 @@ const SectionTitle = ({
         <div className="line border-t-[2px]"></div>
       </div>
 
-      <style jsx>{`
+      <style jsx scoped>{`
         .section-title > div:not(:nth-child(2)) {
           flex-grow: 1;
         }
