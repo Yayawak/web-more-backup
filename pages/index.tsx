@@ -23,6 +23,7 @@ import kdaiIcon from '@/assets/icons/icon-kdai.svg'
 import BaseButton from '@/components/Buttons/Base/BaseButton'
 import { Rounded } from '@/types/rounded'
 import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
+
 import Slideshow from '@/components/Slideshow/Slideshow'
 import mapImage from '@/assets/images/map.png'
 import KMITLLogo from '@/assets/logos/kmitl-logo.png'
@@ -93,6 +94,9 @@ const Home: NextPage = () => {
               roundedType={Rounded.CUSTOM}
               rounded={10}
               className="mt-auto w-[fit-content] mx-auto"
+              onClick={() =>
+                goToExternalPage('https://new.reg.kmitl.ac.th/admission/#/')
+              }
             >
               เข้าสู่เว็บไซต์ Admission
             </BaseButton>
@@ -191,7 +195,11 @@ const Home: NextPage = () => {
                 return (
                   <li key={index} className="mb-8">
                     <Link href={item.path}>
-                      <a className="text-[24px] hover:underline">
+                      <a
+                        className="text-[24px] hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {item.title + ` >`}
                       </a>
                     </Link>
@@ -221,7 +229,7 @@ const Home: NextPage = () => {
       >
         <Container className="py-[16px]">
           <Container className="mb-[32px]">
-            <SectionTitle>ภาควิชาและหน่วยงาน</SectionTitle>
+            <SectionTitle>ภาควิชาและศูนย์</SectionTitle>
           </Container>
           <div className="flex flex-col justify-center lg:flex-row mt-20">
             <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:w-[600px] lg:mr-auto">
@@ -268,10 +276,19 @@ const Home: NextPage = () => {
 
         <div className="flex gap-[24px] justify-center mb-[32px]">
           <ExecutiveCard
-            image="https://www.science.kmitl.ac.th/assets/img/dean-office/sutee.png"
-            name="รศ.ดร.สุธี ชุติไพจิตร"
-            position="คณบดีคณะวิทยาศาสตร์"
+            image="https://cdn.discordapp.com/attachments/983649833275510804/997547460006248548/Untitled-3.png"
+            name=""
+            position=""
+            width={800}
+            widthContact={40}
+            heightContact={40}
+            contactSize={20}
+            contactLeft={52}
+            imageHeight={170}
           />
+          {/* <ExecutiveCardHeader
+            image="https://www.science.kmitl.ac.th/assets/img/dean-office/karn.png"
+          /> */}
         </div>
 
         <div className="flex gap-[24px] justify-center mb-[32px] flex-wrap md:flex-nowrap">
@@ -281,19 +298,25 @@ const Home: NextPage = () => {
             position="รองคณบดีคณะวิทยาศาสตร์"
           />
           <ExecutiveCard
-            image="https://picsum.photos/200/300?12"
-            name="Test"
-            position="Test"
+            image="https://www.science.kmitl.ac.th/assets/img/dean-office/aparporn.png"
+            name="รศ.ดร.อาภาภรณ์
+            สกุลการะเวก"
+            position="รองคณบดี
+            คณะวิทยาศาสตร์"
           />
           <ExecutiveCard
-            image="https://picsum.photos/200/300?13"
-            name="Test"
-            position="Test"
+            image="https://www.science.kmitl.ac.th/assets/img/dean-office/chokchai.png"
+            name="รศ.ดร.โชคชัย
+            กิตติวงศ์วัฒนา"
+            position="รองคณบดี
+            คณะวิทยาศาสตร์"
           />
           <ExecutiveCard
-            image="https://picsum.photos/200/300?14"
-            name="Test"
-            position="Test"
+            image="https://www.science.kmitl.ac.th/assets/img/dean-office/apiluk.png"
+            name="รศ.ดร.อภิลักษณ์
+            เอียดเอื้อ"
+            position="รองคณบดี
+            คณะวิทยาศาสตร์"
           />
         </div>
 

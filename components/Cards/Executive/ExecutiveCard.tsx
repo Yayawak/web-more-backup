@@ -7,6 +7,11 @@ interface IExecutiveCardProps {
   facebook?: string
   width?: number
   height?: number
+  widthContact?: number
+  heightContact?: number
+  contactSize?: number
+  contactLeft?: number
+  imageHeight?: number
 }
 
 const ExecutiveCard = ({
@@ -18,20 +23,26 @@ const ExecutiveCard = ({
   facebook = '',
   width = 180,
   height = 278,
+  widthContact = 25,
+  heightContact = 25,
+  contactSize = 14,
+  contactLeft = 15,
+  imageHeight = 100,
 }: IExecutiveCardProps) => {
   return (
     <>
       <div className="executive-card bg-[#F2F2F2] rounded-[30px] drop-shadow-lg grid overflow-hidden pb-[16px]">
         <div className="pt-[8px] px-[8px]">
           <div
-            className="bg-cover bg-no-repeat bg-top w-full h-full rounded-[20px]"
+            className="executiveImage bg-cover bg-no-repeat bg-top w-full h-full rounded-[20px]"
             style={{ backgroundImage: `url(${image})` }}
           ></div>
         </div>
 
         <div className="mt-[8px] px-[8px] text-center">{name}</div>
         <div className="px-[8px] text-center text-[16px]">{position}</div>
-        <div className="flex gap-[8px] px-[16px] items-end">
+
+        <div className="contact-items flex gap-[8px] px-[16px] items-end">
           <div className="contact-button drop-shadow-lg">
             <span className="mdi mdi-phone "></span>
           </div>
@@ -42,6 +53,7 @@ const ExecutiveCard = ({
             <span className="mdi mdi-facebook"></span>
           </div>
         </div>
+
       </div>
 
       <style jsx lang="scss">{`
@@ -51,18 +63,26 @@ const ExecutiveCard = ({
           height: ${height}px;
         }
 
+        .executiveImage{
+          height: ${imageHeight}%;
+        }
+
+        .contact-items{
+          margin-left : ${contactLeft}%;
+        }
+
         .contact-button {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 25px;
-          height: 25px;
+          width: ${widthContact}px;
+          height: ${heightContact}px;
           background-color: white;
           border-radius: 100%;
           cursor: pointer;
 
           > span {
-            font-size: 14px;
+            font-size: ${contactSize}px;
           }
         }
 
@@ -75,3 +95,4 @@ const ExecutiveCard = ({
 }
 
 export default ExecutiveCard
+
