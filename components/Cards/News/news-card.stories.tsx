@@ -23,7 +23,7 @@ Default.args = {
   category: ['บริการวิชาการ', 'อบรม', 'สัมนา'],
   title:
     'First Announcement for the 18th International Symposium of Biocontroland Biotechnology',
-  date: new Date(),
+  date: new Date().toString(),
   style: {
     width: '304px',
     height: '348px',

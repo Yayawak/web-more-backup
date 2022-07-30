@@ -27,12 +27,13 @@ import Slideshow from '@/components/Slideshow/Slideshow'
 import mapImage from '@/assets/images/map.png'
 import KMITLLogo from '@/assets/logos/kmitl-logo.png'
 import homeHeaderBG from '@/assets/images/home_header_bg.svg'
-import { CustomProps } from '@/@types/component-props'
+import { CustomProps } from '@/types/component-props'
 
 import slideshowImage1 from '@/assets/images/slideshow/1.png'
 
 import { useGetHomeNewsQuery } from '@/store/api/news/getHomeNews'
 import DeanCard from '@/components/Cards/Executive/DeanCard'
+import { Rounded } from '@/types/rounded'
 
 const Home: NextPage = () => {
   const { data, isLoading, isSuccess } = useGetHomeNewsQuery(8)

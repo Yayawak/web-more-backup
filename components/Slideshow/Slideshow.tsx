@@ -1,4 +1,4 @@
-import { CustomProps } from '@/@types/component-props'
+import { CustomProps } from '@/types/component-props'
 import React, { useCallback, useState } from 'react'
 import ControlButton from './ControlButton'
 

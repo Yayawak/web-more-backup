@@ -1,4 +1,4 @@
-declare enum Rounded {
+export enum Rounded {
   NONE = 'NONE',
   CUSTOM = 'CUSTOM',
   FULL = 'FULL',

@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer/Footer'
-import { IComponentProps } from '@/@types/component-props'
+import { IComponentProps } from '@/types/component-props'
 
 const Layout = ({ children }: IComponentProps) => {
   return (
