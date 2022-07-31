@@ -9,7 +9,6 @@ import flagTH from '@/assets/flags/flag-th.png'
 import flagEN from '@/assets/flags/flag-en.png'
 import NavbarMenu from './NavbarMenu'
 import { Menu, MenuButton } from '@szhsin/react-menu'
-import { useCallback } from 'react'
 
 /**
  * TODO: Add responsive design to Navbar component
@@ -21,7 +20,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full flex items-center bg-gradient-to-b from-[#ff970b] to-[#f74707] text-white">
+      <nav className="fixed top-0 left-0 w-full flex items-center bg-[#FF7A00] drop-shadow-sm text-white">
         {/* Logo */}
         <Link href="/">
           <a className="h-full flex items-center ml-[70px]">

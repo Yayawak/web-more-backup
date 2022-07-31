@@ -22,15 +22,7 @@ export const aboutItems: aboutItem[] = [
     path: 'https://www.science.kmitl.ac.th/page#/resolution',
   },
   {
-    title: 'Procurement',
-    path: 'https://www.science.kmitl.ac.th/page#/news_each/5edf9affec4d923a5ce03cd3',
-  },
-  {
-    title: 'Authority and Responsibility',
-    path: 'https://www.science.kmitl.ac.th/page#/news_each/5edf9affec4d923a5ce03cd3',
-  },
-  {
-    title: 'งาน ITA',
+    title: 'ข้อมูลเปิดเผยสาธารณะ (ITA)',
     path: 'https://www.science.kmitl.ac.th/page#/news_each/5edf9affec4d923a5ce03cd3',
   },
   {

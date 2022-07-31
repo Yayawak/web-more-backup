@@ -111,11 +111,11 @@ const menuItems: MyMenuItem[] = [
       },
     ],
   },
-  {
-    title: 'TCAS65',
-    path: 'https://www.science.kmitl.ac.th/page#/news_each/620609270a5c80e1f06c3f0f',
-    isExternalPath: true,
-  },
+  // {
+  //   title: 'TCAS65',
+  //   path: 'https://www.science.kmitl.ac.th/page#/news_each/620609270a5c80e1f06c3f0f',
+  //   isExternalPath: true,
+  // },
   {
     title: 'เอกสาร',
     path: 'https://www.science.kmitl.ac.th/page#/download',

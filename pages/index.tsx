@@ -8,7 +8,8 @@ import atomLogo from '../assets/logos/atom-logo.png'
 import programsSectionBG from '@/assets/images/programs_bg.svg'
 import departmentSectioinBG from '@/assets/images/departments_bg.svg'
 
-import tcasBG from '@/assets/images/tcas_bg.png'
+// import tcasBG from '@/assets/images/tcas_bg.png'
+// import KMITLLogo from '@/assets/logos/kmitl-logo.png'
 import partnerEtat from '@/assets/images/partners/etat.png'
 import partnerIsp from '@/assets/images/partners/isp.png'
 
@@ -25,7 +26,6 @@ import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
 
 import Slideshow from '@/components/Slideshow/Slideshow'
 import mapImage from '@/assets/images/map.png'
-import KMITLLogo from '@/assets/logos/kmitl-logo.png'
 import homeHeaderBG from '@/assets/images/home_header_bg.svg'
 import { CustomProps } from '@/types/component-props'
 
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="header h-[550px] py-[16px] bg-cover bg-center">
+      <div className="header h-[700px] py-[16px] bg-cover bg-center">
         <div className="max-h-[500px] h-full">
           <Slideshow
             className="mx-auto"
@@ -263,7 +263,7 @@ const Home: NextPage = () => {
               })}
             </ul>
             <div className="flex items-center">
-              <div className="border border-black w-0 h-[192px] ml-8 mr-6 lg:h-[517px] lg:mr-44"></div>
+              <div className="border-r-2 border-black w-0 h-[192px] ml-8 mr-6 lg:h-[517px] lg:mr-44"></div>
               <p className="text-2xl whitespace-pre-wrap">
                 เพราะเราเชื่อว่า <br />
                 <q>
@@ -282,7 +282,7 @@ const Home: NextPage = () => {
 
         <DeanCard />
 
-        <div className="flex gap-[24px] justify-center mb-[32px] flex-wrap md:flex-nowrap">
+        <div className="flex gap-[24px] mx-auto max-w-[900px] justify-between mb-[32px] flex-wrap md:flex-nowrap">
           <ExecutiveCard
             image="https://www.science.kmitl.ac.th/assets/img/dean-office/karn.png"
             name="ผศ.ดร.กานต์ วงศาริยะ"
@@ -499,7 +499,7 @@ const departmentItems = [
   },
 ]
 
-const slideshowImages = [slideshowImage1.src, 'https://picsum.photos/200']
+const slideshowImages = [slideshowImage1.src]
 
 const newsTypes = [
   'ทั้งหมด',

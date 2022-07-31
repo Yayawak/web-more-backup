@@ -1,3 +1,5 @@
+import { useMemo } from 'react'
+
 interface IExecutiveCardProps {
   image?: string
   name?: string
@@ -21,6 +23,8 @@ const ExecutiveCard = ({
   height = 278,
   autoHeight = false,
 }: IExecutiveCardProps) => {
+  const splittedName = useMemo(() => name.split(' '), [name])
+
   return (
     <>
       <div className="executive-card bg-[#F2F2F2] rounded-[30px] drop-shadow-lg grid overflow-hidden pb-[16px]">
@@ -31,7 +35,11 @@ const ExecutiveCard = ({
           ></div>
         </div>
 
-        <div className="mt-[8px] px-[8px] text-center">{name}</div>
+        <div className="mt-[8px] px-[8px] text-center">
+          {splittedName[0]}
+          <br />
+          {splittedName[1]}
+        </div>
         <div className="px-[8px] mb-[8px] text-center text-[16px]">
           {position}
         </div>

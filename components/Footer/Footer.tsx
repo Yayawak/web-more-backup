@@ -18,13 +18,11 @@ const Footer = () => {
           />
         </div>
         <div className="text-center xl:text-left xl:w-[520px] xl:mr-auto">
-          <p className="text-sm font-bold mt-2">KMITL</p>
-          <p className="text-[22px] mt-3">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
-          <p className="text-sm mt-5 md:w-[768px] xl:w-auto xl:mr-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <p className="text-[22px] mb-[8px]">
+            สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+          </p>
+          <p className="text-sm font-bold">
+            SCHOOL OF SCIENCE KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG
           </p>
         </div>
       </div>
@@ -55,7 +53,7 @@ const Footer = () => {
               return (
                 <li key={index}>
                   <Link href={item.path}>
-                    <a className={item.mdiIconClass + " text-3xl"} />
+                    <a className={item.mdiIconClass + ' text-3xl'} />
                   </Link>
                 </li>
               )

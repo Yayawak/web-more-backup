@@ -4,7 +4,7 @@ import deanImage from '@/assets/images/dean.png'
 const DeanCard = () => {
   return (
     <>
-      <div className="relative w-full max-w-[1000px] h-[300px] mx-auto mb-[32px] drop-shadow-md rounded-[20px] overflow-hidden">
+      <div className="relative w-full max-w-[900px] h-[300px] mx-auto mb-[32px] drop-shadow-md rounded-[20px] overflow-hidden">
         <Image
           src={deanImage}
           alt="science kmitl"
