@@ -50,13 +50,13 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="bg-[#FF6D2D] h-[50px] flex items-center">
+      {/* <div className="bg-[#FF6D2D] h-[50px] flex items-center">
         <Container>
           <div className="text-white text-[32px] font-bold">TCAS</div>
         </Container>
-      </div>
+      </div> */}
 
-      <div
+      {/* <div
         className="bg-cover bg-center pb-[8px] min-h-[400px]"
         style={{
           backgroundImage: `url(${tcasBG.src})`,
@@ -131,13 +131,13 @@ const Home: NextPage = () => {
             />
           </div>
         </Container>
-      </div>
+      </div> */}
 
       {/* News */}
-      <Container className="my-[16px]">
-        <SectionTitle className="mb-[16px]">ข่าวสาร</SectionTitle>
+      <Container className="mt-[64px] mb-[16px]">
+        <SectionTitle>ข่าวสาร</SectionTitle>
 
-        <div className="flex gap-[8px] flex-wrap">
+        {/* <div className="flex gap-[8px] flex-wrap">
           {newsTypes.map((e) => (
             <div
               key={e}
@@ -146,10 +146,10 @@ const Home: NextPage = () => {
               {e}
             </div>
           ))}
-        </div>
+        </div> */}
       </Container>
 
-      <Container className="news-cards grid justify-between gap-[16px] mt-[32px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap">
+      <Container className="news-cards grid justify-between gap-[16px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap">
         {!isLoading && isSuccess ? (
           data.message.map((news) => (
             <NewsCard
@@ -157,7 +157,7 @@ const Home: NextPage = () => {
               imageUrl={`https://www.science.kmitl.ac.th${news.news_file_topic
                 .replace('public', ' ')
                 .trim()}`}
-              category={['วิชาการ', 'อบรม', 'สัมมนา']}
+              category={[news.resourceName]}
               title={news.topicFull}
               date={news.datetimepost_Preview}
               read={`https://www.science.kmitl.ac.th/page#/news_each/${news._id}`}
