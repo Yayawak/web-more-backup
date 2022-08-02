@@ -34,12 +34,17 @@ import slideshowImage1 from '@/assets/images/slideshow/1.png'
 import { useGetHomeNewsQuery } from '@/store/api/news/getHomeNews'
 import DeanCard from '@/components/Cards/Executive/DeanCard'
 import { Rounded } from '@/types/rounded'
+import BaseModal from '@/components/Modal/Base/BaseMotal'
+import { useState } from 'react'
 
 const Home: NextPage = () => {
   const { data, isLoading, isSuccess } = useGetHomeNewsQuery(8)
+  const [showModal, setShowModal] = useState(false)
 
   return (
     <>
+      {showModal && <BaseModal />}
+
       <div className="header h-[700px] py-[16px] bg-cover bg-center">
         <div className="max-h-[500px] h-full">
           <Slideshow
