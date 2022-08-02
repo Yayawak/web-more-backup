@@ -13,7 +13,11 @@ const DeanCard = () => {
         />
 
         <div className="contact-list flex gap-[32px]">
-          <div className="contact-button drop-shadow-lg">
+          <div className ="contact-button">
+            <span className="mdi mdi-account-box-outline"></span>
+            <a >ช่องทางติดต่อ</a>
+          </div>
+          {/* <div className="contact-button drop-shadow-lg">
             <span className="mdi mdi-phone "></span>
           </div>
           <div className="contact-button drop-shadow-lg">
@@ -21,7 +25,7 @@ const DeanCard = () => {
           </div>
           <div className="contact-button drop-shadow-lg">
             <span className="mdi mdi-facebook"></span>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -29,23 +33,28 @@ const DeanCard = () => {
         .contact-list {
           position: absolute;
           bottom: 30px;
-          right: 50%;
+          right: 42%;
           transform: translateX(100%);
         }
-        .contact-button {
+
+        .contact-button{
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 50px;
-          height: 50px;
-          font-size: 30px;
-          background-color: white;
-          border-radius: 100%;
+          width: 145px;
+          height: 31px;
+          font-size: 16px;
+          border-radius: 10px;
+          background: #D9D9D9;
+          color: #000000;
           cursor: pointer;
+          
         }
 
         .mdi {
-          transform: translateY(2px);
+          transform: translateX(-10px);
+          font-size: 20px;
+
         }
       `}</style>
     </>
