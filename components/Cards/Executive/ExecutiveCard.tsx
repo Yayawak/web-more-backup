@@ -45,7 +45,10 @@ const ExecutiveCard = ({
         </div>
 
         <div className="contact-items flex gap-[8px] px-[16px] items-end">
-          <div className="contact-button drop-shadow-lg">
+          <div className ="contact-button">
+            <a >ช่องทางติดต่อ</a>
+          </div>
+          {/* <div className="contact-button drop-shadow-lg">
             <span className="mdi mdi-phone "></span>
           </div>
           <div className="contact-button drop-shadow-lg">
@@ -53,7 +56,7 @@ const ExecutiveCard = ({
           </div>
           <div className="contact-button drop-shadow-lg">
             <span className="mdi mdi-facebook"></span>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -71,16 +74,19 @@ const ExecutiveCard = ({
           margin-top: auto;
         }
 
-        .contact-button {
+        .contact-button{
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 25px;
-          height: 25px;
-          background-color: white;
-          border-radius: 100%;
+          width: 90px;
+          height: 33px;
+          font-size: 16px;
+          border-radius: 10px;
+          background: #FF7C31;
+          color: #FFFFFF;
           cursor: pointer;
         }
+
 
         .mdi {
           transform: translateY(1px);
