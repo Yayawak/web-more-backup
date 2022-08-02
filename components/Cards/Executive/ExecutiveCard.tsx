@@ -10,6 +10,7 @@ interface IExecutiveCardProps {
   width?: number
   height?: number
   autoHeight?: boolean
+  onContactClick?: () => void
 }
 
 const ExecutiveCard = ({
@@ -19,6 +20,7 @@ const ExecutiveCard = ({
   width = 180,
   height = 278,
   autoHeight = false,
+  onContactClick,
 }: IExecutiveCardProps) => {
   const splittedName = useMemo(() => name.split(' '), [name])
 
@@ -42,8 +44,8 @@ const ExecutiveCard = ({
         </div>
 
         <div className="contact-items flex gap-[8px] px-[16px] items-end">
-          <div className ="contact-button">
-            <a >ช่องทางติดต่อ</a>
+          <div className="contact-button" onClick={onContactClick}>
+            <a>ช่องทางติดต่อ</a>
           </div>
           {/* <div className="contact-button drop-shadow-lg">
             <span className="mdi mdi-phone "></span>
@@ -71,7 +73,7 @@ const ExecutiveCard = ({
           margin-top: auto;
         }
 
-        .contact-button{
+        .contact-button {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -79,11 +81,10 @@ const ExecutiveCard = ({
           height: 33px;
           font-size: 16px;
           border-radius: 10px;
-          background: #FF7C31;
-          color: #FFFFFF;
+          background: #ff7c31;
+          color: #ffffff;
           cursor: pointer;
         }
-
 
         .mdi {
           transform: translateY(1px);

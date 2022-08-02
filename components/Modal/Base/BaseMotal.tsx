@@ -1,13 +1,13 @@
-import { CustomProps } from '@/types/component-props'
 import { useEffect } from 'react'
 
 interface IBaseModalProps {
   title?: string
   body?: React.ReactNode
   footer?: React.ReactNode
+  onClose?: () => void
 }
 
-const BaseModal = ({ title, body, footer }: IBaseModalProps) => {
+const BaseModal = ({ title, body, footer, onClose }: IBaseModalProps) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden'
 
@@ -23,7 +23,7 @@ const BaseModal = ({ title, body, footer }: IBaseModalProps) => {
           <div className="modal-title flex items-center">
             <div>{title}</div>
             <div className="ml-auto">
-              <span className="mdi mdi-close"></span>
+              <span className="close mdi mdi-close" onClick={onClose}></span>
             </div>
           </div>
 
@@ -57,6 +57,10 @@ const BaseModal = ({ title, body, footer }: IBaseModalProps) => {
 
             > div {
               padding: 8px 16px;
+            }
+
+            .close {
+              cursor: pointer;
             }
           }
         }

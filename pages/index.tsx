@@ -43,7 +43,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {showModal && <BaseModal />}
+      {showModal && <BaseModal onClose={() => setShowModal(false)} />}
 
       <div className="header h-[700px] py-[16px] bg-cover bg-center">
         <div className="max-h-[500px] h-full">
@@ -293,6 +293,7 @@ const Home: NextPage = () => {
             name="ผศ.ดร.กานต์ วงศาริยะ"
             position="รองคณบดีคณะวิทยาศาสตร์"
             autoHeight
+            onContactClick={() => setShowModal(true)}
           />
           <ExecutiveCard
             image="https://www.science.kmitl.ac.th/assets/img/dean-office/aparporn.png"
