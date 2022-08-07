@@ -29,7 +29,7 @@ const BackToTopButton = () => {
 
   return (
     <>
-      <div className="back-to-top" onClick={handleClick}>
+      <div className="back-to-top drop-shadow-lg" onClick={handleClick}>
         <span className="mdi mdi-arrow-up"></span>
       </div>
 
@@ -47,7 +47,6 @@ const BackToTopButton = () => {
           font-size: 25px;
           background: #021e4a;
           border-radius: 100%;
-          box-shadow: 0px 4px 4px #d9d9d9;
           cursor: pointer;
           z-index: 3;
         }
