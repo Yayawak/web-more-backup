@@ -32,16 +32,39 @@ import { CustomProps } from '@/types/component-props'
 import slideshowImage1 from '@/assets/images/slideshow/1.png'
 
 import { useGetHomeNewsQuery } from '@/store/api/news/getHomeNews'
+import { useGetSlideNewsQuery } from '@/store/api/news/getSlideNews'
 import DeanCard from '@/components/Cards/Executive/DeanCard'
 import { Rounded } from '@/types/rounded'
 import BaseModal from '@/components/Modal/Base/BaseMotal'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import BackToTopButton from '@/components/Buttons/BackToTopButton/BackToTopButton'
 
 const Home: NextPage = () => {
   const { data, isLoading, isSuccess } = useGetHomeNewsQuery(8)
   const [showModal, setShowModal] = useState(false)
+  const [slideshowImages, setSlideshowImages] = useState<string[]>([])
+
+  const {
+    data: slide,
+    isLoading: slideLoading,
+    isSuccess: slideSuccess,
+  } = useGetSlideNewsQuery(null)
+
+  useEffect(() => {
+    if (!slideLoading && slideSuccess) {
+      const tmpSlideshowImages: string[] = []
+
+      slide.message.forEach((element) => {
+        tmpSlideshowImages.push(
+          'https://www.science.kmitl.ac.th/' +
+            element.news_file_topic.replace('public', '').trim()
+        )
+      })
+
+      setSlideshowImages(tmpSlideshowImages)
+    }
+  }, [slideLoading, slideSuccess])
 
   return (
     <>
@@ -65,15 +88,19 @@ const Home: NextPage = () => {
         />
       )}
 
-      <div className="header h-[700px] py-[16px] bg-cover bg-center">
-        <div className="max-h-[500px] h-full">
-          <Slideshow
-            className="mx-auto"
-            style={{ maxWidth: '800px' }}
-            images={slideshowImages}
-          />
+      {!slideLoading && slideSuccess ? (
+        <div className="header h-[700px] py-[16px] bg-cover bg-center">
+          <div className="max-h-[500px] h-full">
+            <Slideshow
+              className="mx-auto"
+              style={{ maxWidth: '800px' }}
+              images={slideshowImages}
+            />
+          </div>
         </div>
-      </div>
+      ) : (
+        <>Loading...</>
+      )}
 
       {/* <div className="bg-[#FF6D2D] h-[50px] flex items-center">
         <Container>
