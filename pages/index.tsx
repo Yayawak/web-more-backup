@@ -37,6 +37,8 @@ import { Rounded } from '@/types/rounded'
 import BaseModal from '@/components/Modal/Base/BaseMotal'
 import { useState } from 'react'
 
+import BackToTopButton from '@/components/Buttons/BackToTopButton/BackToTopButton'
+
 const Home: NextPage = () => {
   const { data, isLoading, isSuccess } = useGetHomeNewsQuery(8)
   const [showModal, setShowModal] = useState(false)
@@ -208,6 +210,8 @@ const Home: NextPage = () => {
           </a>
         </Link>
       </Container>
+
+      <BackToTopButton />
 
       {/* Programs */}
       <div
