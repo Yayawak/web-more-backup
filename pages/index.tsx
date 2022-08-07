@@ -43,7 +43,25 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {showModal && <BaseModal onClose={() => setShowModal(false)} />}
+      {showModal && (
+        <BaseModal
+          onClose={() => setShowModal(false)}
+          footer={
+            <>
+              <div>arstsrt</div>
+              <div>arstsrt</div>
+              <div>arstsrt</div>
+            </>
+          }
+          body={
+            <>
+              <div>arstsrt</div>
+              <div>arstsrt</div>
+              <div>arstsrt</div>
+            </>
+          }
+        />
+      )}
 
       <div className="header h-[700px] py-[16px] bg-cover bg-center">
         <div className="max-h-[500px] h-full">

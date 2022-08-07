@@ -29,7 +29,9 @@ const BaseModal = ({ title, body, footer, onClose }: IBaseModalProps) => {
 
           <div className="modal-body">{body}</div>
 
-          <div className="modal-footer flex justify-end">{footer}</div>
+          <div className="modal-footer flex justify-end gap-[16px]">
+            {footer}
+          </div>
         </div>
       </div>
 
