@@ -53,9 +53,9 @@ const BaseModal = ({ title, body, footer, onClose }: IBaseModalProps) => {
             position: relative;
             margin: auto;
             width: 100%;
-            max-width: 600px;
+            max-width: 1000px;
             background-color: white;
-            border-radius: 8px;
+            border-radius: 20px;
 
             > div {
               padding: 8px 16px;

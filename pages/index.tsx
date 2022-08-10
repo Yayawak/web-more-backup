@@ -23,6 +23,7 @@ import scitoolIcon from '@/assets/icons/icon-scitool.svg'
 import kdaiIcon from '@/assets/icons/icon-kdai.svg'
 import BaseButton from '@/components/Buttons/Base/BaseButton'
 import ExecutiveCard from '@/components/Cards/Executive/ExecutiveCard'
+import mailIcon from '@/assets/icons/icon-mail.svg'
 
 import Slideshow from '@/components/Slideshow/Slideshow'
 import mapImage from '@/assets/images/map.png'
@@ -40,9 +41,12 @@ import { useEffect, useState } from 'react'
 
 import BackToTopButton from '@/components/Buttons/BackToTopButton/BackToTopButton'
 
+import { contactInfo } from '@/constants/contact_info'
+
 const Home: NextPage = () => {
   const { data, isLoading, isSuccess } = useGetHomeNewsQuery(8)
   const [showModal, setShowModal] = useState(false)
+  const [modalInfo, setModalInfo] = useState(contactInfo[0])
   const [slideshowImages, setSlideshowImages] = useState<string[]>([])
 
   const {
@@ -58,7 +62,7 @@ const Home: NextPage = () => {
       slide.message.forEach((element) => {
         tmpSlideshowImages.push(
           'https://www.science.kmitl.ac.th/' +
-            element.news_file_topic.replace('public', '').trim()
+          element.news_file_topic.replace('public', '').trim()
         )
       })
 
@@ -71,19 +75,42 @@ const Home: NextPage = () => {
       {showModal && (
         <BaseModal
           onClose={() => setShowModal(false)}
-          footer={
-            <>
-              <div>arstsrt</div>
-              <div>arstsrt</div>
-              <div>arstsrt</div>
-            </>
-          }
           body={
-            <>
-              <div>arstsrt</div>
-              <div>arstsrt</div>
-              <div>arstsrt</div>
-            </>
+            <div className='grid grid-cols-2 h-[500px]'>
+              <div className='ml-16'>
+                <Image
+                  src={modalInfo.img}
+                  alt="ผู้บริหาร"
+                  width={300}
+                  height={450}
+                />
+                <div className="-mt-1.5 subtitle2 text-[#979797]">
+                  {modalInfo.name}
+                </div>
+              </div>
+              <div className='mt-20 mx-4'>
+                <div className='text-[22px]'>
+                  {modalInfo.position.split('/')[0]}
+                </div>
+                <div className='h5 mt-1.5'>
+                  {modalInfo.name.replace('รองศาสตราจารย์ ', 'รศ.')
+                                  .replace('ผู้ช่วยศาสตราจารย์ ','ผศ.')}
+                </div>
+                <div className='mt-0.5 text-[22px]'>
+                  <div>{modalInfo.engName}</div>
+                  <div className='-mt-2.5'>
+                    {modalInfo.position.split('/')[1]}
+                  </div>
+                </div>
+                <div className='flex mt-3'>
+                  <Image
+                    src={mailIcon}
+                    alt="mail-icon"
+                  />
+                  <div className='ml-1'>{modalInfo.email}</div>
+                </div>
+              </div>
+            </div>
           }
         />
       )}
@@ -342,24 +369,39 @@ const Home: NextPage = () => {
             name="ผศ.ดร.กานต์ วงศาริยะ"
             position="รองคณบดีคณะวิทยาศาสตร์"
             autoHeight
-            onContactClick={() => setShowModal(true)}
+            onContactClick={() => {
+              setModalInfo(contactInfo[0]);
+              setShowModal(true);
+            }}
           />
           <ExecutiveCard
             image="https://www.science.kmitl.ac.th/assets/img/dean-office/aparporn.png"
             name="รศ.ดร.อาภาภรณ์ สกุลการะเวก"
             position="รองคณบดี คณะวิทยาศาสตร์"
+            onContactClick={() => {
+              setModalInfo(contactInfo[1]);
+              setShowModal(true);
+            }}
             autoHeight
           />
           <ExecutiveCard
             image="https://www.science.kmitl.ac.th/assets/img/dean-office/chokchai.png"
             name="รศ.ดร.โชคชัย กิตติวงศ์วัฒนา"
             position="รองคณบดี คณะวิทยาศาสตร์"
+            onContactClick={() => {
+              setModalInfo(contactInfo[2]);
+              setShowModal(true);
+            }}
             autoHeight
           />
           <ExecutiveCard
             image="https://www.science.kmitl.ac.th/assets/img/dean-office/apiluk.png"
             name="รศ.ดร.อภิลักษณ์ เอียดเอื้อ"
             position="รองคณบดี คณะวิทยาศาสตร์"
+            onContactClick={() => {
+              setModalInfo(contactInfo[3]);
+              setShowModal(true);
+            }}
             autoHeight
           />
         </div>

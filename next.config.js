@@ -17,6 +17,9 @@ const nextConfig = {
     defaultLocale: 'th',
     localeDetection: false,
   },
+  images: {
+    domains: ['www.science.kmitl.ac.th'],
+  },
 }
 
 module.exports = nextConfig
