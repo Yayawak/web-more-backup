@@ -239,7 +239,7 @@ const Home: NextPage = () => {
               category={[news.resourceName]}
               title={news.topicFull}
               date={news.datetimepost_Preview}
-              read={`https://www.science.kmitl.ac.th/page#/news_each/${news._id}`}
+              read={`/news/${news._id}`}
             />
           ))
         ) : (
