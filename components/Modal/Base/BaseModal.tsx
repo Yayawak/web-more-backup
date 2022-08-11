@@ -40,7 +40,7 @@ const BaseModal = ({ title, body, footer, onClose }: IBaseModalProps) => {
           position: fixed;
           display: flex;
           align-items: center;
-          padding: 24px 0;
+          padding: 24px 24px;
           top: 0;
           left: 0;
           width: 100%;
