@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 interface IPaginationProps {
   currentPage?: number
@@ -7,6 +7,7 @@ interface IPaginationProps {
 
 const Pagination = ({ currentPage = 1, maxPages = 10 }: IPaginationProps) => {
   const startPage = useMemo(() => {
+    if (currentPage < 1) return 1
     if (currentPage >= maxPages - 2) return maxPages - 4
     if (currentPage > 3) return currentPage - 2
     else return 1
@@ -24,6 +25,9 @@ const Pagination = ({ currentPage = 1, maxPages = 10 }: IPaginationProps) => {
     const first: number[] = []
     const last: number[] = []
 
+    const newCurrentPage =
+      currentPage < 1 ? 1 : currentPage > maxPages ? maxPages : currentPage
+
     if (maxPages <= 5) {
       for (let i = 1; i <= maxPages; i++) {
         first.push(i)
@@ -33,15 +37,15 @@ const Pagination = ({ currentPage = 1, maxPages = 10 }: IPaginationProps) => {
       return pages
     }
 
-    for (let i = startPage; i < currentPage; i++) {
+    for (let i = startPage; i < newCurrentPage; i++) {
       first.push(i)
     }
 
-    for (let i = currentPage + 1; i <= endPage; i++) {
+    for (let i = newCurrentPage + 1; i <= endPage; i++) {
       last.push(i)
     }
 
-    pages.push(first, [currentPage], last)
+    pages.push(first, [newCurrentPage], last)
     return pages
   }, [maxPages, currentPage, startPage, endPage])
 
