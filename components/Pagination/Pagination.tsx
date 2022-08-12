@@ -1,11 +1,16 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
 
 interface IPaginationProps {
   currentPage?: number
   maxPages?: number
+  onNavigatorClick?: (page: number) => void
 }
 
-const Pagination = ({ currentPage = 1, maxPages = 10 }: IPaginationProps) => {
+const Pagination = ({
+  currentPage = 1,
+  maxPages = 10,
+  onNavigatorClick,
+}: IPaginationProps) => {
   const startPage = useMemo(() => {
     if (currentPage < 1) return 1
     if (currentPage >= maxPages - 2) return maxPages - 4
@@ -60,6 +65,7 @@ const Pagination = ({ currentPage = 1, maxPages = 10 }: IPaginationProps) => {
           <button
             key={page}
             className={`navigator ${currentPage === page && 'active'}`}
+            onClick={() => (onNavigatorClick ? onNavigatorClick(page) : {})}
           >
             {page}
           </button>
