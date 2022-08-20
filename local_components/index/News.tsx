@@ -46,9 +46,7 @@ const IndexNews = () => {
       </Container>
 
       <Container>
-        <Link
-          href={`https://www.science.kmitl.ac.th/page#/news_container/0/5a8470b228d2e92a0c753010`}
-        >
+        <Link href={`/news`}>
           <a>
             <BaseButton
               className="mx-auto mt-[48px] mb-[32px]"
