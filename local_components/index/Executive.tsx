@@ -21,19 +21,19 @@ const IndexExecutive = () => {
         <BaseModal
           onClose={() => setShowModal(false)}
           body={
-            <div className="grid grid-cols-2 h-[500px]">
-              <div className="ml-16">
+            <div className="md:grid md:grid-cols-2 h-fit">
+              <div className="mx-2 md:mx-0 text-center">
                 <Image
                   src={modalInfo.img}
                   alt="ผู้บริหาร"
                   width={300}
                   height={450}
                 />
-                <div className="-mt-1.5 subtitle2 text-[#979797]">
+                <div className="subtitle2 text-[#979797]">
                   {modalInfo.name}
                 </div>
               </div>
-              <div className="mt-20 mx-4">
+              <div className="mt-4 md:mt-20 text-center md:text-left">
                 <div className="text-[22px]">
                   {modalInfo.position.split('/')[0]}
                 </div>
@@ -44,11 +44,11 @@ const IndexExecutive = () => {
                 </div>
                 <div className="mt-0.5 text-[22px]">
                   <div>{modalInfo.engName}</div>
-                  <div className="-mt-2.5">
+                  <div className="md:-mt-2.5">
                     {modalInfo.position.split('/')[1]}
                   </div>
                 </div>
-                <div className="flex mt-3">
+                <div className="flex mt-3 justify-center md:justify-start">
                   <Image src={mailIcon} alt="mail-icon" />
                   <div className="ml-1">{modalInfo.email}</div>
                 </div>
