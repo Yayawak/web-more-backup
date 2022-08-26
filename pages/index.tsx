@@ -6,6 +6,7 @@ import homeHeaderBG from '@/assets/images/home_header_bg.svg'
 
 import BackToTopButton from '@/components/Buttons/BackToTopButton/BackToTopButton'
 import Slideshow from '@/components/Slideshow/Slideshow'
+import Banner from '@/components/Banner/Banner'
 
 import IndexNews from '@/local_components/index/News'
 import IndexPrograms from '@/local_components/index/Programs'
@@ -41,6 +42,7 @@ const Home: NextPage = () => {
   return (
     <>
       <BackToTopButton />
+      <Banner />
 
       {!slideLoading && slideSuccess ? (
         <div className="header h-[700px] py-[16px] bg-cover bg-center">
