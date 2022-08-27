@@ -1,6 +1,7 @@
 import NewsCard from '@/components/Cards/News/NewsCard'
 import { useGetHomeNewsQuery } from '@/store/api/news/getHomeNews'
 import Container from '@/components/Layout/Container'
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
 const NewsCategories = [
   { name: 'กิจกรรม' },
   { name: 'แข่งขัน' },
@@ -25,18 +26,13 @@ const NewsPage = () => {
   const { data, isLoading, isSuccess } = useGetHomeNewsQuery(8)
   return (
     <>
-      <div>
-        <div>
-          <a>หน้าหลัก</a>
-          <a> &gt; </a>
-          <a>ข่าวสาร ฝากพี่ฟิ้นทำ XD</a>
-        </div>
-      </div>
       <Container>
+        <Breadcrumbs className="mt-[16px]" />
         <div className="flex justify-center text-2xl font-semibold mt-5 mb-10">
           ข่าวสาร และประชาสัมพันธ์
         </div>
       </Container>
+
       <Container>
         <div className=" flex justify-between pb-10">
           <div>
