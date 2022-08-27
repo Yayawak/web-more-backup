@@ -1,13 +1,12 @@
-interface IBreadcrumbRoute {
-  path: string
-  name: string // name that will show in the breadcrumb ex. หน้าแรก, ข่าวสาร
-  children: IBreadcrumbRoute[] // sub routes
-}
+import { BreadcrumbsRoute } from '@/types/breadcrumbs'
 
-export const breadcrumbRoutes: IBreadcrumbRoute[] = [
-  {
-    path: '/',
-    name: 'Home',
-    children: [],
+export const breadcrumbRoutes: BreadcrumbsRoute = {
+  '/news': {
+    name: 'ข่าวสาร',
+    children: {
+      '/[id]': {
+        name: '?',
+      },
+    },
   },
-]
+}
