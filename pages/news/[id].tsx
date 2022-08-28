@@ -38,31 +38,30 @@ const NewsByIdPage = ({ id }: INewsByIdPageProps) => {
   }, [newsLoading, newsSuccess])
   return (
     <>
-      {newsSuccess && <Breadcrumbs replaces={[newsData.message.topicFull]} />}
-
       {!newsLoading && newsSuccess ? (
-        <div>
-          <Container className="mt-16">
-            <p className="text-left text-3xl font-bold">
-              {newsData.message.topicFull}
-            </p>
-            <p className="text-lg">{datePreview}</p>
-            <div className="relative h-[400px] w-full my-[48px]">
-              <Image
-                src={`https://www.science.kmitl.ac.th${String(
-                  newsData.message.news_file_topic
-                ).replace('public', '')}`}
-                alt="science kmitl"
-                layout="fill"
-                objectFit="contain"
-              ></Image>
-            </div>
-            <p
-              className="mb-5 text-center"
-              dangerouslySetInnerHTML={{ __html: newsData.message.detailFull }}
-            ></p>
-          </Container>
-        </div>
+        <Container className="my-[16px]">
+          {newsSuccess && (
+            <Breadcrumbs replaces={[newsData.message.topicFull]} />
+          )}
+          <p className="text-left text-3xl font-bold">
+            {newsData.message.topicFull}
+          </p>
+          <p className="text-lg">{datePreview}</p>
+          <div className="relative h-[400px] w-full my-[48px]">
+            <Image
+              src={`https://www.science.kmitl.ac.th${String(
+                newsData.message.news_file_topic
+              ).replace('public', '')}`}
+              alt="science kmitl"
+              layout="fill"
+              objectFit="contain"
+            ></Image>
+          </div>
+          <p
+            className="mb-5 text-center"
+            dangerouslySetInnerHTML={{ __html: newsData.message.detailFull }}
+          ></p>
+        </Container>
       ) : (
         <>Loading...</>
       )}

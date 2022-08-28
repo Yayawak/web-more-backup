@@ -28,7 +28,8 @@ const NewsPage = () => {
     <>
       <Container>
         <Breadcrumbs className="mt-[16px]" />
-        <div className="flex justify-center text-2xl font-semibold mt-5 mb-10">
+
+        <div className="flex justify-center text-2xl font-semibold mt-[16px] mb-10">
           ข่าวสาร และประชาสัมพันธ์
         </div>
       </Container>
@@ -84,7 +85,8 @@ const NewsPage = () => {
           </div>
         </div>
       </Container>
-      <Container className="news-cards grid justify-between gap-[16px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap">
+
+      <Container className="news-cards grid justify-between gap-[16px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap mb-[32px]">
         {!isLoading && isSuccess ? (
           data.message.map((news) => (
             <NewsCard
