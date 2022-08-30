@@ -43,7 +43,7 @@ export default function Banner() {
         }
 
         .sliding-text > *:first-child {
-          animation: slide 15s linear infinite;
+          // animation: slide 15s linear infinite;
         }
       `}</style>
     </>
