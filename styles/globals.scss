@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-size: 20px;
   font-family: kmitl;
+  background-color: #f2f2f2;
 }
 
 a {
@@ -25,34 +26,44 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 @layer components {
   .h1 {
     @apply text-[48px] leading-[45px] font-bold;
   }
+
   .h2 {
     @apply text-[38px] leading-[36px] font-bold;
   }
+
   .h3 {
     @apply text-[32px] leading-[30px] font-bold;
   }
+
   .h4 {
     @apply text-[30px] leading-[23px] font-bold;
   }
+
   .h5 {
     @apply text-[26px] leading-[25px] font-bold;
   }
+
   .h6 {
     @apply text-[24px] leading-[23px] font-bold;
   }
+
   .subtitle1 {
     @apply text-[24px] leading-[23px] font-normal;
   }
+
   .subtitle2 {
     @apply text-[20px] leading-[19px] font-bold;
   }
+
   .body1 {
     @apply text-[24px] leading-[23px] font-normal;
   }
+
   .body2 {
     @apply text-[20px] leading-[19px] font-normal;
   }

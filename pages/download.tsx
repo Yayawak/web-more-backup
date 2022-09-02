@@ -1,64 +1,43 @@
-import CustomSelect from '@/components/Download/CustomSelect';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
+import BaseButton from '@/components/Buttons/Base/BaseButton'
+import InputSelect from '@/components/Input/Select'
+import Container from '@/components/Layout/Container'
+import { Rounded } from '@/types/rounded'
 import { NextPage } from 'next'
-import { useState } from 'react';
-import vectorDown from '@/assets/icons/icon-vectorDown.svg'
-import vectorUp from '@/assets/icons/icon-vectorUp.svg'
 
-type Props = {}
+const Download: NextPage = () => {
+  return (
+    <Container className="mt-[16px]">
+      <Breadcrumbs />
 
-const Download: NextPage = ({ }: Props) => {
-    const roleList = [
-        "บุคลากร",
-        "นักศึกษา",
-    ];
-    const docTypeList = [
-        ".doc",
-        ".pdf",
-    ];
-    const rolePlaceholder = "กรุณาเลือกประเภทบุคลากร";
-    const docTypePlaceholder = "กรุณาเลือกประเภทเอกสาร";
+      <div className="mt-[16px] mb-[56px] text-center text-[32px] font-bold">
+        เลือกรายละเอียดเอกสารที่ต้องการ
+      </div>
 
-    const [roleSelected, setRoleSelected] = useState(rolePlaceholder);
-    const [docTypeSelected, setDocTypeSelected] = useState(docTypePlaceholder);
+      <div className="mx-auto max-w-[600px]">
+        <div className="text-[24px] mb-[8px]">ประเภทบุคลากร</div>
+        <InputSelect items={{ teacher: 'บุคคลากร', student: 'นักศึกษา' }} />
 
-    return (
-        <div className='bg-[#F2F2F2]'>
-            <div className='2xl:container 2xl:mx-auto min-h-screen pt-9 flex flex-col gap-6 items-center sm:gap-16'>
-                <h1 className='h6 sm:h1 text-center'>เลือกรายละเอียดเอกสารที่ต้องการ</h1>
-                <div className='w-[90%] sm:w-[50%]'>
-                    <div className='pb-3 sm:pb-8 subtitle1 sm:h3 font-normal'>
-                        <p className='pb-2 sm:pb-5'>ประเภทบุคลากร</p>
-                        <div className="">
-                            <select id="role" value={roleSelected} onChange={(e) => setRoleSelected(e.target.value)} className="bg-white border-2 border-[#212121] text-[#6A6A6A] rounded-[10px] focus:outline-none focus:ring-[#F8560A] focus:border-[#F8560A] block w-full px-5 py-2">
-                                <option selected disabled>{rolePlaceholder}</option>
-                                {roleList.map((role) => (
-                                    <option key={role} value={role}>{role}</option>
-                                ))}
-                            </select>
-                            {/* <CustomSelect optionsList={roleList} placeHolder={rolePlaceholder} selectedOption={roleSelected} setSelectedOption={setRoleSelected} /> */}
-                        </div>
-                    </div>
-                    <div className='subtitle1 sm:h3 font-normal'>
-                        <p className='pb-2 sm:pb-5'>ประเภทเอกสาร</p>
-                        <div className="">
-                            <select id="docType" value={docTypeSelected} onChange={(e) => setDocTypeSelected(e.target.value)} className="bg-white border-2 border-[#212121] text-[#6A6A6A] rounded-[10px] focus:outline-none focus:ring-[#F8560A] focus:border-[#F8560A] block w-full px-5 py-2">
-                                <option selected disabled>{docTypePlaceholder}</option>
-                                {docTypeList.map((type) => (
-                                    <option key={type} value={type}>{type}</option>
-                                ))}
-                            </select>
-                            {/* <CustomSelect optionsList={docTypeList} placeHolder={docTypePlaceholder} selectedOption={docTypeSelected} setSelectedOption={setDocTypeSelected} /> */}
-                        </div>
-                    </div>
-                </div>
-                <div className='flex justify-center'>
-                    <button className='bg-[#F8560A] text-white text-[24px] sm:text-[30px] leading-[28px] font-bold py-2 px-12 sm:py-4 sm:px-24 rounded-xl'>ค้นหา</button>
-                </div>
-                <div className='bg-white rounded-xl w-[80%] h-[600px] mb-[474px]'>
-                </div>
-            </div>
-        </div>
-    );
+        <div className="text-[24px] mt-[16px] mb-[8px]">ประเภทเอกสาร</div>
+        <InputSelect items={{ doc: '.doc', pdf: '.pdf' }} />
+
+        <BaseButton
+          backgroundColor="#F8560A"
+          textColor="white"
+          roundedType={Rounded.CUSTOM}
+          rounded={8}
+          elevation={false}
+          className="mt-[16px] mb-[16px] mx-auto w-[130px]"
+        >
+          ค้นหา
+        </BaseButton>
+      </div>
+
+      <div className="mx-auto mb-[16px] py-[16px] px-[32px] max-w-[800px] flex flex-col bg-white rounded-[10px]">
+        <div className="font-bold text-[20px]">งานวิจัย</div>
+      </div>
+    </Container>
+  )
 }
 
 export default Download
