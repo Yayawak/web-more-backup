@@ -156,8 +156,7 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'โครงสร้างองค์กร',
-        path: 'https://www.science.kmitl.ac.th/page#/structure',
-        isExternalPath: true,
+        path: '/organization-chart',
       },
       {
         title: 'รายงานประจำปี',
