@@ -66,16 +66,34 @@ const Breadcrumbs: FC<CustomProps<IBreadcrumbsProps>> = ({
   }, [])
 
   return (
-    <div className={className}>
-      {complied.map((set, i) => (
-        <>
-          <Link href={set.path}>
-            <a>{set.name}</a>
-          </Link>
-          {i < complied.length - 1 && <span> &#62; </span>}
-        </>
-      ))}
-    </div>
+    <>
+      <div className={className}>
+        {complied.map((set, i) => (
+          <>
+            <Link href={set.path}>
+              <a className={`${i === complied.length - 1 && 'active'}`}>
+                {set.name}
+              </a>
+            </Link>
+            {i < complied.length - 1 && <span> &#62; </span>}
+          </>
+        ))}
+      </div>
+
+      <style>{`
+        a {
+          color: #737373;
+        }
+
+        a.active {
+          color: #FF7C32;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      `}</style>
+    </>
   )
 }
 
