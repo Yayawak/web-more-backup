@@ -45,7 +45,7 @@ const BaseButton = ({
         {children}
       </button>
 
-      <style jsx>{`
+      <style jsx scoped>{`
         .base-button {
           padding: ${padding};
           color: ${textColor};

@@ -80,13 +80,13 @@ const Breadcrumbs: FC<CustomProps<IBreadcrumbsProps>> = ({
         ))}
       </div>
 
-      <style>{`
+      <style jsx scoped>{`
         a {
           color: #737373;
         }
 
         a.active {
-          color: #FF7C32;
+          color: #ff7c32;
         }
 
         a:hover {

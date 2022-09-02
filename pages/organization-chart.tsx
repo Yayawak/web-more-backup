@@ -99,7 +99,7 @@ const OrganizationChartPage = () => {
         </ol>
       </div>
 
-      <style jsx>{`
+      <style jsx scoped>{`
         .container {
           max-width: 1400px;
           padding: 0 10px;

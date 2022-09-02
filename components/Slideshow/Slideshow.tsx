@@ -59,7 +59,7 @@ const Slideshow = ({ images = [], className = '', style = {} }: Props) => {
         ))}
       </div>
 
-      <style jsx>{`
+      <style jsx scoped>{`
         .navigator {
           background-color: var(--grey);
         }

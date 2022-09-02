@@ -31,7 +31,7 @@ export default function Banner() {
         </div>
       )}
 
-      <style jsx>{`
+      <style jsx scoped>{`
         @keyframes slide {
           from {
             transform: translateX(100%);

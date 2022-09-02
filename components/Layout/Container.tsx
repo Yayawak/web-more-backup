@@ -22,7 +22,7 @@ const Container = ({
         {children}
       </div>
 
-      <style jsx>{`
+      <style jsx scoped>{`
         .container {
           max-width: ${getMaxWidth};
           padding-left: ${noPadding ? 0 : 8}px;

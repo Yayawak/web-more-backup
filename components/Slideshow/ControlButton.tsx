@@ -22,7 +22,7 @@ const SlideshowButton = ({ side, onClick }: ButtonProps) => {
         {sideToText[side]}
       </div>
 
-      <style jsx lang="scss">{`
+      <style jsx scoped lang="scss">{`
         .slideshow-button {
           background-color: rgba(0, 0, 0, 0.7);
         }

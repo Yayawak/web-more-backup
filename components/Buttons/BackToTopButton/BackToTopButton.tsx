@@ -33,7 +33,7 @@ const BackToTopButton = () => {
         <span className="mdi mdi-arrow-up"></span>
       </div>
 
-      <style jsx>{`
+      <style jsx scoped>{`
         .back-to-top {
           position: fixed;
           display: ${isShow ? 'flex' : 'none'};

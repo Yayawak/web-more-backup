@@ -18,7 +18,7 @@ const Layout = ({ children }: IComponentProps) => {
         <Footer />
       </div>
 
-      <style jsx>{`
+      <style jsx scoped>{`
         .app-main {
           padding-top: var(--navbar-height);
         }

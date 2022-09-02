@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <style jsx lang="scss">{`
+      <style jsx scoped lang="scss">{`
         nav {
           height: var(--navbar-height);
           z-index: 999;

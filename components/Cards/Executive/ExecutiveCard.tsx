@@ -59,7 +59,7 @@ const ExecutiveCard = ({
         </div>
       </div>
 
-      <style jsx lang="scss">{`
+      <style jsx scoped lang="scss">{`
         .executive-card {
           grid-template-rows: 160px fit-content(100%) fit-content(100%) auto;
           width: ${width}px;

@@ -109,7 +109,7 @@ const NewsPage = () => {
         )}
       </Container>
 
-      <style jsx lang="scss">{`
+      <style jsx scoped lang="scss">{`
         .tags-select-box {
         }
 
