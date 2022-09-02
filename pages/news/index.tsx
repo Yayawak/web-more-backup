@@ -1,7 +1,8 @@
 import NewsCard from '@/components/Cards/News/NewsCard'
-import { useGetHomeNewsQuery } from '@/store/api/news/getHomeNews'
 import Container from '@/components/Layout/Container'
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
+import { useGetAllNewsQuery } from '@/store/api/news/getAllNews'
+import { useGetHomeNewsQuery } from '@/store/api/news/getHomeNews'
 const NewsCategories = [
   { name: 'กิจกรรม' },
   { name: 'แข่งขัน' },
@@ -23,7 +24,10 @@ const NewsDepartments = [
 ]
 
 const NewsPage = () => {
-  const { data, isLoading, isSuccess } = useGetHomeNewsQuery(8)
+  const { data, isLoading, isSuccess } = useGetAllNewsQuery(null)
+
+  console.log(data)
+
   return (
     <>
       <Container>
