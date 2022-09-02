@@ -1,4 +1,5 @@
 const path = require('path')
+const { i18n } = require('./next-i18next.config')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,10 +13,9 @@ const nextConfig = {
     @import "./palette.scss";
     `,
   },
-  i18n: {
-    locales: ['th', 'en'],
-    defaultLocale: 'th',
-    localeDetection: false,
+  i18n,
+  images: {
+    domains: ['www.science.kmitl.ac.th'],
   },
 }
 
