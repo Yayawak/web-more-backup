@@ -4,7 +4,6 @@ import InputSelect from '@/components/Input/Select'
 import Container from '@/components/Layout/Container'
 import { Rounded } from '@/types/rounded'
 import {
-  ColumnDef,
   createColumnHelper,
   flexRender,
   getCoreRowModel,
