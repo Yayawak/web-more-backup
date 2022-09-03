@@ -9,4 +9,7 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
       },
     },
   },
+  '/download': {
+    name: 'เอกสาร',
+  },
 }
