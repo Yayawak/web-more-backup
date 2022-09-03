@@ -10,13 +10,12 @@ const InputSelect: FC<IInputSelectProps> = ({ items }) => {
   return (
     <>
       <select
+        defaultValue={selected}
         className={`w-full py-[8px] px-[8px] outline-none border-black border-[1px] rounded-[8px]`}
       >
         {Object.keys(items).map((item) => (
           <>
-            <option value={item} selected={selected === items[item]}>
-              {items[item]}
-            </option>
+            <option value={item}>{items[item]}</option>
           </>
         ))}
       </select>
