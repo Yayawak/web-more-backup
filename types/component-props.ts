@@ -6,4 +6,4 @@ export interface IComponentProps {
   children?: React.ReactNode
 }
 
-export type CustomProps<T> = IComponentProps & T
+export type CustomProps<T = { [key: string]: any }> = IComponentProps & T

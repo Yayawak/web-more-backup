@@ -69,14 +69,14 @@ const Breadcrumbs: FC<CustomProps<IBreadcrumbsProps>> = ({
     <>
       <div className={className}>
         {complied.map((set, i) => (
-          <>
+          <span key={set.path}>
             <Link href={set.path}>
               <a className={`${i === complied.length - 1 && 'active'}`}>
                 {set.name}
               </a>
             </Link>
             {i < complied.length - 1 && <span> &#62; </span>}
-          </>
+          </span>
         ))}
       </div>
 
