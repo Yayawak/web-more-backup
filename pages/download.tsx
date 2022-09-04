@@ -5,17 +5,17 @@ import Container from '@/components/Layout/Container'
 import { Rounded } from '@/types/rounded'
 import {
   createColumnHelper,
-  FilterFn,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
+  getPaginationRowModel,
   useReactTable,
 } from '@tanstack/react-table'
 import { NextPage } from 'next'
 import * as fns from 'date-fns'
 import Link from 'next/link'
 import InputText from '@/components/Input/Text'
-import React, { ChangeEvent, useCallback, useState } from 'react'
+import React, { ChangeEvent, useCallback, useEffect, useState } from 'react'
 
 interface IDownloadTable {
   name: string
@@ -76,11 +76,12 @@ const Download: NextPage = () => {
   const table = useReactTable({
     columns,
     data,
-    getCoreRowModel: getCoreRowModel(),
     state: {
       globalFilter: filter,
     },
+    getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
   })
 
   return (
