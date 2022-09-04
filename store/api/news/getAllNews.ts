@@ -4,7 +4,7 @@ const getAllNewsApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getAllNews: builder.query({
       query: () => ({
-        method: 'PORT',
+        method: 'POST',
         url: '/getNews',
         body: {
           tag: '0',

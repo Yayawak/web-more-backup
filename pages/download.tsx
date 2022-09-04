@@ -5,13 +5,17 @@ import Container from '@/components/Layout/Container'
 import { Rounded } from '@/types/rounded'
 import {
   createColumnHelper,
+  FilterFn,
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
   useReactTable,
 } from '@tanstack/react-table'
 import { NextPage } from 'next'
 import * as fns from 'date-fns'
 import Link from 'next/link'
+import InputText from '@/components/Input/Text'
+import React, { ChangeEvent, useCallback, useState } from 'react'
 
 interface IDownloadTable {
   name: string
@@ -67,10 +71,16 @@ const data: IDownloadTable[] = [
 ]
 
 const Download: NextPage = () => {
+  const [filter, setFilter] = useState<string>('')
+
   const table = useReactTable({
     columns,
     data,
     getCoreRowModel: getCoreRowModel(),
+    state: {
+      globalFilter: filter,
+    },
+    getFilteredRowModel: getFilteredRowModel(),
   })
 
   return (
@@ -103,6 +113,15 @@ const Download: NextPage = () => {
 
         <div className="mx-auto mb-[16px] py-[16px] px-[32px] flex flex-col bg-white rounded-[10px]">
           <div className="font-bold text-[20px] mb-[16px]">งานวิจัย</div>
+
+          <div className="flex mb-[16px] items-center">
+            <div className="ml-auto mr-[16px]">คำค้นหา</div>
+            <InputText
+              className="max-w-[200px]"
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+            />
+          </div>
 
           <table>
             <thead className="border-y-[#F8560A66] border-y-2">
