@@ -16,6 +16,7 @@ import * as fns from 'date-fns'
 import Link from 'next/link'
 import InputText from '@/components/Input/Text'
 import React, { ChangeEvent, useCallback, useEffect, useState } from 'react'
+import Pagination from '@/components/Pagination/Pagination'
 
 interface IDownloadTable {
   name: string
@@ -83,6 +84,26 @@ const Download: NextPage = () => {
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   })
+
+  const [pageIndex, setPageIndex] = useState<number>(1)
+  const [pageSize, setPageSize] = useState<number>(10)
+
+  const onPageChange = useCallback(
+    (page: number) => {
+      const maxPages = table.getPageCount()
+      if (page < 1) page = 1
+      if (page > maxPages) page = maxPages
+
+      setPageIndex(page)
+      table.setPageIndex(page - 1)
+    },
+    [table]
+  )
+
+  useEffect(() => {
+    table.setPageIndex(0)
+    table.setPageSize(pageSize)
+  }, [])
 
   return (
     <>
@@ -155,6 +176,15 @@ const Download: NextPage = () => {
               ))}
             </tbody>
           </table>
+
+          <div className="flex mt-[40px]">
+            <Pagination
+              maxPages={table.getPageCount()}
+              currentPage={pageIndex}
+              onPageChanged={onPageChange}
+              className="ml-auto"
+            />
+          </div>
         </div>
       </Container>
 

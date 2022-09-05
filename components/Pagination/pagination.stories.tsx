@@ -1,14 +1,13 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-// import Pagination from './Pagination'
-import PaginationV2 from './PaginationV2'
+import Pagination from './Pagination'
 
 export default {
   title: 'Common/Pagination',
-  component: PaginationV2,
-} as ComponentMeta<typeof PaginationV2>
+  component: Pagination,
+} as ComponentMeta<typeof Pagination>
 
-const Template: ComponentStory<typeof PaginationV2> = (args) => (
-  <PaginationV2 {...args} />
+const Template: ComponentStory<typeof Pagination> = (args) => (
+  <Pagination {...args} />
 )
 
 export const Default = Object.assign(Template, {})
