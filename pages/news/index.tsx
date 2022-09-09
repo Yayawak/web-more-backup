@@ -2,7 +2,8 @@ import NewsCard from '@/components/Cards/News/NewsCard'
 import Container from '@/components/Layout/Container'
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
 import { useGetAllNewsQuery } from '@/store/api/news/getAllNews'
-import { useGetHomeNewsQuery } from '@/store/api/news/getHomeNews'
+import Pagination from '@/components/Pagination/Pagination'
+import { useState } from 'react'
 const NewsCategories = [
   { name: 'กิจกรรม' },
   { name: 'แข่งขัน' },
@@ -25,8 +26,7 @@ const NewsDepartments = [
 
 const NewsPage = () => {
   const { data, isLoading, isSuccess } = useGetAllNewsQuery(null)
-
-  console.log(data)
+  const [newsPage, setNewsPage] = useState<number>(0)
 
   return (
     <>
@@ -92,22 +92,41 @@ const NewsPage = () => {
 
       <Container className="news-cards grid justify-between gap-[16px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap mb-[32px]">
         {!isLoading && isSuccess ? (
-          data.message.map((news) => (
-            <NewsCard
-              key={news.newsId}
-              imageUrl={`https://www.science.kmitl.ac.th${news.news_file_topic
-                .replace('public', ' ')
-                .trim()}`}
-              category={[news.resourceName]}
-              title={news.topicFull}
-              date={news.datetimepost_Preview}
-              read={`https://www.science.kmitl.ac.th/page#/news_each/${news._id}`}
-            />
-          ))
+          data.message
+            .slice(newsPage * 12, newsPage * 12 + 12)
+            .map((news) => (
+              <NewsCard
+                key={news._id}
+                imageUrl={
+                  news.news_file_topic
+                    ? `https://www.science.kmitl.ac.th${news.news_file_topic
+                        .replace('public', '')
+                        .trim()}`
+                    : ''
+                }
+                category={[news.resourceName]}
+                title={news.topicFull}
+                date={news.datetimepost_Preview}
+                read={`https://www.science.kmitl.ac.th/page#/news_each/${news._id}`}
+              />
+            ))
         ) : (
           <>Loading...</>
         )}
       </Container>
+
+      {!isLoading && isSuccess && (
+        <Container className="flex justify-center my-[40px]">
+          <Pagination
+            onPageChanged={(page) => {
+              setNewsPage(page - 1)
+            }}
+            currentPage={newsPage + 1}
+            maxPages={Math.ceil(data.message.length / 12)}
+            className="mx-auto"
+          />
+        </Container>
+      )}
 
       <style jsx scoped lang="scss">{`
         .tags-select-box {
