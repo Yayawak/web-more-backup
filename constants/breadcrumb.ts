@@ -12,4 +12,7 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
   '/download': {
     name: 'เอกสาร',
   },
+  '/ita': {
+    name: 'ข้อมูลเปิดเผยสาธารณะ'
+  }
 }
