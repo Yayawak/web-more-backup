@@ -66,7 +66,7 @@ const NewsByIdPage = ({ id }: INewsByIdPageProps) => {
         <>Loading...</>
       )}
 
-      {!newsLoading && newsSuccess && newsFiles != [] ? (
+      {!newsLoading && newsSuccess && newsFiles.length > 0 ? (
         newsFiles
           .filter((news) => news != null)
           .map((news, i) => (
