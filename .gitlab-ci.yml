@@ -1,0 +1,21 @@
+image: node:16.17.0-alpine
+
+stages:
+  - lint
+  - build
+
+test-lint:
+  stage: lint
+  script:
+    - yarn
+    - yarn lint
+  only:
+    - merge_requests
+
+test-build:
+  stage: build
+  script:
+    - yarn
+    - yarn build
+  only:
+    - merge_requests
