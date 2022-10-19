@@ -42,6 +42,6 @@ export const contactItems: contactItem[] = [
   },
   {
     mdiIconClass: 'mdi mdi-web',
-    path: 'https://www.science.kmitl.ac.th/#/home',
+    path: '/',
   },
 ]
