@@ -14,5 +14,8 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
   },
   '/ita': {
     name: 'ข้อมูลเปิดเผยสาธารณะ'
+  },
+  '/course-master': {
+    name: 'หลักสูตรปริญญาโท',
   }
 }
