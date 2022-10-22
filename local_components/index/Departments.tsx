@@ -16,16 +16,20 @@ import kdaiIcon from '@/assets/icons/icon-kdai.svg'
 const IndexDepartments = () => {
   return (
     <div
-      className="bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${departmentSectioinBG.src})`,
-      }}
+      // className="bg-cover bg-center"
+      // style={{
+      //   backgroundImage: `url(${departmentSectioinBG.src})`,
+      // }}
     >
       <Container className="py-[16px]">
         <Container className="mb-[32px]">
           <IndexSectionTitle>ภาควิชาและศูนย์</IndexSectionTitle>
         </Container>
-        <div className="flex flex-col justify-center lg:flex-row mt-20">
+        <div className="flex flex-col justify-center lg:flex-row p-5 bg-cover bg-center rounded-3xl"
+          style={{
+            backgroundImage: `url(${departmentSectioinBG.src})`,
+          }}
+        >
           <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:w-[600px] lg:mr-auto">
             {departmentItems.map((item, index) => {
               return (
@@ -51,7 +55,7 @@ const IndexDepartments = () => {
             })}
           </ul>
           <div className="flex items-center">
-            <div className="border-r-2 border-black w-0 h-[192px] ml-8 mr-6 lg:h-[517px] lg:mr-44"></div>
+            <div className="border-r-2 border-black w-0 h-[192px] ml-8 mr-6 lg:h-[517px] lg:mr-24"></div>
             <p className="text-2xl whitespace-pre-wrap">
               เพราะเราเชื่อว่า <br />
               <q>
