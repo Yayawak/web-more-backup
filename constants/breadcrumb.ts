@@ -21,4 +21,7 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
   '/course-master': {
     name: 'หลักสูตรปริญญาโท',
   },
+  '/course-doctorate': {
+    name: 'หลักสูตรปริญญาเอก',
+  },
 }
