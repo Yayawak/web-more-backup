@@ -12,7 +12,7 @@ test-lint:
     - yarn lint
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_PIPELINE_SOURCE == "development"
+    - if: $CI_COMMIT_BRANCH == "development"
 
 test-build:
   stage: build
@@ -21,7 +21,7 @@ test-build:
     - yarn build
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_PIPELINE_SOURCE == "development"
+    - if: $CI_COMMIT_BRANCH == "development"
 
 create-docker-image:
   stage: build-image
