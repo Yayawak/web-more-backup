@@ -24,8 +24,9 @@ run-build:
     - if: $CI_COMMIT_BRANCH == "development"
 
 create-docker-image:
-  image: docker:latest
   stage: build-image
+  services:
+    - docker:dind
   before_script:
     - echo $REGISTRY_PASS | docker login -u $REGISTRY_USER --password-stdin
   script:
