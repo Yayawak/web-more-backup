@@ -8,6 +8,13 @@ interface IContactInfo {
 
 export const contactInfo: IContactInfo[] = [
   {
+    name: 'รองศาสตราจารย์ ดร. สุธี  ชุติไพจิตร',
+    engName: 'Associate Professor Dr. Sutee Chutipaijit',
+    position: 'คณบดี / Dean',
+    email: 'sutee.ch@kmitl.ac.th',
+    img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/sutee.png'
+  },
+  {
     name: 'ผู้ช่วยศาสตราจารย์ ดร. กานต์ วงศาริยะ',
     engName: 'Assistant Professor Dr. Karn Wongsariya',
     position: 'รองคณบดีฝ่ายบริหารงานทั่วไปและบริหารยุทธศาสตร์ / Vice Dean',
