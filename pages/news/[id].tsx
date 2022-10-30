@@ -46,17 +46,20 @@ const NewsByIdPage = ({ id }: INewsByIdPageProps) => {
           <p className="text-left text-3xl font-bold">
             {newsData.message.topicFull}
           </p>
+
           <p className="text-lg">{datePreview}</p>
           <div className="relative h-[400px] w-full my-[48px]">
             <Image
+              className="object-contain"
               src={`https://www.science.kmitl.ac.th${String(
                 newsData.message.news_file_topic
               ).replace('public', '')}`}
               alt="science kmitl"
-              layout="fill"
-              objectFit="contain"
+              fill
+              sizes="(min-width: 0) 100vw"
             ></Image>
           </div>
+
           <p
             className="mb-5 text-center"
             dangerouslySetInnerHTML={{ __html: newsData.message.detailFull }}

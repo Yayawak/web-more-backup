@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { aboutItems, contactItems } from './items'
 
-import kmitlLogo from '../../assets/logos/kmitl-logo.png'
+import kmitlLogo from '@/assets/logos/kmitl-logo.png'
 
 const Footer = () => {
   return (
@@ -13,8 +13,8 @@ const Footer = () => {
           <Image
             src={kmitlLogo}
             alt="KMITL logo"
-            layout="fill"
-            objectFit="contain"
+            fill
+            sizes="(min-width: 0) 100vw"
           />
         </div>
         <div className="text-center xl:text-left xl:w-[520px] xl:mr-auto">
@@ -34,9 +34,7 @@ const Footer = () => {
             {aboutItems.map((item, index) => {
               return (
                 <li key={index} className="text-sm mb-1 hover:underline">
-                  <Link href={item.path}>
-                    <a>{item.title}</a>
-                  </Link>
+                  <Link href={item.path}>{item.title}</Link>
                 </li>
               )
             })}
@@ -52,9 +50,10 @@ const Footer = () => {
             {contactItems.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link href={item.path}>
-                    <a className={item.mdiIconClass + ' text-3xl'} />
-                  </Link>
+                  <Link
+                    href={item.path}
+                    className={item.mdiIconClass + ' text-3xl'}
+                  ></Link>
                 </li>
               )
             })}
