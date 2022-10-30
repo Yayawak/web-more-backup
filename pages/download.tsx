@@ -29,8 +29,8 @@ const columns = [
   columnHelper.accessor('name', {
     header: () => <div className="text-left">ชื่อเอกสาร</div>,
     cell: (info) => (
-      <Link href={'#'}>
-        <a className="document-name">{info.getValue()}</a>
+      <Link href={'#'} className="document-name">
+        {info.getValue()}
       </Link>
     ),
   }),

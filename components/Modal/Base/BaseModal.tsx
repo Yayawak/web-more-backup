@@ -1,4 +1,6 @@
-import { useEffect } from 'react'
+import { FC, useEffect, useCallback, useRef } from 'react'
+import { motion } from 'framer-motion'
+import { css } from '@emotion/react'
 
 interface IBaseModalProps {
   title?: string
@@ -7,7 +9,29 @@ interface IBaseModalProps {
   onClose?: () => void
 }
 
-const BaseModal = ({ title, body, footer, onClose }: IBaseModalProps) => {
+const modalVariants = {
+  initial: {
+    opacity: 0,
+    transform: 'translateY(-30px)',
+  },
+  animate: {
+    opacity: 1,
+    transform: 'translateY(0px)',
+  },
+  exit: {
+    opacity: 0,
+    transform: 'translateY(30px)',
+  },
+}
+
+const BaseModal: FC<IBaseModalProps> = ({
+  title,
+  body,
+  footer,
+  onClose,
+}: IBaseModalProps) => {
+  const overlay = useRef<HTMLDivElement | null>(null)
+
   useEffect(() => {
     document.body.style.overflow = 'hidden'
 
@@ -16,14 +40,55 @@ const BaseModal = ({ title, body, footer, onClose }: IBaseModalProps) => {
     }
   })
 
+  const handleOverlayClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (overlay && e.target === overlay.current && onClose) {
+        onClose()
+      }
+    },
+    []
+  )
+
   return (
     <>
-      <div className="modal-overlay">
-        <div className="modal">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        exit={{
+          opacity: 0,
+        }}
+        css={css`
+          padding: 24px 24px;
+          background-color: rgba(0, 0, 0, 0.8);
+        `}
+        className="modal-overlay fixed top-0 left-0 z-[1000] flex h-full w-full items-center overflow-auto"
+        ref={overlay}
+        onClick={handleOverlayClick}
+      >
+        <motion.div
+          css={css`
+            > div {
+              padding: 8px 16px;
+            }
+          `}
+          variants={modalVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className="modal relative m-auto w-full max-w-[800px] rounded-[20px] bg-white"
+        >
           <div className="modal-title flex items-center">
             <div>{title}</div>
+
             <div className="ml-auto">
-              <span className="close mdi mdi-close" onClick={onClose}></span>
+              <span
+                className="close mdi mdi-close cursor-pointer"
+                onClick={onClose}
+              ></span>
             </div>
           </div>
 
@@ -32,41 +97,8 @@ const BaseModal = ({ title, body, footer, onClose }: IBaseModalProps) => {
           <div className="modal-footer flex justify-end gap-[16px]">
             {footer}
           </div>
-        </div>
-      </div>
-
-      <style jsx scoped lang="scss">{`
-        .modal-overlay {
-          position: fixed;
-          display: flex;
-          align-items: center;
-          padding: 24px 24px;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.8);
-          z-index: 1000;
-          overflow: auto;
-
-          .modal {
-            position: relative;
-            margin: auto;
-            width: 100%;
-            max-width: 800px;
-            background-color: white;
-            border-radius: 20px;
-
-            > div {
-              padding: 8px 16px;
-            }
-
-            .close {
-              cursor: pointer;
-            }
-          }
-        }
-      `}</style>
+        </motion.div>
+      </motion.div>
     </>
   )
 }

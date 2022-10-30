@@ -5,8 +5,8 @@ import Image from 'next/image'
 import menuItems, { MyMenuItem } from './MenuItems'
 
 import sciKmitlLogo from '@/assets/logos/sci-kmitl-logo.png'
-import flagTH from '@/assets/flags/flag-th.png'
-import flagEN from '@/assets/flags/flag-en.png'
+import flagTH from '@/assets/flags/th.svg'
+import flagEN from '@/assets/flags/en.svg'
 import NavbarMenu from './NavbarMenu'
 import { Menu, MenuButton } from '@szhsin/react-menu'
 
@@ -22,17 +22,16 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full flex items-center bg-[#FF7A00] drop-shadow-sm text-white">
         {/* Logo */}
-        <Link href="/">
-          <a className="h-full flex items-center ml-[70px]">
-            <Image
-              src={sciKmitlLogo}
-              alt="Science KMITL Logo"
-              layout="fixed"
-              width={220}
-              height={48}
-              quality="100"
-            />
-          </a>
+        <Link href="/" className="h-full flex items-center ml-[70px]">
+          <Image
+            src={sciKmitlLogo}
+            alt="Science KMITL Logo"
+            width={220}
+            height={48}
+            quality="100"
+            priority
+            sizes="(min-width: 0) 100vw"
+          />
         </Link>
 
         {/* Navigation */}
@@ -49,28 +48,45 @@ const Navbar = () => {
                   ))}
                 </Menu>
               ) : (
-                <Link href={item.path as string}>
-                  <a>{item.title}</a>
-                </Link>
+                <Link href={item.path as string}>{item.title}</Link>
               )}
             </div>
           ))}
         </div>
 
         {/* Languages */}
-        <div className="flex items-center h-full pl-[18px] gap-[8px] mr-[60px]">
-          <div className="flex h-min">
+        <div
+          css={{
+            '& > div': {
+              overflow: 'hidden',
+              borderRadius: '5px',
+            },
+          }}
+          className="flex items-center h-full pl-[18px] gap-[8px] mr-[60px]"
+        >
+          <div className="relative w-[25px] h-[20px]">
             <Link href={asPath} locale="th">
-              <a className="h-[24px]">
-                <Image src={flagTH} alt="Thai logo" />
-              </a>
+              <div className="relative w-full h-full">
+                <Image
+                  fill
+                  src={flagTH}
+                  alt="Thai flag"
+                  sizes="(min-width: 0) 100vw"
+                />
+              </div>
             </Link>
           </div>
-          <div className="flex h-min">
+
+          <div className="relative w-[25px] h-[20px]">
             <Link href={asPath} locale="en">
-              <a className="h-[24px]">
-                <Image src={flagEN} alt="English logo" />
-              </a>
+              <div className="relative w-full h-full">
+                <Image
+                  fill
+                  src={flagEN}
+                  alt="English flag"
+                  sizes="(min-width: 0) 100vw"
+                />
+              </div>
             </Link>
           </div>
         </div>

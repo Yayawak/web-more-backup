@@ -17,9 +17,9 @@ const IndexMap = () => {
           <Image
             src={mapImage.src}
             alt="kmitl map"
-            layout="fill"
-            objectFit="contain"
-            className="mt-[16px] md:mt-0"
+            className="object-contain mt-[16px] md:mt-0"
+            fill
+            sizes="(min-width: 0) 100vw"
           />
         </div>
 
@@ -30,6 +30,7 @@ const IndexMap = () => {
             <div>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</div>
             <div>ถนนฉลองกรุง เขตลาดกระบัง กรุงเทพ 10520</div>
           </div>
+
           <div className="flex mt-[16px] mb-[16px]">
             <div className="border-l-2 border-[#FF7C32] mr-[16px]"></div>
             <div>
@@ -52,17 +53,19 @@ const IndexMap = () => {
               </ul>
             </div>
           </div>
-          <Link href="https://www.science.kmitl.ac.th/page#/contact">
-            <a className="mx-auto mt-auto">
-              <BaseButton
-                backgroundColor="#FF7C32"
-                roundedType={Rounded.CUSTOM}
-                rounded={8}
-                elevation={false}
-              >
-                การเดินทางเพิ่มเติม
-              </BaseButton>
-            </a>
+
+          <Link
+            href="https://www.science.kmitl.ac.th/page#/contact"
+            className="mx-auto mt-auto"
+          >
+            <BaseButton
+              backgroundColor="#FF7C32"
+              roundedType={Rounded.CUSTOM}
+              rounded={8}
+              elevation={false}
+            >
+              การเดินทางเพิ่มเติม
+            </BaseButton>
           </Link>
         </div>
       </div>
