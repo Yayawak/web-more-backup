@@ -11,10 +11,12 @@ const DeanCard: FC<IDeanCardProps> = ({ onOpenModal }) => {
     <>
       <div className="relative w-full max-w-[900px] h-[300px] mx-auto mb-[32px] drop-shadow-md rounded-[20px] overflow-hidden">
         <Image
+          css={{
+            objectFit: 'cover',
+          }}
           src={deanImage}
           alt="science kmitl"
-          layout="fill"
-          objectFit="cover"
+          fill
         />
 
         <div className="contact-list flex gap-[32px]">

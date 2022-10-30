@@ -47,17 +47,15 @@ const IndexNews = () => {
 
       <Container>
         <Link href={`/news`}>
-          <a>
-            <BaseButton
-              className="mx-auto mt-[48px] mb-[32px]"
-              roundedType={Rounded.CUSTOM}
-              rounded={8}
-              backgroundColor="#FF7C32"
-              elevation={false}
-            >
-              ข่าวทั้งหมด
-            </BaseButton>
-          </a>
+          <BaseButton
+            className="mx-auto mt-[48px] mb-[32px]"
+            roundedType={Rounded.CUSTOM}
+            rounded={8}
+            backgroundColor="#FF7C32"
+            elevation={false}
+          >
+            ข่าวทั้งหมด
+          </BaseButton>
         </Link>
       </Container>
     </>

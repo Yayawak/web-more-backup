@@ -1,12 +1,15 @@
 {
+  "plugins": ["@emotion"],
   "presets": [
     [
       "next/babel",
       {
         "styled-jsx": {
-          "plugins": [
-            "@styled-jsx/plugin-sass"
-          ]
+          "plugins": ["@styled-jsx/plugin-sass"]
+        },
+        "preset-react": {
+          "runtime": "automatic",
+          "importSource": "@emotion/react"
         }
       }
     ]
