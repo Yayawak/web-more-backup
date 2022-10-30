@@ -4,47 +4,47 @@ import Link from 'next/link'
 import IndexSectionTitle from './SectionTitle'
 
 import activity from '@/assets/images/activity.jpg'
-import atomLogo from '@/assets/logos/atom-logo.png'
-import programsSectionBG from '@/assets/images/programs_bg.svg'
 
 const IndexPrograms = () => {
   return (
     <div
-      // className="bg-cover bg-center"
-      // style={{
-      //   backgroundImage: `url(${programsSectionBG.src})`,
-      // }}
+    // className="bg-cover bg-center"
+    // style={{
+    //   backgroundImage: `url(${programsSectionBG.src})`,
+    // }}
     >
       <Container className="mt-8">
         <IndexSectionTitle>หลักสูตร</IndexSectionTitle>
-        <div className="flex flex-wrap justify-center mt-9 mb-20">
-          <ul className="w-full sm:w-[305px] sm:mr-40">
+        <div className="mt-9 mb-20 flex flex-wrap justify-center">
+          <ul className="w-full sm:mr-40 sm:w-[305px]">
             {programItems.map((item, index) => {
               return (
                 <li key={index} className="mb-8">
-                  <Link href={item.path}>
-                    <a
-                      className="text-[24px] hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.title + ` >`}
-                    </a>
+                  <Link
+                    href={item.path}
+                    className="text-[24px] hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.title + ` >`}
                   </Link>
                   <div className="border-t-[2px] border-t-[#979797] sm:w-[305px]" />
                 </li>
               )
             })}
           </ul>
-          <div className="w-[540px] h-[361px] relative">
-            <Image className="rounded-2xl"
+          <div className="relative h-[361px] w-[540px]">
+            <Image
+              className="rounded-2xl"
+              css={{
+                objectFit: 'contain',
+              }}
               src={activity}
               alt="activity"
-              layout="fill"
-              objectFit="contain"
+              fill
+              sizes="(min-width: 0) 100vw"
             />
-            </div>
-          
+          </div>
         </div>
       </Container>
     </div>

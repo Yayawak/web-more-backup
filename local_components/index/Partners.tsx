@@ -14,18 +14,21 @@ const IndexPartners = () => {
 
         <div className="image relative mx-auto">
           <Image
+            className="object-contain"
             src={partnerEtat.src}
             alt="etat"
-            layout="fill"
-            objectFit="contain"
+            fill
+            sizes="(min-width: 0) 100vw"
           />
         </div>
+
         <div className="image relative mx-auto mt-[32px]">
           <Image
+            className="object-contain"
             src={partnerIsp.src}
             alt="isp"
-            layout="fill"
-            objectFit="contain"
+            fill
+            sizes="(min-width: 0) 100vw"
           />
         </div>
       </Container>
