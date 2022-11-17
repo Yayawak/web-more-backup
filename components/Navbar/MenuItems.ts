@@ -80,7 +80,7 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'ศูนย์เครื่องมือ',
-        path: 'https://www.science.kmitl.ac.th/department-math',
+        path: 'https://sciins.science.kmitl.ac.th/',
         isExternalPath: true,
       },
     ],
