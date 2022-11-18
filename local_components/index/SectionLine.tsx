@@ -1,30 +1,27 @@
-interface ISectionTitleProps {
+interface ISectionLineProps {
   children?: React.ReactNode
   color?: string
   lineColor?: string
   className?: string
 }
 
-const IndexSectionTitle = ({
+const IndexSectionLine = ({
   children,
   color = 'black',
   lineColor = 'rgba(106, 106, 106, 0.25)',
   className = '',
-}: ISectionTitleProps) => {
+}: ISectionLineProps) => {
   return (
     <>
       <div
-        className={`section-title flex gap-[8px] items-center justify-start ${className}`}
+        className={`flex flex-col gap-[8px] ${className}`}
       >
-        <div className="line border-t-[2px] max-w-[unset] md:max-w-[100px]"></div>
-        <div className="title text-[32px] font-bold">{children}</div>
+        <div className="title text-[24px] font-bold self-center">{children}</div>
         <div className="line border-t-[2px]"></div>
+
       </div>
 
       <style jsx scoped>{`
-        .section-title > div:not(:nth-child(2)) {
-          flex-grow: 1;
-        }
 
         .title {
           color: ${color};
@@ -38,4 +35,4 @@ const IndexSectionTitle = ({
   )
 }
 
-export default IndexSectionTitle
+export default IndexSectionLine
