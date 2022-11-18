@@ -39,7 +39,7 @@ const IndexPartners = () => {
           </div>
         </div>
       </Container>
-      <div className="relative h-[370px] mt-5">
+      <div className="relative h-[370px] mt-5 mb-10 drop-shadow">
           <Image
             className="object-contain"
             src={partnerUni.src}
