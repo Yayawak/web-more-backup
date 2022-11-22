@@ -1,14 +1,12 @@
 interface ISectionTitleProps {
   children?: React.ReactNode
   color?: string
-  lineColor?: string
   className?: string
 }
 
 const IndexSectionTitle = ({
   children,
   color = 'black',
-  lineColor = 'rgba(106, 106, 106, 0.25)',
   className = '',
 }: ISectionTitleProps) => {
   return (
@@ -31,7 +29,7 @@ const IndexSectionTitle = ({
         }
 
         .line {
-          border-top-color: ${lineColor};
+          border-top-color: ${color};
         }
       `}</style>
     </>
