@@ -27,15 +27,25 @@ const NewsByIdPage = ({ id }: INewsByIdPageProps) => {
       const dateGmt: string[] = new Date(newsData.message.datetimePost)
         .toString()
         .split(' ')
+
       const date: string = `${dateGmt[2]} ${dateGmt[1]} ${dateGmt[3]}`
+
       setDatePreview(date)
-      setNewsFiles([
-        newsData.message.news_file_01,
-        newsData.message.news_file_02,
-        newsData.message.news_file_03,
-      ])
+
+      const newsFileKeys = ['news_file01', 'news_file02', 'news_file03']
+      const paths: string[] = []
+
+      for (const key of newsFileKeys) {
+        const path = newsData.message[key]?.substring(7)
+        if (path) {
+          paths.push(`https://www.science.kmitl.ac.th/${path}`)
+        }
+      }
+
+      setNewsFiles(paths)
     }
   }, [newsLoading, newsSuccess])
+
   return (
     <>
       {!newsLoading && newsSuccess ? (
@@ -48,7 +58,7 @@ const NewsByIdPage = ({ id }: INewsByIdPageProps) => {
           </p>
 
           <p className="text-lg">{datePreview}</p>
-          <div className="relative h-[400px] w-full my-[48px]">
+          <div className="relative my-[48px] h-[400px] w-full">
             <Image
               className="object-contain"
               src={`https://www.science.kmitl.ac.th${String(
@@ -74,7 +84,7 @@ const NewsByIdPage = ({ id }: INewsByIdPageProps) => {
           .filter((news) => news != null)
           .map((news, i) => (
             <Container className="mt-16 mb-16" key={i}>
-              <iframe className="w-full h-screen" src={`${news}`}></iframe>
+              <iframe className="h-screen w-full" src={`${news}`}></iframe>
             </Container>
           ))
       ) : (
@@ -92,4 +102,5 @@ export async function getServerSideProps(context) {
     },
   }
 }
+
 export default NewsByIdPage
