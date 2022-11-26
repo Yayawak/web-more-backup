@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import deanImage from '@/assets/images/dean.png'
 
-const DeanCard = () => {
+interface IDeanProps {
+  onContactClick: () => void
+}
+
+const DeanCard = ({ onContactClick }: IDeanProps) => {
   return (
     <>
       <div className="relative w-full max-w-[900px] h-[300px] mx-auto mb-[32px] drop-shadow-md rounded-[20px] overflow-hidden">
@@ -12,10 +16,10 @@ const DeanCard = () => {
           objectFit="cover"
         />
 
-        <div className="contact-list flex gap-[32px]">
-          <div className ="contact-button">
+        <div className="contact-list flex gap-[32px]" onClick={onContactClick}>
+          <div className="contact-button">
             <span className="mdi mdi-account-box-outline"></span>
-            <a >ช่องทางติดต่อ</a>
+            <a>ช่องทางติดต่อ</a>
           </div>
           {/* <div className="contact-button drop-shadow-lg">
             <span className="mdi mdi-phone "></span>
@@ -37,7 +41,7 @@ const DeanCard = () => {
           transform: translateX(100%);
         }
 
-        .contact-button{
+        .contact-button {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -45,16 +49,14 @@ const DeanCard = () => {
           height: 31px;
           font-size: 16px;
           border-radius: 10px;
-          background: #D9D9D9;
+          background: #d9d9d9;
           color: #000000;
           cursor: pointer;
-          
         }
 
         .mdi {
           transform: translateX(-10px);
           font-size: 20px;
-
         }
       `}</style>
     </>

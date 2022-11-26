@@ -12,7 +12,19 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
   '/download': {
     name: 'เอกสาร',
   },
-  '/ita': {
-    name: 'ข้อมูลเปิดเผยสาธารณะ'
+  '/about' : {
+    name: 'เกี่ยวกับเรา',
+    children: {
+      '/executive': {
+        name: 'ผู้บริหาร'
+      }, 
+      '/ita': {
+        name: 'ข้อมูลเปิดเผยสาธารณะ'
+      },
+      '/organization-chart': {
+        name: 'แผนผังองค์กร'
+      }
+
+    }
   }
 }

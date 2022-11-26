@@ -29,9 +29,7 @@ const IndexExecutive = () => {
                   width={300}
                   height={450}
                 />
-                <div className="subtitle2 text-[#979797]">
-                  {modalInfo.name}
-                </div>
+                <div className="subtitle2 text-[#979797]">{modalInfo.name}</div>
               </div>
               <div className="mt-4 md:mt-20 text-center md:text-left">
                 <div className="text-[22px]">
@@ -61,7 +59,12 @@ const IndexExecutive = () => {
       <Container>
         <IndexSectionTitle className="my-[16px]">ผู้บริหาร</IndexSectionTitle>
 
-        <DeanCard />
+        <DeanCard
+          onContactClick={() => {
+            setModalInfo(contactInfo[0])
+            setShowModal(true)
+          }}
+        />
 
         <div className="flex gap-[24px] mx-auto max-w-[900px] justify-between mb-[32px] flex-wrap md:flex-nowrap">
           <ExecutiveCard
@@ -70,7 +73,7 @@ const IndexExecutive = () => {
             position="รองคณบดีคณะวิทยาศาสตร์"
             autoHeight
             onContactClick={() => {
-              setModalInfo(contactInfo[0])
+              setModalInfo(contactInfo[1])
               setShowModal(true)
             }}
           />
@@ -79,7 +82,7 @@ const IndexExecutive = () => {
             name="รศ.ดร.อาภาภรณ์ สกุลการะเวก"
             position="รองคณบดี คณะวิทยาศาสตร์"
             onContactClick={() => {
-              setModalInfo(contactInfo[1])
+              setModalInfo(contactInfo[2])
               setShowModal(true)
             }}
             autoHeight
@@ -89,7 +92,7 @@ const IndexExecutive = () => {
             name="รศ.ดร.โชคชัย กิตติวงศ์วัฒนา"
             position="รองคณบดี คณะวิทยาศาสตร์"
             onContactClick={() => {
-              setModalInfo(contactInfo[2])
+              setModalInfo(contactInfo[3])
               setShowModal(true)
             }}
             autoHeight
@@ -99,14 +102,14 @@ const IndexExecutive = () => {
             name="รศ.ดร.อภิลักษณ์ เอียดเอื้อ"
             position="รองคณบดี คณะวิทยาศาสตร์"
             onContactClick={() => {
-              setModalInfo(contactInfo[3])
+              setModalInfo(contactInfo[4])
               setShowModal(true)
             }}
             autoHeight
           />
         </div>
 
-        <Link href="https://www.science.kmitl.ac.th/page#/personel">
+        <Link href={`/about/executive`}>
           <a className="mt-[48px] block">
             <BaseButton
               backgroundColor="#FF7C32"
