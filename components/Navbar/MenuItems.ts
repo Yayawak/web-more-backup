@@ -135,7 +135,7 @@ const menuItems: MyMenuItem[] = [
         isExternalPath: true,
       },
       {
-        title: 'ปรัชญา ปฏิธาน วิสัยทัศน์ พันธกิจ',
+        title: 'ปรัชญา ปณิธาน วิสัยทัศน์ พันธกิจ',
         path: 'https://www.science.kmitl.ac.th/page#/resolution',
         isExternalPath: true,
       },
@@ -150,7 +150,7 @@ const menuItems: MyMenuItem[] = [
         isExternalPath: true,
       },
       {
-        title: 'บุคคลากรเจ้าหน้าที่',
+        title: 'บุคลากรเจ้าหน้าที่',
         path: 'https://www.science.kmitl.ac.th/page#/staff',
         isExternalPath: true,
       },
