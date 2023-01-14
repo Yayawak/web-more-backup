@@ -9,33 +9,11 @@ import Image from 'next/image'
 import React, { useCallback, useState } from 'react'
 import mailIcon from '@/assets/icons/icon-mail.svg'
 import Collapse from '@/components/Collapse/Collapse'
+import CopyButton from '@/components/Buttons/CopyButton/CopyButton'
 
 const Executive = () => {
   const [modalInfo, setModalInfo] = useState(contactInfo[0])
   const [showModal, setShowModal] = useState(false)
-
-  const RenderExecutiveCard = (start, end) => {
-    let obj: any[] = []
-    for (start; start < end + 1; start++) {
-      console.log('[executive] contact start obj:', contactInfo[start])
-
-      obj.push(
-        <div className="mx-4 my-2">
-          <ExecutiveCard
-            image={contactInfo[start].img}
-            name={contactInfo[start].shortName}
-            position={contactInfo[start].position}
-            autoHeight
-            onContactClick={() => {
-              setModalInfo(contactInfo[start])
-              setShowModal(true)
-            }}
-          />
-        </div>
-      )
-    }
-    return <>{obj}</>
-  }
 
   return (
     <>
@@ -50,6 +28,7 @@ const Executive = () => {
                   alt="ผู้บริหาร"
                   width={300}
                   height={450}
+                  loading="lazy"
                 />
                 <div className="subtitle2 text-[#979797]">{modalInfo.name}</div>
               </div>
@@ -71,6 +50,7 @@ const Executive = () => {
                 <div className="flex mt-3 justify-center md:justify-start">
                   <Image src={mailIcon} alt="mail-icon" />
                   <div className="ml-1">{modalInfo.email}</div>
+                  <CopyButton text={modalInfo.email} />
                 </div>
               </div>
             </div>
@@ -98,21 +78,92 @@ const Executive = () => {
             />
 
             {/* Vice Dean */}
-            <Collapse title="รองคณบดี">{RenderExecutiveCard(1, 4)}</Collapse>
+            <Collapse title="รองคณบดี">
+              {contactInfo.map((val, index) => {
+                if (index > 0 && index < 5) {
+                  return (
+                    <div className="mx-4 my-2">
+                      <ExecutiveCard
+                        image={val.img}
+                        name={val.shortName}
+                        position={val.position}
+                        autoHeight
+                        onContactClick={() => {
+                          setModalInfo(val)
+                          setShowModal(true)
+                        }}
+                      />
+                    </div>
+                  )
+                }
+              })}
+            </Collapse>
 
             {/* Assistant Dean */}
             <Collapse title="ผู้ช่วยคณบดี">
-              {RenderExecutiveCard(4, 8)}
+              {contactInfo.map((val, index) => {
+                if (index > 4 && index < 10) {
+                  return (
+                    <div className="mx-4 my-2">
+                      <ExecutiveCard
+                        image={val.img}
+                        name={val.shortName}
+                        position={val.position}
+                        autoHeight
+                        onContactClick={() => {
+                          setModalInfo(val)
+                          setShowModal(true)
+                        }}
+                      />
+                    </div>
+                  )
+                }
+              })}
             </Collapse>
 
             {/* Head of Department */}
-            <Collapse title="หัวหน้าภาค">
-              {RenderExecutiveCard(10, 15)}
+            <Collapse title="หัวหน้าภาค และหัวหน้าศูนย์">
+              {contactInfo.map((val, index) => {
+                if (index > 9 && index < 18) {
+                  return (
+                    <div className="mx-4 my-2">
+                      <ExecutiveCard
+                        image={val.img}
+                        name={val.shortName}
+                        position={val.position}
+                        autoHeight
+                        onContactClick={() => {
+                          setModalInfo(val)
+                          setShowModal(true)
+                        }}
+                      />
+                    </div>
+                  )
+                }
+              })}
             </Collapse>
 
             {/* Head of Center */}
-            <Collapse title="หัวหน้าศูนย์">
-              {RenderExecutiveCard(16, 18)}
+            <Collapse title="ผู้อำนวยการ">
+              {/* {RenderExecutiveCard(16, 18)} */}
+              {contactInfo.map((val, index) => {
+                if (index === 18) {
+                  return (
+                    <div className="mx-4 my-2">
+                      <ExecutiveCard
+                        image={val.img}
+                        name={val.shortName}
+                        position={val.position}
+                        autoHeight
+                        onContactClick={() => {
+                          setModalInfo(val)
+                          setShowModal(true)
+                        }}
+                      />
+                    </div>
+                  )
+                }
+              })}
             </Collapse>
           </>
         </div>

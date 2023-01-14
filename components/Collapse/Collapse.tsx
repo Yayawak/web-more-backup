@@ -12,7 +12,6 @@ const Collapse = ({ title, children }: ICollapseProps) => {
     setExpand(!expand)
   }
 
-  console.log('[collapse] expand: ', expand)
   return (
     <>
       <div className="header" onClick={onClick}>
