@@ -40,16 +40,6 @@ const Collapse = ({ title, children }: ICollapseProps) => {
           margin: 8px 0 0 0;
         }
 
-        // .header: {
-        //   background: #f2f2f2;
-        //   display: flex;
-        //   justify-content: space-between;
-        //   border: 2px solid rgba(106, 106, 106, 0.25);
-        //   border-radius: 8px 8px 0 0;
-        //   padding: 16px;
-        //   margin: 8px 0 0 0;
-        // }
-
         .content {
           height: auto;
           border-radius: 0 0 8px 8px;
