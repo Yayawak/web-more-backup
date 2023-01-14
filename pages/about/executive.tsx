@@ -145,7 +145,6 @@ const Executive = () => {
 
             {/* Head of Center */}
             <Collapse title="ผู้อำนวยการ">
-              {/* {RenderExecutiveCard(16, 18)} */}
               {contactInfo.map((val, index) => {
                 if (index === 18) {
                   return (

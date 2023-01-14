@@ -1,12 +1,9 @@
-import { useState } from '@storybook/addons'
 import React, { useEffect } from 'react'
 
 interface ICopyButtonProps {
   text: string
 }
 const CopyButton = ({ text }: ICopyButtonProps) => {
-  //   const [open, setOpen] = useState(false)
-
   useEffect(() => {}, [text])
 
   const handleClick = (copyText) => {
