@@ -21,8 +21,8 @@ const Executive = () => {
         <BaseModal
           onClose={() => setShowModal(false)}
           body={
-            <div className="md:grid md:grid-cols-2 h-fit">
-              <div className="mx-2 md:mx-0 text-center">
+            <div className="h-fit md:grid md:grid-cols-2">
+              <div className="mx-2 text-center md:mx-0">
                 <Image
                   src={modalInfo.img}
                   alt="ผู้บริหาร"
@@ -32,7 +32,7 @@ const Executive = () => {
                 />
                 <div className="subtitle2 text-[#979797]">{modalInfo.name}</div>
               </div>
-              <div className="mt-4 md:mt-20 text-center md:text-left">
+              <div className="mt-4 text-center md:mt-20 md:text-left">
                 <div className="text-[22px]">
                   {modalInfo.position.split('/')[0]}
                 </div>
@@ -47,7 +47,7 @@ const Executive = () => {
                     {modalInfo.position.split('/')[1]}
                   </div>
                 </div>
-                <div className="flex mt-3 justify-center md:justify-start">
+                <div className="mt-3 flex justify-center md:justify-start">
                   <Image src={mailIcon} alt="mail-icon" />
                   <div className="ml-1">{modalInfo.email}</div>
                   <CopyButton text={modalInfo.email} />
@@ -62,16 +62,16 @@ const Executive = () => {
         <Breadcrumbs />
         <BackToTopButton />
         {/* Title */}
-        <div className="text-[32px] text-center font-bold mt-[64px] mb-[32px]">
+        <div className="mt-[64px] mb-[32px] text-center text-[32px] font-bold">
           ผู้บริหาร
         </div>
 
         {/* Content */}
-        <div className="mx-auto mb-[16px] py-[16px] px-[32px] flex flex-col bg-[#f2f2f2] rounded-[10px]">
+        <div className="mx-auto mb-[16px] flex flex-col rounded-[10px] bg-[#ffffff] py-[16px] px-[32px]">
           <>
             {/* Dean */}
             <DeanCard
-              onContactClick={() => {
+              onOpenModal={() => {
                 setModalInfo(contactInfo[0])
                 setShowModal(true)
               }}

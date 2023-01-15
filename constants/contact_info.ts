@@ -17,6 +17,7 @@ export const contactInfo: IContactInfo[] = [
     img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/sutee.png'
   },
   {
+    shortName: 'ผศ.ดร.กานต์ วงศาริยะ',
     name: 'ผู้ช่วยศาสตราจารย์ ดร. กานต์ วงศาริยะ',
     engName: 'Assistant Professor Dr. Karn Wongsariya',
     position: 'รองคณบดีฝ่ายบริหารงานทั่วไปและบริหารยุทธศาสตร์',
@@ -43,7 +44,7 @@ export const contactInfo: IContactInfo[] = [
     img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/chokchai.png'
   },
   {
-    shortName: 'รศ.ดร.อภิลักษณ์  เอียดเอื้อ',
+    shortName: 'รศ.ดร.อภิลักษณ์ เอียดเอื้อ',
     name: 'รองศาสตราจารย์ ดร. อภิลักษณ์  เอียดเอื้อ',
     engName: 'Associate Professor Dr. Apiluck  Eiad-ua',
     position: 'รองคณบดีฝ่ายกิจการนักศึกษาและศิษย์เก่าสัมพันธ์ ',
