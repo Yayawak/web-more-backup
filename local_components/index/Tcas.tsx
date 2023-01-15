@@ -34,10 +34,12 @@ const IndexTcas = () => {
             <div className="flex mx-auto lg:mx-0 lg:ml-auto">
               <div className="relative w-[100px]">
                 <Image
+                  css={{
+                    objectFit: 'contain',
+                  }}
                   src={KMITLLogo}
                   alt="kmitl logo"
-                  layout="fill"
-                  objectFit="contain"
+                  fill
                 />
               </div>
               <div>
@@ -49,17 +51,18 @@ const IndexTcas = () => {
                 </div>
               </div>
             </div>
-            <Link href="https://new.reg.kmitl.ac.th/admission/#/">
-              <a className="mt-auto w-[fit-content] mx-auto">
-                <BaseButton
-                  backgroundColor="#0A17A7"
-                  textColor="white"
-                  roundedType={Rounded.CUSTOM}
-                  rounded={10}
-                >
-                  เข้าสู่เว็บไซต์ Admission
-                </BaseButton>
-              </a>
+            <Link
+              href="https://new.reg.kmitl.ac.th/admission/#/"
+              className="mt-auto w-[fit-content] mx-auto"
+            >
+              <BaseButton
+                backgroundColor="#0A17A7"
+                textColor="white"
+                roundedType={Rounded.CUSTOM}
+                rounded={10}
+              >
+                เข้าสู่เว็บไซต์ Admission
+              </BaseButton>
             </Link>
           </div>
 

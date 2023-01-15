@@ -16,16 +16,21 @@ import kdaiIcon from '@/assets/icons/icon-kdai.svg'
 const IndexDepartments = () => {
   return (
     <div
-      className="bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${departmentSectioinBG.src})`,
-      }}
+    // className="bg-cover bg-center"
+    // style={{
+    //   backgroundImage: `url(${departmentSectioinBG.src})`,
+    // }}
     >
       <Container className="py-[16px]">
         <Container className="mb-[32px]">
           <IndexSectionTitle>ภาควิชาและศูนย์</IndexSectionTitle>
         </Container>
-        <div className="flex flex-col justify-center lg:flex-row mt-20">
+        <div
+          className="flex flex-col justify-center lg:flex-row p-5 bg-cover bg-center rounded-3xl"
+          style={{
+            backgroundImage: `url(${departmentSectioinBG.src})`,
+          }}
+        >
           <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:w-[600px] lg:mr-auto">
             {departmentItems.map((item, index) => {
               return (
@@ -33,25 +38,24 @@ const IndexDepartments = () => {
                   key={index}
                   className="w-[154px] mb-4 basis-1/3 hover:underline"
                 >
-                  <Link href={item.path}>
-                    <a className="flex flex-col items-center">
-                      <div className="w-[100px] h-[100px] relative mb-2">
-                        <Image
-                          src={item.image}
-                          alt={item.alt}
-                          layout="fill"
-                          objectFit="contain"
-                        />
-                      </div>
-                      <p className="text-base text-center">{item.title}</p>
-                    </a>
+                  <Link href={item.path} className="flex flex-col items-center">
+                    <div className="relative mb-2 w-[100px] h-[100px]">
+                      <Image
+                        className="object-contain"
+                        src={item.image}
+                        alt={item.alt}
+                        fill
+                        sizes="(min-width: 0) 100vw"
+                      />
+                    </div>
+                    <p className="text-base text-center">{item.title}</p>
                   </Link>
                 </li>
               )
             })}
           </ul>
           <div className="flex items-center">
-            <div className="border-r-2 border-black w-0 h-[192px] ml-8 mr-6 lg:h-[517px] lg:mr-44"></div>
+            <div className="border-r-2 border-black w-0 h-[192px] ml-8 mr-6 lg:h-[517px] lg:mr-24"></div>
             <p className="text-2xl whitespace-pre-wrap">
               เพราะเราเชื่อว่า <br />
               <q>

@@ -9,20 +9,14 @@ interface IContactInfo {
 }
 
 export const contactInfo: IContactInfo[] = [
-  // คณบดี
   {
-    shortName:'รศ.ดร. สุธี  ชุติไพจิตร',
     name: 'รองศาสตราจารย์ ดร. สุธี  ชุติไพจิตร',
     engName: 'Associate Professor Dr. Sutee Chutipaijit',
-    position: 'คณบดี',
-    engPosition: 'Dean',
+    position: 'คณบดี / Dean',
     email: 'sutee.ch@kmitl.ac.th',
     img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/sutee.png'
   },
-
-  // รองคณบดี
   {
-    shortName:'ผศ.ดร.กานต์ วงศาริยะ',
     name: 'ผู้ช่วยศาสตราจารย์ ดร. กานต์ วงศาริยะ',
     engName: 'Assistant Professor Dr. Karn Wongsariya',
     position: 'รองคณบดีฝ่ายบริหารงานทั่วไปและบริหารยุทธศาสตร์',

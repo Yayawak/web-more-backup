@@ -18,9 +18,7 @@ const NavbarMenu = ({ item }: MenuProps) => {
     <>
       {!hasSubItems ? (
         <MenuItem>
-          <Link href={item.path as string}>
-            <a>{item.title}</a>
-          </Link>
+          <Link href={item.path as string}>{item.title}</Link>
         </MenuItem>
       ) : (
         <SubMenu>

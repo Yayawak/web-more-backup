@@ -19,12 +19,22 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
         name: 'ผู้บริหาร'
       }, 
       '/ita': {
-        name: 'ข้อมูลเปิดเผยสาธารณะ'
-      },
-      '/organization-chart': {
-        name: 'แผนผังองค์กร'
-      }
-
-    }
+        name: 'ข้อมูลเปิดเผยสาธารณะ',
+        
+  },
+  '/organization-chart': {
+    name: 'แผนผังองค์กร'
   }
+},
+  '/course-bachelor': {
+    name: 'หลักสูตรปริญญาตรี',
+  },
+  '/course-master': {
+    name: 'หลักสูตรปริญญาโท',
+  },
+  '/course-doctorate': {
+    name: 'หลักสูตรปริญญาเอก',
+      },
+      
+
 }

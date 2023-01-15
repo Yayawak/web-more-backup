@@ -1,0 +1,38 @@
+image: node:16.17.0-alpine
+
+stages:
+  - lint
+  - build
+  - build-image
+
+run-lint:
+  stage: lint
+  script:
+    - yarn
+    - yarn lint
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "development"
+
+run-build:
+  stage: build
+  script:
+    - yarn
+    - yarn build
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "development"
+
+create-docker-image:
+  stage: build-image
+  image: docker:latest
+  services:
+    - docker:dind
+  before_script:
+    - docker login registry.gitlab.com -u $REGISTRY_USER -p $REGISTRY_PASS
+    - echo BASE_PATH=$BASE_PATH >> .env.local
+  script:
+    - docker build -t registry.gitlab.com/sci-kmitl/sci-web-frontend .
+    - docker push registry.gitlab.com/sci-kmitl/sci-web-frontend
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"

@@ -42,7 +42,7 @@ const Home: NextPage = () => {
   return (
     <>
       <BackToTopButton />
-      <Banner />
+      {/* <Banner /> */}
 
       {!slideLoading && slideSuccess ? (
         <div className="header h-[700px] py-[16px] bg-cover bg-center">

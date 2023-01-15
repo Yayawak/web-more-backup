@@ -10,11 +10,13 @@ const Layout = ({ children }: IComponentProps) => {
     <>
       <Head>
         <title>Science @KMITL</title>
+
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
 
-      <div className="flex flex-col min-h-screen">
+      <div className="flex min-h-screen flex-col">
         <Navbar />
-        <div className="app-main relative flex flex-col grow">{children}</div>
+        <div className="app-main relative flex grow flex-col">{children}</div>
         <Footer />
       </div>
 

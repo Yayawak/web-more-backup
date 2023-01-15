@@ -14,7 +14,14 @@ const SlideshowButton = ({ side, onClick }: ButtonProps) => {
   return (
     <>
       <div
-        className={`slideshow-button w-[60px] h-[100px] text-white text-[30px] absolute flex justify-center items-center ${
+        css={{
+          right: side === 'right' ? 0 : 'unset',
+          borderTopRightRadius: side === 'left' ? 8 : 'unset',
+          borderBottomRightRadius: side === 'left' ? 8 : 'unset',
+          borderTopLeftRadius: side === 'right' ? 8 : 'unset',
+          borderBottomLeftRadius: side === 'right' ? 8 : 'unset',
+        }}
+        className={`slideshow-button absolute flex h-[100px] w-[60px] items-center justify-center text-[30px] text-white ${
           side === 'right' && 'right-0 '
         } cursor-pointer select-none`}
         onClick={onClick}
