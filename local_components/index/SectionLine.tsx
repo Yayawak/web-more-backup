@@ -13,16 +13,14 @@ const IndexSectionLine = ({
 }: ISectionLineProps) => {
   return (
     <>
-      <div
-        className={`flex flex-col gap-[8px] ${className}`}
-      >
-        <div className="title text-[24px] font-bold self-center">{children}</div>
+      <div className={`flex flex-col gap-[8px] ${className}`}>
+        <div className="title self-center text-[24px] font-bold">
+          {children}
+        </div>
         <div className="line border-t-[2px]"></div>
-
       </div>
 
       <style jsx scoped>{`
-
         .title {
           color: ${color};
         }
