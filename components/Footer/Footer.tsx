@@ -7,7 +7,7 @@ import kmitlLogo from '@/assets/logos/kmitl-logo.png'
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 left-0 w-full bg-[#021e4a] text-white flex flex-col items-center px-4 xl:flex-row xl:h-80 xl:px-0">
+    <footer className="bottom-0 left-0 w-full bg-[#021e4a] text-white flex flex-col items-center px-4 xl:flex-row xl:h-80 xl:px-0 mt-[200px]">
       <div className="w-full flex flex-col items-center pt-10 xl:flex-row xl:p-0 xl:gap-12 xl:ml-16">
         <div className="w-[120px] h-[120px] relative xl:w-[165px] xl:h-[165px] xl:ml-auto">
           <Image
