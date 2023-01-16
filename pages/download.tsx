@@ -107,34 +107,41 @@ const Download: NextPage = () => {
 
   return (
     <>
-      <Container className="mt-[16px]">
+      <Container className="mt-[64px] mb-[200px]">
         <Breadcrumbs />
 
-        <div className="mt-[16px] mb-[56px] text-center text-[32px] font-bold">
+        <div className="mt-[64px] mb-[32px] text-center text-[32px] font-bold">
+          เอกสาร
+        </div>
+
+        <div className="mb-[16px] text-center text-[24px]">
           เลือกรายละเอียดเอกสารที่ต้องการ
         </div>
 
-        <div className="mx-auto max-w-[600px]">
-          <div className="text-[24px] mb-[8px]">ประเภทบุคลากร</div>
+        <div className="mx-auto max-w-[400px]">
+          <div className="text-[16px] mb-[4px]">ประเภทบุคลากร</div>
+
           <InputSelect items={{ teacher: 'บุคคลากร', student: 'นักศึกษา' }} />
 
-          <div className="text-[24px] mt-[16px] mb-[8px]">ประเภทเอกสาร</div>
+          <div className="text-[16px] mt-[8px] mb-[4px]">ประเภทเอกสาร</div>
           <InputSelect items={{ doc: '.doc', pdf: '.pdf' }} />
 
           <BaseButton
             backgroundColor="#F8560A"
             textColor="white"
             roundedType={Rounded.CUSTOM}
-            rounded={8}
+            rounded={6}
             elevation={false}
-            className="mt-[16px] mb-[16px] mx-auto w-[130px]"
+            className="mt-[32px] mb-[64px] mx-auto w-[176px]"
           >
             ค้นหา
           </BaseButton>
         </div>
 
         <div className="mx-auto mb-[16px] py-[16px] px-[32px] flex flex-col bg-white rounded-[10px]">
-          <div className="font-bold text-[20px] mb-[16px]">งานวิจัย</div>
+          <div className="font-bold text-[20px] mx-[16px] mb-[16px]">
+            งานวิจัย
+          </div>
 
           <div className="flex mb-[16px] items-center">
             <div className="ml-auto mr-[16px]">คำค้นหา</div>
@@ -150,7 +157,7 @@ const Download: NextPage = () => {
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>
                   {headerGroup.headers.map((header) => (
-                    <th key={header.id} className="py-[8px]">
+                    <th key={header.id} className="px-[16px] py-[8px]">
                       {flexRender(
                         header.column.columnDef.header,
                         header.getContext()
@@ -165,7 +172,7 @@ const Download: NextPage = () => {
               {table.getRowModel().rows.map((row) => (
                 <tr key={row.id}>
                   {row.getVisibleCells().map((cell) => (
-                    <td key={cell.id} className="py-[8px]">
+                    <td key={cell.id} className=" px-[16px] py-[8px]">
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()

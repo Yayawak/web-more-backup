@@ -9,7 +9,7 @@ interface IDeanCardProps {
 const DeanCard: FC<IDeanCardProps> = ({ onOpenModal }) => {
   return (
     <>
-      <div className="relative w-full max-w-[900px] h-[300px] mx-auto mb-[32px] drop-shadow-md rounded-[20px] overflow-hidden">
+      <div className="relative mx-auto mb-[32px] h-[300px] w-full max-w-[900px] overflow-hidden rounded-[20px] drop-shadow-md">
         <Image
           css={{
             objectFit: 'cover',
@@ -52,8 +52,8 @@ const DeanCard: FC<IDeanCardProps> = ({ onOpenModal }) => {
           height: 31px;
           font-size: 16px;
           border-radius: 10px;
-          background: #d9d9d9;
-          color: #000000;
+          background: #f2f2f2;
+          color: #212121;
           cursor: pointer;
         }
 
