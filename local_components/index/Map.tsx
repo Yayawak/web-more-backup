@@ -12,7 +12,7 @@ const IndexMap = () => {
     <Container>
       <IndexSectionTitle className="mb-[16px]">การเดินทาง</IndexSectionTitle>
 
-      <div className="flex flex-col md:flex-row drop-shadow-lg rounded-[4px] min-h-[574px] bg-[#F2F2F2] mb-[32px] overflow-hidden">
+      <div className="flex flex-col md:flex-row drop-shadow-lg rounded-[4px] min-h-[574px] bg-[#F2F2F2] mb-[200px] overflow-hidden">
         <div className="relative grow flex justify-center items-center min-h-[300px] md:min-h-[unset] bg-[#FBFBFB]">
           <Image
             src={mapImage.src}
