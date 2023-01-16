@@ -82,7 +82,7 @@ const Executive = () => {
               {contactInfo.map((val, index) => {
                 if (index > 0 && index < 5) {
                   return (
-                    <div className="mx-4 my-2">
+                    <div key={val.name} className="mx-4 my-2">
                       <ExecutiveCard
                         image={val.img}
                         name={val.shortName}
@@ -104,7 +104,7 @@ const Executive = () => {
               {contactInfo.map((val, index) => {
                 if (index > 4 && index < 10) {
                   return (
-                    <div className="mx-4 my-2">
+                    <div key={val.name} className="mx-4 my-2">
                       <ExecutiveCard
                         image={val.img}
                         name={val.shortName}
@@ -126,7 +126,7 @@ const Executive = () => {
               {contactInfo.map((val, index) => {
                 if (index > 9 && index < 18) {
                   return (
-                    <div className="mx-4 my-2">
+                    <div key={val.name} className="mx-4 my-2">
                       <ExecutiveCard
                         image={val.img}
                         name={val.shortName}
@@ -148,7 +148,7 @@ const Executive = () => {
               {contactInfo.map((val, index) => {
                 if (index === 18) {
                   return (
-                    <div className="mx-4 my-2">
+                    <div key={val.name} className="mx-4 my-2">
                       <ExecutiveCard
                         image={val.img}
                         name={val.shortName}

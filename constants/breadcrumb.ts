@@ -31,14 +31,12 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
     children: {
       '/executive': {
         name: 'ผู้บริหาร'
-      }, 
+      },
       '/ita': {
         name: 'ข้อมูลเปิดเผยสาธารณะ'},
         '/organization-chart': {
           name: 'แผนผังองค์กร'
         }
     },
- 
   }
 }
-      

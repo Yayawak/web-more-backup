@@ -8,13 +8,13 @@ interface ICollapseProps {
 const Collapse = ({ title, children }: ICollapseProps) => {
   const [expand, setExpand] = useState(false)
 
-  const onClick = () => {
+  const handleClick = () => {
     setExpand(!expand)
   }
 
   return (
     <>
-      <div className="header" onClick={onClick}>
+      <div className="header" onClick={handleClick}>
         <div className="text-[20px] font-bold">{title}</div>
         {expand ? (
           <span className="mdi mdi-chevron-up"></span>

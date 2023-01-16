@@ -1,19 +1,17 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 interface ICopyButtonProps {
   text: string
 }
 const CopyButton = ({ text }: ICopyButtonProps) => {
-  useEffect(() => {}, [text])
-
-  const handleClick = (copyText) => {
-    navigator.clipboard.writeText(copyText)
-    window.alert(`Copied ${copyText} to Clipboard`)
+  const handleClick = () => {
+    navigator.clipboard.writeText(text)
+    window.alert(`Copied ${text} to Clipboard`)
   }
 
   return (
     <>
-      <div className="copy-button" onClick={(e) => handleClick(text)}>
+      <div className="copy-button" onClick={handleClick}>
         <span className="mdi mdi-content-copy"></span>
       </div>
 
