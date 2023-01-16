@@ -33,7 +33,7 @@ const NewsPage = () => {
       <Container>
         <Breadcrumbs className="mt-[16px]" />
 
-        <div className="flex justify-center text-2xl font-semibold mt-[16px] mb-10">
+        <div className="mt-[16px] mb-10 flex justify-center text-2xl font-semibold">
           ข่าวสาร และประชาสัมพันธ์
         </div>
       </Container>
@@ -43,7 +43,7 @@ const NewsPage = () => {
           <div>
             <p className="pb-2">หมวดหมู่</p>
             <div>
-              <select className="filterBox bg-white border border-gray-400 rounded-lg px-5 py-2">
+              <select className="filterBox rounded-lg border border-gray-400 bg-white px-5 py-2">
                 <option value="0">กรุณาเลือกหมวดหมู่</option>
                 {NewsCategories.map((category, index) => (
                   <option key={index} value={index}>
@@ -56,7 +56,7 @@ const NewsPage = () => {
           <div>
             <p className="pb-2">สาขาวิชา</p>
             <div>
-              <select className="filterBox tags-select-box bg-white rounded-lg border  border-gray-400 px-5 py-2">
+              <select className="filterBox tags-select-box rounded-lg border border-gray-400  bg-white px-5 py-2">
                 <option value="0">กรุณาเลือกสาขาวิชา</option>
                 {NewsDepartments.map((category, index) => (
                   <option key={index} value={index}>
@@ -70,7 +70,7 @@ const NewsPage = () => {
             <p className="pb-2 ">คำค้นหา</p>
             <div className="">
               <input
-                className="filterBox bg-white border border-gray-400 rounded-lg px-3 py-[6px]"
+                className="filterBox rounded-lg border border-gray-400 bg-white px-3 py-[6px]"
                 type="text"
                 placeholder="กรุณากรอกคำค้นหา"
               />
@@ -82,7 +82,7 @@ const NewsPage = () => {
             </div>
             <div>
               {/* Reset Button */}
-              <button className="bg-[#FF7C32] rounded-lg px-4 py-[8px] text-white">
+              <button className="rounded-lg bg-[#FF7C32] px-4 py-[8px] text-white">
                 ค้นหา
               </button>
             </div>
@@ -90,7 +90,7 @@ const NewsPage = () => {
         </div>
       </Container>
 
-      <Container className="news-cards grid justify-between gap-[16px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap mb-[32px]">
+      <Container className="news-cards mb-[32px] grid grid-cols-1 flex-wrap justify-between gap-[16px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {!isLoading && isSuccess ? (
           data.message
             .slice(newsPage * 12, newsPage * 12 + 12)
@@ -107,7 +107,7 @@ const NewsPage = () => {
                 category={[news.resourceName]}
                 title={news.topicFull}
                 date={news.datetimepost_Preview}
-                read={`https://www.science.kmitl.ac.th/page#/news_each/${news._id}`}
+                read={`/news/${news._id}`}
               />
             ))
         ) : (
@@ -116,7 +116,7 @@ const NewsPage = () => {
       </Container>
 
       {!isLoading && isSuccess && (
-        <Container className="flex justify-center my-[40px]">
+        <Container className="my-[40px] flex justify-center">
           <Pagination
             onPageChanged={(page) => {
               setNewsPage(page - 1)
