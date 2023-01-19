@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OrganizationChartPage = () => {
+const OrganizationChart = () => {
   return (
     <>
       <div className="container">
@@ -374,4 +374,4 @@ const OrganizationChartPage = () => {
     </>
   )
 }
-export default OrganizationChartPage
+export default OrganizationChart

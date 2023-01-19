@@ -1,21 +1,23 @@
 interface ISectionTitleProps {
   children?: React.ReactNode
-  color?: string
+  lineColor?: string
+  textColer?: string
   className?: string
 }
 
 const IndexSectionTitle = ({
   children,
-  color = 'black',
+  lineColor = 'rgba(97,97,97, 0.25)',
   className = '',
+  textColer = 'black',
 }: ISectionTitleProps) => {
   return (
     <>
       <div
-        className={`section-title flex gap-[8px] items-center justify-start ${className}`}
+        className={`section-title flex gap-[40px] items-center justify-start ${className}`}
       >
         <div className="line border-t-[2px] max-w-[unset] md:max-w-[100px]"></div>
-        <div className="title text-[32px] font-bold">{children}</div>
+        <div className="title text-[24px] font-bold">{children}</div>
         <div className="line border-t-[2px]"></div>
       </div>
 
@@ -25,11 +27,11 @@ const IndexSectionTitle = ({
         }
 
         .title {
-          color: ${color};
+          color: ${textColer};
         }
 
         .line {
-          border-top-color: ${color};
+          border-top-color: ${lineColor};
         }
       `}</style>
     </>
