@@ -23,20 +23,24 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
       },
       '/course-doctorate': {
         name: 'หลักสูตรปริญญาเอก',
-          },
-    }
+      },
+    },
   },
-  '/about' : {
+  '/yearly-report': {
+    name: 'รายงานประจำปี',
+  },
+  '/about': {
     name: 'เกี่ยวกับเรา',
     children: {
       '/executive': {
-        name: 'ผู้บริหาร'
+        name: 'ผู้บริหาร',
       },
       '/ita': {
-        name: 'ข้อมูลเปิดเผยสาธารณะ'},
-        '/organization-chart': {
-          name: 'แผนผังองค์กร'
-        }
+        name: 'ข้อมูลเปิดเผยสาธารณะ',
+      },
+      '/organization-chart': {
+        name: 'แผนผังองค์กร',
+      },
     },
-  }
+  },
 }
