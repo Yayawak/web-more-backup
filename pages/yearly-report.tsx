@@ -1,6 +1,5 @@
 import { NextPage } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Fragment, useCallback, useEffect, useState } from 'react'
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
 import Container from '@/components/Layout/Container'
@@ -27,9 +26,9 @@ const columns = [
     cell: (info) => (
       <div className='flex cursor-pointer'>
         <Image src={pdfIcon} alt={'pdf Icon'} height={'32'} className="hidden md:block " />
-        <Link href={'#'} className="document-name md:ml-5">
+        <p className="document-name md:ml-5">
           {info.getValue().name}
-        </Link>
+        </p>
       </div>
     ),
   }),
@@ -163,7 +162,7 @@ const YearlyReport: NextPage = () => {
             />
           </div>
         </div>
-        <div className='my-8 h-fit flex justify-center'>
+        <div className='mt-8 h-fit flex justify-center'>
           {
             selectedFile !== '' &&
             <iframe id='iframe' src={`${selectedFile}#view=fitH`} height="600px" width="90%"></iframe>
