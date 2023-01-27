@@ -87,7 +87,7 @@ const Executive = () => {
                         image={val.img}
                         name={val.shortName}
                         position={val.position}
-                        autoHeight
+                        height={340}
                         onContactClick={() => {
                           setModalInfo(val)
                           setShowModal(true)
@@ -109,7 +109,7 @@ const Executive = () => {
                         image={val.img}
                         name={val.shortName}
                         position={val.position}
-                        autoHeight
+                        height={340}
                         onContactClick={() => {
                           setModalInfo(val)
                           setShowModal(true)
@@ -131,7 +131,7 @@ const Executive = () => {
                         image={val.img}
                         name={val.shortName}
                         position={val.position}
-                        autoHeight
+                        height={340}
                         onContactClick={() => {
                           setModalInfo(val)
                           setShowModal(true)
