@@ -17,6 +17,7 @@ const DeanCard: FC<IDeanCardProps> = ({ onOpenModal }) => {
           src={deanImage}
           alt="science kmitl"
           fill
+          loading="lazy"
         />
 
         <div className="contact-list flex gap-[32px]">
