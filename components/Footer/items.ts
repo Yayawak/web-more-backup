@@ -23,7 +23,7 @@ export const aboutItems: aboutItem[] = [
   },
   {
     title: 'ข้อมูลเปิดเผยสาธารณะ (ITA)',
-    path: 'https://www.science.kmitl.ac.th/page#/news_each/5edf9affec4d923a5ce03cd3',
+    path: 'https://www.science.kmitl.ac.th/new/en/about/ita',
   },
   {
     title: 'ช่องทางการร้องเรียน',

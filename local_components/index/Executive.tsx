@@ -128,8 +128,10 @@ const IndexExecutive = () => {
         </div>
 
         <Link
-          href="https://www.science.kmitl.ac.th/page#/personel"
+          href="https://www.science.kmitl.ac.th/new/en/about/executive"
           className="mt-[48px] block"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <BaseButton
             backgroundColor="#FF7C32"

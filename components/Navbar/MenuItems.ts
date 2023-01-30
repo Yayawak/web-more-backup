@@ -20,17 +20,17 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'ปริญญาตรี',
-        path: 'https://www.science.kmitl.ac.th/page#/course-tee',
+        path: 'https://www.science.kmitl.ac.th/new/en/course-bachelor',
         isExternalPath: true,
       },
       {
         title: 'ปริญญาโท',
-        path: 'https://www.science.kmitl.ac.th/page#/course-tor',
+        path: 'https://www.science.kmitl.ac.th/new/en/course-master',
         isExternalPath: true,
       },
       {
         title: 'ปริญญาเอก',
-        path: 'https://www.science.kmitl.ac.th/page#/course-aek',
+        path: 'https://www.science.kmitl.ac.th/new/en/course-doctorate',
         isExternalPath: true,
       },
       {
@@ -141,7 +141,7 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'คณะผู้บริหาร',
-        path: 'https://www.science.kmitl.ac.th/page#/personel',
+        path: 'https://www.science.kmitl.ac.th/new/en/about/executive',
         isExternalPath: true,
       },
       {
@@ -156,16 +156,16 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'โครงสร้างองค์กร',
-        path: '/organization-chart',
+        path: 'https://www.science.kmitl.ac.th/new/en/about/organization-chart',
       },
       {
         title: 'รายงานประจำปี',
-        path: 'https://www.science.kmitl.ac.th/page#/yearly-report',
+        path: 'https://www.science.kmitl.ac.th/new/en/yearly-report',
         isExternalPath: true,
       },
       {
         title: 'ข้อมูลเปิดเผยสาธารณะ (ITA)',
-        path: 'https://www.science.kmitl.ac.th/page#/news_each/5edf9affec4d923a5ce03cd3',
+        path: 'https://www.science.kmitl.ac.th/new/en/about/ita',
         isExternalPath: true,
       },
       {

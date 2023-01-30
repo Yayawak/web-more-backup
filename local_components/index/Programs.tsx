@@ -56,15 +56,15 @@ export default IndexPrograms
 const programItems = [
   {
     title: 'หลักสูตรปริญญาตรี',
-    path: 'https://www.science.kmitl.ac.th/page#/course-tee',
+    path: 'https://www.science.kmitl.ac.th/new/en/course-bachelor',
   },
   {
     title: 'หลักสูตรปริญญาโท',
-    path: 'https://www.science.kmitl.ac.th/page#/course-tor',
+    path: 'https://www.science.kmitl.ac.th/new/en/course-master',
   },
   {
     title: 'หลักสูตรปริญญาเอก',
-    path: 'https://www.science.kmitl.ac.th/page#/course-aek',
+    path: 'https://www.science.kmitl.ac.th/new/en/course-doctorate',
   },
   {
     title: 'หลักสูตรนานาชาติ',
