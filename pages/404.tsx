@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import Image from 'next/image'
-import notFound from '@/assets/images/not_found.png'
+import notFound from '@/assets/images/not_found.svg'
 
 const PageError404: NextPage = () => {
   return (
