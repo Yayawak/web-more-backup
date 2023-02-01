@@ -1,8 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
 
-
-
 type Props = {
   src: StaticImageData[]
 }
@@ -19,36 +17,29 @@ function Slideshow2({ src }: Props) {
   };
 
   const handleClick = (i: number) => {
-    // i === currentIndex - 1 || i === currentIndex || i === currentIndex + 1
     if (i === currentIndex - 1)
       prev();
     else if (i === currentIndex + 1)
       next();
-
-
   }
-  // console.log(currentIndex)
   return (
     <div className='flex justify-center items-center'>
       {src.map((val, i) => {
         return (
-          <div key={i} className={`relative ${i === currentIndex ? "w-[450px] h-[227px] z-20" : "w-[260px] h-[151px] z-10 brightness-50 hover:brightness-75 cursor-pointer"} 
-                  ${i < currentIndex && " -mr-32"} ${i > currentIndex && " -ml-32"} ${!(i === currentIndex - 1 || i === currentIndex || i === currentIndex + 1) && "hidden"}`}
+          <div key={i} className={`relative ${i === currentIndex ? "w-[225px] h-[113px] xs:w-[360px] xs:h-[181px] md:w-[450px] md:h-[227px] z-20" : "w-[180px] h-[75px] xs:w-[288px] xs:h-[120px] md:w-[260px] md:h-[151px] z-10 brightness-50 hover:brightness-75 cursor-pointer"} 
+                  ${i < currentIndex && "-mr-28 xs:-mr-48 md:-mr-32"} ${i > currentIndex && "-ml-28 xs:-ml-48 md:-ml-32"} ${!(i === currentIndex - 1 || i === currentIndex || i === currentIndex + 1) && "hidden"}`}
             onClick={() => handleClick(i)}
           >
             <Image
               src={val}
-              alt=""
+              alt="activity"
               fill
               className='object-cover rounded-[10px] '
-              sizes="(max-width: 768px) 100%,
-              (max-width: 1200px) 100%,
-              100%"
+              sizes="(min-width: 0) 100vw"
             />
           </div>
         )
       })}
-
     </div>
   )
 }
