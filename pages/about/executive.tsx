@@ -21,16 +21,17 @@ const Executive = () => {
         <BaseModal
           onClose={() => setShowModal(false)}
           body={
-            <div className="h-fit md:grid md:grid-cols-2">
-              <div className="mx-2 text-center md:mx-0">
+            <div className="h-fit justify-items-center md:grid md:grid-cols-2">
+              <div className="mx-2 md:mx-0">
                 <Image
                   src={modalInfo.img}
                   alt="ผู้บริหาร"
                   width={300}
                   height={450}
-                  loading="lazy"
                 />
-                <div className="subtitle2 text-[#979797]">{modalInfo.name}</div>
+                <div className="subtitle2 text-center text-[#979797]">
+                  {modalInfo.name}
+                </div>
               </div>
               <div className="mt-4 text-center md:mt-20 md:text-left">
                 <div className="text-[22px]">
