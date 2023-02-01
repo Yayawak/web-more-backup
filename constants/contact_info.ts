@@ -52,7 +52,7 @@ export const contactInfo: IContactInfo[] = [
     email: 'apiluck.ei@kmitl.ac.th',
     img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/apiluk.png'
   },
-  
+
   // ผู้ช่วยคณบดี
   {
     shortName: 'ผศ.ดร.ภาณุพล โขลนกระโทก',
@@ -101,15 +101,7 @@ export const contactInfo: IContactInfo[] = [
   },
 
   // หัวหน้าภาค
-  {
-    shortName: 'ดร.วิชญะ ต่อวงศ์ไพชยนต์',
-    name: 'ดร. วิชญะ ต่อวงศ์ไพชยนต์',
-    engName: 'Dr. Witchaya Towongpaichayont',
-    position: 'หัวหน้าภาควิชาวิทยาการคอมพิวเตอร์',
-    engPosition: 'Head of Department',
-    email: 'witchaya.to@kmitl.ac.th',
-    img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/witchaya.png'
-  },
+  // คณิตศาสตร์
   {
     shortName: 'ผศ.ดร.ศุกระวรรณ มะเวชะ',
     name: 'ผู้ช่วยศาสตราจารย์ ดร. ศุกระวรรณ มะเวชะ',
@@ -119,15 +111,17 @@ export const contactInfo: IContactInfo[] = [
     email: 'sukrawan.ta@kmitl.ac.th',
     img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/sukrawan.png'
   },
+  // เคมี
   {
-    shortName: 'รศ.ดร.ภัทรียา ดำรงศักดิ์',
-    name: 'รองศาสตราจารย์ ดร. ภัทรียา ดำรงศักดิ์',
-    engName: 'Associate Professor Dr. Pattareeya Damrongsak',
-    position: 'หัวหน้าภาควิชาฟิสิกส์',
+    shortName: 'ผศ.ดร.วรท โชติปฏิเวชกุล',
+    name: 'ผศ.ดร. วรท โชติปฏิเวชกุล',
+    engName: 'Dr. Warot Chotpatiwetchkul',
+    position: 'หัวหน้าภาควิชาเคมี',
     engPosition: 'Head of Department',
-    email: 'pattareeya.da@kmitl.ac.th',
-    img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/pattareeya.png'
+    email: 'warot.ch@kmitl.ac.th',
+    img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/warot.png'
   },
+  // ชีววิทยา
   {
     shortName: 'ผศ.ดร.วรกฤต วรนันทกิจ',
     name: 'ผู้ช่วยศาสตราจารย์ ดร. วรกฤต วรนันทกิจ',
@@ -137,15 +131,27 @@ export const contactInfo: IContactInfo[] = [
     email: 'worakrit.wo@kmitl.ac.th',
     img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/worakrit.png'
   },
+  // ฟิสิกส์
   {
-    shortName: 'ดร.วรท โชติปฏิเวชกุล',
-    name: 'ดร. วรท โชติปฏิเวชกุล',
-    engName: 'Dr. Warot Chotpatiwetchkul',
-    position: 'หัวหน้าภาควิชาเคมี',
+    shortName: 'รศ.ดร.ภัทรียา ดำรงศักดิ์',
+    name: 'รองศาสตราจารย์ ดร. ภัทรียา ดำรงศักดิ์',
+    engName: 'Associate Professor Dr. Pattareeya Damrongsak',
+    position: 'หัวหน้าภาควิชาฟิสิกส์',
     engPosition: 'Head of Department',
-    email: 'warot.ch@kmitl.ac.th',
-    img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/warot.png'
+    email: 'pattareeya.da@kmitl.ac.th',
+    img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/pattareeya.png'
   },
+  // วิทยาการคอมพิวเตอร์
+  {
+    shortName: 'ดร.วิชญะ ต่อวงศ์ไพชยนต์',
+    name: 'ดร. วิชญะ ต่อวงศ์ไพชยนต์',
+    engName: 'Dr. Witchaya Towongpaichayont',
+    position: 'หัวหน้าภาควิชาวิทยาการคอมพิวเตอร์',
+    engPosition: 'Head of Department',
+    email: 'witchaya.to@kmitl.ac.th',
+    img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/witchaya.png'
+  },
+  // สถิติ
   {
     shortName: 'ผศ.ดร.สิทธิชัย เจริญเศรษฐศิลป์',
     name: 'ผู้ช่วยศาสตราจารย์ ดร. สิทธิชัย เจริญเศรษฐศิลป์',
@@ -155,7 +161,6 @@ export const contactInfo: IContactInfo[] = [
     email: 'kcsittic.ch@kmitl.ac.th',
     img: '	https://www.science.kmitl.ac.th/assets/img/dean-office/sittichai.png'
   },
-
   // หัวหน้าศูนย์
   {
     shortName: 'ผศ.ดร.พิศาล สุขวิสูตร',
@@ -175,6 +180,8 @@ export const contactInfo: IContactInfo[] = [
     email: 'akadej.ud@kmitl.ac.th',
     img: 'https://www.science.kmitl.ac.th/assets/img/dean-office/akadej.png'
   },
+
+    // ผู้อำนวยการ
   {
     shortName: 'นางประไพจิต ยั่งยืน',
     name: 'นางประไพจิต ยั่งยืน',

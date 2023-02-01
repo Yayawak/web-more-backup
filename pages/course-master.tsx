@@ -19,12 +19,12 @@ const DepartmentCard = ({
 }: DepartmentCardProps) => {
   return (
     <div
-      className={`p-4 lg:px-3 bg-white rounded-xl ${
+      className={`rounded-xl bg-white p-4 lg:px-3 ${
         center && 'md:last:col-start-2 md:last:col-end-3'
       } `}
     >
       <div
-        className={`flex flex-col items-center mb-4 ${
+        className={`mb-4 flex flex-col items-center ${
           name === 'ศูนย์วิเคราะห์ข้อมูลดิจิทัลอัจฉริยะพระจอมเกล้าลาดกระบัง'
             ? 'md:h-48'
             : 'md:h-44 lg:h-48 xl:h-44'
@@ -33,8 +33,8 @@ const DepartmentCard = ({
         <div>
           <Image src={logoPath} alt="department logo" width={72} height={72} />
         </div>
-        <p className="bodyBig mb-1 lg:mb-4 lg:mt-3 text-center">{name}</p>
-        <p className="text-[#A69999] text-base text-center leading-4 font-normal mb-3">
+        <p className="bodyBig mb-1 text-center lg:mb-4 lg:mt-3">{name}</p>
+        <p className="mb-3 text-center text-base font-normal leading-4 text-[#A69999]">
           {describe}
         </p>
       </div>
@@ -49,7 +49,7 @@ const DepartmentCard = ({
 
 const Curriculum = ({ name, program }: ICurriculum) => {
   return (
-    <div key={name} className="mb-1 text-[#FF7C32] text-sm leading-4 font-bold">
+    <div key={name} className="mb-1 text-sm font-bold leading-4 text-[#FF7C32]">
       <a target="">{`> ${name}`}</a>
       {program.map(({ name, link }: IProgram) => (
         <div key={name}>
@@ -67,34 +67,21 @@ const Master: NextPage = () => {
     <>
       <Container className="my-4 md:my-8 lg:mt-16 lg:mb-48">
         <Breadcrumbs />
-        <h4 className="h5 lg:h4 text-center my-4 md:mt-8 lg:mt-16 lg:mb-5">
+        <h4 className="h5 lg:h4 my-4 text-center md:mt-8 lg:mt-16 lg:mb-5">
           หลักสูตรปริญญาโท
         </h4>
         <div className="flex flex-col items-center">
-          <div className="h-fit mx-4 grid grid-cols-1 gap-4 lg:gap-5 md:grid-cols-3 md:auto-rows-fr lg:max-w-[90%] ">
+          <div className="mx-4 grid h-fit grid-cols-1 gap-4 md:auto-rows-fr md:grid-cols-3 lg:max-w-[90%] lg:gap-5 ">
             {masterDepartments.map((department) => {
-              if (masterDepartments.length % 3 === 1) {
-                return (
-                  <DepartmentCard
-                    key={department.name}
-                    center={true}
-                    logoPath={department.logoPath}
-                    name={department.name}
-                    describe={department.describe}
-                    curriculum={department.curriculum}
-                  />
-                )
-              } else {
-                return (
-                  <DepartmentCard
-                    key={department.name}
-                    logoPath={department.logoPath}
-                    name={department.name}
-                    describe={department.describe}
-                    curriculum={department.curriculum}
-                  />
-                )
-              }
+              return (
+                <DepartmentCard
+                  key={department.name}
+                  logoPath={department.logoPath}
+                  name={department.name}
+                  describe={department.describe}
+                  curriculum={department.curriculum}
+                />
+              )
             })}
           </div>
         </div>
