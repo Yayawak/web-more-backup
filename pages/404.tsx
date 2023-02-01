@@ -1,10 +1,12 @@
 import { NextPage } from 'next'
+import Image from 'next/image'
+import notFound from '@/assets/images/not_found.png'
 
 const PageError404: NextPage = () => {
   return (
     <>
-      <div className="not-found-container flex flex-col justify-center items-center">
-        <div className="text-[50px]">404</div>
+      <div className="not-found-container flex flex-col items-center justify-center">
+        <Image src={notFound} width={300} alt="404" />
         <div className="text-[24px]">
           Sorry, we couldn&apos;t find the page.
         </div>
