@@ -192,25 +192,25 @@ const HistoryPage = () => {
             <div className="line"></div>
             <div className="text-xl font-bold">ปรัชญา</div>
             <div className="text-md">
-              " การศึกษา วิจัย
-              ด้านวิทยาศาสตร์และเทคโนโลยีเป็นรากฐานที่ดีของการพัฒนาประเทศ "
+              &quot; การศึกษา วิจัย
+              ด้านวิทยาศาสตร์และเทคโนโลยีเป็นรากฐานที่ดีของการพัฒนาประเทศ &quot;
             </div>
           </div>
           <div className="wrapper">
             <div className="line"></div>
             <div className="text-xl font-bold">วิสัยทัศน์</div>
             <div className="text-md">
-              " เป็นเลิศทางวิทยาศาสตร์ประยุกต์ เพื่ออุตสาหกรรมและ
-              การพัฒนาที่ยั่งยืน ในปี 2567 "
+              &quot; เป็นเลิศทางวิทยาศาสตร์ประยุกต์ เพื่ออุตสาหกรรมและ
+              การพัฒนาที่ยั่งยืน ในปี 2567 &quot;
             </div>
           </div>
           <div className="wrapper">
             <div className="line"></div>
             <div className="text-xl font-bold">ปณิธาน</div>
             <div className="text-md">
-              " มุ่งมั่นให้การศึกษาและวิจัย
+              &quot; มุ่งมั่นให้การศึกษาและวิจัย
               เพื่อผลิตทรัพยากรมนุษย์ที่มีความรู้ทางด้านวิทยาศาสตร์และเทคโนโลยี
-              ควบคู่จริยธรรม และรักษาไว้ซึ่งศิลปวัฒนธรรมอันดีของประเทศ "
+              ควบคู่จริยธรรม และรักษาไว้ซึ่งศิลปวัฒนธรรมอันดีของประเทศ &quot;
             </div>
           </div>
           <div className="wrapper">
