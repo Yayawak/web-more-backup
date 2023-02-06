@@ -131,7 +131,7 @@ const menuItems: MyMenuItem[] = [
     submenus: [
       {
         title: 'รู้จักคณะวิทยาศาสตร์',
-        path: 'https://www.science.kmitl.ac.th/page#/history',
+        path: '/about/history',
         isExternalPath: true,
       },
       // {
