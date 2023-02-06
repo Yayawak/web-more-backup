@@ -15,7 +15,7 @@ type contactItem = {
 export const aboutItems: aboutItem[] = [
   {
     title: 'History',
-    path: 'https://www.science.kmitl.ac.th/page#/history',
+    path: '/about/history',
   },
   {
     title: 'KMITL Vision and Strategy',
