@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { lazy, useMemo } from 'react'
 
 interface IExecutiveCardProps {
   image?: string
