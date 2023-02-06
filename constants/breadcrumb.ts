@@ -41,6 +41,9 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
       '/organization-chart': {
         name: 'แผนผังองค์กร',
       },
+      '/history': {
+        name: 'รู้จักคณะวิทยาศาสตร์'
+      },
     },
   },
 }
