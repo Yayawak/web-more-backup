@@ -4,6 +4,10 @@ import Link from 'next/link'
 import IndexSectionTitle from './SectionTitle'
 
 import activity from '@/assets/images/activity.jpg'
+import activity2 from '@/assets/images/activity2.png'
+import Slideshow2 from '@/components/Slideshow2/Slideshow2'
+
+const activitiesPic = [activity, activity2, activity, activity2, activity];
 
 const IndexPrograms = () => {
   return (
@@ -16,7 +20,7 @@ const IndexPrograms = () => {
       <Container className="mt-8">
         <IndexSectionTitle>หลักสูตร</IndexSectionTitle>
         <div className="mt-9 mb-20 flex flex-wrap justify-center">
-          <ul className="w-full sm:mr-40 sm:w-[305px]">
+          <ul className="w-full sm:mr-40 md:mr-14 sm:w-[305px]">
             {programItems.map((item, index) => {
               return (
                 <li key={index} className="mb-8">
@@ -33,17 +37,8 @@ const IndexPrograms = () => {
               )
             })}
           </ul>
-          <div className="relative h-[361px] w-[540px]">
-            <Image
-              className="rounded-2xl"
-              css={{
-                objectFit: 'contain',
-              }}
-              src={activity}
-              alt="activity"
-              fill
-              sizes="(min-width: 0) 100vw"
-            />
+          <div className="flex justify-center relative h-auto w-[300px] xs:w-[400px] md:w-[700px]">
+            <Slideshow2 src={activitiesPic} />
           </div>
         </div>
       </Container>
