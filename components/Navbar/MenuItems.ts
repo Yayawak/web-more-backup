@@ -20,23 +20,26 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'ปริญญาตรี',
-        path: 'https://www.science.kmitl.ac.th/new/en/course-bachelor',
-        isExternalPath: true,
+        path: '/course-bachelor',
+        // path: 'https://www.science.kmitl.ac.th/page#/course-tee',
+        // isExternalPath: true,
       },
       {
         title: 'ปริญญาโท',
-        path: 'https://www.science.kmitl.ac.th/new/en/course-master',
-        isExternalPath: true,
+        path: '/course-master',
+        // path: 'https://www.science.kmitl.ac.th/page#/course-tor',
+        // isExternalPath: true,
       },
       {
         title: 'ปริญญาเอก',
-        path: 'https://www.science.kmitl.ac.th/new/en/course-doctorate',
-        isExternalPath: true,
+        path: '/course-doctorate',
+        // path: 'https://www.science.kmitl.ac.th/page#/course-aek',
+        // isExternalPath: true,
       },
       {
         title: 'ค่าธรรมเนียมการศึกษา',
         path: '/',
-        isExternalPath: true,
+        // isExternalPath: true,
       },
     ],
   },
@@ -130,15 +133,15 @@ const menuItems: MyMenuItem[] = [
     title: 'เกี่ยวกับเรา',
     submenus: [
       {
-        title: 'ประวัติความเป็นมา',
-        path: 'https://www.science.kmitl.ac.th/page#/history',
+        title: 'รู้จักคณะวิทยาศาสตร์',
+        path: '/about/history',
         isExternalPath: true,
       },
-      {
-        title: 'ปรัชญา ปณิธาน วิสัยทัศน์ พันธกิจ',
-        path: 'https://www.science.kmitl.ac.th/page#/resolution',
-        isExternalPath: true,
-      },
+      // {
+      //   title: 'ปรัชญา ปณิธาน วิสัยทัศน์ พันธกิจ',
+      //   path: 'https://www.science.kmitl.ac.th/page#/resolution',
+      //   isExternalPath: true,
+      // },
       {
         title: 'คณะผู้บริหาร',
         path: 'https://www.science.kmitl.ac.th/new/en/about/executive',
@@ -165,8 +168,9 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'ข้อมูลเปิดเผยสาธารณะ (ITA)',
-        path: 'https://www.science.kmitl.ac.th/new/en/about/ita',
-        isExternalPath: true,
+        // path: 'https://www.science.kmitl.ac.th/page#/news_each/5edf9affec4d923a5ce03cd3',
+        // isExternalPath: true,
+        path: '/about/ita',
       },
       {
         title: 'ข้อมูลการติดต่อ',
