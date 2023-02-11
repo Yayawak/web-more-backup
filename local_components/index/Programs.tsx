@@ -7,7 +7,7 @@ import activity from '@/assets/images/activity.jpg'
 import activity2 from '@/assets/images/activity2.png'
 import Slideshow2 from '@/components/Slideshow2/Slideshow2'
 
-const activitiesPic = [activity, activity2, activity, activity2, activity];
+const activitiesPic = [activity, activity2, activity, activity2, activity]
 
 const IndexPrograms = () => {
   return (
@@ -20,14 +20,13 @@ const IndexPrograms = () => {
       <Container className="mt-8">
         <IndexSectionTitle>หลักสูตร</IndexSectionTitle>
         <div className="mt-9 mb-20 flex flex-wrap justify-center">
-          <ul className="w-full sm:mr-40 md:mr-14 sm:w-[305px]">
+          <ul className="w-full sm:mr-40 sm:w-[305px] md:mr-14">
             {programItems.map((item, index) => {
               return (
                 <li key={index} className="mb-8">
                   <Link
                     href={item.path}
                     className="text-[24px] hover:underline"
-                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     {item.title + ` >`}
@@ -37,7 +36,7 @@ const IndexPrograms = () => {
               )
             })}
           </ul>
-          <div className="flex justify-center relative h-auto w-[300px] xs:w-[400px] md:w-[700px]">
+          <div className="relative flex h-auto w-[300px] justify-center md:w-[700px] xs:w-[400px]">
             <Slideshow2 src={activitiesPic} />
           </div>
         </div>
@@ -51,15 +50,15 @@ export default IndexPrograms
 const programItems = [
   {
     title: 'หลักสูตรปริญญาตรี',
-    path: 'https://www.science.kmitl.ac.th/new/en/course-bachelor',
+    path: '/course-bachelor',
   },
   {
     title: 'หลักสูตรปริญญาโท',
-    path: 'https://www.science.kmitl.ac.th/new/en/course-master',
+    path: '/course-master',
   },
   {
     title: 'หลักสูตรปริญญาเอก',
-    path: 'https://www.science.kmitl.ac.th/new/en/course-doctorate',
+    path: '/course-doctorate',
   },
   {
     title: 'หลักสูตรนานาชาติ',
