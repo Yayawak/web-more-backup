@@ -133,15 +133,15 @@ const menuItems: MyMenuItem[] = [
     title: 'เกี่ยวกับเรา',
     submenus: [
       {
-        title: 'ประวัติความเป็นมา',
-        path: 'https://www.science.kmitl.ac.th/page#/history',
+        title: 'รู้จักคณะวิทยาศาสตร์',
+        path: '/about/history',
         isExternalPath: true,
       },
-      {
-        title: 'ปรัชญา ปณิธาน วิสัยทัศน์ พันธกิจ',
-        path: 'https://www.science.kmitl.ac.th/page#/resolution',
-        isExternalPath: true,
-      },
+      // {
+      //   title: 'ปรัชญา ปณิธาน วิสัยทัศน์ พันธกิจ',
+      //   path: 'https://www.science.kmitl.ac.th/page#/resolution',
+      //   isExternalPath: true,
+      // },
       {
         title: 'คณะผู้บริหาร',
         path: 'https://www.science.kmitl.ac.th/page#/personel',
