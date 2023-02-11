@@ -144,7 +144,7 @@ const menuItems: MyMenuItem[] = [
       // },
       {
         title: 'คณะผู้บริหาร',
-        path: 'https://www.science.kmitl.ac.th/page#/personel',
+        path: 'https://www.science.kmitl.ac.th/new/en/about/executive',
         isExternalPath: true,
       },
       {
@@ -159,11 +159,11 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'โครงสร้างองค์กร',
-        path: '/organization-chart',
+        path: 'https://www.science.kmitl.ac.th/new/en/about/organization-chart',
       },
       {
         title: 'รายงานประจำปี',
-        path: 'https://www.science.kmitl.ac.th/page#/yearly-report',
+        path: 'https://www.science.kmitl.ac.th/new/en/yearly-report',
         isExternalPath: true,
       },
       {
