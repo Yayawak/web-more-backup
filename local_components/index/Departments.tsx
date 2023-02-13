@@ -26,20 +26,20 @@ const IndexDepartments = () => {
           <IndexSectionTitle>ภาควิชาและศูนย์</IndexSectionTitle>
         </Container>
         <div
-          className="flex flex-col justify-center lg:flex-row p-5 bg-cover bg-center rounded-3xl"
+          className="flex flex-col justify-center rounded-3xl bg-cover bg-center p-5 lg:flex-row"
           style={{
             backgroundImage: `url(${departmentSectioinBG.src})`,
           }}
         >
-          <ul className="flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:w-[600px] lg:mr-auto">
+          <ul className="flex flex-wrap justify-center lg:mr-auto lg:grid lg:w-[600px] lg:grid-cols-3">
             {departmentItems.map((item, index) => {
               return (
                 <li
                   key={index}
-                  className="w-[154px] mb-4 basis-1/3 hover:underline"
+                  className="mb-4 w-[154px] basis-1/3 hover:underline"
                 >
                   <Link href={item.path} className="flex flex-col items-center">
-                    <div className="relative mb-2 w-[100px] h-[100px]">
+                    <div className="relative mb-2 h-[100px] w-[100px]">
                       <Image
                         className="object-contain"
                         src={item.image}
@@ -48,21 +48,18 @@ const IndexDepartments = () => {
                         sizes="(min-width: 0) 100vw"
                       />
                     </div>
-                    <p className="text-base text-center">{item.title}</p>
+                    <p className="text-center text-base">{item.title}</p>
                   </Link>
                 </li>
               )
             })}
           </ul>
           <div className="flex items-center">
-            <div className="border-r-2 border-black w-0 h-[192px] ml-8 mr-6 lg:h-[517px] lg:mr-24"></div>
-            <p className="text-2xl whitespace-pre-wrap">
-              เพราะเราเชื่อว่า <br />
-              <q>
-                {' '}
-                การศึกษา วิจัย ด้านวิทยาศาสตร์และเทคโนโลยี <br />
-                เป็นรากฐานที่ดีของการพัฒนาประเทศ{' '}
-              </q>
+            <div className="ml-8 mr-6 h-[192px] w-0 border-r-2 border-black lg:mr-24 lg:h-[517px]"></div>
+            <p className="whitespace-pre-wrap text-2xl">
+              &quot;เพราะเราเชื่อว่า <br />
+              การศึกษา วิจัย ด้านวิทยาศาสตร์และเทคโนโลยี <br />
+              เป็นรากฐานที่ดีของการพัฒนาประเทศ&quot;
             </p>
           </div>
         </div>

@@ -10,8 +10,6 @@ const Layout = ({ children }: IComponentProps) => {
     <>
       <Head>
         <title>Science @KMITL</title>
-
-        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
 
       <div className="flex min-h-screen flex-col">
