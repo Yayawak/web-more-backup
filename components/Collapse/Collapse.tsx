@@ -25,7 +25,7 @@ const Collapse = ({ title, children }: ICollapseProps) => {
       {expand && (
         <>
           <div className="content">{children}</div>
-          <div className="rainbow"></div>
+          {/* <div className="rainbow"></div> */}
         </>
       )}
 
@@ -60,25 +60,25 @@ const Collapse = ({ title, children }: ICollapseProps) => {
           }
         }
 
-        .rainbow {
-          width: 100%;
-          height: 4px;
-          margin-bottom: 32px;
-          border-radius: 8px;
-          background-repeat: repeat-x;
-          background: linear-gradient(
-            to right,
-            #eb5252,
-            #ff6201,
-            #f78f2f,
-            #faa300,
-            #f3b700,
-            #f4c151,
-            #eb5252
-          );
-          animation: rainbow 10s linear infinite;
-          background-size: 200% 100% !important;
-        }
+        // .rainbow {
+        //   width: 100%;
+        //   height: 4px;
+        //   margin-bottom: 32px;
+        //   border-radius: 8px;
+        //   background-repeat: repeat-x;
+        //   background: linear-gradient(
+        //     to right,
+        //     #eb5252,
+        //     #ff6201,
+        //     #f78f2f,
+        //     #faa300,
+        //     #f3b700,
+        //     #f4c151,
+        //     #eb5252
+        //   );
+        //   animation: rainbow 10s linear infinite;
+        //   background-size: 200% 100% !important;
+        // }
       `}</style>
     </>
   )

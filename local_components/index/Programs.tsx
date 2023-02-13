@@ -4,6 +4,10 @@ import Link from 'next/link'
 import IndexSectionTitle from './SectionTitle'
 
 import activity from '@/assets/images/activity.jpg'
+import activity2 from '@/assets/images/activity2.png'
+import Slideshow2 from '@/components/Slideshow2/Slideshow2'
+
+const activitiesPic = [activity, activity2, activity, activity2, activity]
 
 const IndexPrograms = () => {
   return (
@@ -16,14 +20,13 @@ const IndexPrograms = () => {
       <Container className="mt-8">
         <IndexSectionTitle>หลักสูตร</IndexSectionTitle>
         <div className="mt-9 mb-20 flex flex-wrap justify-center">
-          <ul className="w-full sm:mr-40 sm:w-[305px]">
+          <ul className="w-full sm:mr-40 sm:w-[305px] md:mr-14">
             {programItems.map((item, index) => {
               return (
                 <li key={index} className="mb-8">
                   <Link
                     href={item.path}
                     className="text-[24px] hover:underline"
-                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     {item.title + ` >`}
@@ -33,17 +36,8 @@ const IndexPrograms = () => {
               )
             })}
           </ul>
-          <div className="relative h-[361px] w-[540px]">
-            <Image
-              className="rounded-2xl"
-              css={{
-                objectFit: 'contain',
-              }}
-              src={activity}
-              alt="activity"
-              fill
-              sizes="(min-width: 0) 100vw"
-            />
+          <div className="relative flex h-auto w-[300px] justify-center md:w-[700px] xs:w-[400px]">
+            <Slideshow2 src={activitiesPic} />
           </div>
         </div>
       </Container>
@@ -56,15 +50,15 @@ export default IndexPrograms
 const programItems = [
   {
     title: 'หลักสูตรปริญญาตรี',
-    path: 'https://www.science.kmitl.ac.th/page#/course-tee',
+    path: '/course-bachelor',
   },
   {
     title: 'หลักสูตรปริญญาโท',
-    path: 'https://www.science.kmitl.ac.th/page#/course-tor',
+    path: '/course-master',
   },
   {
     title: 'หลักสูตรปริญญาเอก',
-    path: 'https://www.science.kmitl.ac.th/page#/course-aek',
+    path: '/course-doctorate',
   },
   {
     title: 'หลักสูตรนานาชาติ',
