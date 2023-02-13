@@ -173,7 +173,7 @@ const Tcas = () => {
         </p>
         <iframe
           className="mb-12 h-[680px] w-full"
-          src="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2650_2023_02_08-09-47-02_1d44d.pdf?fbclid=IwAR1TasY_UrhOqCRxyO9qI5bcGJfAKiILuiRiYubmlFhC0fxY5imqvTaunSY"
+          src="https://www.science.kmitl.ac.th/course-files/tcas2-1.pdf"
           title="Iframe Example"
         />
         <p>
