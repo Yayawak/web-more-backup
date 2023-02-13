@@ -12,20 +12,29 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
   '/download': {
     name: 'เอกสาร',
   },
-  '/course': {
-    name: 'หลักสูตร',
-    children: {
-      '/course-bachelor': {
-        name: 'หลักสูตรปริญญาตรี',
-      },
-      '/course-master': {
-        name: 'หลักสูตรปริญญาโท',
-      },
-      '/course-doctorate': {
-        name: 'หลักสูตรปริญญาเอก',
-      },
-    },
+  '/course-bachelor': {
+         name: 'หลักสูตรปริญญาตรี',
   },
+  '/course-master': {
+    name: 'หลักสูตรปริญญาโท',
+  },
+  '/course-doctorate': {
+    name: 'หลักสูตรปริญญาเอก',
+  },
+  // '/course': {
+  //   name: 'หลักสูตร',
+  //   children: {
+  //     '/course-bachelor': {
+  //       name: 'หลักสูตรปริญญาตรี',
+  //     },
+  //     '/course-master': {
+  //       name: 'หลักสูตรปริญญาโท',
+  //     },
+  //     '/course-doctorate': {
+  //       name: 'หลักสูตรปริญญาเอก',
+  //     },
+  //   },
+  // },
   '/yearly-report': {
     name: 'รายงานประจำปี',
   },

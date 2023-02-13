@@ -133,18 +133,18 @@ const menuItems: MyMenuItem[] = [
     title: 'เกี่ยวกับเรา',
     submenus: [
       {
-        title: 'ประวัติความเป็นมา',
-        path: 'https://www.science.kmitl.ac.th/page#/history',
+        title: 'รู้จักคณะวิทยาศาสตร์',
+        path: '/about/history',
         isExternalPath: true,
       },
-      {
-        title: 'ปรัชญา ปณิธาน วิสัยทัศน์ พันธกิจ',
-        path: 'https://www.science.kmitl.ac.th/page#/resolution',
-        isExternalPath: true,
-      },
+      // {
+      //   title: 'ปรัชญา ปณิธาน วิสัยทัศน์ พันธกิจ',
+      //   path: 'https://www.science.kmitl.ac.th/page#/resolution',
+      //   isExternalPath: true,
+      // },
       {
         title: 'คณะผู้บริหาร',
-        path: 'https://www.science.kmitl.ac.th/page#/personel',
+        path: 'https://www.science.kmitl.ac.th/new/en/about/executive',
         isExternalPath: true,
       },
       {
@@ -159,11 +159,11 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'โครงสร้างองค์กร',
-        path: '/organization-chart',
+        path: 'https://www.science.kmitl.ac.th/new/en/about/organization-chart',
       },
       {
         title: 'รายงานประจำปี',
-        path: 'https://www.science.kmitl.ac.th/page#/yearly-report',
+        path: 'https://www.science.kmitl.ac.th/new/en/yearly-report',
         isExternalPath: true,
       },
       {

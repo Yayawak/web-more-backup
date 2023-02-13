@@ -6,7 +6,11 @@ module.exports = {
     './local_components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: '475px',
+      },
+    },
   },
   plugins: [],
 }
