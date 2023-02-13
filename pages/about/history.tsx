@@ -1,5 +1,6 @@
 import Container from '@/components/Layout/Container'
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
+import Image from 'next/image'
 
 const HistoryPage = () => {
   return (
@@ -11,8 +12,8 @@ const HistoryPage = () => {
         </h1>
         <div className="container text-center">
           <h1 className="text-left text-2xl font-bold">ประวัติความเป็นมา</h1>
-          <hr></hr>
           <ul className="timeline">
+            <div className="vertical-line"></div>
             <li>
               <div className="timeline-badge">
                 <a>
@@ -24,11 +25,13 @@ const HistoryPage = () => {
                   <h4>เริ่มก่อตั้ง</h4>
                 </div>
                 <div className="timeline-body">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     loading="lazy"
                     width="80%"
                     className="img-raised img-fluid rounded"
                     src="https://campus.campus-star.com/app/uploads/2016/11/KMITL-2.jpg"
+                    alt="science-kmitl"
                   />
                   <p className="timelineDescription">
                     คณะวิทยาศาสตร์เริ่มก่อตั้งขึ้นในปี พ.ศ. 2520
@@ -54,11 +57,13 @@ const HistoryPage = () => {
                   <h4>เริ่มเปิดรับนักศึกษา</h4>
                 </div>
                 <div className="timeline-body">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     loading="lazy"
                     width="80%"
                     className="img-raised img-fluid rounded"
                     src="https://www.science.kmitl.ac.th/assets/img/sciKmitl/1.jpg"
+                    alt="science-kmitl"
                   />
                   <p className="timelineDescription">
                     ในปีการศึกษา 2525
@@ -86,11 +91,13 @@ const HistoryPage = () => {
                   <h4>จัดตั้งคณะวิทยาศาสตร์</h4>
                 </div>
                 <div className="timeline-body">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     loading="lazy"
                     width="80%"
                     className="img-raised img-fluid rounded"
                     src="https://www.science.kmitl.ac.th/assets/img/sciKmitl/2.jpg"
+                    alt="science-kmitl"
                   />
                   <p className="timelineDescription">
                     จากการขยายภาระหน้าที่ความรับผิดชอบ
@@ -117,11 +124,13 @@ const HistoryPage = () => {
                   <h4>เข้าสู่หน่วยงานในกำกับของรัฐ</h4>
                 </div>
                 <div className="timeline-body">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     loading="lazy"
                     width="80%"
                     className="img-raised img-fluid rounded"
                     src="https://www.science.kmitl.ac.th/assets/img/sciKmitl/3.jpg"
+                    alt="science-kmitl"
                   />
                   <p className="timelineDescription">
                     สถาบันฯ มีฐานะเป็นหน่วยงานในกำกับของรัฐ
@@ -151,11 +160,13 @@ const HistoryPage = () => {
                   <h4>จัดตั้งส่วนงาน</h4>
                 </div>
                 <div className="timeline-body">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     loading="lazy"
                     width="80%"
                     className="img-raised img-fluid rounded"
                     src="https://www.science.kmitl.ac.th/assets/img/sciKmitl/4.jpg"
+                    alt="science-kmitl"
                   />
                   <p className="timelineDescription">
                     มีการจัดตั้งส่วนงานในสถาบันตามประกาศในราชกิจจานุเบกษา วันที่
@@ -572,33 +583,12 @@ const HistoryPage = () => {
         *::after {
           box-sizing: border-box;
         }
-        hr {
-          display: block;
-          unicode-bidi: isolate;
-          margin-block-start: 0.5em;
-          margin-block-end: 0.5em;
-          margin-inline-start: auto;
-          margin-inline-end: auto;
-          overflow: hidden;
-          border-style: inset;
-          border-width: 1px;
-        }
-        hr {
-          margin-top: 1rem;
-          margin-bottom: 1rem;
-          border: 0;
-          border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        hr {
-          box-sizing: content-box;
-          height: 0;
-          overflow: visible;
-        }
-        hr {
+
+        .vertical-line {
+          display: none;
           border-top: 2px solid #ff9800a6;
-          box-shadow: 0 2px 2px 0 #ffc64587, 0 3px 1px -2px rgb(0 0 0 / 20%),
-            0 1px 5px 0 rgb(0 0 0 / 12%);
         }
+
         ol,
         ul,
         dl {

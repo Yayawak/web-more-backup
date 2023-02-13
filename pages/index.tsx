@@ -14,6 +14,7 @@ import IndexDepartments from '@/local_components/index/Departments'
 import IndexExecutive from '@/local_components/index/Executive'
 import IndexMap from '@/local_components/index/Map'
 import IndexPartners from '@/local_components/index/Partners'
+import IndexTcas from '@/local_components/index/Tcas66'
 
 const Home: NextPage = () => {
   const [slideshowImages, setSlideshowImages] = useState<string[]>([])
@@ -60,6 +61,7 @@ const Home: NextPage = () => {
 
       {/* <IndexTcas /> */}
 
+      <IndexTcas />
       <IndexNews />
       <IndexPrograms />
       <IndexDepartments />
