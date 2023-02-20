@@ -10,7 +10,6 @@ import { courseSet, departmentSet, dataBachelor, dataMaster, dataDoctorate } fro
 const TutitionFee: NextPage = () => {
   const [course, setCourse] = useState('bachelor');
   const [department, setDepartment] = useState('ทั้งหมด');
-  console.log(department)
   return (
     <>
       <Container className="mt-[64px] mb-[200px]">

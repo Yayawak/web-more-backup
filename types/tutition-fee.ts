@@ -24,6 +24,7 @@ export interface IBranch2 {
 }
 export interface ILessonPlan {
   name: string
-  tutitionFee: string
+  tutitionFee1: string
+  tutitionFee2: string
   credit: string
 }
