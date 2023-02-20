@@ -25,11 +25,7 @@ export const departmentSet: { [key: string]: string } = {
 export const dataBachelor: ITutitionFeeCard[] = [{
   icon: iconChem,
   department: 'ภาควิชาเคมี',
-  branch: [{
-    name: 'สาขาวิชาเทคโนโลยีสิ่งแวดล้อมและการจัดการอย่างยั่งยืน',
-    tutitionFee: '19,000',
-    credit: '134',
-  }, {
+  branch: [ {
     name: 'สาขาวิชาเคมีสิ่งแวดล้อม',
     tutitionFee: '19,000',
     credit: '143',
@@ -41,6 +37,10 @@ export const dataBachelor: ITutitionFeeCard[] = [{
     name: 'สาขาวิชาเคมีวิศวกรรมและอุตสาหกรรม (หลักสูตรนานาชาติ)',
     tutitionFee: '75,000',
     credit: '124(One degree) | 124(Two degree)',
+  },{
+    name: 'สาขาวิชาเทคโนโลยีสิ่งแวดล้อมและการจัดการอย่างยั่งยืน',
+    tutitionFee: '19,000',
+    credit: '134',
   }]
 },{
   icon: iconMath,
@@ -168,13 +168,13 @@ export const dataMaster: ITutitionFeeCard2[] = [{
       name:'แผนการเรียน ก1',
       tutitionFee1: '21,000',
       tutitionFee2:'80,000',
-      credit: 'xx',
+      credit: '36',
     },
     {
       name:'แผนการเรียน ก2',
       tutitionFee1: '21,000',
       tutitionFee2:'80,000',
-      credit: 'xx',
+      credit: '36',
     }]
   },]
 },{
@@ -202,8 +202,8 @@ export const dataMaster: ITutitionFeeCard2[] = [{
     name: 'MASTER OF SCIENCE PROGRAM IN ACTUARIAL SCIENCE (INTERNATIONAL PROGRAM)',
     lessonPlan: [{
       name:'NEW CURRICULUM 2020',
-      tutitionFee1: 'xx,xxx',
-      tutitionFee2:'xx,xxx',
+      tutitionFee1: '65,000',
+      tutitionFee2:'65,000',
       credit: '39(A1) | 39(A2) | 39(B)',
     }]
   }]
@@ -340,12 +340,12 @@ export const dataDoctorate: ITutitionFeeCard2[] = [{
       name:'แบบ 1.1 แผนการศึกษาที่เน้นการวิจัย',
       tutitionFee1: '35,000',
       tutitionFee2:'120,000',
-      credit: 'xxx',
+      credit: '48',
     },{
       name:'แบบ 2.1 แผนการศึกษาเรียนรายวิชาควบคู่กับการวิจัย',
       tutitionFee1: '35,000',
       tutitionFee2:'120,000',
-      credit: 'xxx',
+      credit: '48',
     },{
       name:'แบบ 2.2 แผนการศึกษาเรียนรายวิชาควบคู่กับการวิจัย',
       tutitionFee1: '35,000',
