@@ -1,14 +1,22 @@
 import facebookLogo from '../../assets/logos/facebook-logo.png'
 import youtubeLogo from '../../assets/logos/youtube-logo.png'
-import worldLogo from '../../assets/logos/world-logo.png'
+import phoneLogo from '../../assets/logos/phone-logo.png'
+import mailLogo from '../../assets/logos/mail-logo.png'
+import { StaticImageData } from 'next/image'
 
 type aboutItem = {
   title: string
   path: string
 }
 
+type infoItem = {
+  title: string
+  dataline: string[]
+}
+
 type contactItem = {
-  mdiIconClass: string
+  icon: StaticImageData
+  alt: string
   path: string
 }
 
@@ -31,17 +39,43 @@ export const aboutItems: aboutItem[] = [
   },
 ]
 
+export const infoItems: infoItem[] = [
+  {
+    title: 'ที่อยู่',
+    dataline: [
+      'เลขที่ 1 ซอยฉลองกรุง 1 ถ.ฉลองกรุง',
+      'แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพฯ 10520',
+    ],
+  },
+  {
+    title: 'โทรศัพท์',
+    dataline: ['02-329-8400 ถึง 8411'],
+  },
+  {
+    title: 'โทรสาร',
+    dataline: ['02-329-8412'],
+  },
+]
+
 export const contactItems: contactItem[] = [
   {
-    mdiIconClass: 'mdi mdi-facebook',
+    icon: phoneLogo,
+    alt: 'phone logo',
+    path: 'tel:023298400',
+  },
+  {
+    icon: mailLogo,
+    alt: 'mail logo',
+    path: 'mailto:SCIENCE@kmitl.ac.th',
+  },
+  {
+    icon: facebookLogo,
+    alt: 'facebook logo',
     path: 'https://www.facebook.com/SciKmitl?_rdc=1&_rdr',
   },
   {
-    mdiIconClass: 'mdi mdi-youtube',
+    icon: youtubeLogo,
+    alt: 'youtube logo',
     path: 'https://www.youtube.com/channel/UCuU-IWCmc10r4DDRnyV4y6A',
-  },
-  {
-    mdiIconClass: 'mdi mdi-web',
-    path: '/',
   },
 ]

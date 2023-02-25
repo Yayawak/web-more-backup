@@ -41,14 +41,14 @@ const Navbar = () => {
               {item.submenus && item.submenus.length > 0 ? (
                 <Menu
                   key={index}
-                  menuButton={<MenuButton>{item.title}</MenuButton>}
+                  menuButton={<MenuButton className="hover:underline decoration-2 underline-offset-2">{item.title}</MenuButton>}
                 >
                   {item.submenus.map((menu, index) => (
                     <NavbarMenu item={menu} key={index} />
                   ))}
                 </Menu>
               ) : (
-                <Link href={item.path as string}>{item.title}</Link>
+                <Link className="hover:underline decoration-2 underline-offset-2" href={item.path as string}>{item.title}</Link>
               )}
             </div>
           ))}

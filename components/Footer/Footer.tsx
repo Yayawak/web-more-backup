@@ -1,68 +1,119 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { aboutItems, contactItems } from './items'
+import { aboutItems, contactItems, infoItems } from './items'
 
-import kmitlLogo from '@/assets/logos/kmitl-logo.png'
+import sciKmitlLogo from '@/assets/logos/sci-kmitl-logo.png'
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 left-0 w-full bg-[#021e4a] text-white flex flex-col items-center px-4 xl:flex-row xl:h-80 xl:px-0 mt-[200px]">
-      <div className="w-full flex flex-col items-center pt-10 xl:flex-row xl:p-0 xl:gap-12 xl:ml-16">
-        <div className="w-[120px] h-[120px] relative xl:w-[165px] xl:h-[165px] xl:ml-auto">
+    <footer className="relative flex w-full flex-col items-center gap-5 bg-[#021E4A] pt-[100px] pb-[60px] text-white md:flex-row md:justify-evenly md:gap-0">
+
+      <div className=" absolute top-[-100px] flex h-auto w-[90%] flex-col items-center justify-between gap-3 rounded-2xl bg-gradient-to-b from-[#F96E0A] to-[#FAAF08] py-[30px] px-[10px] md:py-[30px] md:px-[53px] md:top-[-50px] md:h-[110px] md:w-[70%] md:flex-row">
+        <div className="text-center  md:font-semibold text-base md:text-xs lg:text-base leading-4 md:leading-5 md:text-left">
+          <p>ร่วมบริจาค เพื่อสนับสนุนคณะวิทยาศาสตร์</p>
+          <p>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+        </div>
+        <a
+          className="rounded-full bg-[#0A17A7] py-[8px] px-[16px] text-xs md:text-xs lg:text-base font-light tracking-wide"
+          href="/"
+        >
+          บริจาคเงินทุนการศึกษา
+        </a>
+      </div>
+
+      <div className="flex md:w-[230px] lg:w-[460px] justify-center text-base font-light md:block">
+        <div className="relative w-[197px] h-[42px] lg:h-[70px] lg:w-[330px]">
           <Image
-            src={kmitlLogo}
-            alt="KMITL logo"
+            src={sciKmitlLogo}
+            alt={'Sci kmitl logo'}
             fill
             sizes="(min-width: 0) 100vw"
           />
         </div>
-        <div className="text-center xl:text-left xl:w-[520px] xl:mr-auto">
-          <p className="text-[22px] mb-[8px]">
-            สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        <div className="hidden md:block">
+          <p className="mt-2">Copyright © 2022.</p>
+          <p className="mt-1.5">
+            คณะวิทยาศาสตร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
           </p>
-          <p className="text-sm font-bold">
-            SCHOOL OF SCIENCE KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG
-          </p>
-        </div>
-      </div>
-      <div className="hidden border border-white xl:block xl:h-72" />
-      <div className="w-full flex flex-col items-center mt-7 mb-4 text-center sm:flex-row sm:items-start sm:text-left xl:my-0 xl:mr-16">
-        <div className="h-full mb-7 md:mx-auto">
-          <p className="text-[22px] font-bold mb-2">About Science KMITL</p>
-          <ul>
-            {aboutItems.map((item, index) => {
-              return (
-                <li key={index} className="text-sm mb-1 hover:underline">
-                  <Link href={item.path}>{item.title}</Link>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-        <div className="hidden border border-white h-36 m-auto sm:block xl:hidden" />
-        <div className="h-full md:mx-auto">
-          <p className="text-[22px] font-bold mb-2">Contact</p>
-          <p className="text-sm leading-none">Phone : 02-329-8400 To 8411</p>
-          <p className="text-sm leading-none">Email : SCIENCE@kmitl.ac.th</p>
-          <p className="text-sm leading-none">Fax : 02-329-8412</p>
-          <ul className="flex gap-4 mt-2">
+          <p className="mt-1">All rights reserved.</p>
+          <div className="mt-5 border-t-[1px] w-[90%]"></div>
+          <div className="mt-3 flex gap-5">
             {contactItems.map((item, index) => {
               return (
-                <li key={index}>
-                  <Link
-                    href={item.path}
-                    className={item.mdiIconClass + ' text-3xl'}
-                  ></Link>
-                </li>
+                <div className="relative h-[24px] w-[24px]" key={index}>
+                  <a href={item.path} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={item.icon}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 0) 100vw"
+                    />
+                  </a>
+                </div>
               )
             })}
-          </ul>
+          </div>
         </div>
       </div>
-      <div className="xl:hidden">
-        <p className="text-sm">© 2010 — 2020</p>
-        <p className="text-sm">Privacy — Terms</p>
+
+      <div className="flex flex-col items-center text-xs font-light md:block md:text-base">
+        <div className="mb-2 text-center text-base md:text-xl font-bold md:text-left ">
+          <p>คณะวิทยาศาสตร์</p>
+          <p>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+        </div>
+        {infoItems.map((item, index) => {
+          return (
+            <div key={index} className="mb-4">
+              <div>
+                {item.title} : {item.dataline[0]}
+              </div>
+              {item.dataline.map((data, index) => {
+                if (index > 0) {
+                  return <div key={index}>{data}</div>
+                }
+              })}
+            </div>
+          )
+        })}
+      </div>
+
+      <div className="flex flex-col justify-evenly gap-3.5 text-center text-sm font-light md:gap-0 md:text-left md:text-base">
+        <div className="text-base font-semibold md:hidden">
+          เกี่ยวกับคณะวิทยาศาสตร์
+        </div>
+        {aboutItems.map((item, index) => {
+          return (
+            <div key={index}>
+              <a href={item.path}>{item.title}</a>
+            </div>
+          )
+        })}
+      </div>
+
+      <div className="flex flex-col items-center md:hidden">
+        <div className="mt-2 w-[90vw] border-t-[1px]"></div>
+        <div className="mt-5 flex gap-5 font-light">
+          {contactItems.map((item, index) => {
+            return (
+              <div className="relative h-[24px] w-[24px]" key={index}>
+                <a href={item.path} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={item.icon}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 0) 100vw"
+                  />
+                </a>
+              </div>
+            )
+          })}
+        </div>
+        <p className="mt-5 font-light text-xs">Copyright © 2022.</p>
+        <p className="mt-1.5 font-light text-xs">
+          คณะวิทยาศาสตร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        </p>
+        <p className="mt-1 font-light text-xs">All rights reserved.</p>
       </div>
     </footer>
   )
