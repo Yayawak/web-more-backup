@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Container from '@/components/Layout/Container'
 import { detailDepartment } from '@/constants/infoDepartmentBachelor'
-import { JobDepartment, Department } from '@/types/department'
+import { EducationPlan, JobDepartment, Department } from '@/types/department'
 import { NextPage } from 'next'
 import Image from 'next/image'
 import { css } from '@emotion/react'
@@ -16,7 +16,7 @@ const DepartmentCard = ({
   Video,
   DownloadCourse,
   Infographic,
-  Brochure
+  Plan
 }: Department) => {
   //show Dynamic Page
   const [displayedComponent, setDisplayedComponent] = useState('OverviewCourse')
@@ -30,7 +30,7 @@ const DepartmentCard = ({
   return (
     <>
       <Container className="my-4">
-        <div className="font-bold text-2xl mb-5 text-start">{name}</div>
+      <div className="font-bold text-2xl mb-5 text-start">{name}</div>
         <div>
           <button
             className={`px-4 rounded-t-lg ${
@@ -40,6 +40,14 @@ const DepartmentCard = ({
           >
             ภาพรวมหลักสูตร
           </button>
+          {/* <button
+            className={`px-4 rounded-t-lg ${
+              activeButton === "EducationPlanPage" ? "bg-orange-500 text-white" : "bg-gray-300"
+            } hover:bg-orange-500 hover:text-white`}
+            onClick={() => handleButtonClick("EducationPlanPage")}
+          >
+            แผนการศึกษา
+          </button> */}
           <button
             className={`px-4 rounded-t-lg ${
               activeButton === "DownloadCoursePage" ? "bg-orange-500 text-white" : "bg-gray-300"
@@ -56,21 +64,13 @@ const DepartmentCard = ({
           >
             INFOGRAPHIC
           </button>
-          <button
-            className={`px-4 rounded-t-lg ${
-              activeButton === "BrochurePage" ? "bg-orange-500 text-white" : "bg-gray-300"
-            } hover:bg-orange-500 hover:text-white`}
-            onClick={() => handleButtonClick("BrochurePage")}
-          >
-            BROCHURE
-          </button>
         </div>
 
         <div className="">
           {displayedComponent === 'OverviewCourse' && <OverviewCourse />}
+          {displayedComponent === 'EducationPlanPage' && <EducationPlanPage/>}
           {displayedComponent === 'DownloadCoursePage' && <DownloadCoursePage />}
           {displayedComponent === 'InfographicPage' && <InfographicPage/>}
-          {displayedComponent === 'BrochurePage' && <BrochurePage/>}
         </div>
       </Container>
     </>
@@ -121,9 +121,25 @@ const DepartmentCard = ({
       )
   }
 
+  function EducationPlanPage() {
+    return (
+        <>
+          <div className='bg-orange-500 h-2 w-full'></div>
+          <div className='bg-white p-6 rounded-b-lg'>
+            <div className='flex justify-center flex-col'>
+              {Plan.map(({ name } : EducationPlan) => (
+                <li>{ name }</li>
+              ))}
+            </div>
+          </div>
+        </>
+      )
+  }
+
   function DownloadCoursePage() {
     return (
         <>
+          <div className='bg-orange-500 h-2 w-full'></div>
           <div className='bg-white p-6 rounded-b-lg'>
             <div className='flex justify-center'>
               <iframe 
@@ -141,6 +157,7 @@ const DepartmentCard = ({
   function InfographicPage() {
     return (
         <>
+          <div className='bg-orange-500 h-2 w-full'></div>
           <div className='bg-white p-6 rounded-b-lg'>
             <div className='flex justify-center'>
               <Image
@@ -150,28 +167,6 @@ const DepartmentCard = ({
                 `}
                   src={Infographic}
                   alt="InfographicPage"
-                  fill
-                />
-            </div>
-          </div>
-        </>
-      )
-  }
-
-  function BrochurePage() {
-    return (
-        <>
-          <div className='bg-white p-6 rounded-b-lg'>
-            <div className='flex justify-center'>
-              <Image
-                  css={css`
-                    objectFit: contain;
-                    position: static !important;
-                    width: 810px !important;
-                    height: 1080px !important;
-                `}
-                  src={Brochure}
-                  alt="BrochurePage"
                   fill
                 />
             </div>
@@ -196,9 +191,9 @@ const courseChemist: NextPage = () => {
               CourseNameEng={department.CourseNameEng}
               Job={department.Job}
               Video={department.Video}
+              Plan={department.Plan}
               DownloadCourse={department.DownloadCourse}
               Infographic={department.Infographic}
-              Brochure={department.Brochure}
             />
         ))}
     </>
