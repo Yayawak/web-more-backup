@@ -112,7 +112,7 @@ const DepartmentCard = ({
               <p className='font-bold text-x mt-3'>อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา :</p>
               <div className="">
                 {Job.map(({ name } : JobDepartment) => (
-                  <li>{ name }</li>
+                  <li key={ name }>{ name }</li>
                 ))}
               </div>
             </div>

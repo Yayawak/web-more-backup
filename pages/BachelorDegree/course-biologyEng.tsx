@@ -119,7 +119,7 @@ const DepartmentCard = ({
           <div className='bg-white p-6 rounded-b-lg'>
             <div className='flex justify-center flex-col'>
               {Plan.map(({ name } : EducationPlan) => (
-                <li>{ name }</li>
+                <li key={ name }>{ name }</li>
               ))}
             </div>
           </div>
