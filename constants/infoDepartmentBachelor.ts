@@ -15,9 +15,9 @@ export const detailDepartment: Department[] = [
       {name: 'นักวิจัย/นักวิทยาศาสตร์ด้านสิ่งแวดล้อม'}
     ],
     Video: 'https://www.youtube.com/embed/WcHxeMRFpv8',
+    Plan: [],
     DownloadCourse: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%A7%E0%B8%94%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%A1.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/info/%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%A7%E0%B8%94%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%A1.png',
-    Brochure: 'https://www.science.kmitl.ac.th/assets/brochure/brocheme.png',
   },{
     key:'math',
     name: 'หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาคณิตศาสตร์ประยุกต์ หลักสูตรปี พ.ศ. 2565',
@@ -36,9 +36,9 @@ export const detailDepartment: Department[] = [
       {name: 'บุคลากรในสายงานสารสนเทศ'},
     ],
     Video: 'https://www.youtube.com/embed/JhBT9VJCVE0',
+    Plan: [],
     DownloadCourse: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/info/%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.png',
-    Brochure: 'https://online.anyflip.com/qajah/zwrw/mobile/',
   },{
     key:'physics',
     name: 'หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาฟิสิกส์อุตสาหกรรม หลักสูตรปี พ.ศ. 2564',
@@ -55,9 +55,365 @@ export const detailDepartment: Department[] = [
       {name: 'ผู้ประกอบการทางธุรกิจเทคโนโลยี'}
     ],
     Video: 'https://www.youtube.com/embed/nscnz7P8UUE',
+    Plan: [
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        Term: [
+            {
+              ID: '05016201',
+              name: 'แคลคูลัส 1/CALCULUS 1',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05206500',
+              name: 'ชีววิทยาทั่วไป/GENERAL BIOLOGY',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05206501',
+              name: 'ปฏิบัติการชีววิทยาทั่วไป/GENERAL BIOLOGY LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05366001',
+              name: 'ฟิสิกส์และการประยุกต์ 1/PHYSICS AND APPLICATIONS 1',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366002',
+              name: 'ปฏิบัติการฟิสิกส์และการประยุกต์ 1/PHYSICS AND APPLICATIONS LABORATORY 1',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05366022',
+              name: 'การเขียนโปรแกรมคอมพิวเตอร์/COMPUTER PROGRAMMING',
+              credit: 3,
+              hours: '2-2-5'
+            },
+            {
+              ID: '90644007',
+              name: 'ภาษาอังกฤษพื้นฐาน 1/FOUNDATION ENGLISH 1',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90641002',
+              name: 'ความฉลาดทางดิจิทัล/DIGITAL INTELLIGENCE QUOTIENT',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90641001',
+              name: 'โรงเรียนสร้างเสน่ห์/CHARM SCHOOL',
+              credit: 3,
+              hours: '1-2-3'
+            }
+            
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        Term: [
+            {
+              ID: '05016202',
+              name: 'แคลคูลัส 2/CALCULUS 2',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366003',
+              name: 'ฟิสิกส์และการประยุกต์ 2/PHYSICS AND APPLICATIONS 2',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366004',
+              name: 'ปฏิบัติการฟิสิกส์และการประยุกต์ 2/PHYSICS AND APPLICATIONS LABORATORY 2',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05366021',
+              name: 'ทฤษฎีวงจรไฟฟ้าและอิเล็กทรอนิกส์พื้นฐาน/ELECTRICAL CIRCUIT THEORY AND BASIC ELECTRONICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366025',
+              name: 'อิเล็กทรอนิกส์ดิจิตอล/DIGITAL ELECTRONICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366043',
+              name: 'การเขียนแบบและการฝึกงานวิศวกรรม/DRAWING AND ENGINEERING WORKSHOP',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '90644008',
+              name: 'ภาษาอังกฤษพื้นฐาน 2/FOUNDATION ENGLISH 2',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90641003',
+              name: 'กีฬาและนันทนาการ/SPORTS AND RECREATIONAL ACTIVITIES',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกหมวดวิชาศึกษาทั่วไป/ELECTIVE TOPICS IN GENERAL EDUCATION',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        Term: [
+            {
+              ID: '05106030',
+              name: 'เคมีทั่วไป/GENERAL CHEMISTRY',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05106042',
+              name: 'ปฏิบัติการเคมีทั่วไป/GENERAL CHEMISTRY LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05366020',
+              name: 'คณิตศาสตร์สําหรับนักฟิสิกส์/MATHEMATICS FOR PHYSICISTS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366023',
+              name: 'อิเล็กทรอนิกส์/ELECTRONICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366032',
+              name: 'สนามแม่เหล็กไฟฟ้า/ELECTROMAGNETICS FIELD',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366034',
+              name: 'เซ็นเซอร์และทรานสดิวเซอร์/SENSORS AND TRANSDUCERS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366039',
+              name: 'ปฏิบัติการฟิสิกส์ระดับกลาง 1/INTERMEDIATE PHYSICS LABORATORY 1',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกทางภาษา/ELECTIVE TOPICS IN LANGUAGE',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        Term: [
+            {
+              ID: '05366024',
+              name: 'ปฏิบัติการอิเล็กทรอนิกส์/ELECTRONICS LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05366028',
+              name: 'กลศาสตร์/MECHANICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366030',
+              name: 'ฟิสิกส์ยุคใหม่/MODERN PHYSICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366033',
+              name: 'คลื่นและทัศนศาสตร์/WAVES AND OPTICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366038',
+              name: 'สถิติในงานอุตสาหกรรม/INDUSTRIAL STATISTICS	',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366040',
+              name: 'ปฏิบัติการฟิสิกส์ระดับกลาง 2/INTERMEDIATE PHYSICS LABORATORY 2',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '0535xxxx',
+              name: 'วิชาเลือก/ELECTIVE',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกตามเกณฑ์ของคณะวิทยาศาสตร์/ELECTIVE TOPICS FOR FACULTY COURSE REQUIREMENT',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 3 ภาคการศึกษาที่ 1',
+        Term: [
+            {
+              ID: '05366027',
+              name: 'ปฏิบัติการอิเล็กทรอนิกส์ดิจิตอล/DIGITAL ELECTRONICS LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05366031',
+              name: 'ฟิสิกส์เชิงความร้อนและเชิงสถิติ/THERMAL AND STATISTICAL PHYSICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366035',
+              name: 'ฟิสิกส์และเทคโนโลยีของสิ่งประดิษฐ์สารกึ่งตัวนำ/PHYSICS AND TECHNOLOGY OF SEMICONDUCTOR DEVICES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366036',
+              name: 'ไมโครคอนโทรลเลอร์และการเชื่อมต่อ/MICROCONTROLLER AND INTERFACING',
+              credit: 3,
+              hours: '2-2-5'
+            },
+            {
+              ID: '05366041',
+              name: 'ปฏิบัติการฟิสิกส์อุตสาหกรรม 1/INDUSTRIAL PHYSICS LABORATORY 1',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '0535xxxx',
+              name: 'วิชาเลือก/ELECTIVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกตามเกณฑ์ของคณะวิทยาศาสตร์/ELECTIVE TOPICS FOR FACULTY COURSE REQUIREMENT',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: 'xxxxxxxx',
+              name: 'วิชาเลือกเสรี/FREE ELECTIVE',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 3 ภาคการศึกษาที่ 2',
+        Term: [
+            {
+              ID: '05366029',
+              name: 'กลศาสตร์ควอนตัมและเทคโนโลยีควอนตัม/QUANTUM MECHANICS AND QUANTUM TECHNOLOGY',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366037',
+              name: 'การวัดและเครื่องมือวัด/MEASUREMENT AND INSTRUMENTATION',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05366042',
+              name: 'ปฏิบัติการฟิสิกส์อุตสาหกรรม 2/INDUSTRIAL PHYSICS LABORATORY 2',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '0535xxxx',
+              name: 'วิชาเลือก/ELECTIVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกตามเกณฑ์ของคณะวิทยาศาสตร์/ELECTIVE TOPICS FOR FACULTY COURSE REQUIREMENT	',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกหมวดวิชาศึกษาทั่วไป/ELECTIVE TOPICS IN GENERAL EDUCATION',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: 'xxxxxxxx',
+              name: 'วิชาเลือกเสรี/FREE ELECTIVE',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 4 ภาคการศึกษาที่ 1',
+        Term: [
+            {
+              ID: '05366094',
+              name: 'การฝึกงานต่างประเทศ/OVERSEAS TRAINING',
+              credit: 6,
+              hours: '0-45-0'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 4 ภาคการศึกษาที่ 2',
+        Term: [
+            {
+              ID: '05366080',
+              name: 'สัมมนา/SEMINAR',
+              credit: 1,
+              hours: '0-3-2'
+            }
+          ],
+      }
+    ],
     DownloadCourse: '-',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1.png',
-    Brochure: 'https://online.anyflip.com/qajah/jkmk/mobile/',
   },{
     key:'appliedPhysics',
     name: 'หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาฟิสิกส์ประยุกต์ หลักสูตรปี พ.ศ. 2560',
@@ -76,9 +432,376 @@ export const detailDepartment: Department[] = [
       {name: 'งานอื่น ๆ ที่ต้องการใช้ความรู้ทางฟิสิกส์'}
     ],
     Video: 'https://www.youtube.com/embed/V1S-WcZHWmc',
+    Plan: [
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        Term: [
+            {
+              ID: '05016201',
+              name: 'แคลคูลัส 1/CALCULUS 1',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05206500',
+              name: 'ชีววิทยาทั่วไป/GENERAL BIOLOGY',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05206501',
+              name: 'ปฏิบัติการชีววิทยาทั่วไป/GENERAL BIOLOGY LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05306011',
+              name: '	ฟิสิกส์พื้นฐาน/FUNDAMENTAL PHYSICS 1',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306012',
+              name: 'ปฏิบัติการฟิสิกส์พื้นฐาน/FUNDAMENTAL PHYSICS LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกทางภาษา/ELECTIVE TOPICS IN LANGUAGE',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90xxxxxx',
+              name: '	วิชาวิทยาศาสตร์และคณิตศาสตร์ หมวดศึกษาทั่วไป/ELECTIVE TOPICS IN SCIENCE & MATHEMATICS',
+              credit: 3,
+              hours: '3'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกทางสังคมศาสตร์/ELECTIVE TOPICS IN SOCIAL SCIENCE',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        Term: [
+            {
+              ID: '05016202',
+              name: 'แคลคูลัส 2/CALCULUS 2',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05106030',
+              name: 'เคมีทั่วไป/GENERAL CHEMISTRY',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05106042',
+              name: 'ปฏิบัติการเคมีทั่วไป/GENERAL PHYSICS LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05306013',
+              name: 'ฟิสิกส์พื้นฐาน 2/FUNDAMENTAL PHYSICS 2',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306014',
+              name: 'ปฏิบัติการฟิสิกส์พื้นฐาน 2/FUNDAMENTAL PHYSICS LABORATORY 2',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกทางสังคมศาสตร์/ELECTIVE TOPICS IN SOCIAL SCIENCE',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกทางภาษา/ELECTIVE TOPICS IN LANGUAGE',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกทางมนุษยศาสตร์/ELECTIVE TOPICS IN HUMANITY',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        Term: [
+            {
+              ID: '05306221',
+              name: 'คณิตศาสตร์สําหรับนักฟิสิกส์/MATHEMATICS FOR PHYSICISTS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306223',
+              name: 'ทฤษฎีวงจรไฟฟ้าและการวิเคราะห์/ELECTRIC CIRCUIT THEORY AND ANALYSIS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306224',
+              name: 'สนามแม่เหล็กไฟฟ้า/ELECTROMAGNETIC FIELD',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306225',
+              name: 'กลศาสตร์/MECHANICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306226',
+              name: 'ฟิสิกส์ยุคใหม่/MODERN PHYSICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306234',
+              name: 'ปฏิบัติการฟิสิกส์ระดับกลาง 1/INTERMEDIATE PHYSICS LABORATORY 1',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกทางภาษา/ELECTIVE TOPICS IN LANGUAGE',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        Term: [
+            {
+              ID: '05306222',
+              name: 'การสั่นและคลื่น/VIBRATIONS AND WAVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306227',
+              name: 'ฟิสิกส์เชิงความร้อนและเชิงสถิติ/THERMAL AND STATISTICAL PHYSICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306228',
+              name: 'กลศาสตร์ควอนตัม/QUANTUM MECHANICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306229	',
+              name: 'อิเล็กทรอนิกส์/ELECTRONICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306230',
+              name: 'การเขียนโปรแกรมคอมพิวเตอร์และการวิเคราะห์ตัวเลข/COMPUTER PROGRAMMING AND NUMERICAL ANALYSIS',
+              credit: 3,
+              hours: '2-2-5'
+            },
+            {
+              ID: '05306235',
+              name: 'ปฏิบัติการฟิสิกส์ระดับกลาง 2/INTERMEDIATE PHYSICS LABORATORY 2',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05306221',
+              name: 'การเขียนแบบและการฝึกงานทางวิศวกรรม/DRAWING AND ENGINEERING WORKSHOP',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '90xxxxxx	',
+              name: '	วิชาเลือกทางภาษา/ELECTIVE TOPICS IN LANGUAGE',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 3 ภาคการศึกษาที่ 1',
+        Term: [
+            {
+              ID: '05306233',
+              name: 'ฟิสิกส์โซลิดสเตท/SOLID STATE PHYSICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306236',
+              name: 'ปฏิบัติการอิเล็กทรอนิกส์/ELECTRONICS LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '05306238',
+              name: 'อิเล็กทรอนิกส์ดิจิตอล/DIGITAL ELECTRONICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '05306239',
+              name: 'ไมโครคอนโทรลเลอร์และการเชื่อมต่อ/MICROCONTROLLER AND INTERFACING',
+              credit: 3,
+              hours: '2-2-5'
+            },
+            {
+              ID: '053XXXXX',
+              name: 'วิชาเลือก/ELECTIVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '053XXXXX',
+              name: 'วิชาเลือกทางปฏิบัติการ/ELECTIVES LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกเสรี/FREE ELECTIVE COURSES',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 3 ภาคการศึกษาที่ 2',
+        Term: [
+            {
+              ID: '05306240',
+              name: 'ปฏิบัติการอิเล็กทรอนิกส์ดิจิตอล/DIGITAL ELECTRONICS LABORATORY',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '053XXXXX',
+              name: 'วิชาเลือก/ELECTIVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '053XXXXX',
+              name: 'วิชาเลือก/ELECTIVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '053XXXXX',
+              name: 'วิชาเลือก/ELECTIVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '053XXXXX',
+              name: 'วิชาเลือก/ELECTIVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '053XXXXX',
+              name: 'วิชาเลือก/ELECTIVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '053XXXXX',
+              name: 'วิชาเลือกทางปฏิบัติการ/ELECTIVES LABORATORY',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกทางมนุษยศาสตร์/ELECTIVES TOPICS IN HUMANITY',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 4 ภาคการศึกษาที่ 1',
+        Term: [
+            {
+              ID: '05306241',
+              name: 'สัมมนา/SEMINAR',
+              credit: 1,
+              hours: '0-3-2'
+            },
+            {
+              ID: '053XXXXX',
+              name: 'วิชาเลือก/ELECTIVES',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาวิทยาศาสตร์และคณิตศาสตร์ หมวดศึกษาทั่วไป/ELECTIVE TOPICS IN SCIENCE & MATHEMATICS',
+              credit: 3,
+              hours: '3-0-6'
+            },
+            {
+              ID: '90xxxxxx',
+              name: 'วิชาเลือกเสรี/ELECTIVE',
+              credit: 3,
+              hours: '3-0-6'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 4 ภาคการศึกษาที่ 2',
+        Term: [
+          {
+            ID: '05306315',
+            name: 'โครงงานพิเศษ/SPECIAL PROJECT 2',
+            credit: 6,
+            hours: '0-450-225'
+          },
+          {
+            ID: '05306316',
+            name: 'สหกิจศึกษา/CO-OPERATIVE EDUCATION',
+            credit: 6,
+            hours: '0-450-225'
+          },
+          {
+            ID: '05306317',
+            name: 'การปฏิบัติการฝึกงานต่างประเทศ/OVERSEAS TRAINING',
+            credit: 6,
+            hours: '0-450-225'
+          }
+        ],
+      }
+    ],
     DownloadCourse: '-',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1.png',
-    Brochure: '-',
   },{
     key:'biology',
     name: 'หลักสูตรวิทยาศาสตรมหาบัณฑิต (แผนการเรียน ก1) สาขาวิชาเทคโนโลยีชีวภาพ หลักสูตรปี พ.ศ. 2560',
@@ -94,9 +817,70 @@ export const detailDepartment: Department[] = [
       {name: 'ศึกษาต่อระดับปริญญาเอกในสาขาที่เกี่ยวข้อง'}
     ],
     Video: 'https://www.youtube.com/embed/P3afSO8cgxM',
+    Plan: [
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        Term: [
+          {
+            ID: '05207307',
+            name: 'วิทยานิพนธ์/THESIS',
+            credit: 9,
+            hours: '0-405-0'
+          },
+          {
+            ID: '05207198',
+            name: 'สัมมนา 1 (ไม่นับหน่วยกิต)/SEMINAR 1',
+            credit: 1,
+            hours: '0-2-1'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        Term: [
+            {
+              ID: '05207307',
+              name: 'วิทยานิพนธ์/THESIS',
+              credit: 9,
+              hours: '0-405-0'
+            },
+            {
+              ID: '05207199',
+              name: 'สัมมนา 2 (ไม่นับหน่วยกิต)/SEMINAR 2',
+              credit: 1,
+              hours: '0-2-1'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        Term: [
+            {
+              ID: '05207307',
+              name: 'วิทยานิพนธ์/THESIS',
+              credit: 9,
+              hours: '0-405-0'
+            }
+          ],
+      },
+      {
+        type: 'kmitl',
+        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        Term: [
+            {
+              ID: '05207307',
+              name: 'วิทยานิพนธ์/THESIS',
+              credit: 9,
+              hours: '0-405-0'
+            }
+          ],
+      }
+    ],
     DownloadCourse: 'http://www.reg.kmitl.ac.th/curriculum/file/graduate/05/bio_mc2560.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%A0%E0%B8%B2%E0%B8%9E.png',
-    Brochure: '-',
   },{
     key:'biologyEng',
     name: 'BACHELOR OF SCIENCE PROGRAM IN INDUSTRIAL MICROBIOLOGY (INTERNATIONAL PROGRAM) NEW PROGRAM 2016',
@@ -106,9 +890,77 @@ export const detailDepartment: Department[] = [
     CourseNameEng: 'Bachelor of Science Program in Industrial Microbiology (International Program)',
     Job: [],
     Video: 'https://www.youtube.com/embed/-DPuYUSpNwA',
+    Plan: [
+      {
+        type: 'kmitl_au',
+        name: '1st YEAR 1st SEMESTER',
+        Term: [
+          {
+            ID: '05656001',
+            name: 'CALCULUS 1 FOR BIOSCIENCE/CALCULUS 1 FOR BIOSCIENCE',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656005',
+            name: 'GENERAL CHEMISTRY/GENERAL CHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656006',
+            name: 'GENERAL CHEMISTRY LABORATORY/GENERAL CHEMISTRY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656054',
+            name: 'PRINCIPLE OF BIOLOGY/PRINCIPLE OF BIOLOGY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656055',
+            name: 'BIOLOGY LABORATORY/BIOLOGY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05636001',
+            name: 'GENERAL PSYCOLOGY/GENERAL PSYCOLOGY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05646001	',
+            name: 'INTRODUCTION TO ECONOMICS/INTRODUCTION TO ECONOMICS',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05626001',
+            name: 'ENGLISH 1/ENGLISH 1',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      // {
+      //   key: 'kmitl_au',
+      //   name: '1st YEAR 2nd SEMESTER',
+      //   Term: [
+      //     {
+      //       ID: '',
+      //       name: '',
+      //       credit: ,
+      //       hours: ''
+      //     }
+      //   ],
+      // },
+      
+    ],
     DownloadCourse: '-',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%88%E0%B8%B8%E0%B8%A5%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2.png',
-    Brochure: '-',
   },{
     key:'statistic',
     name: 'หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาสถิติประยุกต์และการวิเคราะห์ข้อมูล หลักสูตรปี พ.ศ.2565',
@@ -133,9 +985,9 @@ export const detailDepartment: Department[] = [
       {name: 'นักวิทยาการข้อมูล'},
     ],
     Video: 'https://www.youtube.com/embed/x2-If-10a8M',
+    Plan: [],
     DownloadCourse: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4.png',
-    Brochure: 'https://www.science.kmitl.ac.th/assets/brochure/brostat.png',
   }
 ]
 

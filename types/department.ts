@@ -25,10 +25,21 @@ export interface Department {
   CourseNameEng: string
   Job: JobDepartment[]
   Video: string
+  Plan: EducationPlan[]
   DownloadCourse: string
   Infographic: string
-  Brochure: string
 }
 export interface JobDepartment {
   name: string
+}
+export interface EducationPlan{
+  type: string
+  name: string
+  Term: year[]
+}
+export interface year{
+  ID: string
+  name: string
+  credit: number
+  hours: string
 }
