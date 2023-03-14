@@ -38,7 +38,7 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'ค่าธรรมเนียมการศึกษา',
-        path: '/',
+        path: '/tutition-fee',
         // isExternalPath: true,
       },
     ],
