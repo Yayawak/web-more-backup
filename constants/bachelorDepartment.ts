@@ -19,7 +19,7 @@ export const bachelorDepartment: IDepartmentCard[] = [
         program: [
           {
             name: '',
-            link: 'https://www.science.kmitl.ac.th/chemistry#/course_detail_tee_1',
+            link: '/BachelorDegree/course-chemist',
           },
         ],
       },
@@ -45,7 +45,7 @@ export const bachelorDepartment: IDepartmentCard[] = [
         program: [
           {
             name: '',
-            link: 'https://www.science.kmitl.ac.th/department-math#/course_detail_tee_1',
+            link: '/BachelorDegree/course-math',
           },
         ],
       },
@@ -62,7 +62,7 @@ export const bachelorDepartment: IDepartmentCard[] = [
         program: [
           {
             name: '',
-            link: 'https://www.science.kmitl.ac.th/department-physics#/course_detail_tee_2',
+            link: '/BachelorDegree/course-physics',
           },
         ],
       },
@@ -71,7 +71,7 @@ export const bachelorDepartment: IDepartmentCard[] = [
         program: [
           {
             name: '',
-            link: 'https://www.science.kmitl.ac.th/department-physics#/course_detail_tee_1',
+            link: '/BachelorDegree/course-appliedPhysics',
           },
         ],
       },
@@ -88,7 +88,7 @@ export const bachelorDepartment: IDepartmentCard[] = [
         program: [
           {
             name: '',
-            link: 'https://www.science.kmitl.ac.th/department-bio#/course_detail_tee_1',
+            link: '/BachelorDegree/course-biology',
           },
         ],
       },
@@ -106,7 +106,7 @@ export const bachelorDepartment: IDepartmentCard[] = [
         program: [
           {
             name: '',
-            link: 'https://www.science.kmitl.ac.th/department-bio#/course_detail_tee_3',
+            link: '/BachelorDegree/course-biologyEng',
           },
         ],
       },
@@ -140,7 +140,7 @@ export const bachelorDepartment: IDepartmentCard[] = [
         program: [
           {
             name: '',
-            link: 'https://www.science.kmitl.ac.th/department-stat#/course_detail_tee_1',
+            link: '/BachelorDegree/course-statistic',
           },
         ],
       },
