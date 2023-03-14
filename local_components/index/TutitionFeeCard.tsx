@@ -7,7 +7,7 @@ export const TutitionFeeCard1 = ({
   branch,
 }: ITutitionFeeCard) => {
   return (
-    <div className="mx-2 mb-4 flex rounded-xl border border-[#E1E1E1] bg-white py-2 md:py-4 lg:gap-4 lg:py-6">
+    <div className="mx-2 mb-4 flex rounded-xl border border-[#E1E1E1] bg-white py-2 px-3 md:py-4 lg:gap-4 lg:py-6">
       <div className="relative h-16 w-16 md:h-24 md:w-24">
         <Image src={icon} alt="icon" fill sizes="(min-width: 0) 100vw" />
       </div>
@@ -36,7 +36,7 @@ export const TutitionFeeCard2 = ({
   branch,
 }: ITutitionFeeCard2) => {
   return (
-    <div className="mx-2 mb-4 flex rounded-xl border border-[#E1E1E1] bg-white py-2 md:py-4 lg:gap-4 lg:py-6">
+    <div className="mx-2 mb-4 flex rounded-xl border border-[#E1E1E1] bg-white py-2 px-3 md:py-4 lg:gap-4 lg:py-6">
       <div className="relative h-16 w-16 md:h-24 md:w-24">
         <Image src={icon} alt="icon" fill sizes="(min-width: 0) 100vw" />
       </div>
