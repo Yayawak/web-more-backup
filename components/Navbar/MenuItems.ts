@@ -112,6 +112,11 @@ const menuItems: MyMenuItem[] = [
         path: 'https://osda.science.kmitl.ac.th/room/%E0%B8%AA%E0%B8%AB%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2',
         isExternalPath: true,
       },
+      {
+        title: 'แจ้งซ่อม',
+        path: 'http://sciserv01.sci.kmitl.ac.th/repair-sci/pages/auth/',
+        isExternalPath: true,
+      },
     ],
   },
   // {
