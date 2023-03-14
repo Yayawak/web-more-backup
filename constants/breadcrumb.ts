@@ -38,6 +38,9 @@ export const breadcrumbRoutes: BreadcrumbsRoute = {
   '/yearly-report': {
     name: 'รายงานประจำปี',
   },
+  '/tutition-fee': {
+    name: 'ค่าธรรมเนียมการศึกษา',
+  },
   '/about': {
     name: 'เกี่ยวกับเรา',
     children: {
