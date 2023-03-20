@@ -15,6 +15,7 @@ export const detailDepartment: Department[] = [
       {name: 'นักวิจัย/นักวิทยาศาสตร์ด้านสิ่งแวดล้อม'}
     ],
     Video: 'https://www.youtube.com/embed/WcHxeMRFpv8',
+    Structure: [],
     Plan: [],
     DownloadCourse: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%A7%E0%B8%94%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%A1.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/info/%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%A7%E0%B8%94%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%A1.png',
@@ -36,6 +37,7 @@ export const detailDepartment: Department[] = [
       {name: 'บุคลากรในสายงานสารสนเทศ'},
     ],
     Video: 'https://www.youtube.com/embed/JhBT9VJCVE0',
+    Structure: [],
     Plan: [],
     DownloadCourse: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/info/%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.png',
@@ -55,6 +57,169 @@ export const detailDepartment: Department[] = [
       {name: 'ผู้ประกอบการทางธุรกิจเทคโนโลยี'}
     ],
     Video: 'https://www.youtube.com/embed/nscnz7P8UUE',
+    Structure: [
+      {
+        credit: 129,
+        Category: [
+          {
+            name: '1. หมวดวิชาศึกษาทั่วไป',
+            credit: 48,
+            subject: [
+              {
+                name: '1.4 รายวิชาเลือกในกลุ่มวิชาเลือกหมวดวิชาศึกษาทั่วไป',
+                credit: 6,
+                sub: [
+                  {
+                    name: '1.41 กลุ่มทักษะที่จําเป็นในศตวรรษที่ 21 และส่งเสริมอัตลักษณ์สถาบันฯ',
+                    detail: [
+                      {
+                        ID: '90641001',
+                        name: 'โรงเรียนสร้างเสน่ห์',
+                        nameEng: 'CHARM SCHOOL',
+                        compulsory: 'ไม่มี',
+                        credit: 2,
+                        hours: '1-2-3'
+                      },
+                      {
+                        ID: '90641002',
+                        name: 'ความฉลาดทางดิจิทัล',
+                        nameEng: 'DIGITAL INTELLIGENCE QUOTIENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90641003',
+                        name: 'กีฬาและนันทนาการ',
+                        nameEng: 'SPORTS AND RECREATIONAL ACTIVITIES',
+                        compulsory: '90595002 ภาษาอังกฤษเพื่อการสื่อสาร',
+                        credit: 1,
+                        hours: '0-3-2'
+                      }
+                    ]
+                  },
+                  {
+                    name: '1.4.2 กลุ่มทักษะด้านบุคคลและทักษะส่งเสริมวิชาชีพ',
+                    detail: [
+                      {
+                        ID: '90642001',
+                        name: 'ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 1',
+                        nameEng: 'PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 1',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '0-2-1'
+                      },
+                      {
+                        ID: '90642002',
+                        name: 'ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 2',
+                        nameEng: 'PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 2',
+                        compulsory: 'ไม่มี',
+                        credit: 2,
+                        hours: '0-4-2'
+                      },
+                      // {
+                      //   ID: '',
+                      //   name: '',
+                      //   nameEng: '',
+                      //   compulsory: '',
+                      //   credit: ,
+                      //   hours: ''
+                      // },
+                      // {
+                      //   ID: '',
+                      //   name: '',
+                      //   nameEng: '',
+                      //   compulsory: '',
+                      //   credit: ,
+                      //   hours: ''
+                      // }
+                      
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: '2. หมวดวิชาเฉพาะ',
+            credit: 100,
+            subject: [
+              {
+                name: '1. หมวดวิชาวิทยานิพนธ์',
+                credit: 6,
+                sub: [
+                  {
+                    name: '1.41 กลุ่มทักษะที่จําเป็นในศตวรรษที่ 21 และส่งเสริมอัตลักษณ์สถาบันฯ',
+                    detail: [
+                      // {
+                      //   ID: '90641001',
+                      //   name: 'โรงเรียนสร้างเสน่ห์ CHARM SCHOOL',
+                      //   compulsory: 'ไม่มี',
+                      //   credit: 2,
+                      //   hours: '1-2-3'
+                      // },
+                      // {
+                      //   ID: '90641002',
+                      //   name: 'ความฉลาดทางดิจิทัล DIGITAL INTELLIGENCE QUOTIENT',
+                      //   compulsory: 'ไม่มี',
+                      //   credit: 3,
+                      //   hours: '3-0-6'
+                      // },
+                      // {
+                      //   ID: '90641003',
+                      //   name: 'กีฬาและนันทนาการ SPORTS AND RECREATIONAL ACTIVITIES',
+                      //   compulsory: '90595002 ภาษาอังกฤษเพื่อการสื่อสาร',
+                      //   credit: 1,
+                      //   hours: '0-3-2'
+                      // }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+          ,
+          {
+            name: '3. กลุ่มวิชาเลือกเสรี',
+            credit: 6,
+            subject: [
+              {
+                name: '1. หมวดวิชาวิทยานิพนธ์',
+                credit: 6,
+                sub: [
+                  {
+                    name: '1.41 กลุ่มทักษะที่จําเป็นในศตวรรษที่ 21 และส่งเสริมอัตลักษณ์สถาบันฯ',
+                    detail: [
+                      // {
+                      //   ID: '90641001',
+                      //   name: 'โรงเรียนสร้างเสน่ห์ CHARM SCHOOL',
+                      //   compulsory: 'ไม่มี',
+                      //   credit: 2,
+                      //   hours: '1-2-3'
+                      // },
+                      // {
+                      //   ID: '90641002',
+                      //   name: 'ความฉลาดทางดิจิทัล DIGITAL INTELLIGENCE QUOTIENT',
+                      //   compulsory: 'ไม่มี',
+                      //   credit: 3,
+                      //   hours: '3-0-6'
+                      // },
+                      // {
+                      //   ID: '90641003',
+                      //   name: 'กีฬาและนันทนาการ SPORTS AND RECREATIONAL ACTIVITIES',
+                      //   compulsory: '90595002 ภาษาอังกฤษเพื่อการสื่อสาร',
+                      //   credit: 1,
+                      //   hours: '0-3-2'
+                      // }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ] 
+      }
+    ],
     Plan: [
       {
         type: 'kmitl',
@@ -432,6 +597,1357 @@ export const detailDepartment: Department[] = [
       {name: 'งานอื่น ๆ ที่ต้องการใช้ความรู้ทางฟิสิกส์'}
     ],
     Video: 'https://www.youtube.com/embed/V1S-WcZHWmc',
+    Structure: [
+      {
+        credit: 129,
+        Category: [
+          {
+            name: '1. หมวดวิชาศึกษาทั่วไป',
+            credit: 30,
+            subject: [
+              {
+                name: '1.1 กลุ่มวิชาวิทยาศาสตร์กับคณิตศาสตร',
+                credit: 6,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '90101002',
+                        name: 'คณิตศาสตร์ในชีวิตประจำวัน',
+                        nameEng: 'MATHEMATICS IN DAILY LIFE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90101003',
+                        name: 'สถิติในชีวิตประจำวัน',
+                        nameEng: 'STATISTICS IN DAILY LIFE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90101004',
+                        name: 'คณิตศาสตร์กับเทคโนโลยี',
+                        nameEng: 'MATHEMATICS AND TECHNOLOGY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90101005',
+                        name: 'คณิตศาสตร์เพื่อการตัดสินใจ',
+                        nameEng: 'MATHEMATICS FOR DECISION MAKING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90101006',
+                        name: 'คณิตศาสตร์เพื่อพัฒนากระบวนการคิด',
+                        nameEng: 'MATHEMATICS FOR THINKING PROCESS DEVELOPMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90101007',
+                        name: 'คณิตเศรษฐศาสตร์เบื้องต้น',
+                        nameEng: 'INTRODUCTION TO MATHEMATICAL ECONOMICS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90101008',
+                        name: 'คณิตศาสตร์ในเชิงธุรกิจและอุตสาหกรรม',
+                        nameEng: 'MATHEMATICS IN BUSINESS AND INDUSTRY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90101009',
+                        name: 'คณิตศาสตร์สำหรับผู้บริโภค',
+                        nameEng: 'MATHEMATICS FOR CONSUME',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90102001',
+                        name: 'คอมพิวเตอร์ในชีวิตประจำวัน',
+                        nameEng: 'COMPUTER IN DAILY LIFE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90102003',
+                        name: 'คอมพิวเตอร์และการโปรแกรม',
+                        nameEng: 'COMPUTERS AND PROGRAMMING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90102005',
+                        name: 'ระบบสารสนเทศเพื่อการจัดการ',
+                        nameEng: 'INTRODUCTION TO INFORMATION SYSTEMS FOR MANAGEMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90102006',
+                        name: 'การจัดการข้อมูลการวิจัยทางวิทยาศาสตร์ และการเกษตรด้วยโปรแกรมคอมพิวเตอร์',
+                        nameEng: 'INTEGRATED DATA MANAGEMENT FOR SCIENTIFIC AND AGRICULTURAL RESEARCH BY USING COMPUTATIONAL PROGRAM',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90103003',
+                        name: 'เทคโนโลยีรถยนต์',
+                        nameEng: 'AUTOMOTIVE TECHNOLOGY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104003',
+                        name: 'สุขภาพและโภชนาการ',
+                        nameEng: 'HEALTH AND NUTRITION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104004',
+                        name: 'นวัตกรรมการสื่อสารเพื่อการพัฒนา',
+                        nameEng: 'COMMUNICATION INNOVATION FOR DEVELOPMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104005',
+                        name: 'วิทยาศาสตร์การถ่ายภาพ',
+                        nameEng: 'SCIENCE OF PHOTOGRAPHY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104006',
+                        name: 'โภชนาการอาหารเบื้องต้น',
+                        nameEng: 'INTRODUCTION TO FOOD NUTRITION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104007',
+                        name: 'วิทยาศาสตร์การอาหารสำหรับชีวิตประจำวัน',
+                        nameEng: 'FOOD SCIENCE IN DAILY LIFE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104008',
+                        name: 'สุขอนามัยส่วนบุคคลและชุมชน',
+                        nameEng: 'PERSONAL AND COMMUNITY HYGINE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104009',
+                        name: 'สิ่งแวดล้อมและการอนุรักษ์ทรัพยากรธรรมชาติ',
+                        nameEng: 'ENVIRONMENT AND NATURAL RESOURCE CONSERVATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104010',
+                        name: 'การจัดการสวนในบ้าน',
+                        nameEng: 'HOME GARDEN MANAGEMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104011',
+                        name: 'การเลี้ยงสัตว์สวยงาม',
+                        nameEng: 'PET MANAGEMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90104012',
+                        name: 'นวัตกรรมนาโนเทคโนโลยี',
+                        nameEng: 'NANOTECHNOLOGY INNOVATIONS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90105002',
+                        name: 'สารเคมีในชีวิตประจำวัน',
+                        nameEng: 'CHEMICALS IN DAILY LIFE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90106001',
+                        name: 'ฟิสิกส์ในชีวิตประจำวัน',
+                        nameEng: 'PHYSICS IN DAILY LIFE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90106002',
+                        name: 'มนุษย์กับพลังงาน',
+                        nameEng: 'HUMAN AND ENERGY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90106003',
+                        name: 'โลกและเอกภพ',
+                        nameEng: 'EARTH AND UNIVERSE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90106004',
+                        name: 'ฟิสิกส์และเทคโนโลยีเพื่อเตรียมพร้อมเผชิญภัยพิบัติ',
+                        nameEng: 'PHYSICS AND TECHNOLOGY FOR DISASTER PREPAREDNESS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90108003',
+                        name: 'ชีวิตกับสิ่งแวดล้อม',
+                        nameEng: 'LIFE AND ENVIRONMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90108005',
+                        name: 'เทคโนโลยีพลังงานทดแทน',
+                        nameEng: 'RENEWABLE ENERGY TECHNOLOGIES',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90108007',
+                        name: 'สิ่งแวดล้อมศึกษา',
+                        nameEng: 'ENVIRONMENTAL STUDY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90108010',
+                        name: 'มลพิษและการป้องกัน',
+                        nameEng: 'POLLUTION AND PREVENTION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90010007',
+                        name: 'การออกแบบเชิงภูมิสังคมไทย',
+                        nameEng: 'THAI GEOSOCIAL DESIGN',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      }
+                    ]
+                  },
+                  
+                ]
+              },
+              {
+                name: '1.2 กลุ่มวิชาภาษา',
+                credit: 12,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '90201001',
+                        name: 'ภาษาอังกฤษพื้นฐาน 1',
+                        nameEng: '',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201002',
+                        name: 'ภาษาอังกฤษพื้นฐาน 2',
+                        nameEng: 'FOUNDATION ENGLISH 2',
+                        compulsory: '90201001 ภาษาอังกฤษพื้นฐาน 1',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201003',
+                        name: 'ภาษาอังกฤษเชิงวิชาการ',
+                        nameEng: 'ENGLISH FOR ACADEMIC PURPOSES',
+                        compulsory: '90201002 ภาษาอังกฤษพื้นฐาน 2',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201012',
+                        name: 'การพัฒนาทักษะการอ่านและการเขียนภาษาอังกฤษ',
+                        nameEng: 'DEVELOPMENT OF READING AND WRITING SKILL IN ENGLISH',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201013',
+                        name: 'ภาษาอังกฤษเพื่อการจัดการ',
+                        nameEng: 'ENGLISH FOR MANAGEMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201016',
+                        name: 'ภาษาอังกฤษเพื่อการสื่อสารทางวิชาชีพ',
+                        nameEng: 'ENGLISH FOR PROFESSIONAL COMMUNICATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201017',
+                        name: 'ภาษาอังกฤษสำหรับธุรกิจ',
+                        nameEng: 'ENGLISH FOR BUSINESS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201018',
+                        name: 'การเขียนภาษาอังกฤษเพื่อการสื่อสาร',
+                        nameEng: 'ENGLISH FOR COMMUNICATIVE WRITING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201019',
+                        name: 'ภาษาอังกฤษเพื่อพัฒนาทักษะการอ่าน',
+                        nameEng: 'ENGLISH FOR DEVELOPING READING SKILLS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201020',
+                        name: 'ภาษาอังกฤษเพื่ออุตสาหกรรม',
+                        nameEng: 'ENGLISH FOR INDUSTRY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201022',
+                        name: 'ภาษาอังกฤษเพื่อการศึกษาต่อ',
+                        nameEng: 'ENGLISH FOR FURTHER STUDIES',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201024',
+                        name: 'ภาษาอังกฤษเพื่อการประกอบอาชีพ',
+                        nameEng: 'ENGLISH FOR PROFESSIONAL PURPOSE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201026',
+                        name: 'ภาษาอังกฤษเพื่อการสื่อสาร',
+                        nameEng: 'ENGLISH FOR COMMUNICATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201029',
+                        name: 'ภาษาอังกฤษเพื่อการท่องเที่ยวและการเดินทาง',
+                        nameEng: 'ENGLISH FOR TOURISM AND TRAVELLING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201030',
+                        name: 'ภาษาอังกฤษเพื่อการนำเสนอผลงานทางวิชาชีพ',
+                        nameEng: 'ENGLISH FOR PROFESSIONAL PRESENTATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201031',
+                        name: 'ภาษาอังกฤษเพื่อการสื่อสารระหว่างวัฒนธรรม',
+                        nameEng: 'ENGLISH FOR INTERCULTURAL COMMUNICATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201032',
+                        name: 'ภาษาอังกฤษเพื่อความเข้าใจข่าวสารและข้อมูลในสื่อสารมวลชน',
+                        nameEng: 'ENGLISH FOR UNDERSTANDING NEWS AND INFORMATION IN MASS MEDIA',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201033',
+                        name: 'ไวยากรณ์ภาษาอังกฤษเพื่อการสื่อสาร',
+                        nameEng: 'COMMUNICATIVE ENGLISH GRAMMAR',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201034',
+                        name: 'ภาษาอังกฤษแบบเข้ม',
+                        nameEng: 'INTENSIVE ENGLISH',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201035',
+                        name: 'การเขียนและการพูดในงานอาชีพ',
+                        nameEng: 'WRITING AND SPEAKING IN THE PROFESSIONS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201036',
+                        name: 'การพัฒนาทักษะทางภาษาอังกฤษเพื่อการเรียนรู้ตลอดชีวิต',
+                        nameEng: 'ENGLISH SKILL DEVELOPMENT FOR LIVE-LONG LEARNING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201037',
+                        name: 'การออกเสียงภาษาอังกฤษเบื้องต้น',
+                        nameEng: 'BASIC ENGLISH PRONUNCIATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201038',
+                        name: 'พื้นฐานการเขียนเพื่อการสื่อความหมายทางวิชาชีพ',
+                        nameEng: 'BASIC WRITING FOR PROFESSIONAL COMMUNICATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201039',
+                        name: 'ภาษาอังกฤษจากสื่อบันเทิง',
+                        nameEng: 'ENGLISH FROM ENTERTAINMENT MEDIA',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90201040',
+                        name: 'การพูดภาษาอังกฤษเพื่อการสื่อสารในที่ทำงาน',
+                        nameEng: 'ORAL ENGLISH COMMUNICATION AT WORK',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90020008',
+                        name: 'ภาษาอังกฤษเพื่อการตลาด',
+                        nameEng: 'ENGLISH FOR MARKETING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      }
+                    ]
+                  },
+                  
+                ]
+              },
+              {
+                name: '1.3 กลุ่มวิชามนุษย์ศาสตร์',
+                credit: 6,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '90301003',
+                        name: 'ปรัชญาทั่วไป',
+                        nameEng: 'GENERAL PHILOSOPHY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90301007',
+                        name: 'จริยศาสตร์และสุนทรียศาสตร์',
+                        nameEng: 'ETHICS AND AESTHETICS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90302001',
+                        name: 'จิตวิทยาทั่วไป',
+                        nameEng: 'GENERAL PSYCHOLOGY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90302003',
+                        name: 'มนุษยสัมพันธ์',
+                        nameEng: 'HUMAN RELATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90302010',
+                        name: 'จิตวิทยาเพื่อพัฒนาตน',
+                        nameEng: 'PSYCHOLOGY FOR SELF DEVELOPMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90302010',
+                        name: 'จิตวิทยาการคิด',
+                        nameEng: 'PSYCHOLOGY OF THINKING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90302012',
+                        name: 'จิตวิทยาแห่งอุตสาหกรรม',
+                        nameEng: 'INDUSTRIAL BUSINESS PSYCHOLOGY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90302013',
+                        name: 'การพัฒนาบคุลิกภาพและสุขภาพจิต',
+                        nameEng: 'PERSONALITY AND MENTAL HEALTH DEVELOPMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90303005',
+                        name: 'พลศาสตร์เบื้องต้น',
+                        nameEng: 'INTRODUCTION TO PHYSICAL EDUCATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90303006',
+                        name: 'การจัดการสุขภาพ',
+                        nameEng: 'HEALTH MANAGEMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90303007',
+                        name: 'นันทนาการเบื้องต้น',
+                        nameEng: 'FUNDAMENTAL RECREATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90303008',
+                        name: 'การปฐมพยาบาล',
+                        nameEng: 'FIRST AIDS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90303009',
+                        name: 'หลักความปลอดภัยในการทำงาน',
+                        nameEng: 'PINCIPLES OF WORK SAFETY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90303010',
+                        name: 'สุขศาสตร์อุตสาหกรรมเบื้องต้น',
+                        nameEng: 'INTRODUCTION TO INDUSTRIAL HYGIENE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90303011',
+                        name: 'การเสริมสร้างคุณภาพชีวิต',
+                        nameEng: 'ENHANCEMENT OF QUALITY OF LIFE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90303012',
+                        name: 'การพัฒนาสุขภาพแบบองค์รวม',
+                        nameEng: 'HOLISTIC HEALTH DEVELOPMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90304001',
+                        name: 'การใช้ห้องสมุดและสารนิเทศ',
+                        nameEng: 'LIBRARY USAGE AND INFORMATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90304004',
+                        name: 'การเขียนรายงาน',
+                        nameEng: 'REPORT WRITING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90304005',
+                        name: 'ศิลปะแห่งการสื่อสาร',
+                        nameEng: 'ART OF COMMUNICATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90305001',
+                        name: 'อารยธรรมไทย',
+                        nameEng: 'THAI CIVILIZATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90305003',
+                        name: 'เหตุการณ์โลกปัจจุบัน',
+                        nameEng: 'THE WORLD TODAY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90305004',
+                        name: 'ภูมิ-ประวัติศาสตร์เพื่อการท่องเที่ยว',
+                        nameEng: 'GEOGRAPHY AND HISTORY FOR TOURISM',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90305005',
+                        name: 'มนุษย์กับการท่องเที่ยว',
+                        nameEng: 'HUMAN AND TOURISM',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90305006',
+                        name: 'มนุษย์กับสิ่งแวดล้อม',
+                        nameEng: 'HUMAN AND ENVIRONMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90306003',
+                        name: 'ทักษะการดำเนินชีวิต',
+                        nameEng: 'LIVING SKILLS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90306004',
+                        name: 'ครอบครัวอบอุ่น',
+                        nameEng: 'LOVING FAMILY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90306005',
+                        name: 'ภูมิปัญญาไทย',
+                        nameEng: 'THAI WISDOM',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90306006',
+                        name: 'การจัดการความรู้',
+                        nameEng: 'KNOWLEDGE MANAGEMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90306007',
+                        name: 'ทักษะแห่งความสุข',
+                        nameEng: 'HAPINESS SKILL',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90306008',
+                        name: 'สมาธิเพื่อพัฒนาชีวิต',
+                        nameEng: 'MEDITATION FOR LIFE DEVELOPMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90307001',
+                        name: 'ภาษาไทยเพื่อการสื่อสาร',
+                        nameEng: 'THAI USAGE FOR COMMUNICATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90307002',
+                        name: 'ภาษาและวัฒนธรรมญี่ปุ่น',
+                        nameEng: 'JAPANESE LANGUAGE AND CULTURE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90307003',
+                        name: 'วรรณกรรมวิจารณ์',
+                        nameEng: 'LITERARY CRITICISM',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90307004',
+                        name: 'ภาษาในสังคมไทย',
+                        nameEng: 'LANGUAGE IN THAI SOCIETY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90307005',
+                        name: 'การฟังและการอ่านเพื่อพัฒนาคุณภาพชีวิต',
+                        nameEng: 'LISTENING AND READ',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90307006',
+                        name: 'ศิลปะการต่อรอง',
+                        nameEng: 'ART OF NEGOTIATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90307007',
+                        name: '',
+                        nameEng: 'SPEECH COMMUNICATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90307008',
+                        name: 'ภาษาเพื่อการสื่อสารมวลชน',
+                        nameEng: 'LANGUAGE FOR MASS MEDIA',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90030001',
+                        name: 'การคิดเชิงวิทยาศาสตร์',
+                        nameEng: 'SCIENTIFIC THINKING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      }
+                    ]
+                  },
+                  
+                ]
+              },
+              {
+                name: '1.4 กลุ่มวิชาสังคมศาสตร์',
+                credit: 6,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '90401003',
+                        name: 'เศรษฐกิจกับวิถีชีวิต',
+                        nameEng: 'ECONOMY AND LIVING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90401007',
+                        name: 'ความรู้เบื้อต้นเกี่ยวกับเศรษฐกิจไทย',
+                        nameEng: 'INTRODUCTION TO THAI ECONOMY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90401008',
+                        name: 'เศรษฐกิจเอเชีย',
+                        nameEng: 'ECONOMY OF ASIAN COUNTRIES',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90401009',
+                        name: 'เศรษฐศาสตร์เพื่อธุรกิจ',
+                        nameEng: 'ECONOMICS FOR BUSINESS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90401010',
+                        name: 'ความรู้เบื้องต้นเกี่ยวกับการลงทุน',
+                        nameEng: 'INTRODUCTION TO INVESTMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90401011',
+                        name: 'การประกอบการ',
+                        nameEng: 'ENTREPRENRUESHIP',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90401012',
+                        name: 'ความรู้เบื้องต้นทางการตลาด',
+                        nameEng: 'INTRODUCTION TO MARKETING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90401013',
+                        name: 'ความรู้เบื้องต้นเกี่ยวกับธุรกิจ',
+                        nameEng: 'GENERAL BUSINESS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90402007',
+                        name: 'ความรู้เบื้องต้นเกี่บงกับสิทธิทางสังคมและครอบครัว',
+                        nameEng: 'INTRODUCTION TO PRINCIPLES OF SOCIAL AND FAMILY RIGHTS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90402008',
+                        name: 'ความรู้เบื้องต้นในการทำงานและสวัสดิการทางสังคม',
+                        nameEng: 'INTRODUCTION TO WORKING AND SOCIAL WARFARE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90402009',
+                        name: 'ความรู้เบื้องต้นเกี่ยวกับกฎหมายในชีวิตประจำวัน',
+                        nameEng: 'INTRODUCTION TO PRINCIPLES OF LAWS IN DAILY LIFE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90402010',
+                        name: '90402010',
+                        nameEng: 'INTRODUCTION TO THAI LAWS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90402011',
+                        name: 'กฎหมายวิศวกรรมและเทคโนโลยี',
+                        nameEng: 'ENGINEERING AND TECHNOLOGY LAWS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90402012',
+                        name: 'ความรู้เบื้องต้นเกี่ยวกับตลาดแรงงานและการค้าในกลุ่มอาเซียน',
+                        nameEng: 'INTRODUCTION TO ASEAN TRADE AND LABOR MARKET',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90402013',
+                        name: 'ทรัพย์สินทางปัญญาไทย',
+                        nameEng: 'INTELLECTUAL PROPERTY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403004',
+                        name: 'การบริหารท้องถิ่นไทย',
+                        nameEng: 'THAI LOCAL ADMINISTRATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403007',
+                        name: 'การดำรงชีพในสังคม',
+                        nameEng: 'LIVING IN SOCIETY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403008',
+                        name: 'สังคมและวัฒนธรรมไทย',
+                        nameEng: 'THAI SOCIETY AND CULTURE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403009',
+                        name: 'พลวัตสังคมไทย',
+                        nameEng: 'DYNAMICS OF THAI SOCIETY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403010',
+                        name: 'การบริหารจัดการภาครัฐ',
+                        nameEng: 'PUBLIC MANAGEMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403011',
+                        name: 'การจัดการเทคโนโลยีในชีวิตประจำวัน',
+                        nameEng: 'TECHNOLOGY MANAGEMENT IN DAILY LIFE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403012',
+                        name: 'การจัดการประสิทธิภาพตนเองและอาชีพ',
+                        nameEng: 'SELF-EFFICIENCY AND CAREER MANAGEMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403013',
+                        name: 'ศิลปะและวัฒนธรมไทย',
+                        nameEng: 'THAI ART AND CULTURE',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403014',
+                        name: 'ประชากรศึกษา',
+                        nameEng: 'POPULATION EDUCATION',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '90403015',
+                        name: 'การเมืองการปกครองไทย',
+                        nameEng: 'THAI POLITICS AD GOVERNMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      }
+                    ]
+                  },
+                  
+                ]
+              }
+            ]
+          },
+          {
+            name: '2. หมวดวิชาเฉพาะ',
+            credit: 99,
+            subject: [
+              {
+                name: '2.1 กลุ่มวิชาพื้นฐาน',
+                credit: 22,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '05016201',
+                        name: 'แคลคูลัส 1',
+                        nameEng: 'CALCULUS 1',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05016202',
+                        name: 'แคลคูลัส 2',
+                        nameEng: 'CALCULUS 2',
+                        compulsory: '05016201 แคลคูลัส 1',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05106030',
+                        name: 'เคมีทั่วไป',
+                        nameEng: 'GENERAL CHEMISTRY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05106042',
+                        name: 'ปฏิบัติการเคมีทั่วไป',
+                        nameEng: 'GENERAL CHEMISTRY LABORATORY',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05206500',
+                        name: 'ชีววิทยาทั่วไป',
+                        nameEng: 'GENERAL BIOLOGY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05206501',
+                        name: 'ปฏิบัติการชีววิทยาทั่วไป',
+                        nameEng: 'GENERAL BIOLOGY LABORATORY',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306011',
+                        name: 'ฟิสิกส์พื้นฐาน 1',
+                        nameEng: 'FUNDAMENTAL PHYSICS 1',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306012',
+                        name: 'ปฏิบัติการฟิสิกส์พื้นฐาน 1',
+                        nameEng: 'FUNDAMENTAL PHYSICS LABORATORY 1',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306013',
+                        name: 'ฟิสิกส์พื้นฐาน 2',
+                        nameEng: 'FUNDAMENTAL PHYSICS 2',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306014',
+                        name: 'ปฏิบัติการฟิสิกส์พื้นฐาน 2',
+                        nameEng: 'FUNDAMENTAL PHYSICS LABORATORY 2',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '3-0-6'
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: '2.2 กลุ่มวิชาเฉพาะบังคับ',
+                credit: 45,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '05306221',
+                        name: 'คณิตศาสตร์สําหรับนักฟิสิกส์',
+                        nameEng: 'MATHEMATICS FOR PHYSICISTS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306222',
+                        name: 'การสั่นและคลื่น',
+                        nameEng: 'VIBRATIONS AND WAVES',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306223',
+                        name: 'ฤษฎีวงจรไฟฟ้าและการวิเคราะห์',
+                        nameEng: 'ELECTRIC CIRCUIT THEORY AND ANALYSIS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306224',
+                        name: 'สนามแม่เหล็กไฟฟ้า',
+                        nameEng: 'ELECTROMAGNETIC FIELD',
+                        compulsory: '05306013 ฟิสิกส์พื้น',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306225',
+                        name: 'กลศาสตร์',
+                        nameEng: 'MECHANICS',
+                        compulsory: '05306011 ฟิสิกส์พื้นฐาน 1',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306226',
+                        name: 'ฟิสิกส์ยุคใหม่',
+                        nameEng: 'MODERN PHYSICS',
+                        compulsory: '05306013 ฟิสิกส์พื้นฐาน 2',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306227',
+                        name: 'ฟิสิกส์เชิงความร้อนและเชิงสถิติ',
+                        nameEng: 'THERMAL AND STATISTICAL PHYSICS',
+                        compulsory: '05306011 ฟิสิกส์พื้นฐาน 1',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306228',
+                        name: 'กลศาสตร์ควอนตัม',
+                        nameEng: 'QUANTUM MECHANICS',
+                        compulsory: '05306013 ฟิสิกส์พื้นฐาน 2',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306229',
+                        name: 'อิเล็กทรอนิกส์',
+                        nameEng: 'ELECTRONICS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306230',
+                        name: 'การเขียนโปรแกรมคอมพิวเตอร์และการวิเคราะห์เชิงตัวเลข',
+                        nameEng: 'COMPUTER PROGRAMMING AND NUMERICAL ANALYSIS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '2-2-6'
+                      },
+                      {
+                        ID: '05306233',
+                        name: 'ฟิสิกส์โซลิดสเตท',
+                        nameEng: 'SOLID STATE PHYSICS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306234',
+                        name: 'ปฏิบัติการฟิสิกส์ระดับกลาง 1',
+                        nameEng: 'INTERMEDIATE PHYSICS LABORATORY 1',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '0-3-2'
+                      },
+                      {
+                        ID: '05306235',
+                        name: 'ปฏิบัติการฟิสิกส์ระดับกลาง 2',
+                        nameEng: 'INTERMEDIATE PHYSICS LABORATORY 2',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '0-3-2'
+                      },
+                      {
+                        ID: '05306236',
+                        name: 'ปฏิบัติการอิเล็กทรอนิกส์',
+                        nameEng: 'ELECTRONICS LABORATORY',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '0-3-2'
+                      },
+                      {
+                        ID: '05306237',
+                        name: 'การเขียนแบบและการฝึกงานทางวิศวกรรม',
+                        nameEng: 'DRAWING AND ENGINEERING WORKSHOP',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '0-3-2'
+                      },
+                      {
+                        ID: '05306238',
+                        name: 'อิเล็กทรอนิกส์ดิจิตอล',
+                        nameEng: 'DIGITAL ELECTRONICS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05306239',
+                        name: 'ไมโครคอนโทรลเลอร์และการเชื่อมต่อ',
+                        nameEng: 'MICROCONTROLLER AND INTERFACING',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '2-2-5'
+                      },
+                      {
+                        ID: '05306240',
+                        name: 'ปฏิบัติการอิเล็กทรอนิกส์ดิจิตอล',
+                        nameEng: 'DIGITAL ELECTRONICS LABORATORY',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '0-3-2'
+                      },
+                      {
+                        ID: '05306241',
+                        name: 'สัมมนา',
+                        nameEng: 'SEMINAR',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '0-3-2'
+                      },
+                      {
+                        ID: '05306242',
+                        name: 'ฝึกงาน',
+                        nameEng: 'TRAINING',
+                        compulsory: 'ไม่มี',
+                        credit: 0,
+                        hours: '0-150-75'
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: '2.3 หมวดวิชาเลือกทางฟิสิกส์ประยุกต์',
+                credit: 26,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '',
+                        name: '',
+                        nameEng: '',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: '2.4 กลุ่มวิชาศึกษาทางเลือก',
+                credit: 6,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '',
+                        name: '',
+                        nameEng: '',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ] 
+      },
+    ],
     Plan: [
       {
         type: 'kmitl',
@@ -817,6 +2333,7 @@ export const detailDepartment: Department[] = [
       {name: 'ศึกษาต่อระดับปริญญาเอกในสาขาที่เกี่ยวข้อง'}
     ],
     Video: 'https://www.youtube.com/embed/P3afSO8cgxM',
+    Structure: [],
     Plan: [
       {
         type: 'kmitl',
@@ -890,6 +2407,7 @@ export const detailDepartment: Department[] = [
     CourseNameEng: 'Bachelor of Science Program in Industrial Microbiology (International Program)',
     Job: [],
     Video: 'https://www.youtube.com/embed/-DPuYUSpNwA',
+    Structure: [],
     Plan: [
       {
         type: 'kmitl_au',
@@ -945,19 +2463,756 @@ export const detailDepartment: Department[] = [
           }
         ],
       },
-      // {
-      //   key: 'kmitl_au',
-      //   name: '1st YEAR 2nd SEMESTER',
-      //   Term: [
-      //     {
-      //       ID: '',
-      //       name: '',
-      //       credit: ,
-      //       hours: ''
-      //     }
-      //   ],
-      // },
-      
+      {
+        type: 'kmitl_au',
+        name: '1st YEAR 2st SEMESTER',
+        Term: [
+          {
+            ID: '05656009',
+            name: 'ORGANIC CHEMISTRY/ORGANIC CHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656010',
+            name: 'ORGANIC CHEMISTRY LABORATORY/ORGANIC CHEMISTRY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656003',
+            name: 'GENERAL PHYSICS/GENERAL PHYSICS',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656004',
+            name: 'GENERAL PHYSICS LABORATORY/GENERAL PHYSICS LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656002	',
+            name: 'ELEMENTARY STATISTICS /ELEMENTARY STATISTICS',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656013',
+            name: 'INTRODUCTION TO MICROBIOLOGY/INTRODUCTION TO MICROBIOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656017',
+            name: 'GENETICS/GENETICS',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05626002',
+            name: 'ENGLISH 2 (Study at AU)/ENGLISH 2 (Study at AU)',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl_au',
+        name: '1st YEAR SUMMER COURSE',
+        Term: [
+          {
+            ID: '05616001',
+            name: 'INTRODUCTION TO MICROCOMPUTER APPLICATION/INTRODUCTION TO MICROCOMPUTER APPLICATION',
+            credit: 3,
+            hours: '2-2-5'
+          },
+          {
+            ID: '05656056',
+            name: 'INTRODUCTION TO AGRO-INDUSTRY/INTRODUCTION TO AGRO-INDUSTRY',
+            credit: 2,
+            hours: '2-0-4'
+          }
+        ],
+      },
+      {
+        type: 'kmitl_au',
+        name: '2nd YEAR 1st SEMESTER',
+        Term: [
+          {
+            ID: '05656011',
+            name: 'BASIC BIOCHEMISTRY/BASIC BIOCHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656012',
+            name: 'BASIC BIOCHEMISTRY LABORATORY/BASIC BIOCHEMISTRY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656007',
+            name: 'ANALYTICAL CHEMISTRY/ANALYTICAL CHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656008',
+            name: 'ANALYTICAL CHEMISTRY LABORATORY/ANALYTICAL CHEMISTRY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656016',
+            name: 'INSTUMENTATION FOR MICROBIOLOGY/INSTUMENTATION FOR MICROBIOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656021',
+            name: 'ALGOLOGY/ALGOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05636002',
+            name: 'WORLD CIVILIZATION (Study at AU)/WORLD CIVILIZATION (Study at AU)',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05626003',
+            name: 'ENGLISH 3 (Study at AU)/ENGLISH 3 (Study at AU)',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl_au',
+        name: '2nd YEAR 2nd SEMESTER',
+        Term: [
+          {
+            ID: '3',
+            name: 'MICROBIAL PHYSIOLOGY/MICROBIAL PHYSIOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656037',
+            name: 'INTRODUCTION TO BIOTECHNOLOGY/INTRODUCTION TO BIOTECHNOLOGY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656057',
+            name: 'PHYSICAL CHEMISTRY/PHYSICAL CHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656058',
+            name: 'PROCESSING OF AGRICULTURAL PRODUCTS I/PROCESSING OF AGRICULTURAL PRODUCTS I',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656059',
+            name: 'BIOCHEMICAL ENGINEERING/BIOCHEMICAL ENGINEERING',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05646002',
+            name: 'ETHICS/ETHICS',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05626004',
+            name: 'ENGLISH 4 /ENGLISH 4',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl_au',
+        name: '2nd YEAR SUMMER COURSE',
+        Term: [
+          {
+            ID: '05656019	',
+            name: 'ENGINEERING DRAWING IN BIOSCIENCE/ENGINEERING DRAWING IN BIOSCIENCE',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05616002',
+            name: 'ECOLOGY, CONSERVATION AND ENVIRONMENTALISM/ECOLOGY, CONSERVATION AND ENVIRONMENTALISM',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl_au',
+        name: '3rd YEAR 1st SEMESTER',
+        Term: [
+          {
+            ID: '05656027',
+            name: 'INDUSTRIAL FERMENTATION/INDUSTRIAL FERMENTATION',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656014',
+            name: 'UNIT OPERATION OF BIOINDUSTRY 1/UNIT OPERATION OF BIOINDUSTRY 1',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656015',
+            name: 'GENETIC ENGINEERING/GENETIC ENGINEERING',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656029',
+            name: 'MANUFACTURING MANAGEMENT 1/MANUFACTURING MANAGEMENT 1',
+            credit: 2,
+            hours: '2-0-4'
+          },
+          {
+            ID: '05656060',
+            name: 'PROCESSING OF AGRICULTURAL PRODUCTS 2/PROCESSING OF AGRICULTURAL PRODUCTS 2',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656036',
+            name: 'BIOLOGICAL MATERIAL AND BIODEGRADATION/BIOLOGICAL MATERIAL AND BIODEGRADATION',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656035',
+            name: 'MANUFACTURING MANAGEMENT 2/MANUFACTURING MANAGEMENT 2',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl_au',
+        name: '3rd YEAR 2nd SEMESTER',
+        Term: [
+          {
+            ID: '05656024',
+            name: 'BIOINFORMATICS/BIOINFORMATICS',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656026',
+            name: 'WATER AND WASTE MANAGEMENT/WATER AND WASTE MANAGEMENT',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656022',
+            name: 'BACTERIOLOGY/BACTERIOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656023',
+            name: 'MYCOLOGY/MYCOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656020',
+            name: 'PRINCIPLE OF RESEARCH/PRINCIPLE OF RESEARCH',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656025',
+            name: 'PRODUCT QUALITY CONTROL/PRODUCT QUALITY CONTROL',
+            credit: 3,
+            hours: '2-3-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl_au',
+        name: '3rd YEAR SUMMER COURSE',
+        Term: [
+          {
+            ID: '05656030',
+            name: 'TRAINING IN INDUSTRIAL MICROBIOLOGY/TRAINING IN INDUSTRIAL MICROBIOLOGY',
+            credit: 0,
+            hours: '0-0-0'
+          },
+        ],
+      },
+      {
+        type: 'kmitl_au',
+        name: '4th YEAR 1st SEMESTER',
+        Term: [
+          {
+            ID: '05656031',
+            name: 'SEMINAR/SEMINAR',
+            credit: 1,
+            hours: '0-2-0'
+          },
+          {
+            ID: '05656028',
+            name: '	FERMENTATION PROCESS/FERMENTATION PROCESS',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656061',
+            name: 'UNIT OPERATION OF BIOINDUSTRY 2/UNIT OPERATION OF BIOINDUSTRY 2',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656034',
+            name: 'MICROBIAL PRODUCT DEVELOPMENT/MICROBIAL PRODUCT DEVELOPMENT',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656033',
+            name: 'ENZYME TECHNOLOGY/ENZYME TECHNOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: 'xxxxxxxx',
+            name: 'Subjects offered by AU or KMITL/Subjects offered by AU or KMITL',
+            credit: 3,
+            hours: 'x-x-x'
+          },
+          {
+            ID: 'xxxxxxxx',
+            name: 'Subjects offered by AU or KMITL/Subjects offered by AU or KMITL',
+            credit: 3,
+            hours: 'x-x-x'
+          }
+        ],
+      },
+      {
+        type: 'kmitl_au',
+        name: '4th YEAR 2nd SEMESTER',
+        Term: [
+          {
+            ID: '05656032',
+            name: 'FIELD TRIP/FIELD TRIP',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656051',
+            name: 'SPECIAL PROJECT/SPECIAL PROJECT',
+            credit: 6,
+            hours: '0-300-0'
+          }
+        ],
+      }
+      ,{
+        type: 'kmitl',
+        name: '1st YEAR 1st SEMESTER',
+        Term: [
+          {
+            ID: '05656001',
+            name: 'CALCULUS 1 FOR BIOSCIENCE/CALCULUS 1 FOR BIOSCIENCE',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656005',
+            name: 'GENERAL CHEMISTRY/GENERAL CHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656006',
+            name: 'GENERAL CHEMISTRY LABORATORY/GENERAL CHEMISTRY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656054',
+            name: 'PRINCIPLE OF BIOLOGY/PRINCIPLE OF BIOLOGY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656055',
+            name: 'BIOLOGY LABORATORY/BIOLOGY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05636001',
+            name: 'GENERAL PSYCOLOGY/GENERAL PSYCOLOGY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05646001	',
+            name: 'INTRODUCTION TO ECONOMICS/INTRODUCTION TO ECONOMICS',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05626001',
+            name: 'ENGLISH 1/ENGLISH 1',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '1st YEAR 2st SEMESTER',
+        Term: [
+          {
+            ID: '05656009',
+            name: 'ORGANIC CHEMISTRY/ORGANIC CHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656010',
+            name: 'ORGANIC CHEMISTRY LABORATORY/ORGANIC CHEMISTRY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656003',
+            name: 'GENERAL PHYSICS/GENERAL PHYSICS',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656004',
+            name: 'GENERAL PHYSICS LABORATORY/GENERAL PHYSICS LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656002	',
+            name: 'ELEMENTARY STATISTICS /ELEMENTARY STATISTICS',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656013',
+            name: 'INTRODUCTION TO MICROBIOLOGY/INTRODUCTION TO MICROBIOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656017',
+            name: 'GENETICS/GENETICS',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05626002',
+            name: 'ENGLISH 2 (Study at AU)/ENGLISH 2 (Study at AU)',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '1st YEAR SUMMER COURSE',
+        Term: [
+          {
+            ID: '05616001',
+            name: 'INTRODUCTION TO MICROCOMPUTER APPLICATION/INTRODUCTION TO MICROCOMPUTER APPLICATION',
+            credit: 3,
+            hours: '2-2-5'
+          },
+          {
+            ID: '05656056',
+            name: 'INTRODUCTION TO AGRO-INDUSTRY/INTRODUCTION TO AGRO-INDUSTRY',
+            credit: 2,
+            hours: '2-0-4'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '2nd YEAR 1st SEMESTER',
+        Term: [
+          {
+            ID: '05656011',
+            name: 'BASIC BIOCHEMISTRY/BASIC BIOCHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656012',
+            name: 'BASIC BIOCHEMISTRY LABORATORY/BASIC BIOCHEMISTRY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656007',
+            name: 'ANALYTICAL CHEMISTRY/ANALYTICAL CHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656008',
+            name: 'ANALYTICAL CHEMISTRY LABORATORY/ANALYTICAL CHEMISTRY LABORATORY',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656016',
+            name: 'INSTUMENTATION FOR MICROBIOLOGY/INSTUMENTATION FOR MICROBIOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656021',
+            name: 'ALGOLOGY/ALGOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05636002',
+            name: 'WORLD CIVILIZATION (Study at AU)/WORLD CIVILIZATION (Study at AU)',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05626003',
+            name: 'ENGLISH 3 (Study at AU)/ENGLISH 3 (Study at AU)',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '2nd YEAR 2nd SEMESTER',
+        Term: [
+          {
+            ID: '3',
+            name: 'MICROBIAL PHYSIOLOGY/MICROBIAL PHYSIOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656037',
+            name: 'INTRODUCTION TO BIOTECHNOLOGY/INTRODUCTION TO BIOTECHNOLOGY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656057',
+            name: 'PHYSICAL CHEMISTRY/PHYSICAL CHEMISTRY',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656058',
+            name: 'PROCESSING OF AGRICULTURAL PRODUCTS I/PROCESSING OF AGRICULTURAL PRODUCTS I',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656059',
+            name: 'BIOCHEMICAL ENGINEERING/BIOCHEMICAL ENGINEERING',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05646002',
+            name: 'ETHICS/ETHICS',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05626004',
+            name: 'ENGLISH 4 /ENGLISH 4',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '2nd YEAR SUMMER COURSE',
+        Term: [
+          {
+            ID: '05656019	',
+            name: 'ENGINEERING DRAWING IN BIOSCIENCE/ENGINEERING DRAWING IN BIOSCIENCE',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05616002',
+            name: 'ECOLOGY, CONSERVATION AND ENVIRONMENTALISM/ECOLOGY, CONSERVATION AND ENVIRONMENTALISM',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '3rd YEAR 1st SEMESTER',
+        Term: [
+          {
+            ID: '05656027',
+            name: 'INDUSTRIAL FERMENTATION/INDUSTRIAL FERMENTATION',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656014',
+            name: 'UNIT OPERATION OF BIOINDUSTRY 1/UNIT OPERATION OF BIOINDUSTRY 1',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656015',
+            name: 'GENETIC ENGINEERING/GENETIC ENGINEERING',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656029',
+            name: 'MANUFACTURING MANAGEMENT 1/MANUFACTURING MANAGEMENT 1',
+            credit: 2,
+            hours: '2-0-4'
+          },
+          {
+            ID: '05656036',
+            name: 'BIOLOGICAL MATERIAL AND BIODEGRADATION/BIOLOGICAL MATERIAL AND BIODEGRADATION',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656035',
+            name: 'MANUFACTURING MANAGEMENT 2/MANUFACTURING MANAGEMENT 2',
+            credit: 3,
+            hours: '3-0-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '3rd YEAR 2nd SEMESTER',
+        Term: [
+          {
+            ID: '05656024',
+            name: 'BIOINFORMATICS/BIOINFORMATICS',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656026',
+            name: 'WATER AND WASTE MANAGEMENT/WATER AND WASTE MANAGEMENT',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656022',
+            name: 'BACTERIOLOGY/BACTERIOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656023',
+            name: 'MYCOLOGY/MYCOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656020',
+            name: 'PRINCIPLE OF RESEARCH/PRINCIPLE OF RESEARCH',
+            credit: 3,
+            hours: '3-0-6'
+          },
+          {
+            ID: '05656025',
+            name: 'PRODUCT QUALITY CONTROL/PRODUCT QUALITY CONTROL',
+            credit: 3,
+            hours: '2-3-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '3rd YEAR SUMMER COURSE',
+        Term: [
+          {
+            ID: '05656030',
+            name: 'TRAINING IN INDUSTRIAL MICROBIOLOGY/TRAINING IN INDUSTRIAL MICROBIOLOGY',
+            credit: 0,
+            hours: '0-0-0'
+          },
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '4th YEAR 1st SEMESTER',
+        Term: [
+          {
+            ID: '05656031',
+            name: 'SEMINAR/SEMINAR',
+            credit: 1,
+            hours: '0-2-0'
+          },
+          {
+            ID: '05656028',
+            name: 'FERMENTATION PROCESS/FERMENTATION PROCESS',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656034',
+            name: 'MICROBIAL PRODUCT DEVELOPMENT/MICROBIAL PRODUCT DEVELOPMENT',
+            credit: 3,
+            hours: '2-3-6'
+          },
+          {
+            ID: '05656033',
+            name: 'ENZYME TECHNOLOGY/ENZYME TECHNOLOGY',
+            credit: 3,
+            hours: '2-3-6'
+          }
+        ],
+      },
+      {
+        type: 'kmitl',
+        name: '4th YEAR 2nd SEMESTER',
+        Term: [
+          {
+            ID: '05656032',
+            name: 'FIELD TRIP/FIELD TRIP',
+            credit: 1,
+            hours: '0-3-2'
+          },
+          {
+            ID: '05656051',
+            name: 'SPECIAL PROJECT/SPECIAL PROJECT',
+            credit: 6,
+            hours: '0-300-0'
+          }
+        ],
+      },
     ],
     DownloadCourse: '-',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%88%E0%B8%B8%E0%B8%A5%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2.png',
@@ -985,6 +3240,7 @@ export const detailDepartment: Department[] = [
       {name: 'นักวิทยาการข้อมูล'},
     ],
     Video: 'https://www.youtube.com/embed/x2-If-10a8M',
+    Structure: [],
     Plan: [],
     DownloadCourse: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4.png',
