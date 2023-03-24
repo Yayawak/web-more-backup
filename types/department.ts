@@ -26,6 +26,7 @@ export interface Department {
   Job: JobDepartment[]
   Video: string
   Structure: structure[]
+  yearPlan: string
   Plan: EducationPlan[]
   DownloadCourse: string
   Infographic: string
@@ -59,9 +60,9 @@ export interface SubjectCategory{//โครงสร้างหลักสู
 export interface Subject{//กลุ่มรายวิชา
   name: string//ชื่อกลุ่มรายวิชา
   credit: number//หน่วยกิต
-  sub:SubSubject[]
+  sub:Subjectby[]
 }
-export interface SubSubject{//กลุ่มรายวิชาย่อย
+export interface Subjectby{//กลุ่มรายวิชาย่อย
   name: string//ชื่อกลุ่มรายวิชา
   detail:Details[]
 }

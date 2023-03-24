@@ -16,6 +16,7 @@ export const detailDepartment: Department[] = [
     ],
     Video: 'https://www.youtube.com/embed/WcHxeMRFpv8',
     Structure: [],
+    yearPlan: '',
     Plan: [],
     DownloadCourse: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%A7%E0%B8%94%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%A1.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/info/%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%A7%E0%B8%94%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%A1.png',
@@ -38,6 +39,7 @@ export const detailDepartment: Department[] = [
     ],
     Video: 'https://www.youtube.com/embed/JhBT9VJCVE0',
     Structure: [],
+    yearPlan: '',
     Plan: [],
     DownloadCourse: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/info/%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.png',
@@ -3000,10 +3002,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาฟิสิกส์อุตสาหกรรม หลักสูตรปี พ.ศ. 2564',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
             {
               ID: '05016201',
@@ -3064,7 +3067,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
             {
               ID: '05016202',
@@ -3124,7 +3127,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
             {
               ID: '05106030',
@@ -3178,7 +3181,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
             {
               ID: '05366024',
@@ -3232,7 +3235,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 3 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 3 ภาคเรียนที่ 1',
         Term: [
             {
               ID: '05366027',
@@ -3286,7 +3289,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 3 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 3 ภาคเรียนที่ 2',
         Term: [
             {
               ID: '05366029',
@@ -3334,7 +3337,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 4 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 4 ภาคเรียนที่ 1',
         Term: [
             {
               ID: '05366094',
@@ -3346,7 +3349,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 4 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 4 ภาคเรียนที่ 2',
         Term: [
             {
               ID: '05366080',
@@ -3357,7 +3360,7 @@ export const detailDepartment: Department[] = [
           ],
       }
     ],
-    DownloadCourse: '-',
+    DownloadCourse: '',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1.png',
   },{
     key:'appliedPhysics',
@@ -5192,10 +5195,11 @@ export const detailDepartment: Department[] = [
         ] 
       },
     ],
+    yearPlan: 'สาขาวิชาฟิสิกส์ประยุกต์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
             {
               ID: '05016201',
@@ -5249,7 +5253,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
             {
               ID: '05016202',
@@ -5303,7 +5307,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
             {
               ID: '05306221',
@@ -5351,7 +5355,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
             {
               ID: '05306222',
@@ -5405,7 +5409,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 3 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 3 ภาคเรียนที่ 1',
         Term: [
             {
               ID: '05306233',
@@ -5453,7 +5457,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 3 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 3 ภาคเรียนที่ 2',
         Term: [
             {
               ID: '05306240',
@@ -5507,7 +5511,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 4 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 4 ภาคเรียนที่ 1',
         Term: [
             {
               ID: '05306241',
@@ -5537,7 +5541,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 4 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 4 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05306315',
@@ -5560,7 +5564,7 @@ export const detailDepartment: Department[] = [
         ],
       }
     ],
-    DownloadCourse: '-',
+    DownloadCourse: '',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1.png',
   },{
     key:'biology',
@@ -5644,10 +5648,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาเทคโนโลยีชีวภาพ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05207307',
@@ -5665,7 +5670,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
             {
               ID: '05207307',
@@ -5683,7 +5688,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
             {
               ID: '05207307',
@@ -5695,7 +5700,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
             {
               ID: '05207307',
@@ -6490,6 +6495,7 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'Option 1 for two degrees from KMITL and AU / Option 2 for one degrees from KMITL',
     Plan: [
       {
         type: 'kmitl_au',
@@ -7296,7 +7302,7 @@ export const detailDepartment: Department[] = [
         ],
       },
     ],
-    DownloadCourse: '-',
+    DownloadCourse: '',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%88%E0%B8%B8%E0%B8%A5%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2.png',
   },{
     key:'statistic',
@@ -7323,6 +7329,7 @@ export const detailDepartment: Department[] = [
     ],
     Video: 'https://www.youtube.com/embed/x2-If-10a8M',
     Structure: [],
+    yearPlan: '',
     Plan: [],
     DownloadCourse: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4.png',

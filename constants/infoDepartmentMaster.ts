@@ -77,10 +77,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาเคมีประยุกต์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05157001',
@@ -92,7 +93,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05157001',
@@ -110,7 +111,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05157001',
@@ -128,7 +129,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05157001',
@@ -548,10 +549,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาเคมีประยุกต์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05157005',
@@ -581,7 +583,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05157009',
@@ -611,7 +613,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05157001',
@@ -629,7 +631,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05157001',
@@ -750,10 +752,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาเคมีสิ่งแวดล้อม (หลักสูตรปรับปรุง พ.ศ. 2560)',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05117180',
@@ -771,7 +774,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05117180',
@@ -789,7 +792,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05117180',
@@ -807,7 +810,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05117180',
@@ -1051,10 +1054,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาเคมีสิ่งแวดล้อม (หลักสูตรปรับปรุง พ.ศ. 2560)',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05117301',
@@ -1084,7 +1088,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05117304',
@@ -1120,7 +1124,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05117190',
@@ -1138,7 +1142,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05117190',
@@ -1223,10 +1227,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาเทคโนโลยีพอลิเมอร์ (หลักสูตรปรับปรุง พ.ศ. 2560)',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05147185',
@@ -1238,7 +1243,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05147185',
@@ -1256,7 +1261,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05147185',
@@ -1268,7 +1273,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05147185',
@@ -1393,10 +1398,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาเทคโนโลยีพอลิเมอร์ (หลักสูตรปรับปรุง พ.ศ. 2560)',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05117301',
@@ -1426,7 +1432,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05117304',
@@ -1462,7 +1468,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05117190',
@@ -1480,7 +1486,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05117190',
@@ -1598,10 +1604,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาคณิตศาสตร์ประยุกต์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05017105',
@@ -1619,7 +1626,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05017500',
@@ -1637,7 +1644,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05017500',
@@ -1655,7 +1662,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05017500',
@@ -2414,10 +2421,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาคณิตศาสตร์ประยุกต์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05017105',
@@ -2447,7 +2455,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05017102',
@@ -2477,7 +2485,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05017601',
@@ -2501,7 +2509,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05017602',
@@ -3283,10 +3291,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาคณิตศาสตร์ประยุกต์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05017105',
@@ -3316,7 +3325,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05017102',
@@ -3346,7 +3355,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05017182',
@@ -3376,7 +3385,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05017701',
@@ -3474,10 +3483,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาฟิสิกส์ประยุกต์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05308060',
@@ -3495,7 +3505,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05308060',
@@ -3513,7 +3523,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05308060',
@@ -3531,7 +3541,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05308060',
@@ -3825,10 +3835,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาฟิสิกส์ประยุกต์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05307102',
@@ -3858,7 +3869,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05307189',
@@ -3888,7 +3899,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05307181',
@@ -3906,7 +3917,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05307199',
@@ -4000,10 +4011,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาเทคโนโลยีชีวภาพ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05207307',
@@ -4021,7 +4033,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05207307',
@@ -4039,7 +4051,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05207307',
@@ -4051,7 +4063,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05207307',
@@ -4420,10 +4432,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาเทคโนโลยีชีวภาพ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05207309',
@@ -4453,7 +4466,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05207104',
@@ -4477,7 +4490,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05207308',
@@ -4489,7 +4502,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05207308',
@@ -4583,10 +4596,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาวิทยาการคอมพิวเตอร์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05507141',
@@ -4604,7 +4618,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05507141',
@@ -4622,7 +4636,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05507141',
@@ -4640,7 +4654,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05507141',
@@ -5136,10 +5150,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาวิทยาการคอมพิวเตอร์ หลักสูตรปี พ.ศ. 2560',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05507003',
@@ -5169,7 +5184,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05507031',
@@ -5199,7 +5214,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05507188',
@@ -5229,7 +5244,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05507142',
@@ -5535,10 +5550,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'สาขาวิชาสถิติและการวิเคราะห์ธุรกิจ (หลักสูตรปรับปรุง พ.ศ. 2563)',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05407241',
@@ -5568,7 +5584,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05407xxx',
@@ -5598,7 +5614,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05407300',
@@ -5622,7 +5638,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05407404',
@@ -5920,10 +5936,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ], 
+    yearPlan: 'สาขาวิชาสถิติและการวิเคราะห์ธุรกิจ (หลักสูตรปรับปรุง พ.ศ. 2563)',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05407241',
@@ -5953,7 +5970,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05407250',
@@ -5977,7 +5994,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05407305',
@@ -6007,7 +6024,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05407xxx',
@@ -6248,10 +6265,11 @@ export const detailDepartment: Department[] = [
         ] 
       }
     ],
+    yearPlan: 'วิทยาศาสตรมหาบัณฑิต สาขาวิชาสถิติประยุกต์ พ.ศ. 2564',
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05407500',
@@ -6281,7 +6299,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 1 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05407502',
@@ -6311,7 +6329,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 1',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
         Term: [
           {
             ID: '05407600',
@@ -6329,7 +6347,7 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีที่ 2 ภาคการศึกษาที่ 2',
+        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
         Term: [
           {
             ID: '05017602',
