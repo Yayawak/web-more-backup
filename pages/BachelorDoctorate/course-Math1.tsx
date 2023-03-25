@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Container from '@/components/Layout/Container'
-import { detailDepartment } from '@/constants/infoDepartmentBachelor'
+import { detailDepartment } from '@/constants/infoDepartmentDoctorate'
 import {Department } from '@/types/department'
 import { NextPage } from 'next'
 
@@ -46,7 +46,7 @@ const DepartmentCard = ({
           >
             ภาพรวมหลักสูตร
           </button>
-          {/* <button
+          <button
             className={`px-4 rounded-t-lg ${
               activeButton === "StructurePage" ? "bg-orange-500 text-white" : "bg-gray-300"
             } hover:bg-orange-500 hover:text-white`}
@@ -61,15 +61,15 @@ const DepartmentCard = ({
             onClick={() => handleButtonClick("EducationPlanPage")}
           >
             แผนการศึกษา
-          </button> */}
-          <button
+          </button>
+          {/* <button
             className={`px-4 rounded-t-lg ${
               activeButton === "DownloadCoursePage" ? "bg-orange-500 text-white" : "bg-gray-300"
             } hover:bg-orange-500 hover:text-white`}
             onClick={() => handleButtonClick("DownloadCoursePage")}
           >
             ดาวน์โหลดหลักสูตร
-          </button>
+          </button>  */}
           <button
             className={`px-4 rounded-t-lg ${
               activeButton === "InfographicPage" ? "bg-orange-500 text-white" : "bg-gray-300"
@@ -99,7 +99,7 @@ const DepartmentCard = ({
   )
 }
 
-const filteredData = detailDepartment.filter((department) => department.key === "statistic");
+const filteredData = detailDepartment.filter((department) => department.key === "appliedMath1");
 const course: NextPage = () => {
   return (
     <>

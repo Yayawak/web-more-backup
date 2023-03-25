@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import Container from '@/components/Layout/Container'
 import { detailDepartment } from '@/constants/infoDepartmentBachelor'
-import { EducationPlan, JobDepartment, Department } from '@/types/department'
+import {Department } from '@/types/department'
 import { NextPage } from 'next'
-import Image from 'next/image'
-import { css } from '@emotion/react'
+
+import OverviewCourseEng from '@/components/DepartmentCardEng/OverviewCourseEng'
+import StructureEng from '@/components/DepartmentCardEng/StructureEng'
+import EducationPlanEng from '@/components/DepartmentCardEng/EducationPlanEng'
+import DownloadCoursePage from '@/components/DepartmentCard/DownloadCoursePage'
+import InfographicPage from '@/components/DepartmentCard/InfographicPage';
 
 const DepartmentCard = ({
   name,
@@ -16,7 +20,9 @@ const DepartmentCard = ({
   Video,
   DownloadCourse,
   Infographic,
-  Plan
+  yearPlan,
+  Plan,
+  Structure
 }: Department) => {
   //show Dynamic Page
   const [displayedComponent, setDisplayedComponent] = useState('OverviewCourse')
@@ -38,23 +44,31 @@ const DepartmentCard = ({
             } hover:bg-orange-500 hover:text-white`}
             onClick={() => handleButtonClick("OverviewCourse")}
           >
-            ภาพรวมหลักสูตร
+            COURSE OVERVIEW
           </button>
-          {/* <button
+          <button
+            className={`px-4 rounded-t-lg ${
+              activeButton === "StructurePage" ? "bg-orange-500 text-white" : "bg-gray-300"
+            } hover:bg-orange-500 hover:text-white`}
+            onClick={() => handleButtonClick("StructurePage")}
+          >
+            STRUCTURE OF SYLLABUS
+          </button>
+          <button
             className={`px-4 rounded-t-lg ${
               activeButton === "EducationPlanPage" ? "bg-orange-500 text-white" : "bg-gray-300"
             } hover:bg-orange-500 hover:text-white`}
             onClick={() => handleButtonClick("EducationPlanPage")}
           >
-            แผนการศึกษา
+            STUDY PLAN
           </button>
-          <button
+          {/* <button
             className={`px-4 rounded-t-lg ${
               activeButton === "DownloadCoursePage" ? "bg-orange-500 text-white" : "bg-gray-300"
             } hover:bg-orange-500 hover:text-white`}
             onClick={() => handleButtonClick("DownloadCoursePage")}
           >
-            ดาวน์โหลดหลักสูตร
+            DOWNLOAD COURSE
           </button> */}
           <button
             className={`px-4 rounded-t-lg ${
@@ -67,110 +81,26 @@ const DepartmentCard = ({
         </div>
 
         <div className="">
-          {displayedComponent === 'OverviewCourse' && <OverviewCourse />}
-          {displayedComponent === 'EducationPlanPage' && <EducationPlanPage/>}
-          {displayedComponent === 'DownloadCoursePage' && <DownloadCoursePage />}
-          {displayedComponent === 'InfographicPage' && <InfographicPage/>}
+          {displayedComponent === 'OverviewCourse' && <OverviewCourseEng 
+            philosophy={philosophy} 
+            importance={importance} 
+            CourseNameThai={CourseNameThai} 
+            CourseNameEng={CourseNameEng} 
+            Job={Job} 
+            Video={Video}
+          />}
+          {displayedComponent === 'StructurePage' && <StructureEng Structure={Structure}/>}
+          {displayedComponent === 'EducationPlanPage' && <EducationPlanEng Plan={Plan} yearPlan={yearPlan}/>}
+          {displayedComponent === 'DownloadCoursePage' && <DownloadCoursePage DownloadCourse={DownloadCourse}/>}
+          {displayedComponent === 'InfographicPage' && <InfographicPage Infographic={Infographic} />}
         </div>
       </Container>
     </>
   )
-
-  function OverviewCourse() {
-    return (
-        <div className='bg-white pb-8 rounded-b-lg'>
-          <div className='bg-orange-500 h-2 w-full'></div>
-          <div className='flex justify-center my-10'>
-            <iframe 
-              width="720" 
-              height="380" 
-              src={Video}
-              title="YouTube video player" >
-            </iframe>
-          </div>
-          <div className='flex justify-around'>
-            <div className='w-2/5'>
-            <h1 className='font-bold text-2xl'>Course Overview</h1>
-              <p className='font-bold text-xl mt-3'>Collaboration with Other Institutes</p>
-              <div className="">
-                {philosophy}
-              </div>
-              <p className='font-bold text-xl mt-3'>One degree 133 credits / Two degree 154 credits</p>
-            </div>
-            <div className='w-2/5'>
-              <p className='font-bold text-x mt-3'>Name of the program (Thai) :</p>
-              <div className="">
-                {CourseNameThai}
-              </div>
-              <p className='font-bold text-x mt-3'>Name of the program (English) : </p>
-              <div className="">
-                {CourseNameEng}
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-  }
-
-  function EducationPlanPage() {
-    return (
-        <>
-          <div className='bg-orange-500 h-2 w-full'></div>
-          <div className='bg-white p-6 rounded-b-lg'>
-            <div className='flex justify-center flex-col'>
-              {Plan.map(({ name } : EducationPlan) => (
-                <li key={ name }>{ name }</li>
-              ))}
-            </div>
-          </div>
-        </>
-      )
-  }
-
-  function DownloadCoursePage() {
-    return (
-        <>
-          <div className='bg-orange-500 h-2 w-full'></div>
-          <div className='bg-white p-6 rounded-b-lg'>
-            <div className='flex justify-center'>
-              <h1>ลิงค์เสีย</h1>
-              {/* <iframe 
-                width="1080px" 
-                height="608px" 
-                src={DownloadCourse} 
-                title="DownloadCourse" >
-              </iframe> */}
-            </div>
-          </div>
-        </>
-      )
-  }
-
-  function InfographicPage() {
-    return (
-        <>
-          <div className='bg-orange-500 h-2 w-full'></div>
-          <div className='bg-white p-6 rounded-b-lg'>
-            <div className='flex justify-center'>
-              <Image
-                  css={css`
-                    objectFit: contain;
-                    position: static !important;
-                `}
-                  src={Infographic}
-                  alt="InfographicPage"
-                  fill
-                />
-            </div>
-          </div>
-        </>
-      )
-  }
 }
 
-
 const filteredData = detailDepartment.filter((department) => department.key === "biologyEng");
-const courseChemist: NextPage = () => {
+const course: NextPage = () => {
   return (
     <>
       {filteredData.map((department) => (
@@ -183,6 +113,8 @@ const courseChemist: NextPage = () => {
               CourseNameEng={department.CourseNameEng}
               Job={department.Job}
               Video={department.Video}
+              Structure={department.Structure}
+              yearPlan={department.yearPlan}
               Plan={department.Plan}
               DownloadCourse={department.DownloadCourse}
               Infographic={department.Infographic}
@@ -192,4 +124,4 @@ const courseChemist: NextPage = () => {
   )
 }
 
-export default courseChemist
+export default course

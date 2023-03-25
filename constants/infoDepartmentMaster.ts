@@ -821,7 +821,7 @@ export const detailDepartment: Department[] = [
         ],
       }
     ],
-    DownloadCourse: '',
+    DownloadCourse: 'http://www.reg.kmitl.ac.th/curriculum/file/graduate/05/chemi_envi_mc2560.pdf',
     Infographic: 'https://www.science.kmitl.ac.th/assets/%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%A7%E0%B8%94%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%A1.png'
   },
   {
@@ -1388,6 +1388,128 @@ export const detailDepartment: Department[] = [
                         compulsory: 'ไม่มี',
                         credit: 3,
                         hours: '3-0-6'
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: '3. หมวดวิชาเลือก',
+            credit: 9,
+            subject: [
+              {
+                name: '',
+                credit: 0,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '05117401',
+                        name: 'การประเมินผลกระทบสิ่งแวดล้อมและสุขภาพ',
+                        nameEng: 'ENVIRONMENTAL AND HEALTH IMPACT ASSESSMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05117402',
+                        name: 'แบบจําลองทางคณิตศาสตร์สําหรับเคมีสีงแวดล้อม',
+                        nameEng: 'MATHEMATICAL MODELING FOR ENVIRONMENTAL CHEMISTRY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '2-3-6'
+                      },
+                      {
+                        ID: '05117403',
+                        name: 'มลพิษทางดินและการจัดการ',
+                        nameEng: 'SOIL POLLUTION AND MANAGEMENT',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05117404',
+                        name: 'ระบบการจัดการสิ่งแวดล้อมและมาตรฐานสากล',
+                        nameEng: 'ENVIRONMENTAL MANAGEMENT SYSTEM AND INTERNATIONAL STANDARDS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05117405',
+                        name: 'กฎหมายและข้อกําหนดสิ่งแวดล้อม',
+                        nameEng: 'ENVIRONMENTAL LAWS AND REGULATIONS',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05117406',
+                        name: 'การประยุกต์ใช้เทคนคทางชีวเคมีในงานด้านเคมีสิ่งแวดล้อม',
+                        nameEng: 'APPLIED BIOCHEMICAL TECHNIQUES IN ENVIRONMENTAL CHEMISTRY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '2-3-6'
+                      },
+                      {
+                        ID: '05117707',
+                        name: 'พิษวิทยาสิ่งแวดล้อม',
+                        nameEng: 'ENVIRONMENTAL TOXICOLOGY',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05117408',
+                        name: 'หัวข้อเลือกสรรทางเคมีสิ่งแวดล้อม 1',
+                        nameEng: 'SELECTED TOPICS IN ENVIRONMENTAL CHEMISTRY 1',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      },
+                      {
+                        ID: '05117409',
+                        name: 'หัวข้อเลือกสรรทางเคมีสิ่งแวดล้อม 2',
+                        nameEng: 'SELECTED TOPICS IN ENVIRONMENTAL CHEMISTRY 2',
+                        compulsory: 'ไม่มี',
+                        credit: 3,
+                        hours: '3-0-6'
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: '4. หมวดวิชาสัมมนา (ไม่นับหน่วยกิต)',
+            credit: 1,
+            subject: [
+              {
+                name: '',
+                credit: 0,
+                sub: [
+                  {
+                    name: '',
+                    detail: [
+                      {
+                        ID: '05117191',
+                        name: 'สัมมนาทางเคมีสิ่งแวดล้อม 1',
+                        nameEng: 'SEMINAR IN ENVIRONMENTAL CHEMISTRY 1',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '0-2-1'
+                      },
+                      {
+                        ID: '05117192',
+                        name: 'สัมมนาทางเคมีสิ่งแวดล้อม 2',
+                        nameEng: 'SEMINAR IN ENVIRONMENTAL CHEMISTRY 2',
+                        compulsory: 'ไม่มี',
+                        credit: 1,
+                        hours: '0-2-1'
                       }
                     ]
                   }

@@ -28,10 +28,14 @@ function OverviewCourse({ philosophy, importance, CourseNameThai, CourseNameEng,
           <div className="">
             {philosophy}
           </div>
-          <p className='font-bold text-xl mt-3'>ความสำคัญ :</p>
-          <div className="">
-            {importance}
-          </div>
+          {importance !== '' ? (
+            <>
+              <p className='font-bold text-xl mt-3'>ความสำคัญ :</p>
+              <div className="">
+                {importance}
+              </div>
+            </>
+          ) : null}
         </div>
         <div className='w-2/5'>
           <p className='font-bold text-x mt-3'>ชื่อหลักสูตร (ภาษาไทย) :</p>
@@ -42,12 +46,16 @@ function OverviewCourse({ philosophy, importance, CourseNameThai, CourseNameEng,
           <div className="">
             {CourseNameEng}
           </div>
-          <p className='font-bold text-x mt-3'>อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา :</p>
-          <div className="">
-            {Job.map(({ name } : JobDepartment) => (
-              <li key={ name }>{ name }</li>
-            ))}
-          </div>
+          {Job.length > 0 && (
+            <div>
+              <p className='font-bold text-x mt-3' style={{ display: Job[0].name === '' ? 'none' : 'block' }}>อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา :</p>
+              <ul>
+                {Job.map(({ name }: JobDepartment) =>
+                  name !== '' ? <li key={name}>- {name}</li> : null
+                )}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>

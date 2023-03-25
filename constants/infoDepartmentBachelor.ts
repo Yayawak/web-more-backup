@@ -5716,7 +5716,7 @@ export const detailDepartment: Department[] = [
   },{
     key:'biologyEng',
     name: 'BACHELOR OF SCIENCE PROGRAM IN INDUSTRIAL MICROBIOLOGY (INTERNATIONAL PROGRAM) NEW PROGRAM 2016',
-    philosophy: 'Collaboration with Other : Institutes The program is in collaboration with Faculty of Biotechnology, Assumption University, Thailand according to the memorandum of understanding (MOU)',
+    philosophy: 'The program is in collaboration with Faculty of Biotechnology, Assumption University, Thailand according to the memorandum of understanding (MOU)',
     importance: 'One degree 133 credits / Two degree 154 credits',
     CourseNameThai: 'หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาจุลชีววิทยาอุตสาหกรรม (หลักสูตรนานาชาติ)',
     CourseNameEng: 'Bachelor of Science Program in Industrial Microbiology (International Program)',
