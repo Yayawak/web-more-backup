@@ -26,7 +26,7 @@ const DepartmentCard = ({
 }: Department) => {
   //show Dynamic Page
   const [displayedComponent, setDisplayedComponent] = useState('OverviewCourse')
-  const [activeButton, setActiveButton] = useState("OverviewCourse")
+  const [activeButton, setActiveButton] = useState('OverviewCourse')
 
   function handleButtonClick(component) {
     setDisplayedComponent(component)
@@ -39,10 +39,12 @@ const DepartmentCard = ({
       <div className="font-bold text-2xl mb-5 text-start">{name}</div>
         <div>
           <button
-            className={`px-4 rounded-t-lg ${
-              activeButton === "OverviewCourse" ? "bg-orange-500 text-white" : "bg-gray-300"
+            className={`rounded-t-lg px-4 ${
+              activeButton === 'OverviewCourse'
+                ? 'bg-orange-500 text-white'
+                : 'bg-gray-300'
             } hover:bg-orange-500 hover:text-white`}
-            onClick={() => handleButtonClick("OverviewCourse")}
+            onClick={() => handleButtonClick('OverviewCourse')}
           >
             ภาพรวมหลักสูตร
           </button>
@@ -71,10 +73,12 @@ const DepartmentCard = ({
             ดาวน์โหลดหลักสูตร
           </button> */}
           <button
-            className={`px-4 rounded-t-lg ${
-              activeButton === "InfographicPage" ? "bg-orange-500 text-white" : "bg-gray-300"
+            className={`rounded-t-lg px-4 ${
+              activeButton === 'InfographicPage'
+                ? 'bg-orange-500 text-white'
+                : 'bg-gray-300'
             } hover:bg-orange-500 hover:text-white`}
-            onClick={() => handleButtonClick("InfographicPage")}
+            onClick={() => handleButtonClick('InfographicPage')}
           >
             INFOGRAPHIC
           </button>

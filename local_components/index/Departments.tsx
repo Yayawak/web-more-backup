@@ -4,14 +4,14 @@ import Link from 'next/link'
 import IndexSectionTitle from './SectionTitle'
 
 import departmentSectioinBG from '@/assets/images/departments_bg.svg'
-import chemistryIcon from '@/assets/icons/icon-chemist.png'
-import mathIcon from '@/assets/icons/icon-math.png'
-import physicsIcon from '@/assets/icons/icon-physics.png'
-import biologyIcon from '@/assets/icons/icon-biology.png'
-import comsciIcon from '@/assets/icons/icon-comsci.png'
-import statisticIcon from '@/assets/icons/icon-stat.png'
-import scitoolIcon from '@/assets/icons/icon-scitool.svg'
-import kdaiIcon from '@/assets/icons/icon-kdai.svg'
+import chemistryIcon from '@/assets/icons/icon_chemist.svg'
+import mathIcon from '@/assets/icons/icon_math.svg'
+import physicsIcon from '@/assets/icons/icon_physics.svg'
+import biologyIcon from '@/assets/icons/icon_biology.svg'
+import comsciIcon from '@/assets/icons/icon_comsci.svg'
+import statisticIcon from '@/assets/icons/icon_stat.svg'
+import scitoolIcon from '@/assets/icons/icon_scitool.svg'
+import kdaiIcon from '@/assets/icons/icon_kdai.svg'
 
 const IndexDepartments = () => {
   return (
