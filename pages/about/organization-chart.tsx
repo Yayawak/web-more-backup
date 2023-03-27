@@ -1,5 +1,3 @@
-import React from 'react'
-
 const OrganizationChart = () => {
   return (
     <>
@@ -18,7 +16,7 @@ const OrganizationChart = () => {
                 <ol className="level-4-wrapper">
                   <li>
                     <h4 className="level-4 box">
-                      งานบริหารทรัพยากรกายภาพและสิงแวดล้อม
+                      งานบริหารทรัพยากรกายภาพและ<br/>สิงแวดล้อม
                     </h4>
                   </li>
                   <li>
@@ -59,23 +57,17 @@ const OrganizationChart = () => {
                     <h4 className="level-4 box">งานกิจการนักศึกษา</h4>
                   </li>
                   <li>
-                    <h4 className="level-4 box">งานสารบรรณ์</h4>
+                    <h4 className="level-4 box">สารบรรณ</h4>
                   </li>
                   <li>
                     <h4 className="level-4 box">งานบริการวิชาการ</h4>
                   </li>
                   <li>
-                    <h4 className="level-4 box">งานทะเบียนปริญญาตรี</h4>
-                  </li>
-                  <li>
-                    <h4 className="level-4 box">งานทะเบียนบัณฑิต</h4>
-                  </li>
-                  <li>
-                    <h4 className="level-4 box">งานหลักสูตร</h4>
+                    <h4 className="level-4 box">งานทะเบียนและหลักสูตร</h4>
                   </li>
                   <li>
                     <h4 className="level-4 box">
-                      งานเอกสารการพิมพ์และโครงการตำรา
+                      งานเอกสารการพิมพ์และ<br/>โครงการตำรา
                     </h4>
                   </li>
                 </ol>
@@ -90,9 +82,9 @@ const OrganizationChart = () => {
               <h2 className="level-5 box">ภาควิชาสถิติ</h2>
               <h2 className="level-5 box">ภาควิชาชีววิทยา</h2>
               <h2 className="level-5 box">ภาควิชาเคมี</h2>
-              <h2 className="level-5 box">ศูนย์ครื่องมือวิทยาศาตร์</h2>
+              <h2 className="level-5 box">ศูนย์เครื่องมือวิทยาศาสตร์</h2>
               <h2 className="level-5 box">
-                ศูนย์วิเคราะห์ข้อมูลดิจิทัลอัจฉริยะ สจล.
+                ศูนย์วิเคราะห์ข้อมูลดิจิทัลอัจฉริยะ  พระจอมเกล้าลาดกระบัง
               </h2>
             </ol>
           </li>
@@ -104,7 +96,6 @@ const OrganizationChart = () => {
           max-width: 1400px;
           padding: 0 10px;
           margin: 30px auto 60px;
-          // background-color: #F2F2F2;
         }
 
         .title {
@@ -188,17 +179,6 @@ const OrganizationChart = () => {
           position: relative;
         }
 
-        // .level-2-wrapper > li::before {
-        //   content: "";
-        //   position: absolute;
-        //   bottom: 94.1%;
-        //   left: 50%;
-        //   transform: translateX(-50%);
-        //   width: 4px;
-        //   height: 20px;
-        //   background:  #6A6A6A;
-        // }
-
         .level-2 {
           width: 560px;
           margin: 0 auto 40px;
@@ -230,22 +210,11 @@ const OrganizationChart = () => {
           position: relative;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          // grid-column-gap: 40px;
           top: 4.5%;
           width: 580px;
           margin: 0 auto;
           left: -10px;
         }
-
-        // .level-3-wrapper::before {
-        //   content: "";
-        //   position: absolute;
-        //   top: -6%;
-        //   left: calc(-3.4%);
-        //   width: calc(52.4% + 10px);
-        //   height: 4px;
-        //   background: #6A6A6A;
-        // }
 
         .level-4-wrapper {
           position: relative;
@@ -268,7 +237,6 @@ const OrganizationChart = () => {
         }
 
         .level-4 {
-          // color box
           font-weight: normal;
           font-color: #ffffff;
           background: #6a6a6a;
