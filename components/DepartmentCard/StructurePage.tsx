@@ -6,11 +6,20 @@ interface StructurePageProps {
 }
 
 function StructurePage({ Structure }: StructurePageProps) {
-  const [activeSub, setActiveSub] = useState("");
-
-  const handleSubClick = (Name: string) => {
-    setActiveSub(Name === activeSub ? "" : Name);
+  const [activeSub, setActiveSub] = useState<{ name: string; subName: string; subSubName: string }>({
+    name: "",
+    subName: "",
+    subSubName: "",
+  });
+  
+  const handleSubClick = (Name: string, SubName: string = "", SubSubName: string = "") => {
+    setActiveSub({
+      name: Name,
+      subName: SubName,
+      subSubName: SubSubName,
+    });
   };
+  
   return (
     <>
       <div className="bg-orange-500 h-2 w-full"></div>
@@ -27,7 +36,7 @@ function StructurePage({ Structure }: StructurePageProps) {
               {Category.map(({ name, credit: catCredit, subject }: SubjectCategory) => (
               <div key={name}>
                 {/* button */}
-                <button className='flex w-full justify-between' onClick={() => handleSubClick(name)}>
+                <button className='flex w-full justify-between' onClick={() => handleSubClick(name, "", "")}>
                   <p>{name}</p>
                   {catCredit !== 0 && name !== "1. หมวดวิชาปรับพื้นฐาน เรียนตามความเหมาะสม" ? (
                     <p>{catCredit} หน่วยกิต</p>
@@ -37,13 +46,13 @@ function StructurePage({ Structure }: StructurePageProps) {
                 </button>
                 {subject.map(({ name: subName, credit: subCredit, sub }: Subject) => (
                   <div key={subName}>
-                    <button className={`pl-4 flex w-full justify-between ${subName === "" ? "hidden" : ""}`} onClick={() => handleSubClick(subName)}>
+                    <button className={`pl-4 flex w-full justify-between ${subName === "" ? "hidden" : ""}`} onClick={() => handleSubClick(name, subName, "")}>
                       <p>{subName}</p>
                       <p>{subCredit} หน่วยกิต</p>
                     </button>
                     {sub.map(({ name: subSubName }: Subjectby) => (
                       <div key={subSubName}>
-                        <button className={`pl-8 w-full text-start ${subSubName === "" ? "hidden" : ""}`} onClick={() => handleSubClick(subSubName)}>
+                        <button className={`pl-8 w-full text-start ${subSubName === "" ? "hidden" : ""}`} onClick={() => handleSubClick(name, subName, subSubName)}>
                           <p>{subSubName}</p>
                         </button>
                       </div>
@@ -72,7 +81,7 @@ function StructurePage({ Structure }: StructurePageProps) {
                       {sub.map(({ name: subSubName, detail }: Subjectby) => (
                         <div key={subSubName}>
                           <ul>
-                            {activeSub === name || activeSub === subName || activeSub === subSubName  && detail.map(({ ID, name: detailName, nameEng, compulsory, credit: detailCredit, hours }: Details) => (
+                            {activeSub.name === name  && activeSub.subName === subName && activeSub.subSubName === subSubName  && detail.map(({ ID, name: detailName, nameEng, compulsory, credit: detailCredit, hours }: Details) => (
                               <li key={ID}>
                                 <div className='my-1 grid grid-cols-8'>
                                   <p className='col-span-1'>{ID}</p>
