@@ -1,3 +1,4 @@
+import Container from '@/components/Layout/Container'
 import { useState } from 'react';
 import { structure, SubjectCategory, Subject, Subjectby, Details} from '@/types/department';
 
@@ -23,11 +24,11 @@ function StructureEng({ Structure }: StructurePageProps) {
   return (
     <>
       <div className="bg-orange-500 h-2 w-full"></div>
-      <div className="bg-white p-6 rounded-b-lg px-28">
+      <Container className="bg-white p-6 rounded-b-lg px-28">
         {Structure.map(({ credit, Category }: structure) => {
         const [wholePart, decimalPart] = credit.toString().split('.');
         return (
-          <div key={credit}>
+          <div key={credit} className='lg:w-[80%] xl:w-[90%] mx-auto'>
             <div className="py-2 px-5 flex w-full justify-between text-gray-200 font-bold bg-blue-900 rounded-lg">
               <p>Total Credits</p>
               <p>One degree {wholePart} credits / Two degree {decimalPart} credits</p>
@@ -102,7 +103,7 @@ function StructureEng({ Structure }: StructurePageProps) {
             </div>
           </div>
         )})}
-      </div>
+      </Container>
     </>
   );
 }

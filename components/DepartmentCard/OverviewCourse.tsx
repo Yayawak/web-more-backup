@@ -1,3 +1,4 @@
+import Container from '@/components/Layout/Container'
 import { JobDepartment } from '@/types/department';
 
 interface OverviewCourseProps {
@@ -11,9 +12,10 @@ interface OverviewCourseProps {
 
 function OverviewCourse({ philosophy, importance, CourseNameThai, CourseNameEng, Job, Video  }: OverviewCourseProps) {
   return (
-    <div className='bg-white pb-8 rounded-b-lg'>
-      <div className='bg-orange-500 h-2 w-full'></div>
-      <div className='flex justify-center my-10'>
+  <>
+    <div className='bg-orange-500 h-2 w-full'/>
+    <Container className='bg-white pb-8 rounded-b-lg'>
+      <div className='flex justify-center pt-10 mb-10'>
         <iframe 
           width="720" 
           height="380" 
@@ -58,7 +60,8 @@ function OverviewCourse({ philosophy, importance, CourseNameThai, CourseNameEng,
           )}
         </div>
       </div>
-    </div>
+    </Container>
+  </>
   )
 }
 

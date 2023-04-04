@@ -38,7 +38,8 @@ export interface JobDepartment {
 
 export interface EducationPlan{
   type: string
-  name: string
+  year: string
+  term: string
   Term: year[]
 }
 export interface year{
