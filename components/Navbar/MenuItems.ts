@@ -7,7 +7,12 @@ export type MyMenuItem = {
   submenus?: MyMenuItem[]
 }
 
-const menuItems: MyMenuItem[] = [
+export type MyPathItem = {
+  idx: number
+  path: string
+}
+
+export const menuItems: MyMenuItem[] = [
   {
     title: 'หน้าแรก',
     path: '/',
@@ -17,19 +22,19 @@ const menuItems: MyMenuItem[] = [
     submenus: [
       {
         title: 'ปริญญาตรี',
-        path: '/course-bachelor',
+        path: '/course/course-bachelor',
         // path: 'https://www.science.kmitl.ac.th/page#/course-tee',
         // isExternalPath: true,
       },
       {
         title: 'ปริญญาโท',
-        path: '/course-master',
+        path: '/course/course-master',
         // path: 'https://www.science.kmitl.ac.th/page#/course-tor',
         // isExternalPath: true,
       },
       {
         title: 'ปริญญาเอก',
-        path: '/course-doctorate',
+        path: '/course/course-doctorate',
         // path: 'https://www.science.kmitl.ac.th/page#/course-aek',
         // isExternalPath: true,
       },
@@ -40,7 +45,7 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'ค่าธรรมเนียมการศึกษา',
-        path: '/tutition-fee',
+        path: '/course/tutition-fee',
         // isExternalPath: true,
       },
     ],
@@ -179,7 +184,7 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'รายงานประจำปี',
-        path: 'https://www.science.kmitl.ac.th/new/en/yearly-report',
+        path: '/about/yearly-report',
         isExternalPath: true,
       },
       {
@@ -197,4 +202,30 @@ const menuItems: MyMenuItem[] = [
   },
 ]
 
-export default menuItems
+// Mapping index between menuItems <--> pathItems, use for underline.
+
+export const pathItems : MyPathItem[] = [
+{
+  idx: 0,
+  path: ""
+},{
+  idx: 1,
+  path: "course"
+},{
+  idx: 2,
+  path: "department"
+},{
+  idx: 3,
+  path: "graduate"
+},{
+  idx: 4,
+  path: "research"
+},{
+  idx: 5,
+  path: "services"
+},{
+  idx: 6,
+  path: "about"
+},]
+
+// export default menuItems

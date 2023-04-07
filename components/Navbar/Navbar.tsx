@@ -3,24 +3,24 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { useState } from 'react'
 
-import menuItems, { MyMenuItem } from './MenuItems'
+import { menuItems, pathItems, MyMenuItem } from './MenuItems'
 
 import sciKmitlLogo from '@/assets/logos/sci-kmitl-logo.png'
 import flagTH from '@/assets/flags/th.svg'
 import flagEN from '@/assets/flags/en.svg'
 import NavbarMenu from './NavbarMenu'
 import { Menu, MenuButton } from '@szhsin/react-menu'
+import { MyPathItem } from './MenuItems'
 
-/**
- * TODO: Add responsive design to Navbar component
- */
 
 const Navbar = () => {
   const router = useRouter()
   const { asPath } = router
+  const whereAmI = asPath.split("/")[1]
+  const isPath = (element: MyPathItem) => element.path === whereAmI;
 
   const [active, setActive] = useState(false);
-  const [clicked, setClicked] = useState(0);
+  const [clicked, setClicked] = useState(pathItems.findIndex(isPath));
 
   return (
     <>
