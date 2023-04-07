@@ -6,7 +6,7 @@ import { NextPage } from 'next'
 
 import OverviewCourse from '@/components/DepartmentCard/OverviewCourse'
 import StructurePage from '@/components/DepartmentCard/StructurePage'
-import EducationPlanPage from '@/components/DepartmentCard/EducationPlanPage';
+import EducationPlanPageSP from '@/components/DepartmentCard/EducationPlanPageSP';
 import DownloadCoursePage from '@/components/DepartmentCard/DownloadCoursePage'
 import InfographicPage from '@/components/DepartmentCard/InfographicPage';
 
@@ -46,7 +46,7 @@ const DepartmentCard = ({
           >
             ภาพรวมหลักสูตร
           </button>
-          {/* <button
+          <button
             className={`px-4 rounded-t-lg ${
               activeButton === "StructurePage" ? "bg-orange-500 text-white" : "bg-gray-300"
             } hover:bg-orange-500 hover:text-white`}
@@ -61,7 +61,7 @@ const DepartmentCard = ({
             onClick={() => handleButtonClick("EducationPlanPage")}
           >
             แผนการศึกษา
-          </button> */}
+          </button>
           <button
             className={`px-4 rounded-t-lg ${
               activeButton === "DownloadCoursePage" ? "bg-orange-500 text-white" : "bg-gray-300"
@@ -90,7 +90,7 @@ const DepartmentCard = ({
             Video={Video}
           />}
           {displayedComponent === 'StructurePage' && <StructurePage Structure={Structure}/>}
-          {displayedComponent === 'EducationPlanPage' && <EducationPlanPage Plan={Plan} yearPlan={yearPlan}/>}
+          {displayedComponent === 'EducationPlanPage' && <EducationPlanPageSP Plan={Plan} yearPlan={yearPlan}/>}
           {displayedComponent === 'DownloadCoursePage' && <DownloadCoursePage DownloadCourse={DownloadCourse}/>}
           {displayedComponent === 'InfographicPage' && <InfographicPage Infographic={Infographic} />}
         </div>

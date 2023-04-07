@@ -26,6 +26,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05157001',
@@ -51,6 +52,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05157003',
@@ -81,7 +83,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05157001',
@@ -93,7 +96,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05157001',
@@ -111,7 +115,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05157001',
@@ -129,7 +134,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05157001',
@@ -168,6 +174,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05157002',
@@ -193,6 +200,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05157005',
@@ -250,6 +258,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05157010',
@@ -523,6 +532,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05157003',
@@ -553,7 +563,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05157005',
@@ -583,7 +594,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05157009',
@@ -613,7 +625,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05157001',
@@ -631,7 +644,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05157001',
@@ -676,6 +690,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117302',
@@ -701,6 +716,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117191',
@@ -734,6 +750,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117180',
@@ -756,7 +773,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05117180',
@@ -774,7 +792,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05117180',
@@ -792,7 +811,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05117180',
@@ -810,7 +830,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05117180',
@@ -849,6 +870,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117301',
@@ -914,6 +936,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117191',
@@ -947,6 +970,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117180',
@@ -972,6 +996,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117401',
@@ -1058,7 +1083,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05117301',
@@ -1088,7 +1114,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05117304',
@@ -1124,7 +1151,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05117190',
@@ -1142,7 +1170,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05117190',
@@ -1184,6 +1213,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05147185',
@@ -1209,6 +1239,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05147193',
@@ -1231,7 +1262,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05147185',
@@ -1243,7 +1275,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05147185',
@@ -1261,7 +1294,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05147185',
@@ -1273,7 +1307,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05147185',
@@ -1315,6 +1350,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117190',
@@ -1340,6 +1376,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117301',
@@ -1405,6 +1442,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117401',
@@ -1494,6 +1532,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05117191',
@@ -1524,7 +1563,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05117301',
@@ -1554,7 +1594,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05117304',
@@ -1590,7 +1631,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05117190',
@@ -1608,7 +1650,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05117190',
@@ -1650,6 +1693,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017500',
@@ -1675,6 +1719,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017181',
@@ -1708,6 +1753,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017105',
@@ -1730,7 +1776,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05017105',
@@ -1748,7 +1795,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05017500',
@@ -1766,7 +1814,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05017500',
@@ -1784,7 +1833,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05017500',
@@ -1826,6 +1876,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017601',
@@ -1859,6 +1910,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017101',
@@ -1916,6 +1968,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017181',
@@ -1949,6 +2002,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017231',
@@ -2547,7 +2601,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05017105',
@@ -2577,7 +2632,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05017102',
@@ -2607,7 +2663,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05017601',
@@ -2631,7 +2688,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05017602',
@@ -2679,6 +2737,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017701',
@@ -2704,6 +2763,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017181',
@@ -2737,6 +2797,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017101',
@@ -2794,6 +2855,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '99050173',
@@ -2819,6 +2881,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017231',
@@ -3417,7 +3480,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05017105',
@@ -3447,7 +3511,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05017102',
@@ -3477,7 +3542,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05017182',
@@ -3507,7 +3573,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05017701',
@@ -3562,6 +3629,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05307198',
@@ -3587,6 +3655,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05307181',
@@ -3609,7 +3678,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05308060',
@@ -3627,7 +3697,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05308060',
@@ -3645,7 +3716,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05308060',
@@ -3663,7 +3735,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05308060',
@@ -3712,6 +3785,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05307199',
@@ -3737,6 +3811,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05017181',
@@ -3770,6 +3845,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05307102',
@@ -3827,6 +3903,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05307100',
@@ -3961,7 +4038,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05307102',
@@ -3991,7 +4069,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05307189',
@@ -4021,7 +4100,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05307181',
@@ -4039,7 +4119,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05307199',
@@ -4082,6 +4163,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05207307',
@@ -4107,6 +4189,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05207198',
@@ -4137,7 +4220,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05207307',
@@ -4155,7 +4239,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05207307',
@@ -4173,7 +4258,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05207307',
@@ -4185,7 +4271,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05207307',
@@ -4228,6 +4315,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05207306',
@@ -4253,6 +4341,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05207308',
@@ -4278,6 +4367,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05207309',
@@ -4319,6 +4409,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05207191',
@@ -4352,6 +4443,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05207202',
@@ -4558,7 +4650,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05207309',
@@ -4588,7 +4681,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05207104',
@@ -4612,7 +4706,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05207308',
@@ -4624,7 +4719,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05207308',
@@ -4667,6 +4763,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05507141',
@@ -4692,6 +4789,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05507187',
@@ -4722,7 +4820,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05507141',
@@ -4740,7 +4839,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05507141',
@@ -4758,7 +4858,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05507141',
@@ -4776,7 +4877,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05507141',
@@ -4819,6 +4921,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05507141',
@@ -4844,6 +4947,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05507003',
@@ -4893,6 +4997,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05507187',
@@ -4926,6 +5031,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05507000',
@@ -5276,7 +5382,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05507003',
@@ -5306,7 +5413,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05507031',
@@ -5336,7 +5444,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05507188',
@@ -5366,7 +5475,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05507142',
@@ -5403,6 +5513,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407404',
@@ -5428,6 +5539,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407300',
@@ -5461,6 +5573,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407241',
@@ -5510,6 +5623,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407245',
@@ -5676,7 +5790,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05407241',
@@ -5706,7 +5821,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05407xxx',
@@ -5736,7 +5852,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05407300',
@@ -5760,7 +5877,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05407404',
@@ -5797,6 +5915,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407405',
@@ -5822,6 +5941,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407305',
@@ -5847,6 +5967,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407241',
@@ -5904,6 +6025,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407245',
@@ -6062,7 +6184,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05407241',
@@ -6092,7 +6215,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05407250',
@@ -6116,7 +6240,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05407305',
@@ -6146,7 +6271,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05407xxx',
@@ -6198,6 +6324,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407603',
@@ -6223,6 +6350,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407600',
@@ -6248,6 +6376,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407500',
@@ -6297,6 +6426,7 @@ export const detailDepartment: Department[] = [
                 sub: [
                   {
                     name: '',
+                    credit: 0,
                     detail: [
                       {
                         ID: '05407504',
@@ -6391,7 +6521,8 @@ export const detailDepartment: Department[] = [
     Plan: [
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 1',
+        year: '1',
+        term: '1',
         Term: [
           {
             ID: '05407500',
@@ -6421,7 +6552,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 1 ภาคเรียนที่ 2',
+        year: '1',
+        term: '2',
         Term: [
           {
             ID: '05407502',
@@ -6451,7 +6583,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 1',
+        year: '2',
+        term: '1',
         Term: [
           {
             ID: '05407600',
@@ -6469,7 +6602,8 @@ export const detailDepartment: Department[] = [
       },
       {
         type: 'kmitl',
-        name: 'ปีการศึกษาที่ 2 ภาคเรียนที่ 2',
+        year: '2',
+        term: '2',
         Term: [
           {
             ID: '05017602',

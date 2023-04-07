@@ -65,6 +65,7 @@ export interface Subject{//กลุ่มรายวิชา
 }
 export interface Subjectby{//กลุ่มรายวิชาย่อย
   name: string//ชื่อกลุ่มรายวิชา
+  credit: number
   detail:Details[]
 }
 export interface Details{//กลุ่มรายวิชา

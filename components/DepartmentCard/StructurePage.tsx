@@ -51,10 +51,13 @@ function StructurePage({ Structure }: StructurePageProps) {
                       <p>{subName}</p>
                       <p>{subCredit} หน่วยกิต</p>
                     </button>
-                    {sub.map(({ name: subSubName }: Subjectby) => (
+                    {sub.map(({ name: subSubName, credit: subSubCredit }: Subjectby) => (
                       <div key={subSubName}>
-                        <button className={`pl-8 w-full text-start ${subSubName === "" ? "hidden" : ""}`} onClick={() => handleSubClick(name, subName, subSubName)}>
+                        <button className={`pl-8 flex w-full justify-between ${subSubName === "" ? "hidden" : ""}`} onClick={() => handleSubClick(name, subName, subSubName)}>
                           <p>{subSubName}</p>
+                          {subSubCredit !== 0 ? (
+                            <p>{subSubCredit} หน่วยกิต</p>
+                          ) : null}
                         </button>
                       </div>
                     ))}

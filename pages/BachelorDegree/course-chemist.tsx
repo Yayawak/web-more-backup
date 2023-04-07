@@ -46,7 +46,7 @@ const DepartmentCard = ({
           >
             ภาพรวมหลักสูตร
           </button>
-          {/* <button
+          <button
             className={`px-4 rounded-t-lg ${
               activeButton === "StructurePage" ? "bg-orange-500 text-white" : "bg-gray-300"
             } hover:bg-orange-500 hover:text-white`}
@@ -61,7 +61,7 @@ const DepartmentCard = ({
             onClick={() => handleButtonClick("EducationPlanPage")}
           >
             แผนการศึกษา
-          </button> */}
+          </button>
           <button
             className={`px-4 rounded-t-lg ${
               activeButton === "DownloadCoursePage" ? "bg-orange-500 text-white" : "bg-gray-300"
