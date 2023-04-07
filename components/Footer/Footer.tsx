@@ -2,28 +2,30 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { aboutItems, contactItems, infoItems } from './items'
-import sciKmitlLogo from '@/assets/logos/sci-kmitl-logo.png'
+import sci_KMITL_Logo from '@/assets/logos/sci-kmitl-logo.png'
 
 const Footer = () => {
   return (
-    <footer className="relative flex w-full flex-col items-center gap-5 bg-[#021E4A] pt-[100px] pb-[60px] text-white md:flex-row md:justify-evenly md:gap-0 md:h-[410px]">
+    <footer className="relative flex w-full flex-col items-center gap-5 bg-[#021E4A] pt-[100px] pb-[60px] text-white md:h-[410px] md:flex-row md:justify-evenly md:gap-0">
       <div className=" absolute top-[-100px] flex h-auto w-[90%] flex-col items-center justify-between gap-3 rounded-2xl bg-gradient-to-b from-[#F96E0A] to-[#FAAF08] py-[30px] px-[10px] md:top-[-50px] md:h-[110px] md:w-[70%] md:flex-row md:py-[30px] md:px-[53px]">
         <div className="text-center  text-base leading-4 md:text-left md:text-xs md:font-semibold md:leading-5 lg:text-base">
           <p>ร่วมบริจาค เพื่อสนับสนุนคณะวิทยาศาสตร์</p>
           <p>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
         </div>
-        <Link
-          className="rounded-full bg-[#0A17A7] py-[8px] px-[16px] text-xs font-light tracking-wide md:text-xs lg:text-base"
-          href="/"
-        >
-          บริจาคเงินทุนการศึกษา
+        <Link href="/">
+          <button
+            disabled
+            className="rounded-full bg-[#0A17A7] py-[8px] px-[16px] text-xs font-light tracking-wide disabled:bg-[#a6aadf] disabled:text-[#444a89] md:text-xs lg:text-base"
+          >
+            บริจาคเงินทุนการศึกษา
+          </button>
         </Link>
       </div>
       <div className="flex justify-center text-base font-light md:block md:w-[230px] lg:w-[460px]">
         <div className="relative h-[42px] w-[197px] lg:h-[70px] lg:w-[330px]">
           <Image
-            src={sciKmitlLogo}
-            alt={'Sci kmitl logo'}
+            src={sci_KMITL_Logo}
+            alt={'Sci KMITL logo'}
             fill
             sizes="(min-width: 0) 100vw"
           />
@@ -80,7 +82,7 @@ const Footer = () => {
           )
         })}
       </div>
-      <div className="flex flex-col justify-evenly gap-3.5 text-center text-sm font-light md:gap-0 md:text-left md:text-base md:h-full">
+      <div className="flex flex-col justify-evenly gap-3.5 text-center text-sm font-light md:h-full md:gap-0 md:text-left md:text-base">
         <div className="text-base font-semibold md:hidden">
           เกี่ยวกับคณะวิทยาศาสตร์
         </div>
