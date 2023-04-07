@@ -182,7 +182,7 @@ const OrganizationChart = () => {
         .level-2 {
           width: 560px;
           margin: 0 auto 40px;
-          background: #facf06;
+          background: #eac105;
           top: 6%;
         }
 
@@ -257,7 +257,7 @@ const OrganizationChart = () => {
         .level-5 {
           width: 560px;
           margin: 0 auto 30px;
-          background: #facf06;
+          background: #eac105;
           top: 40px;
         }
 
