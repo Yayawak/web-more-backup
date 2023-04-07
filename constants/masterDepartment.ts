@@ -18,11 +18,11 @@ export const masterDepartments: IDepartmentCard[] = [
         program: [
           {
             name: "แผนการเรียน ก1",
-            link: "https://www.science.kmitl.ac.th/chemistry#/course_detail_tor_1"
+            link: "/BachelorMaster/course-Chemist1Applied"
           },
           {
             name: "แผนการเรียน ก2",
-            link: "https://www.science.kmitl.ac.th/chemistry#/course_detail_tor_2"
+            link: "/BachelorMaster/course-Chemist2Applied"
           },
         ]
       },
@@ -31,11 +31,11 @@ export const masterDepartments: IDepartmentCard[] = [
         program: [
           {
             name: "แผนการเรียน ก1",
-            link: "https://www.science.kmitl.ac.th/chemistry#/course_detail_tor_3"
+            link: "/BachelorMaster/course-Chemist1Environmental"
           },
           {
             name: "แผนการเรียน ก2",
-            link: "https://www.science.kmitl.ac.th/chemistry#/course_detail_tor_4"
+            link: "/BachelorMaster/course-Chemist2Environmental"
           },
         ]
       },
@@ -44,11 +44,11 @@ export const masterDepartments: IDepartmentCard[] = [
         program: [
           {
             name: "แผนการเรียน ก1",
-            link: "https://www.science.kmitl.ac.th/chemistry#/course_detail_tor_5"
+            link: "/BachelorMaster/course-Chemist1Polymer"
           },
           {
             name: "แผนการเรียน ก2",
-            link: "https://www.science.kmitl.ac.th/chemistry#/course_detail_tor_6"
+            link: "/BachelorMaster/course-Chemist2Polymer"
           },
         ]
       },
@@ -64,15 +64,15 @@ export const masterDepartments: IDepartmentCard[] = [
         program: [
           {
             name: "แผนการเรียน ก1",
-            link: "https://www.science.kmitl.ac.th/department-math#/course_detail_tor_1"
+            link: "/BachelorMaster/course-Math1Applied"
           },
           {
             name: "แผนการเรียน ก2",
-            link: "https://www.science.kmitl.ac.th/department-math#/course_detail_tor_2"
+            link: "/BachelorMaster/course-Math2Applied"
           },
           {
             name: "แผนการเรียน ข",
-            link: "https://www.science.kmitl.ac.th/department-math#/course_detail_tor_3"
+            link: "/BachelorMaster/course-Math3Applied"
           },
         ]
       }
@@ -88,11 +88,11 @@ export const masterDepartments: IDepartmentCard[] = [
         program: [
           {
             name: "แผนการเรียน ก1",
-            link: "https://www.science.kmitl.ac.th/department-physics#/course_detail_tor_1"
+            link: "/BachelorMaster/course-Physics1Applied"
           },
           {
             name: "แผนการเรียน ก2",
-            link: "https://www.science.kmitl.ac.th/department-physics#/course_detail_tor_2"
+            link: "/BachelorMaster/course-Physics2Applied"
           },
         ]
       }
@@ -108,11 +108,11 @@ export const masterDepartments: IDepartmentCard[] = [
         program: [
           {
             name: "แผนการเรียน ก1",
-            link: "https://www.science.kmitl.ac.th/department-bio#/course_detail_tor_1"
+            link: "/BachelorMaster/course-Biology1"
           },
           {
             name: "แผนการเรียน ก2",
-            link: "https://www.science.kmitl.ac.th/department-bio#/course_detail_tor_2"
+            link: "/BachelorMaster/course-Biology2"
           },
         ]
       }
@@ -128,11 +128,11 @@ export const masterDepartments: IDepartmentCard[] = [
         program: [
           {
             name: "แผนการเรียน ก1",
-            link: "https://www.science.kmitl.ac.th/department-com#/course_detail_tor_1"
+            link: "/BachelorMaster/course-Com1"
           },
           {
             name: "แผนการเรียน ก2",
-            link: "https://www.science.kmitl.ac.th/department-com#/course_detail_tor_2"
+            link: "/BachelorMaster/course-Com1"
           },
         ]
       }
@@ -148,11 +148,11 @@ export const masterDepartments: IDepartmentCard[] = [
         program: [
           {
             name: "แผนการเรียน ก2",
-            link: "https://www.science.kmitl.ac.th/department-stat#/course_detail_tor_3"
+            link: "/BachelorMaster/course-Statistic1"
           },
           {
             name: "แผนการเรียน ข",
-            link: "https://www.science.kmitl.ac.th/department-stat#/course_detail_tor_4"
+            link: "/BachelorMaster/course-Statistic2"
           },
         ]
       },
@@ -161,7 +161,7 @@ export const masterDepartments: IDepartmentCard[] = [
         program: [
           {
             name: "แผนการเรียน ก2",
-            link: "https://www.science.kmitl.ac.th/department-stat#/course_detail_tor_2"
+            link: "/BachelorMaster/course-StatisticApplied"
           }
         ]
       },

@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import Container from '@/components/Layout/Container'
-import { detailDepartment } from '@/constants/infoDepartmentBachelor'
+import { detailDepartment } from '@/constants/infoDepartmentMaster'
 import {Department } from '@/types/department'
 import { NextPage } from 'next'
 
 import OverviewCourse from '@/components/DepartmentCard/OverviewCourse'
 import StructurePage from '@/components/DepartmentCard/StructurePage'
-import EducationPlanPageSP from '@/components/DepartmentCard/EducationPlanPageSP';
+import EducationPlanPage from '@/components/DepartmentCard/EducationPlanPage';
 import DownloadCoursePage from '@/components/DepartmentCard/DownloadCoursePage'
 import InfographicPage from '@/components/DepartmentCard/InfographicPage';
 
@@ -70,14 +70,14 @@ const DepartmentCard = ({
           >
             ดาวน์โหลดหลักสูตร
           </button>
-          <button
+          {/* <button
             className={`px-4 rounded-t-lg ${
               activeButton === "InfographicPage" ? "bg-orange-500 text-white" : "bg-gray-300"
             } hover:bg-orange-500 hover:text-white`}
             onClick={() => handleButtonClick("InfographicPage")}
           >
             INFOGRAPHIC
-          </button>
+          </button> */}
         </div>
 
         <div className="">
@@ -90,7 +90,7 @@ const DepartmentCard = ({
             Video={Video}
           />}
           {displayedComponent === 'StructurePage' && <StructurePage Structure={Structure}/>}
-          {displayedComponent === 'EducationPlanPage' && <EducationPlanPageSP Plan={Plan} yearPlan={yearPlan}/>}
+          {displayedComponent === 'EducationPlanPage' && <EducationPlanPage Plan={Plan} yearPlan={yearPlan}/>}
           {displayedComponent === 'DownloadCoursePage' && <DownloadCoursePage DownloadCourse={DownloadCourse}/>}
           {displayedComponent === 'InfographicPage' && <InfographicPage Infographic={Infographic} />}
         </div>
@@ -99,7 +99,7 @@ const DepartmentCard = ({
   )
 }
 
-const filteredData = detailDepartment.filter((department) => department.key === "math");
+const filteredData = detailDepartment.filter((department) => department.key === "polymerChemist2");
 const course: NextPage = () => {
   return (
     <>
