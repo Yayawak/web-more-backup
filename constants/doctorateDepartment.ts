@@ -16,7 +16,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/chemistry#/course_detail_ake_1"
+            link: "/BachelorDoctorate/course-Chemist1"
           },
         ]
       },
@@ -25,7 +25,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/chemistry#/course_detail_ake_2"
+            link: "/BachelorDoctorate/course-Chemist2"
           },
         ]
       },
@@ -41,7 +41,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/department-math#/course_detail_ake_1"
+            link: "/BachelorDoctorate/course-Math1"
           },
         ]
       },
@@ -50,7 +50,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/department-math#/course_detail_ake_2"
+            link: "/BachelorDoctorate/course-Math2"
           },
         ]
       }
@@ -66,7 +66,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/department-physics#/course_detail_ake"
+            link: "/BachelorDoctorate/course-Physics"
           },
         ]
       }
@@ -82,7 +82,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/department-bio#/course_detail_ake_1"
+            link: "/BachelorDoctorate/course-Biology1"
           },
         ]
       },
@@ -91,7 +91,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/department-bio#/course_detail_ake_2"
+            link: "/BachelorDoctorate/course-Biology2"
           },
         ]
       }
@@ -107,7 +107,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/department-com#/course_detail_ake_1"
+            link: "/BachelorDoctorate/course-Com1"
           },
         ]
       },
@@ -116,7 +116,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/department-com#/course_detail_ake_2"
+            link: "/BachelorDoctorate/course-Com2"
           },
         ]
       },
@@ -125,7 +125,7 @@ export const doctorateDepartment: IDepartmentCard[] = [
         program: [
           {
             name: "",
-            link: "https://www.science.kmitl.ac.th/department-com#/course_detail_ake_3"
+            link: "/BachelorDoctorate/course-Com3"
           },
         ]
       }

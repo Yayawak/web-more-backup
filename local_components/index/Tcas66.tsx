@@ -12,7 +12,7 @@ const IndexTcas = () => {
     <>
       <Container className="mt-8">
         <div className="bd p-4">
-          <div className="bg flex min-h-[218px] flex-wrap justify-between pl-8 pr-8 text-white">
+          <div className="bg flex min-h-[218px] pl-8 pr-8 text-white flex-wrap lg:justify-between justify-center">
             <div className="relative flex">
               <Image
                 className="mr-2"
