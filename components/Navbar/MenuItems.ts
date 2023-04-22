@@ -1,3 +1,5 @@
+import { SubMenu } from "@szhsin/react-menu"
+
 export type MyMenuItem = {
   title: string
   path?: string
@@ -5,7 +7,12 @@ export type MyMenuItem = {
   submenus?: MyMenuItem[]
 }
 
-const menuItems: MyMenuItem[] = [
+export type MyPathItem = {
+  idx: number
+  path: string
+}
+
+export const menuItems: MyMenuItem[] = [
   {
     title: 'หน้าแรก',
     path: '/',
@@ -14,31 +21,31 @@ const menuItems: MyMenuItem[] = [
     title: 'หลักสูตร',
     submenus: [
       {
-        title: 'International Program',
-        path: 'https://inter.science.kmitl.ac.th/',
-        isExternalPath: true,
-      },
-      {
         title: 'ปริญญาตรี',
-        path: '/course-bachelor',
+        path: '/course/course-bachelor',
         // path: 'https://www.science.kmitl.ac.th/page#/course-tee',
         // isExternalPath: true,
       },
       {
         title: 'ปริญญาโท',
-        path: '/course-master',
+        path: '/course/course-master',
         // path: 'https://www.science.kmitl.ac.th/page#/course-tor',
         // isExternalPath: true,
       },
       {
         title: 'ปริญญาเอก',
-        path: '/course-doctorate',
+        path: '/course/course-doctorate',
         // path: 'https://www.science.kmitl.ac.th/page#/course-aek',
         // isExternalPath: true,
       },
       {
+        title: 'International Program',
+        path: 'https://inter.science.kmitl.ac.th/',
+        isExternalPath: true,
+      },
+      {
         title: 'ค่าธรรมเนียมการศึกษา',
-        path: '/tutition-fee',
+        path: '/course/tutition-fee',
         // isExternalPath: true,
       },
     ],
@@ -47,8 +54,13 @@ const menuItems: MyMenuItem[] = [
     title: 'ภาควิชาและศูนย์',
     submenus: [
       {
-        title: 'ภาควิชาวิทยาการคอมพิวเตอร์',
-        path: 'https://www.science.kmitl.ac.th/department-com',
+        title: 'ภาควิชาคณิตศาสตร์',
+        path: 'https://www.science.kmitl.ac.th/department-math',
+        isExternalPath: true,
+      },
+      {
+        title: 'ภาควิชาเคมี',
+        path: 'https://www.science.kmitl.ac.th/chemistry',
         isExternalPath: true,
       },
       {
@@ -62,62 +74,56 @@ const menuItems: MyMenuItem[] = [
         isExternalPath: true,
       },
       {
+        title: 'ภาควิชาวิทยาการคอมพิวเตอร์',
+        path: 'https://www.science.kmitl.ac.th/department-com',
+        isExternalPath: true,
+      },
+      {
         title: 'ภาควิชาสถิติ',
         path: 'https://www.science.kmitl.ac.th/department-stat',
         isExternalPath: true,
       },
       {
-        title: 'ภาควิชาเคมี',
-        path: 'https://www.science.kmitl.ac.th/chemistry',
-        isExternalPath: true,
-      },
-      {
-        title: 'ภาควิชาคณิตศาสตร์ประยุกต์',
-        path: 'https://www.science.kmitl.ac.th/department-math',
-        isExternalPath: true,
-      },
-      {
-        title: 'K-DAI',
-        path: 'https://kdaicenter.science.kmitl.ac.th/',
-        isExternalPath: true,
-      },
-      {
-        title: 'ศูนย์เครื่องมือ',
+        title: 'ศูนย์เครื่องมือวิทยาศาสตร์',
         path: 'https://sciins.science.kmitl.ac.th/',
+        isExternalPath: true,
+      },
+      {
+        title: 'ศูนย์วิเคราะห์ข้อมูลอัจฉริยะ',
+        path: 'https://kdaicenter.science.kmitl.ac.th/',
         isExternalPath: true,
       },
     ],
   },
-
+  // {
+  //   title: 'หน่วยงานสนับสนุน',
+  //   submenus: [
+  //     {
+  //       title: 'กิจการต่างประเทศ',
+  //       path: 'https://www.science.kmitl.ac.th/international_affairs#/about',
+  //       isExternalPath: true,
+  //     },
+  //     {
+  //       title: 'บริการคอมพิวเตอร์',
+  //       path: 'http://www.it.science.kmitl.ac.th/app/repair/data-repair.php',
+  //       isExternalPath: true,
+  //     },
+  //     {
+  //       title: 'งานประกันคุณภาพ',
+  //       path: 'http://www.it.science.kmitl.ac.th/oqa/',
+  //       isExternalPath: true,
+  //     },
+  //   ],
+  // },
   {
-    title: 'หน่วยงานสนับสนุน',
-    submenus: [
-      {
-        title: 'กิจการต่างประเทศ',
-        path: 'https://www.science.kmitl.ac.th/international_affairs#/about',
-        isExternalPath: true,
-      },
-      {
-        title: 'บริการคอมพิวเตอร์',
-        path: 'http://www.it.science.kmitl.ac.th/app/repair/data-repair.php',
-        isExternalPath: true,
-      },
-      {
-        title: 'งานประกันคุณภาพ',
-        path: 'http://www.it.science.kmitl.ac.th/oqa/',
-        isExternalPath: true,
-      },
-      {
-        title: 'บริการถามตอบปัญหา',
-        path: 'https://osda.science.kmitl.ac.th/room/%E0%B8%AA%E0%B8%AB%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2',
-        isExternalPath: true,
-      },
-      {
-        title: 'แจ้งซ่อม',
-        path: 'http://sciserv01.sci.kmitl.ac.th/repair-sci/pages/auth/',
-        isExternalPath: true,
-      },
-    ],
+    title: 'บัณฑิตศึกษา',
+    path: 'https://www.science.kmitl.ac.th/graduate/#/home',
+    isExternalPath: true,
+  },
+  {
+    title: 'วิจัย',
+    path: 'https://research.science.kmitl.ac.th/',
+    isExternalPath: true,
   },
   // {
   //   title: 'TCAS65',
@@ -125,14 +131,29 @@ const menuItems: MyMenuItem[] = [
   //   isExternalPath: true,
   // },
   {
-    title: 'เอกสาร',
-    path: 'https://www.science.kmitl.ac.th/page#/download',
-    isExternalPath: true,
-  },
-  {
-    title: 'บัณฑิตศึกษา',
-    path: 'https://www.science.kmitl.ac.th/graduate/#/home',
-    isExternalPath: true,
+    title: 'บริการ',
+    submenus: [
+      {
+        title: 'แจ้งซ่อม',
+        path: 'http://sciserv01.sci.kmitl.ac.th/repair-sci/pages/auth/',
+        isExternalPath: true,
+      },
+      {
+        title: 'บริการถามตอบปัญหา',
+        path: 'https://www.facebook.com/SciKmitl?_rdc=1&_rdr',
+        isExternalPath: true,
+      },
+      {
+        title: 'แบบฟอร์มสำหรับนักศึกษา',
+        path: 'https://www.science.kmitl.ac.th/page#/download',
+        isExternalPath: true,
+      },
+      {
+        title: 'แบบฟอร์มบุคลากร',
+        path: 'https://www.science.kmitl.ac.th/page#/download',
+        isExternalPath: true,
+      },
+    ]
   },
   {
     title: 'เกี่ยวกับเรา',
@@ -153,12 +174,7 @@ const menuItems: MyMenuItem[] = [
         isExternalPath: true,
       },
       {
-        title: 'คณาจารย์',
-        path: 'https://research.science.kmitl.ac.th/',
-        isExternalPath: true,
-      },
-      {
-        title: 'บุคลากรเจ้าหน้าที่',
+        title: 'บุคลากรสายสนับสนุน',
         path: 'https://www.science.kmitl.ac.th/page#/staff',
         isExternalPath: true,
       },
@@ -168,7 +184,7 @@ const menuItems: MyMenuItem[] = [
       },
       {
         title: 'รายงานประจำปี',
-        path: 'https://www.science.kmitl.ac.th/new/en/yearly-report',
+        path: '/about/yearly-report',
         isExternalPath: true,
       },
       {
@@ -186,4 +202,30 @@ const menuItems: MyMenuItem[] = [
   },
 ]
 
-export default menuItems
+// Mapping index between menuItems <--> pathItems, use for underline.
+
+export const pathItems : MyPathItem[] = [
+{
+  idx: 0,
+  path: ""
+},{
+  idx: 1,
+  path: "course"
+},{
+  idx: 2,
+  path: "department"
+},{
+  idx: 3,
+  path: "graduate"
+},{
+  idx: 4,
+  path: "research"
+},{
+  idx: 5,
+  path: "services"
+},{
+  idx: 6,
+  path: "about"
+},]
+
+// export default menuItems

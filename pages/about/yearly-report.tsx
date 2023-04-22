@@ -16,7 +16,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 import * as fns from 'date-fns'
-import pdfIcon from '../assets/icons/icon-pdf.svg'
+import pdfIcon from '../../assets/icons/icon-pdf.svg'
 
 const columnHelper = createColumnHelper<IyearlyReportTable>()
 
