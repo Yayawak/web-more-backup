@@ -43,54 +43,66 @@ const Tcas = () => {
 
   //show Dynamic Page
   const [displayedComponent, setDisplayedComponent] = useState('tcas3')
-  const [activeButton, setActiveButton] = useState('');
+  const [activeButton, setActiveButton] = useState('')
 
   function handleButtonClick(component) {
     setDisplayedComponent(component)
-    setActiveButton(component);
+    setActiveButton(component)
   }
 
   return (
-    <Container className='mt-14'>
+    <Container className="mt-14">
       <div className="bg bg-cover bg-top">
         {/* head */}
-        <div className="flex justify-between flex-wrap">
+        <div className="flex flex-wrap justify-between">
           <h1 className="left-[106px] top-[123px] ml-24 w-[300px] text-[90px] font-bold">
             TCAS 66
           </h1>
-          <div className="mr-24 h-[362px] w-[475px] hidden lg:block">
+          <div className="mr-24 hidden h-[362px] w-[475px] lg:block">
             <Image src={DepartmentLogo} alt="DepartmentLogo" sizes="" />
           </div>
         </div>
 
         {/*Dynamic Page*/}
-          <div className="m-10 grid grid-cols-1 sm:grid-cols-4 w-auto justify-between rounded-lg border-2 border-orange-500 flex-wrap">
-            <button
-              className={`bg-transparent py-1 text-[28px] ${activeButton === 'tcas1' ? 'bg-orange-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}
-              onClick={() => handleButtonClick('tcas1')}
-            >
-              รอบ 1 Portfolio
-            </button>
-            <button
-              className={`bg-transparent py-1 text-[28px] ${activeButton === 'tcas2' ? 'bg-orange-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}
-              onClick={() => handleButtonClick('tcas2')}
-            >
-              รอบ 2 Quota
-            </button>
-            <button
-              className={`bg-transparent py-1 text-[28px] ${activeButton === 'tcas3' ? 'bg-orange-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}
-              onClick={() => handleButtonClick('tcas3')}
-            >
-              รอบ 3 Admission
-            </button>
-            <button
-              disabled
-              className="bg-transparent py-1 text-[28px] hover:bg-orange-300 hover:text-white"
-              onClick={() => handleButtonClick('tcas4')}
-            >
-              รอบ 4
-            </button>
-          </div>
+        <div className="m-10 grid w-auto grid-cols-1 flex-wrap justify-between rounded-lg border-2 border-orange-500 sm:grid-cols-4">
+          <button
+            className={`py-1 text-[28px] ${
+              activeButton === 'tcas1'
+                ? 'bg-orange-500 text-white'
+                : 'hover:bg-orange-500 hover:text-white'
+            }`}
+            onClick={() => handleButtonClick('tcas1')}
+          >
+            รอบ 1 Portfolio
+          </button>
+          <button
+            className={`py-1 text-[28px] ${
+              activeButton === 'tcas2'
+                ? 'bg-orange-500 text-white'
+                : 'hover:bg-orange-500 hover:text-white'
+            }`}
+            onClick={() => handleButtonClick('tcas2')}
+          >
+            รอบ 2 Quota
+          </button>
+          <button
+            className={`py-1 text-[28px] ${
+              activeButton === 'tcas3'
+                ? 'bg-orange-500 text-white'
+                : 'hover:bg-orange-500 hover:text-white'
+            }`}
+            onClick={() => handleButtonClick('tcas3')}
+          >
+            รอบ 3 Admission
+          </button>
+          <button
+            disabled
+            className="py-1 text-[28px] hover:bg-orange-300 hover:text-white"
+            onClick={() => handleButtonClick('tcas4')}
+          >
+            รอบ 4
+          </button>
+        </div>
 
         <div className="flex justify-center">
           {displayedComponent === 'tcas1' && <TACS1 />}
@@ -137,7 +149,7 @@ const Tcas = () => {
 
   function TACS2() {
     return (
-      <Container className='mx-8'>
+      <Container className="mx-8">
         <h1 className="text-center text-[36px]">
           เปิดรับสมัคร TCAS 2 รอบ โควตา ของคณะวิทยาศาสตร์ (ขยายเวลารับสมัคร)
         </h1>
@@ -201,7 +213,7 @@ const Tcas = () => {
 
   function TACS3() {
     return (
-      <Container className='mx-8'>
+      <Container className="mx-8">
         <h1 className="text-center text-[36px]">
           เปิดรับสมัคร TCAS 3 รอบ Admission ของคณะวิทยาศาสตร์
         </h1>
@@ -214,7 +226,8 @@ const Tcas = () => {
         <h1 className="flex justify-center text-[36px] font-bold">ประกาศ</h1>
 
         <p>
-          การรับสมัครคัดเลือกบุคคลเข้าศึกษาต่อระดับปริญญาตรี รอบที่ ๓ แบบAdmission
+          การรับสมัครคัดเลือกบุคคลเข้าศึกษาต่อระดับปริญญาตรี รอบที่ ๓
+          แบบAdmission
         </p>
         <iframe
           className="mb-12 h-[680px] w-full"
