@@ -15,16 +15,14 @@ import { NextPage } from 'next'
 import * as fns from 'date-fns'
 import Link from 'next/link'
 import InputText from '@/components/Input/Text'
-import React, { ChangeEvent, useCallback, useEffect, useState } from 'react'
+import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react'
 import Pagination from '@/components/Pagination/Pagination'
+import { domainToUnicode } from 'url'
 
 interface IDownloadTable {
   // todo 1 : ใส่ logo ของ เอกสารแต่ละแบบ -> enum แม่ง มีไม่กี่ประเภทรูปภาพ -> JK
   // todo 2 : ใส่ next-privious page 1 2 3 4 ตอนนี้มีสีดำแล้ว -> ใส่สีขาว -> เขียน custom component -> JK
   // todo 3 : ขยายคำค้นหา ให้กล่องใหญ่ขึ้น ตาม design -> Achi
-  // todo 4 : ส่่วนแสดงรายการ -> J
-  // todo 5 * : ประเภทเอกสาร -> J
-  // todo 6 : ทั้งหมด 10 รายการ -> J
   name: string
   type: string
   date: Date
@@ -55,6 +53,8 @@ const columns = [
   }),
 ]
 
+// columns[0].
+
 const data: IDownloadTable[] = [
   {
     name: 'แบบฟอร์มลาออก.pdf',
@@ -76,7 +76,24 @@ const data: IDownloadTable[] = [
     type: 'งานวิจัย',
     date: new Date(),
   },
+  {
+    name: 'phd ptsd peepip pew',
+    type: 'แบบฟอร์มปริญญาเอก',
+    date: new Date(),
+  },
+  {
+    name: 'เช่นธีระ',
+    type: 'บุคลากร',
+    date: new Date(),
+  },
 ]
+
+const docTypesObj = data.reduce((obj, item) => {
+  obj[item.type] = item.type
+  return obj;
+}, {})
+// ? ละทำไมมึง const วะ ถ้าแก้ได้
+docTypesObj['all'] = 'all'
 
 const Download: NextPage = () => {
   const [filter, setFilter] = useState<string>('')
@@ -110,18 +127,20 @@ const Download: NextPage = () => {
   useEffect(() => {
     table.setPageIndex(0)
     table.setPageSize(pageSize)
-  }, [])
+  // }, [])
+  }, [table, pageSize, pageIndex])
 
   return (
     <>
       <Container className="mt-[64px] mb-[200px]">
         <Breadcrumbs />
+        {/* // todo 6 : ทั้งหมด 10 รายการ -> J */}
 
         <div className="mt-[64px] mb-[32px] text-center text-[32px] font-bold">
           เอกสาร
         </div>
 
-        <div className="mb-[16px] text-center text-[24px]">
+        {/* <div className="mb-[16px] text-center text-[24px]">
           เลือกรายละเอียดเอกสารที่ต้องการ
         </div>
 
@@ -143,11 +162,36 @@ const Download: NextPage = () => {
           >
             ค้นหา
           </BaseButton>
+        </div> */}
+
+        {/* // todo 5 * : ประเภทเอกสาร -> J */}
+        <div className={`
+          flex items-center
+          max-w-[400px]
+        `}>
+          <div className='ml-auto mr-[16px] whitespace-nowrap'>
+            ประเภทเอกสาร
+          </div>
+          <InputSelect items={ docTypesObj }
+            setState={setFilter}
+            // setState={() => {setFilter()}}
+            state={filter}
+            // className='bg-green-300'
+            // className='max-w-[200px]'
+          />
         </div>
 
+
         <div className="mx-auto mb-[16px] py-[16px] px-[32px] flex flex-col bg-white rounded-[10px]">
-          <div className="font-bold text-[20px] mx-[16px] mb-[16px]">
-            งานวิจัย
+          {/* // todo 4 : ส่่วนแสดงรายการ -> J */}
+          <div>
+            <div className="font-bold text-[20px] mx-[16px] mb-[16px]">
+            แสดงรายการ
+            </div>
+            {/* // ? อย่าใช้ input select เลย มันมีเป็น string หนิ ใช้กับ int ไม่ได้ */}
+            {/* <InputSelect
+              items={}
+            /> */}
           </div>
 
           <div className="flex mb-[16px] items-center">
@@ -193,6 +237,11 @@ const Download: NextPage = () => {
           </table>
 
           <div className="flex mt-[40px]">
+            <div>
+              <div className='text-sm'>
+                { `ทั้งหมด ${data.length} รายการ` }
+              </div>
+            </div>
             <Pagination
               maxPages={table.getPageCount()}
               currentPage={pageIndex}
