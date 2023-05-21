@@ -19,10 +19,17 @@ import React, { ChangeEvent, useCallback, useEffect, useState } from 'react'
 import Pagination from '@/components/Pagination/Pagination'
 
 interface IDownloadTable {
+  // todo 1 : ใส่ logo ของ เอกสารแต่ละแบบ -> enum แม่ง มีไม่กี่ประเภทรูปภาพ -> JK
+  // todo 2 : ใส่ next-privious page 1 2 3 4 ตอนนี้มีสีดำแล้ว -> ใส่สีขาว -> เขียน custom component -> JK
+  // todo 3 : ขยายคำค้นหา ให้กล่องใหญ่ขึ้น ตาม design -> Achi
+  // todo 4 : ส่่วนแสดงรายการ -> J
+  // todo 5 * : ประเภทเอกสาร -> J
+  // todo 6 : ทั้งหมด 10 รายการ -> J
   name: string
   type: string
   date: Date
 }
+
 const columnHelper = createColumnHelper<IDownloadTable>()
 
 const columns = [
@@ -149,6 +156,7 @@ const Download: NextPage = () => {
               className="max-w-[200px]"
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
+              placeholder='กรุณากรอกคำค้นหา'
             />
           </div>
 
