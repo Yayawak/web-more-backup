@@ -3,97 +3,25 @@ import BaseButton from '@/components/Buttons/Base/BaseButton'
 import InputSelect from '@/components/Input/Select'
 import Container from '@/components/Layout/Container'
 import { Rounded } from '@/types/rounded'
+import { NextPage } from 'next'
+import InputText from '@/components/Input/Text'
+import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react'
+import Pagination from '@/components/Pagination/Pagination'
 import {
-  createColumnHelper,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import { NextPage } from 'next'
-import * as fns from 'date-fns'
-import Link from 'next/link'
-import InputText from '@/components/Input/Text'
-import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react'
-import Pagination from '@/components/Pagination/Pagination'
-import { domainToUnicode } from 'url'
+import { data } from './dummyData'
+import { columns, docTypesObj } from './downloadHelper'
+import { isNumeric } from '@/helpers/validity'
+// import { isNumberObject } from 'util/types'
 
-interface IDownloadTable {
   // todo 1 : ใส่ logo ของ เอกสารแต่ละแบบ -> enum แม่ง มีไม่กี่ประเภทรูปภาพ -> JK
   // todo 2 : ใส่ next-privious page 1 2 3 4 ตอนนี้มีสีดำแล้ว -> ใส่สีขาว -> เขียน custom component -> JK
   // todo 3 : ขยายคำค้นหา ให้กล่องใหญ่ขึ้น ตาม design -> Achi
-  name: string
-  type: string
-  date: Date
-}
-
-const columnHelper = createColumnHelper<IDownloadTable>()
-
-const columns = [
-  columnHelper.accessor('name', {
-    header: () => <div className="text-left">ชื่อเอกสาร</div>,
-    cell: (info) => (
-      <Link href={'#'} className="document-name">
-        {info.getValue()}
-      </Link>
-    ),
-  }),
-  columnHelper.accessor('type', {
-    header: 'ประเภทเอกสาร',
-    cell: (info) => <div className="text-center">{info.getValue()}</div>,
-  }),
-  columnHelper.accessor('date', {
-    header: () => <div className="text-right">วันที่ออกเอกสาร</div>,
-    cell: (info) => (
-      <div className="text-right">
-        {fns.format(info.getValue(), 'dd/MM/yyyy')}
-      </div>
-    ),
-  }),
-]
-
-// columns[0].
-
-const data: IDownloadTable[] = [
-  {
-    name: 'แบบฟอร์มลาออก.pdf',
-    type: 'งานวิจัย',
-    date: new Date(),
-  },
-  {
-    name: 'เอกสารลาออก.doc',
-    type: 'งานวิจัย',
-    date: new Date(),
-  },
-  {
-    name: 'เอกสารงานวิจัย.doc',
-    type: 'งานวิจัย',
-    date: new Date(),
-  },
-  {
-    name: 'เอกสารขอเงิน.doc',
-    type: 'งานวิจัย',
-    date: new Date(),
-  },
-  {
-    name: 'phd ptsd peepip pew',
-    type: 'แบบฟอร์มปริญญาเอก',
-    date: new Date(),
-  },
-  {
-    name: 'เช่นธีระ',
-    type: 'บุคลากร',
-    date: new Date(),
-  },
-]
-
-const docTypesObj = data.reduce((obj, item) => {
-  obj[item.type] = item.type
-  return obj;
-}, {})
-// ? ละทำไมมึง const วะ ถ้าแก้ได้
-docTypesObj['all'] = 'all'
 
 const Download: NextPage = () => {
   const [filter, setFilter] = useState<string>('')
@@ -108,9 +36,11 @@ const Download: NextPage = () => {
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   })
+  // const k = table.getSortedRowModel().rows.length;
 
   const [pageIndex, setPageIndex] = useState<number>(1)
   const [pageSize, setPageSize] = useState<number>(10)
+  const [rowSize, setRowSize] = useState<number>(5);
 
   const onPageChange = useCallback(
     (page: number) => {
@@ -127,8 +57,25 @@ const Download: NextPage = () => {
   useEffect(() => {
     table.setPageIndex(0)
     table.setPageSize(pageSize)
-  // }, [])
   }, [table, pageSize, pageIndex])
+
+  const onRowSizeChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+  {
+    if (isNumeric(e.target.value) && parseInt(e.target.value) > 0)
+    {
+      setRowSize(parseInt(e.target.value));
+    }
+    else {
+      setRowSize(table.getRowModel().rows.length)
+    }
+  }
+
+  const onFormTypeChange = (formType: string) => {
+    if (formType === "all")
+      setFilter("")
+    else
+      setFilter(formType)
+  }
 
   return (
     <>
@@ -168,12 +115,17 @@ const Download: NextPage = () => {
         <div className={`
           flex items-center
           max-w-[400px]
-        `}>
-          <div className='ml-auto mr-[16px] whitespace-nowrap'>
+          mb-[40px]
+          `}
+        >
+
+          {/* <div className='ml-auto mr-[16px] whitespace-nowrap'> */}
+          <div className='mr-[16px] whitespace-nowrap'>
             ประเภทเอกสาร
           </div>
           <InputSelect items={ docTypesObj }
-            setState={setFilter}
+            // setState={setFilter}
+            setState={onFormTypeChange}
             // setState={() => {setFilter()}}
             state={filter}
             // className='bg-green-300'
@@ -181,27 +133,36 @@ const Download: NextPage = () => {
           />
         </div>
 
-
         <div className="mx-auto mb-[16px] py-[16px] px-[32px] flex flex-col bg-white rounded-[10px]">
+        {/* <div className=""> */}
           {/* // todo 4 : ส่่วนแสดงรายการ -> J */}
-          <div>
-            <div className="font-bold text-[20px] mx-[16px] mb-[16px]">
-            แสดงรายการ
+          {/* <div className='flex flex-col mb-[16px]'> */}
+          <div className='inline-flex mb-[20px]'>
+            <div className='flex justify-content'>
+              <div className="ml-auto mr-[16px] whitespace-nowrap">แสดงรายการ</div>
+              {/* // ? อย่าใช้ input select เลย มันมีเป็น string หนิ ใช้กับ int ไม่ได้ */}
+              <InputText
+                className='max-w-[200px]'
+                // value={`${rowSize}`}
+                // value={`${table.getSortedRowModel().rows.length}`}
+                placeholder={`${table.getSortedRowModel().rows.length}`}
+                // onChange={e => {table.setPageSize(e.target.value)}}
+                // onChange={e => {table.setPageCount(parseInt(e.target.value))}}
+                onChange={e => {onRowSizeChange(e) }}
+                // onChange={e => {table.setExpanded}}
+              />
+              <div className="mr-auto ml-[16px] whitespace-nowrap" >แถว</div>
             </div>
-            {/* // ? อย่าใช้ input select เลย มันมีเป็น string หนิ ใช้กับ int ไม่ได้ */}
-            {/* <InputSelect
-              items={}
-            /> */}
-          </div>
 
-          <div className="flex mb-[16px] items-center">
-            <div className="ml-auto mr-[16px]">คำค้นหา</div>
-            <InputText
-              className="max-w-[200px]"
-              value={filter}
-              onChange={(e) => setFilter(e.target.value)}
-              placeholder='กรุณากรอกคำค้นหา'
-            />
+            <div className="flex items-center ml-auto">
+              <div className="ml-auto mr-[16px] whitespace-nowrap">คำค้นหา</div>
+              <InputText
+                className="max-w-[200px]"
+                value={filter}
+                onChange={(e) => setFilter(e.target.value)}
+                placeholder='กรุณากรอกคำค้นหา'
+              />
+            </div>
           </div>
 
           <table>
@@ -221,7 +182,9 @@ const Download: NextPage = () => {
             </thead>
 
             <tbody>
-              {table.getRowModel().rows.map((row) => (
+              {table.getRowModel().
+              rows.slice(0, rowSize).
+              map((row) => (
                 <tr key={row.id}>
                   {row.getVisibleCells().map((cell) => (
                     <td key={cell.id} className=" px-[16px] py-[8px]">
